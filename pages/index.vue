@@ -1,6 +1,6 @@
 <template>
   <div>
-    Home Page-x
+    Home Page
   </div>
 </template>
 
