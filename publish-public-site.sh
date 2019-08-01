@@ -6,5 +6,4 @@
 npm run generate
 git add .
 git commit -m "rebuilding files from script"
-git push
 git subtree push --prefix=dist https://github.com/mcalvert2089/mcalvert2089.github.io master
