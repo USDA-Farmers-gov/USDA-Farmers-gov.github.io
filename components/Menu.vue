@@ -49,7 +49,6 @@
     },
     methods: {
       setActiveCategoryOnLoad() {
-        console.log({ 'currentPath': this.currentPath })
         let data = this.menu.map(row => (row.links) ? row.links.filter(link => link.path === this.currentPath).length : 0)
         let index = data.findIndex(row => row)
         this.activeCategory = (index !== -1) ? this.menu[index].category : ''
