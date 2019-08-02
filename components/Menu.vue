@@ -2,8 +2,12 @@
   <div>
     <ul>
       <li v-for="item in menu">
-        <span :class="activeCategory(item.category) ? 'active' : ''">{{ item.category }}</span>
-        <ul>
+        <span :class="(activeCategory === item.category) ? 'active' : ''" 
+              @click="setActiveCategoryOnClick(item.category)">
+                {{ item.category }}
+        </span>
+        
+        <ul v-if="activeCategory === item.category">
           <li :class="currentPath === link.path ? 'active' : ''" v-for="link in item.links">
             <a :href="link.path">{{ link.name }}</a>
           </li>
@@ -18,6 +22,7 @@
     data() {
       return {
         currentPath: this.$route.path,
+        activeCategory: '',
         menu: [
           {
             category: 'Primary Elements',
@@ -39,11 +44,17 @@
         ]
       }
     },
+    mounted() {
+      this.setActiveCategoryOnLoad()
+    },
     methods: {
-      activeCategory(name) {
-        let data = this.menu.find(row => row.category === name)
-        let active = (data.links) ? data.links.filter(row => row.path === this.currentPath) : {}
-        return (active.length) ? true : false
+      setActiveCategoryOnLoad() {
+        let data = this.menu.map(row => (row.links) ? row.links.filter(link => link.path === this.currentPath).length : 0)
+        let index = data.findIndex(row => row)
+        this.activeCategory = (index !== -1) ? this.menu[index].category : ''
+      },
+      setActiveCategoryOnClick(name) {
+        this.activeCategory = name
       }
     }
   }
