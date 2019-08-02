@@ -21,7 +21,7 @@
   export default {
     data() {
       return {
-        currentPath: this.$route.path,
+        currentPath: this.$route.path.replace(/\/$/, ""),
         activeCategory: '',
         menu: [
           {
