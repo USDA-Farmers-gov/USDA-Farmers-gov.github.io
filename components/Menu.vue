@@ -2,9 +2,9 @@
   <div>
     <ul>
       <li v-for="item in menu">
-        {{ item.category }}
+        <span :class="activeCategory(item.category) ? 'active' : ''">{{ item.category }}</span>
         <ul>
-          <li v-for="link in item.links">
+          <li :class="currentPath === link.path ? 'active' : ''" v-for="link in item.links">
             <a :href="link.path">{{ link.name }}</a>
           </li>
         </ul>
@@ -17,6 +17,7 @@
   export default {
     data() {
       return {
+        currentPath: this.$route.path,
         menu: [
           {
             category: 'Primary Elements',
@@ -27,12 +28,22 @@
                     ]
           },
           {
-            category: 'UI Components'
+            category: 'UI Components',
+            links:  [
+                      { name: 'Links', path: '/ui/Links'},
+                    ]
           },
           {
             category: 'Navigation'
           }
         ]
+      }
+    },
+    methods: {
+      activeCategory(name) {
+        let data = this.menu.find(row => row.category === name)
+        let active = (data.links) ? data.links.filter(row => row.path === this.currentPath) : {}
+        return (active.length) ? true : false
       }
     }
   }

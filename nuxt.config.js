@@ -23,7 +23,8 @@ export default {
   ** Global CSS
   */
   css: [
-    '@/farmers/dist/css/main.min.css'
+    '@/farmers/dist/css/main.min.css',
+    '@/assets/css/styles.css'
   ],
   /*
   ** Plugins to load before mounting the App
