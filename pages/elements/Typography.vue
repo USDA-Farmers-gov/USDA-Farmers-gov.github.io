@@ -28,6 +28,22 @@
           <td>{{ font.font_size }}</td>
           <td>{{ font.line_height }}</td>
         </tr>
+        <tr>
+          <td colspan="5">
+            <h2>Merriweather*</h2>
+            <hr>
+            A a
+          </td>
+        </tr>
+        <tr v-for="font in merriweather">
+          <td>
+            <div v-html="font.name"></div>
+          </td>
+          <td>{{ font.font_family }}</td>
+          <td>{{ font.weight }}</td>
+          <td>{{ font.font_size }}</td>
+          <td>{{ font.line_height }}</td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -50,6 +66,10 @@ export default {
         { name: 'Body Copy', font_family: 'Public Sans', weight: '400', font_size: '18px', line_height: '28px' },
         { name: 'Subheading', font_family: 'Public Sans', weight: '400', font_size: '16px', line_height: '24px' },
         { name: 'Caption*', font_family: 'Public Sans', weight: '400', font_size: '14px', line_height: '22px' },
+      ],
+      merriweather: [
+        { name: 'Blog Body Copy*', font_family: 'Merriweather', weight: '400', font_size: '18px', line_height: '30px' },
+        { name: 'Blog Quote*', font_family: 'Merriweather', weight: '300', font_size: '28px', line_height: '34px' },
       ]
     }
   }
