@@ -21,7 +21,7 @@
   export default {
     data() {
       return {
-        currentPath: this.$route.path.replace(/\/$/, ""),
+        currentPath: this.$route.path.replace(/\/$/, ""), // remove trailing slashes
         activeCategory: '',
         menu: [
           {
