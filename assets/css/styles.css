@@ -1,3 +1,6 @@
+.category {
+  cursor: pointer;
+}
 .active {
   font-weight: 700;
 }

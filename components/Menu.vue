@@ -2,7 +2,7 @@
   <div>
     <ul>
       <li v-for="item in menu">
-        <span :class="(activeCategory === item.category) ? 'active' : ''" 
+        <span :class="setCategoryClass(item.category)" 
               @click="setActiveCategoryOnClick(item.category)">
                 {{ item.category }}
         </span>
@@ -39,7 +39,10 @@
                     ]
           },
           {
-            category: 'Navigation'
+            category: 'Navigation',
+            links:  [
+                      { name: 'Breadcrumbs', path: '/navigation/Breadcrumbs'},
+                    ]
           }
         ]
       }
@@ -48,6 +51,10 @@
       this.setActiveCategoryOnLoad()
     },
     methods: {
+      setCategoryClass(category) {
+        let baseClasses = 'category'
+        return (this.activeCategory === category) ? baseClasses + ' active' : baseClasses
+      },
       setActiveCategoryOnLoad() {
         let data = this.menu.map(row => (row.links) ? row.links.filter(link => link.path === this.currentPath).length : 0)
         let index = data.findIndex(row => row)
