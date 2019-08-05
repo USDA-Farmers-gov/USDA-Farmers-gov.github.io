@@ -5,6 +5,8 @@
         <span :class="setCategoryClass(item.category)" 
               @click="setActiveCategoryOnClick(item.category)">
                 {{ item.category }}
+                <i v-if="activeCategory === item.category" class="arrow up"></i>
+                <i v-if="activeCategory !== item.category" class="arrow down"></i>
         </span>
         
         <ul v-if="activeCategory === item.category">

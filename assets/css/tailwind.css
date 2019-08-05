@@ -10,10 +10,24 @@
 }
 .menu {
   @apply mr-12 ml-12 text-3xl;
+  width: 20rem;
 }
-.menu .category.active {
-  /*background: #ff0;*/
+.menu .category i {
+  @apply float-right inline-block mt-4;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  padding: 3px;
 }
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
 .menu li {
   @apply ml-4 p-2;
 }
@@ -24,6 +38,9 @@
   background: #DBEDE0;
   border-left: 0.25rem #006546 solid;
   margin-left: -0.25rem;
+}
+.menu li.active a {
+  @apply pl-8;
 }
 .category {
   @apply cursor-pointer;
