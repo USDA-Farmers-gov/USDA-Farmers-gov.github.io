@@ -32,7 +32,9 @@
           <td colspan="5">
             <h2>Merriweather*</h2>
             <hr>
-            A a
+            <div class="container">
+              <div class="row">A a</div>
+            </div>
           </td>
         </tr>
         <tr v-for="font in merriweather">
