@@ -1,0 +1,22 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.main {
+  @apply flex;
+}
+.menu {
+  @apply mr-12;
+}
+.menu .category.active {
+  background: #ff0;
+}
+.menu li.active {
+  background: #8EBC5E;
+}
+.category {
+  @apply cursor-pointer;
+}
+.active {
+  @apply font-bold;
+}
