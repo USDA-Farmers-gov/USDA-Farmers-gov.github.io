@@ -10,7 +10,7 @@
         </span>
         
         <ul v-if="activeCategory === item.category">
-          <li :class="currentPath === link.path ? 'active' : ''" v-for="link in item.links">
+          <li :class="currentPath === link.path ? 'active soft-green' : ''" v-for="link in item.links">
             <a :href="link.path">{{ link.name }}</a>
           </li>
         </ul>

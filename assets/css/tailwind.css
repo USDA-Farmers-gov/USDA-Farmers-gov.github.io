@@ -2,9 +2,9 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-/*html {
-  font-size: 10px !important;
-}*/
+body {
+  @apply text-4xl;
+}
 .main {
   @apply flex;
 }
@@ -13,21 +13,17 @@
   width: 20rem;
 }
 .menu .category i {
-  @apply float-right inline-block mt-4;
-  border: solid #000;
+  @apply float-right border-black inline-block p-1 mt-4;
   border-width: 0 2px 2px 0;
-  padding: 3px;
 }
 .up {
   transform: rotate(-135deg);
   -webkit-transform: rotate(-135deg);
 }
-
 .down {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
-
 .menu li {
   @apply ml-4 p-2;
 }
@@ -35,7 +31,6 @@
   @apply pl-4;
 }
 .menu li.active {
-  background: #DBEDE0;
   border-left: 0.25rem #006546 solid;
   margin-left: -0.25rem;
 }
