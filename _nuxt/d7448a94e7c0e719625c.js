@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{163:function(n,t,e){"use strict";e.r(t);var l={layout:"farmers"},r=e(10),component=Object(r.a)(l,function(){var n=this.$createElement;return(this._self._c||n)("div",[this._v("\n  Button\n")])},[],!1,null,null,null);t.default=component.exports}}]);
