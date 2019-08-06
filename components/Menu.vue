@@ -29,8 +29,9 @@
           {
             category: 'Primary Elements',
             links:  [
-                      { name: 'Button', path: '/elements/Button'},
+                      // { name: 'Button', path: '/elements/Button'},
                       { name: 'Colors', path: '/elements/Colors'},
+                      { name: 'Grid', path: '/elements/Grid'},
                       { name: 'Typography', path: '/elements/Typography'},
                     ]
           },
