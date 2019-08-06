@@ -9,7 +9,7 @@
                 <i v-if="activeCategory !== item.category" class="arrow down"></i>
         </span>
         
-        <ul v-if="activeCategory === item.category">
+        <ul v-if="activeCategory === item.category" class="menu-links">
           <li :class="currentPath === link.path ? 'active soft-green' : ''" v-for="link in item.links">
             <a :href="link.path">{{ link.name }}</a>
           </li>

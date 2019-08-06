@@ -1,10 +1,12 @@
 <template>
-  <div class="main">
-    <div class="menu">
-      <Menu/>
-    </div>
-    <div class="content">
-      <nuxt />
+  <div class="container menu">
+    <div class="row">
+      <div class="medium-3">
+        <Menu/>
+      </div>
+      <div class="medium-6">
+        <nuxt />
+      </div>
     </div>
   </div>
 </template>
@@ -21,8 +23,4 @@ export default {
 </script>
 
 <style>
-.container {
-  width: 600px;
-  margin: auto;
-}
 </style>

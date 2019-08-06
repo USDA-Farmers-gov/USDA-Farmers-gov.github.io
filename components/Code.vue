@@ -11,7 +11,7 @@
 </template>
 
 <script>
-  var beautify = require('js-beautify').html
+  var beautifyHTML = require('js-beautify').html
 
   export default {
     props: ['html'],
@@ -21,7 +21,7 @@
       }
     },
     mounted() {
-      this.code = beautify(this.$el.getElementsByClassName("preview")[0].innerHTML)
+      this.code = beautifyHTML(this.$el.getElementsByClassName("preview")[0].innerHTML, { preserve_newlines: true })
     }
   }
 </script>
