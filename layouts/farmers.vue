@@ -1,13 +1,11 @@
 <template>
-  <div class="main container">
-    <div class="row">
-      <div class="menu medium-3">
+  <div class="main">
+      <div class="menu">
         <Menu/>
       </div>
-      <div class="content medium-8">
+      <div class="content">
         <nuxt />
       </div>
-    </div>
   </div>
 </template>
 

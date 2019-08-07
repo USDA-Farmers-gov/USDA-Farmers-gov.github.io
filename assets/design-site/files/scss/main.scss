@@ -9,10 +9,15 @@ body {
   font-family: 'Public Sans';
 }
 /** END TODO **/
+
 .main {
-  display: flex;
-  padding-left: 0;
-  padding-right: 0;
+  max-width: 1140px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 217px auto;
+}
+.content {
+  padding-left:6rem;
 }
 
 .preview {
