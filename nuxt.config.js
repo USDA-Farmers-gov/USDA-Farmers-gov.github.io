@@ -23,7 +23,6 @@ export default {
   ** Global CSS
   */
   css: [
-    '@/farmers/dist/css/main.min.css',
     '@/assets/design-site/files/scss/main.scss'
   ],
   /*
