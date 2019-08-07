@@ -1,6 +1,9 @@
 .menu {
   margin: 0 1.5rem;
   font-size: 1.75rem;
+  width: 20rem;
+  margin: 0;
+  padding-left:0;
   ul {
     list-style-type: none;
   }
@@ -16,7 +19,7 @@
       padding-left: 2rem;
     }
     
-    .category.active {
+    .category {
       font-weight: 700;
     }
 

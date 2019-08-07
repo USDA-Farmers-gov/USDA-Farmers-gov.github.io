@@ -15,9 +15,9 @@
       <h3 v-if="color.header">{{ color.header }}</h3>
       <div v-if="color.description" v-html="color.description"></div>
 
-      <div class="container color-groups">
+      <div v-if="color.examples" class="container color-groups">
         <div class="row">
-          <div v-if="color.examples" v-for="swatch in color.examples" class="medium-3 colors">
+          <div v-for="swatch in color.examples" class="medium-3 colors">
             <div :class="'color-swatch ' + swatch.text_class"></div>
             <div class="color-name">{{ swatch.caption }}</div>
           </div>

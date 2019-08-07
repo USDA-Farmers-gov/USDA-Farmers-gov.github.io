@@ -21,7 +21,7 @@
       }
     },
     mounted() {
-      this.code = beautifyHTML(this.$el.getElementsByClassName("preview")[0].innerHTML, { preserve_newlines: true })
+      this.code = beautifyHTML(this.$el.getElementsByClassName("preview")[0].innerHTML)
     }
   }
 </script>

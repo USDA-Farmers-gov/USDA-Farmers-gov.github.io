@@ -9,7 +9,13 @@ body {
   font-family: 'Public Sans';
 }
 /** END TODO **/
-
 .main {
   display: flex;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.preview {
+  border: 2px solid #ccc;
+  padding: 10px;
 }
