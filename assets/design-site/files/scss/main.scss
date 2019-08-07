@@ -1,9 +1,9 @@
 @import 'farmers/old/styles.scss';
 @import 'farmers/new/styles.scss';
-@import 'borders.scss';
-@import 'elements.scss';
-@import 'menu.scss';
-@import 'kitchen-sink.scss';
+@import '_borders.scss';
+@import '_elements.scss';
+@import '_menu.scss';
+@import '_kitchen-sink.scss';
 /** TODO: May need to adjust these numbers as they are overriding the design system **/
 body {
   font-family: 'Public Sans';
