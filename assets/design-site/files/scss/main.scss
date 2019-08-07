@@ -1,0 +1,15 @@
+@import 'farmers/old/styles.scss';
+@import 'farmers/new/styles.scss';
+@import 'borders.scss';
+@import 'elements.scss';
+@import 'menu.scss';
+@import 'kitchen-sink.scss';
+/** TODO: May need to adjust these numbers as they are overriding the design system **/
+body {
+  font-size: 20px;
+}
+/** END TODO **/
+
+.main {
+  display: flex;
+}

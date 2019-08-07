@@ -24,8 +24,7 @@ export default {
   */
   css: [
     '@/farmers/dist/css/main.min.css',
-    '@/assets/scss/main.scss'
-    // '@/assets/css/tailwind.css'
+    '@/assets/design-site/files/scss/main.scss'
   ],
   /*
   ** Plugins to load before mounting the App

@@ -38,6 +38,7 @@
           {
             category: 'UI Components',
             links:  [
+                      { name: 'Buttons', path: '/ui/Buttons'},
                       { name: 'Links', path: '/ui/Links'},
                     ]
           },

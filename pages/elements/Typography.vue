@@ -177,20 +177,20 @@ export default {
         { name: '<div class="blog-block-quote">Blog Quote*</div>', font_family: 'Merriweather', weight: '300', font_size: '28px', line_height: '34px' },
       ],
       contrast_buttons_normal: [
-        { classes: 'heritage heritage-border white-color', description: 'White on Heritage Green'},
-        { classes: 'grey-3-border heritage-color', description: 'Heritage Green on White'},
-        { classes: 'soft-green soft-green-border', description: 'Asphalt on Soft Green'},
-        { classes: 'grey-3-border', description: 'Asphalt on White'},
-        { classes: 'soft-yellow soft-yellow-border', description: 'Asphalt on Soft Yellow'},
-        { classes: 'grey-1 grey-1-border', description: 'Asphalt on Bone'},
-        { classes: 'soft-red soft-red-border', description: 'Asphalt on Soft Red'},
-        { classes: 'grey-2 grey-2-border', description: 'Asphalt on Light Gray'},
+        { classes: 'heritage heritage-border white-txt', description: 'White on Heritage Green'},
+        { classes: 'grey-3-border heritage-txt', description: 'Heritage Green on White'},
+        { classes: 'soft-green soft-green-border asphalt-txt', description: 'Asphalt on Soft Green'},
+        { classes: 'grey-3-border asphalt-txt', description: 'Asphalt on White'},
+        { classes: 'soft-yellow soft-yellow-border asphalt-txt', description: 'Asphalt on Soft Yellow'},
+        { classes: 'grey-1 grey-1-border asphalt-txt', description: 'Asphalt on Bone'},
+        { classes: 'soft-red soft-red-border asphalt-txt', description: 'Asphalt on Soft Red'},
+        { classes: 'grey-2 grey-2-border asphalt-txt', description: 'Asphalt on Light Gray'},
       ],
       contrast_buttons_large_text: [
-        { classes: 'sweet-grass sweet-grass-border white-color', description: 'White on Sweet Grass'},
-        { classes: 'sweet-grass-color grey-3-border', description: 'Sweet Grass on White'},
-        { classes: 'big-sky big-sky-border white-color', description: 'White on Big Sky'},
-        { classes: 'big-sky-color grey-3-border', description: 'Big Sky on White'},
+        { classes: 'sweet-grass sweet-grass-border white-txt', description: 'White on Sweet Grass'},
+        { classes: 'sweet-grass-txt grey-3-border', description: 'Sweet Grass on White'},
+        { classes: 'big-sky big-sky-border white-txt', description: 'White on Big Sky'},
+        { classes: 'big-sky-txt grey-3-border', description: 'Big Sky on White'},
       ]
     }
   }
