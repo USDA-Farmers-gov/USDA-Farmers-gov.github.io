@@ -20,6 +20,26 @@
     <div>
       <button class="btn">Button</button>
     </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="medium-3">
+          <strong>Default</strong>
+          <br/>
+          <button class="btn">Button</button>
+        </div>
+        <div class="medium-3">
+          <strong>Small</strong>
+          <br/>
+          <button class="btn sm-btn">Button</button>
+        </div>
+        <div class="medium-3">
+          <strong>Large</strong>
+          <br/>
+          <button class="btn lg-btn">Button</button>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
