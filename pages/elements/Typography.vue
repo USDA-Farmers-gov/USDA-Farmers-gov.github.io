@@ -48,7 +48,7 @@
             <div class="container">
               <div class="row">
                 <div class="medium-1">A a</div>
-                <div class="medium-8">
+                <div class="medium-10">
                   ABCDEFGHIJKLMNOPQRSTUVWXYZ
                   <br/>
                   abcdefghijklmnopqrstuvwxyz
@@ -113,17 +113,11 @@
           <strong>AAA</strong> 7:1 minimum contrast ratio
           <br/>
 
-          <div class="container">
-            <div v-for="btn in contrast_buttons_normal" class="row">
-              <div class="medium-2">
-                <div :class="'mini-square ' + btn.classes">
-                  AAA
-                </div>
-              </div>
-              <div>
-                {{ btn.description }}
-              </div>
+          <div v-for="btn in contrast_buttons_normal" class="row">
+            <div :class="'mini-square ' + btn.classes">
+              AAA
             </div>
+            {{ btn.description }}
           </div>
         </div>
 
@@ -136,16 +130,12 @@
           <br/>
           <strong>AAA</strong> 4.5:1 minimum contrast ratio
 
-          <div class="container">
-            <div v-for="btn in contrast_buttons_large_text" class="row">
-              <div class="medium-2">
-                <div :class="'mini-square ' + btn.classes">
-                  AA
-                </div>
+          <div v-for="btn in contrast_buttons_large_text" class="row">
+              <div :class="'mini-square ' + btn.classes">
+                AA
               </div>
-              <div>
-                {{ btn.description }}
-              </div>
+            <div>
+              {{ btn.description }}
             </div>
           </div>
         </div>

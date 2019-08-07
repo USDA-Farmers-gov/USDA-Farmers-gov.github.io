@@ -1,11 +1,11 @@
 .menu {
-  margin: 0 2rem;
-  font-size: 2rem;
+  margin: 0 1.5rem;
+  font-size: 1.75rem;
   ul {
     list-style-type: none;
   }
   li {
-    margin-left: 2rem;
+    // margin-left: 2rem;
     padding: 1rem;
 
     a {
@@ -47,9 +47,6 @@
       border-left: 0.25rem $heritage solid;
       margin-left: -0.25rem;
       font-weight: 700;
-      a {
-        padding-left: 3.7rem;
-      }
     }
 }
 .category {

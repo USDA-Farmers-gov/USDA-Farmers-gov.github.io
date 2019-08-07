@@ -1,7 +1,7 @@
 <template>
-  <div class="container">
+  <div class="main">
     <div class="row">
-      <div class="medium-3 menu">
+      <div class="medium-2 menu">
         <Menu/>
       </div>
       <div class="medium-6">
