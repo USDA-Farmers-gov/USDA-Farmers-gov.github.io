@@ -1,23 +1,22 @@
 <template>
   <div>
-    <Code>
-      <div>
-        <h1>Header 1</h1> 
-        <div>
-          <a href="link">Link</a>
-        </div>
-      </div>
-    </Code>
+    <h2>Links</h2>
+    <p>
+      Links direct users to different pages or sections of the site. Links should not be in uppercase to visually differentiate between a link and a button.
+    </p>
+    <h3>Text Link</h3>
+    <p>
+      Text links are used to navigate users from page to page. Text links should be used on its own single line with a right caret icon. 
+    </p>
+    <p>
+      <a href="#">Text Link</a>
+    </p>
   </div>
 </template>
 
 <script>
-import Code from '~/components/Code.vue'
 
 export default {
   layout: 'farmers',
-  components: {
-    Code
-  }
 }
 </script>
