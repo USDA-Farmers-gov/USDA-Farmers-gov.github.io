@@ -7,10 +7,9 @@
     <div v-for="button in data">
       <h3>{{ button.header }}</h3>
       <div v-html="button.description"></div>
-      <p>
-        <button v-if="button.classes !== 'feedback'" :class="setButtonClasses(button.classes)">Button</button>
-        <button v-if="button.classes === 'feedback'" :class="setButtonClasses(button.classes)">Yes</button>
-      </p>
+      
+      <p v-html="outputButtonMarkup(button.classes)"/>
+      
       <div v-if="button.buttons_3" class="container">
         <div class="row">
           <div v-for="btn in button.buttons_3" class="medium-4">
@@ -18,20 +17,17 @@
               <strong>{{ btn.header }}</strong>
             </p>
             <div class="button-container">
-              <span>
-                <button v-if="button.classes !== 'feedback'" :class="setButtonClasses(btn.classes)">Button</button>
-                <button v-if="button.classes === 'feedback'" :class="setButtonClasses(btn.classes)">Yes</button>
-              </span>
+              <span v-html="outputButtonMarkup(button.classes)"/>
             </div>
             <p class="text-medium">
               <span v-if="btn.background" class="label">BACKGROUND</span>
               <br/>
-              <span class="text-medium" v-html="btn.background"></span>
+              <span class="text-medium" v-html="addLineBreaks(btn.background)"></span>
             </p>
             <p v-if="btn.text" class="text-medium">
               <span class="label">TEXT</span>
               <br/>
-              <span class="text-medium" v-html="btn.text"></span>
+              <span class="text-medium" v-html="addLineBreaks(btn.text)"></span>
             </p>
           </div>
         </div>
@@ -44,10 +40,7 @@
               <strong>{{ btn.header }}</strong>
             </p>
             <div class="button-container">
-              <span>
-                <button v-if="button.classes !== 'feedback'" :class="setButtonClasses(btn.classes)">Button</button>
-                <button v-if="button.classes === 'feedback'" :class="setButtonClasses(btn.classes)">Yes</button>
-              </span>
+              <span v-html="outputButtonMarkup(button.classes)"/>
             </div>
             <p class="text-medium">
               <span v-if="btn.background" class="label">BACKGROUND</span>
@@ -104,9 +97,42 @@ export default {
               We utilize, and have provided, a variety of button sizes to accommodate different space constrictions and intended uses.
             </p>`,
           buttons_3: [
-            { header: 'Default', classes: '', background: 'border-radius: 4px;<br/>color: #1A6AD3;<br/>shadow: 0;1;4;0  #BBBBBB;', text: 'color: #FFFFFF;<br/>font-family: "Public Sans";<br/>font-size: 16px;<br/>font-weight: bold;<br/>line-height: 20px;' },
-            { header: 'Small', classes: 'sm-btn', background: 'border-radius: 4px; <br/> color: #1A6AD3; <br/> shadow: 0;1;4;0  #BBBBBB;', text: 'color: #FFFFFF; <br/> font-family: "Public Sans"; <br/> font-size: 16px; <br/> font-weight: bold; <br/> line-height: 20px;'},
-            { header: 'Large', classes: 'lg-btn', background: 'border-radius: 4px;<br/>color: #1A6AD3;<br/>shadow: 0;1;4;0  #BBBBBB;', text: 'color: #FFFFFF;<br/>font-family: "Public Sans";<br/>font-size: 20px;<br/>font-weight: bold;<br/>line-height: 26px;' }
+            { 
+              header: 'Default', 
+              classes: '', 
+              background: `border-radius: 4px;
+                            color: #1A6AD3;
+                            shadow: 0;1;4;0  #BBBBBB;`, 
+              text: `color: #FFFFFF;
+                      font-family: "Public Sans";
+                      font-size: 16px;
+                      font-weight: bold;
+                      line-height: 20px;` 
+            },
+            { 
+              header: 'Small', 
+              classes: 'sm-btn', 
+              background: `border-radius: 4px;
+                            color: #1A6AD3;
+                            shadow: 0;1;4;0  #BBBBBB;`, 
+              text: `color: #FFFFFF;
+                      font-family: "Public Sans";
+                      font-size: 16px;
+                      font-weight: bold;
+                      line-height: 20px;`
+            },
+            { 
+              header: 'Large', 
+              classes: 'lg-btn', 
+              background: `border-radius: 4px;
+                            color: #1A6AD3;
+                            shadow: 0;1;4;0  #BBBBBB;`, 
+              text: `color: #FFFFFF;
+                      font-family: "Public Sans";
+                      font-size: 20px;
+                      font-weight: bold;
+                      line-height: 26px;` 
+              }
           ],
 
           buttons_4: [
@@ -123,9 +149,45 @@ export default {
               Secondary buttons carry less visual weight than primary buttons, which helps ensure that when they are used together the primary action will be more noticeable. The difference between their “weight” is immediately noticeable, so that users can make the correct choice. These buttons utilize the same blue as primary buttons but only as an outline.
             </p>`,
           buttons_3: [
-            { header: 'Default', classes: 'outline', background: 'border: 1px #1A6AD3; <br> border-radius: 4px; <br> color: #FFFFFF; <br> shadow: 0;1;4;0  #BBBBBB;', text: 'color: #1A6AD3; <br> font-family: "Public Sans"; <br> font-size: 16px; <br> font-weight: bold; <br> line-height: 20px;' },
-            { header: 'Small', classes: 'sm-btn outline', background: 'border: 1px #1A6AD3; <br> border-radius: 4px; <br> color: #FFFFFF; <br> shadow: 0;1;4;0  #BBBBBB;', text: 'color: #1A6AD3; <br> font-family: "Public Sans"; <br> font-size: 16px; <br> font-weight: bold; <br> line-height: 20px;'},
-            { header: 'Large', classes: 'lg-btn outline', background: 'border: 1px #1A6AD3; <br> border-radius: 4px; <br> color: #FFFFFF; <br> shadow: 0;1;4;0  #BBBBBB;', text: 'color: #1A6AD3; <br> font-family: "Public Sans"; <br> font-size: 20px; <br> font-weight: bold; <br> line-height: 26px;' }
+            { 
+              header: 'Default', 
+              classes: 'outline', 
+              background: `border: 1px #1A6AD3;
+                            border-radius: 4px;
+                            color: #FFFFFF;
+                            shadow: 0;1;4;0  #BBBBBB;`, 
+              text: `color: #1A6AD3;
+                      font-family: "Public Sans";
+                      font-size: 16px;
+                      font-weight: bold;
+                      line-height: 20px;` 
+            },
+            { 
+              header: 'Small', 
+              classes: 'sm-btn outline', 
+              background: `border: 1px #1A6AD3;
+                            border-radius: 4px;
+                            color: #FFFFFF;
+                            shadow: 0;1;4;0  #BBBBBB;`, 
+              text: `color: #1A6AD3;
+                      font-family: "Public Sans";
+                      font-size: 16px;
+                      font-weight: bold;
+                      line-height: 20px;`
+            },
+            { 
+              header: 'Large', 
+              classes: 'lg-btn outline', 
+              background: `border: 1px #1A6AD3;
+                            border-radius: 4px;
+                            color: #FFFFFF;
+                            shadow: 0;1;4;0  #BBBBBB;`, 
+              text: `color: #1A6AD3;
+                      font-family: "Public Sans";
+                      font-size: 20px;
+                      font-weight: bold;
+                      line-height: 26px;` 
+            }
           ],
 
           buttons_4: [
@@ -157,7 +219,19 @@ export default {
             </p>`,
 
           buttons_4: [
-            { header: 'Hover', classes: 'hover-color feedback', background: 'border: 2px #1A6AD3; <br> color: #FFFFFF; <br> shadow: 0;1;4;0 <br> #BBBBBB;', text: 'color: #1A6AD3; <br> font-family: "Public Sans"; <br> font-size: 16px; <br> font-weight: bold; <br> line-height: 20px;' },
+            { 
+              header: 'Hover', 
+              classes: 'hover-color feedback', 
+              background: `border: 2px #1A6AD3;
+                            color: #FFFFFF;
+                            shadow: 0;1;4;0
+                            #BBBBBB;`, 
+              text: `color: #1A6AD3;
+                      font-family: "Public Sans";
+                      font-size: 16px;
+                      font-weight: bold;
+                      line-height: 20px;` 
+            },
             { header: 'Active', classes: 'active-color feedback', background: 'border: 2px #004785;', text: 'color: #004785;' },
             { header: 'Focus', classes: 'focus-color feedback', background: 'border: 2px #122E51;', text: 'color: #122E51;' },
             { header: 'Disabled', classes: 'disabled feedback', background: 'border: 2px #122E51; <br> shadow: #1B69D3;', text: 'color: #122E51;' }
@@ -170,6 +244,14 @@ export default {
     setButtonClasses(classes) {
       let baseClasses = 'btn'
       return classes ? baseClasses + ' ' + classes : baseClasses 
+    },
+    addLineBreaks(text) {
+      return text.trim().replace(/(?:\r\n|\r|\n)/g, '<br>');
+    },
+    outputButtonMarkup(classes) {
+      let btnClasses = this.setButtonClasses(classes)
+      let buttonText = (classes === 'feedback') ? 'Yes' : 'Button'
+      return '<button class="' + btnClasses + '">' + buttonText + '</button>'
     }
   }
 }

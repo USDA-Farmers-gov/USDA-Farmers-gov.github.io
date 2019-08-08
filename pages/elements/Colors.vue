@@ -59,7 +59,6 @@ export default {
             { classes: 'asphalt', caption: 'Asphalt #212121', description: 'Asphalt: typography and icons' }
             ]
         },
-
         {
           header: 'Secondary Colors',
           description: "The secondary colors also draw inspiration from hues found in nature such as bright dandelions and iconic red maple leaves. These colors compliment the primary colors by adding pops of accent elements throughout the site.",
@@ -69,7 +68,6 @@ export default {
             { classes: 'dandelion', caption: 'Dandelion #F7BE00',  description: 'Dandelion: heading styling, decorative elements' }
           ]
         },
-
         {
           header: 'Low Saturation Colors',
           description: "These colors provide a low saturation of the primary and secondary colors. They can be used as 508 compliant text backgrounds on system status indicators.",
@@ -79,7 +77,6 @@ export default {
             { classes: 'soft-red', caption: 'Soft Red #EEDAD9',  description: 'Soft Red: warning status ' }
           ]
         },
-
         {
           header: 'Grayscale',
           description: "These neutral grays provide a range of tones and shades for utilitarian purposes such as backgrounds and inactive states.",
@@ -91,7 +88,6 @@ export default {
             { classes: 'grey-5', caption: '#494440',  description: '' },
           ]
         },
-
         {
           header: 'Special States',
           description: "Special states are used to signify information about an interaction or situational identifiers.",
@@ -109,14 +105,9 @@ export default {
     setSwatchClasses(color) {
       let baseClass = 'medium-3 colors'
       return color.header.indexOf('Grayscale') === 0 ? baseClass + ' medium-greyscale' : baseClass
-
     },
     getDescriptionCount(examples) {
       return examples.filter(row => row.description).length
-    },
-    containsText(text, word) {
-      console.log(text)
-      return text.indexOf(word)
     }
   }
 }
