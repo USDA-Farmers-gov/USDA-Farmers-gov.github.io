@@ -1,0 +1,23 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th {
+  background: #fff;
+  font-size: 16px;
+  padding: 1rem;
+  text-align: left;
+}
+tr th:first-child, tr td:first-child {
+  padding-left: 2rem;
+}
+tr:nth-child(even) {
+  background: #fff
+}
+tr:nth-child(odd) {
+  background: #f7f7f7
+}
+td {
+  padding: 1rem;
+  margin: 0;
+}

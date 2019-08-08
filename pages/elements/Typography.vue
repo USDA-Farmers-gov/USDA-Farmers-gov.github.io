@@ -8,10 +8,10 @@
 
     <h2>Public Sans</h2>
 
-    <div class="container">
+    <div class="container typography-container">
       <div class="row">
-        <div class="medium-1">A a</div>
-        <div class="medium-8">
+        <div class="medium-2 text-large typography-letters ps-padding">A a</div>
+        <div class="medium-7 text-small typography-example">
           ABCDEFGHIJKLMNOPQRSTUVWXYZ
           <br/>
           abcdefghijklmnopqrstuvwxyz
@@ -42,13 +42,12 @@
           <td>{{ font.line_height }}</td>
         </tr>
         <tr>
-          <td colspan="5">
-            <h2>Merriweather*</h2>
-            <hr>
+          <td colspan="5" class="merriweather merriweather-container">
+            <h2 class="merriweather">Merriweather*</h2>
             <div class="container">
               <div class="row">
-                <div class="medium-1">A a</div>
-                <div class="medium-10">
+                <div class="medium-2 text-large typography-letters">A a</div>
+                <div class="medium-7 text-small typography-example">
                   ABCDEFGHIJKLMNOPQRSTUVWXYZ
                   <br/>
                   abcdefghijklmnopqrstuvwxyz
@@ -70,6 +69,9 @@
         </tr>
       </tbody>
     </table>
+    <div class="typography-footnote text-small">
+      *Currently used on blog only
+    </div>
 
     <h2>Lists</h2>
     <div>
@@ -106,39 +108,47 @@
     <div class="container">
       <div class="row">
         <div class="medium-5">
-          <p>
-            <strong>Normal Text</strong>
-            <br/>
-            &lt;24px size at 400 weight
-            <br/>
-            <strong>AA</strong> 4.5:1 minimum contrast ratio
-            <br/>
-            <strong>AAA</strong> 7:1 minimum contrast ratio
-          </p>
+          <strong>Normal Text</strong>
+          <div class="contrast-stats">
+            <p>
+              &lt;24px size at 400 weight
+            </p>
+            <p>
+              <strong>AA</strong> 4.5:1 minimum contrast ratio
+            </p>
+            <p>
+              <strong>AAA</strong> 7:1 minimum contrast ratio
+            </p>
+          </div>
 
-          <div v-for="btn in contrast_buttons_normal" class="row">
+          <div v-for="btn in contrast_buttons_normal" class="row contrast">
             <div :class="'mini-square ' + btn.classes">
               AAA
             </div>
-            {{ btn.description }}
+            <div>
+              {{ btn.description }}
+            </div>
           </div>
         </div>
 
         <div class="medium-5">
-          <p>
-            <strong>Large Text</strong>
-            <br/>
-            ≥19px size at 700 weight or ≥24px size
-            <br/>
-            <strong>AA</strong> 3:1 minimum contrast ratio
-            <br/>
-            <strong>AAA</strong> 4.5:1 minimum contrast ratio
-          </p>
+          <strong>Large Text</strong>
+          <div class="contrast-stats">
+            <p>
+              &#8805;19px sizeat 700 weight or &#8805;24px size
+            </p>
+            <p>
+              <strong>AA</strong> 3:1 minimum contrast ratio
+            </p>
+            <p>
+              <strong>AAA</strong> 4.5:1 minimum contrast ratio
+            </p>
+          </div>
 
-          <div v-for="btn in contrast_buttons_large_text" class="row">
-              <div :class="'mini-square ' + btn.classes">
-                AA
-              </div>
+          <div v-for="btn in contrast_buttons_large_text" class="row contrast">
+            <div :class="'mini-square ' + btn.classes">
+              AA
+            </div>
             <div>
               {{ btn.description }}
             </div>
@@ -155,12 +165,12 @@ export default {
   data() {
     return {
       public_sans: [
-        { name: '<h1>Header 1</h1>', font_family: 'Public Sans', weight: '700', font_size: '38px', line_height: '48px' },
-        { name: '<h2>Header 2</h2>', font_family: 'Public Sans', weight: '700', font_size: '28px', line_height: '38px' },
-        { name: '<h3>Header 3</h3>', font_family: 'Public Sans', weight: '700', font_size: '23px', line_height: '30px' },
-        { name: '<h4>Header 4</h4>', font_family: 'Public Sans', weight: '700', font_size: '20px', line_height: '26px' },
-        { name: '<h5>Header 5</h5>', font_family: 'Public Sans', weight: '700', font_size: '16px', line_height: '20px' },
-        { name: '<h6>Header 6</h6>', font_family: 'Public Sans', weight: '400', font_size: '12px', line_height: '18px' },
+        { name: '<h1>Headline 1</h1>', font_family: 'Public Sans', weight: '700', font_size: '38px', line_height: '48px' },
+        { name: '<h2>Headline 2</h2>', font_family: 'Public Sans', weight: '700', font_size: '28px', line_height: '38px' },
+        { name: '<h3>Headline 3</h3>', font_family: 'Public Sans', weight: '700', font_size: '23px', line_height: '30px' },
+        { name: '<h4>Headline 4</h4>', font_family: 'Public Sans', weight: '700', font_size: '20px', line_height: '26px' },
+        { name: '<h5>Headline 5</h5>', font_family: 'Public Sans', weight: '700', font_size: '16px', line_height: '20px' },
+        { name: '<h6>Headline 6</h6>', font_family: 'Public Sans', weight: '400', font_size: '12px', line_height: '18px' },
         { name: '<div class="label">Label 1</div>', font_family: 'Public Sans', weight: '700', font_size: '22px', line_height: '34px' },
         { name: '<div class="lead-p">Lead Paragraph</div>', font_family: 'Public Sans', weight: '300', font_size: '22px', line_height: '34px' },
         { name: '<div class="body-p">Body Copy</div>', font_family: 'Public Sans', weight: '400', font_size: '18px', line_height: '28px' },

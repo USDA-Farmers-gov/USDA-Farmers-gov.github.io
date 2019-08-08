@@ -1,0 +1,38 @@
+.text-small {
+  font-size: 1.2rem;
+}
+.text-large {
+  font-size: 6.4rem;
+}
+.typography-letters {
+  border-top: 1px solid #bbb;
+  letter-spacing: -6px;  
+}
+.ps-padding {
+    padding-left: 2rem;
+}
+.typography-example {
+  padding-top: 2rem;
+  line-height: 2rem;
+  letter-spacing: 10px;
+  border-top: 1px solid #bbb;
+}
+.typography-footnote {
+  padding: 3rem 0 4rem 0;
+}
+.typography-container {
+  padding-bottom: 2rem;
+}
+.contrast {
+  font-size: 1.4rem;
+  div:nth-child(2) {
+    padding-top: 1.8rem;
+  }
+}
+.contrast-stats p {
+  font-size: 1.6rem;
+}
+.merriweather-container {
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+}
