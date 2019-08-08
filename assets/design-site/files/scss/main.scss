@@ -53,10 +53,10 @@ main {
   padding: 10px;
 }
 
-.color-groups {
-  padding-left: 0;
-}
-
 *, ::after, ::before {
     box-sizing: border-box;
+}
+
+.container {
+  padding-left: 0;
 }

@@ -3,12 +3,12 @@
     <img class="logo" src="../assets/images/farmers-logo.svg"/>
     <ul class="menu-container">
       <li v-for="item in menu">
-        <span :class="setCategoryClass(item.category)" 
+        <div :class="setCategoryClass(item.category)" 
               @click="setActiveCategoryOnClick(item.category)">
                 {{ item.category }}
                 <i v-if="activeCategory === item.category" class="arrow up"></i>
                 <i v-if="activeCategory !== item.category" class="arrow down"></i>
-        </span>
+        </div>
         
         <ul v-if="activeCategory === item.category" class="menu-links">
           <li :class="currentPath === link.path ? 'active soft-green' : ''" v-for="link in item.links">
