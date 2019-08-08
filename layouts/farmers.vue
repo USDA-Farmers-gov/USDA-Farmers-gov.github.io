@@ -1,11 +1,16 @@
 <template>
-  <div class="main">
-      <div class="menu">
-        <Menu/>
-      </div>
-      <div class="content">
-        <nuxt />
-      </div>
+  <div>
+    <header>
+      <h1>Farmers Design System</h1>
+    </header>
+    <div class="page">
+        <div class="menu">
+          <Menu/>
+        </div>
+        <main>
+          <nuxt />
+        </main>
+    </div>
   </div>
 </template>
 

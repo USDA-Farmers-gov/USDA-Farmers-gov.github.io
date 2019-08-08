@@ -10,17 +10,41 @@
 /** TODO: May need to adjust these numbers as they are overriding the design system **/
 
 body {
-  font-family: 'Public Sans';
+  font-family: 'Public Sans';  
+  margin: 0;
+  padding: 0;
 }
 /** END TODO **/
 
-.main {
+header {
+  background: $heritage;
+  text-align: center;
+  color: #fff;
+  margin-bottom:5rem;
+  height:15rem;
+  font-size: 5rem;
+
+  h1 {
+    color: #fff;
+    font-size: 8rem;
+    padding:0;
+    margin:0;
+    vertical-align: middle;
+    line-height:13.5rem;
+  }
+}
+img.logo {
+  display: block;
+  width: 18rem;
+  margin: auto;
+}
+.page {
   max-width: 1140px;
   margin: auto;
   display: grid;
   grid-template-columns: 217px auto;
 }
-.content {
+main {
   padding-left:6rem;
 }
 

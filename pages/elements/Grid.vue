@@ -1,12 +1,11 @@
 <template>
   <div>
     <h2>Grid</h2>
-    <div>
+    <p>
       This 12-column grid provides the basic structure for website content and creates flexibility to accommodate different viewport sizes. Grids enable a consistent experience across different pages of the site and create a way to effortlessly organize design elements through uniformity and precise alignment.
-    </div>
+    </p>
 
     <div class="container grid-example">
-      <h2>Grid</h2>
       <div class="row">
         <div class="medium-12">
           <div class="col-content-example">1/1</div>
