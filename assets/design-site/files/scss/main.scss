@@ -5,6 +5,7 @@
 @import '_menu.scss';
 @import '_kitchen-sink.scss';
 /** TODO: May need to adjust these numbers as they are overriding the design system **/
+
 body {
   font-family: 'Public Sans';
 }
@@ -23,4 +24,8 @@ body {
 .preview {
   border: 2px solid #ccc;
   padding: 10px;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
 }
