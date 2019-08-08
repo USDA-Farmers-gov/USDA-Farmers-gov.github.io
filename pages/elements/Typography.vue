@@ -72,8 +72,10 @@
     </table>
 
     <h2>Lists</h2>
-    <div class="medium-12">
-      There are two recommended ways of organizing bulleted information. The first is unorganized, where information can be shown in any order. The second list is organized based on priority.
+    <div>
+      <p>
+        There are two recommended ways of organizing bulleted information. The first is unorganized, where information can be shown in any order. The second list is organized based on priority.
+      </p>
       <div class="container">
         <div class="row">
           <div class="medium-4">
@@ -97,21 +99,22 @@
     </div>
 
     <h2>Text Contrast</h2>
-    <div>
+    <p>
       All Text must meet the minimum AA Web Content Accessibliity Guidlines to be 508 compliant. This is so that text is accessible for for all users. The text and background color combinations below are used throughout the farmers.gov site and are an integral part of our visual styles.
-    </div>
+    </p>
 
     <div class="container">
       <div class="row">
         <div class="medium-5">
-          <strong>Normal Text</strong>
-          <br/>
-          &lt;24px size at 400 weight
-          <br/>
-          <strong>AA</strong> 4.5:1 minimum contrast ratio
-          <br/>
-          <strong>AAA</strong> 7:1 minimum contrast ratio
-          <br/>
+          <p>
+            <strong>Normal Text</strong>
+            <br/>
+            &lt;24px size at 400 weight
+            <br/>
+            <strong>AA</strong> 4.5:1 minimum contrast ratio
+            <br/>
+            <strong>AAA</strong> 7:1 minimum contrast ratio
+          </p>
 
           <div v-for="btn in contrast_buttons_normal" class="row">
             <div :class="'mini-square ' + btn.classes">
@@ -122,13 +125,15 @@
         </div>
 
         <div class="medium-5">
-          <strong>Large Text</strong>
-          <br/>
-          ≥19px size at 700 weight or ≥24px size
-          <br/>
-          <strong>AA</strong> 3:1 minimum contrast ratio
-          <br/>
-          <strong>AAA</strong> 4.5:1 minimum contrast ratio
+          <p>
+            <strong>Large Text</strong>
+            <br/>
+            ≥19px size at 700 weight or ≥24px size
+            <br/>
+            <strong>AA</strong> 3:1 minimum contrast ratio
+            <br/>
+            <strong>AAA</strong> 4.5:1 minimum contrast ratio
+          </p>
 
           <div v-for="btn in contrast_buttons_large_text" class="row">
               <div :class="'mini-square ' + btn.classes">

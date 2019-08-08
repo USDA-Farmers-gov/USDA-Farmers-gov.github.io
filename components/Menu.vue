@@ -1,6 +1,7 @@
 <template>
   <div>
-    <ul>
+    <img class="logo" src="../assets/images/farmers-logo.svg"/>
+    <ul class="menu-container">
       <li v-for="item in menu">
         <span :class="setCategoryClass(item.category)" 
               @click="setActiveCategoryOnClick(item.category)">
@@ -39,7 +40,7 @@
             category: 'UI Components',
             links:  [
                       { name: 'Buttons', path: '/ui/Buttons'},
-                      { name: 'Links', path: '/ui/Links'},
+                      // { name: 'Links', path: '/ui/Links'},
                     ]
           },
           {
