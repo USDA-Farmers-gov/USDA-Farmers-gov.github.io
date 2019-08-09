@@ -7,54 +7,26 @@
     <div class="buttons" v-for="button in data">
       <h3>{{ button.header }}</h3>
       <div v-html="button.description"></div>
-      
       <p class="button-default" v-html="outputButtonMarkup(button.classes)"/>
-
       <p class="medium-text" v-if="button.default_text" v-html="addLineBreaks(button.default_text)"></p>
       
       <div v-if="button.buttons_3" class="container">
         <div class="row">
-          <div v-for="btn in button.buttons_3" class="medium-4">
-            <p v-if="btn.header">
-              <strong>{{ btn.header }}</strong>
-            </p>
-            <div class="button-container">
-                <div v-html="outputButtonMarkup(btn.classes, true)" style="display:inline-block"/>
-            </div>
-            <p v-if="btn.background.length" class="text-medium">
-              <span v-if="btn.background" class="label">BACKGROUND</span>
-              <br/>
-              <span class="text-medium" v-html="addLineBreaks(btn.background)"></span>
-            </p>
-            <p v-if="btn.text.length" class="text-medium">
-              <span class="label">TEXT</span>
-              <br/>
-              <span class="text-medium" v-html="addLineBreaks(btn.text)"></span>
-            </p>
-          </div>
+          <Example v-if="button.buttons_3" v-for="btn in button.buttons_3" 
+              :columns="3" 
+              :header="btn.header" 
+              :markup="outputButtonMarkup(btn.classes, true)" 
+              :examples="{ background: btn.background, text: btn.text }"/>
         </div>
       </div>
 
       <div v-if="button.buttons_4" class="container">
         <div class="row">
-          <div v-for="(btn, index) in button.buttons_4" class="medium-3">
-            <p>
-              <strong>{{ btn.header }}</strong>
-            </p>
-            <div class="button-container">
-              <span v-html="outputButtonMarkup(btn.classes, false, index)"/>
-            </div>
-            <p v-if="btn.background.length" class="text-medium">
-              <span v-if="btn.background" class="label">BACKGROUND</span>
-              <br/>
-              <span class="text-medium" v-html="btn.background"></span>
-            </p>
-            <p v-if="btn.text.length" class="text-medium">
-              <span class="label">TEXT</span>
-              <br/>
-              <span class="text-medium" v-html="btn.text"></span>
-            </p>
-          </div>
+          <Example v-for="(btn, index) in button.buttons_4" 
+            :columns="4" 
+            :header="btn.header" 
+            :markup="outputButtonMarkup(btn.classes, false, index)" 
+            :examples="{ background: btn.background, text: btn.text }" />
         </div>
       </div>
     </div>
@@ -78,6 +50,8 @@
 </template>
 
 <script>
+import utils from '~/assets/js/utils'
+
 export default {
   layout: 'farmers',
   data() {
@@ -86,18 +60,9 @@ export default {
         {
           header: 'Primary Buttons',
           classes: '',
-          description: `<p>
-              Primary buttons carry a strong visual prominence to signify that they are the expected action, versus possible secondary or tertiary actions.
-            </p>
-            <p>
-              Our primary buttons are blue as the color allows for distinct contrast with the rest of the
-              visuals on the site (mostly white and green), and thus support its purpose of highlighting an important action. We recommend using upper case for the labels with those buttons, as
-              well as keeping the actions within the buttons discrete and simple. Avoid wrapping button
-              labels in two rows of text.
-            </p>
-            <p>
-              We utilize, and have provided, a variety of button sizes to accommodate different space constrictions and intended uses.
-            </p>`,
+          description: `<p>Primary buttons carry a strong visual prominence to signify that they are the expected action, versus possible secondary or tertiary actions.</p>
+            <p>Our primary buttons are blue as the color allows for distinct contrast with the rest of the visuals on the site (mostly white and green), and thus support its purpose of highlighting an important action. We recommend using upper case for the labels with those buttons, as well as keeping the actions within the buttons discrete and simple. Avoid wrapping button labels in two rows of text.</p>
+            <p>We utilize, and have provided, a variety of button sizes to accommodate different space constrictions and intended uses.</p>`,
           buttons_3: [
             { 
               header: 'Default', 
@@ -147,9 +112,7 @@ export default {
         {
           header: 'Secondary Buttons',
           classes: 'outline',
-          description: `<p>
-              Secondary buttons carry less visual weight than primary buttons, which helps ensure that when they are used together the primary action will be more noticeable. The difference between their “weight” is immediately noticeable, so that users can make the correct choice. These buttons utilize the same blue as primary buttons but only as an outline.
-            </p>`,
+          description: `<p>Secondary buttons carry less visual weight than primary buttons, which helps ensure that when they are used together the primary action will be more noticeable. The difference between their “weight” is immediately noticeable, so that users can make the correct choice. These buttons utilize the same blue as primary buttons but only as an outline.</p>`,
           buttons_3: [
             { 
               header: 'Default', 
@@ -202,9 +165,7 @@ export default {
         {
           header: 'Tertiary Buttons',
           classes: 'tertiary',
-          description: `<p>
-              The tertiary button should be used for instances of user actions that are of less importance than those reserved for primary and secondary buttons. Those buttons should be used for card design. Tertiary buttons should not be used in place of ‘text links,’ as tertiary buttons are not used for user navigation.
-            </p>`,
+          description: `<p>The tertiary button should be used for instances of user actions that are of less importance than those reserved for primary and secondary buttons. Those buttons should be used for card design. Tertiary buttons should not be used in place of ‘text links,’ as tertiary buttons are not used for user navigation.</p>`,
           default_text: `color: #1A6AD3;
                   font-family: "Public Sans";
                   font-size: 16px;
@@ -220,9 +181,7 @@ export default {
         {
           header: 'Feedback Buttons',
           classes: 'feedback',
-          description: `<p>
-              The tertiary button should be used for instances of user actions that are of less importance than those reserved for primary and secondary buttons. Those buttons should be used for card design. Tertiary buttons should not be used in place of ‘text links,’ as tertiary buttons are not used for user navigation.
-            </p>`,
+          description: `<p>The tertiary button should be used for instances of user actions that are of less importance than those reserved for primary and secondary buttons. Those buttons should be used for card design. Tertiary buttons should not be used in place of ‘text links,’ as tertiary buttons are not used for user navigation.</p>`,
           buttons_4: [
             { 
               header: 'Default', classes: 'feedback', 
@@ -294,7 +253,7 @@ export default {
       return { width: btnWidth, height: btnHeight }
     },
     addLineBreaks(text) {
-      return text.trim().replace(/(?:\r\n|\r|\n)/g, '<br>');
+      return utils.addLineBreaks(text)
     },
     
   }
