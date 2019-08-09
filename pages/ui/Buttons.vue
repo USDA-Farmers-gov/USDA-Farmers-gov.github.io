@@ -4,11 +4,13 @@
     <p>
       Buttons are used to communicate important actions the users can take, such as download, apply, or start. Depending on the context and desired outcome of the design, there are multiple styles and sizes of buttons available for use.
     </p>
-    <div v-for="button in data">
+    <div class="buttons" v-for="button in data">
       <h3>{{ button.header }}</h3>
       <div v-html="button.description"></div>
       
-      <p v-html="outputButtonMarkup(button.classes)"/>
+      <p class="button-default" v-html="outputButtonMarkup(button.classes)"/>
+
+      <p class="medium-text" v-if="button.default_text" v-html="addLineBreaks(button.default_text)"></p>
       
       <div v-if="button.buttons_3" class="container">
         <div class="row">
@@ -17,14 +19,16 @@
               <strong>{{ btn.header }}</strong>
             </p>
             <div class="button-container">
-              <span v-html="outputButtonMarkup(button.classes)"/>
+              <div>
+                <div v-html="outputButtonMarkup(btn.classes)" style="display:inline-block"/>
+              </div>
             </div>
-            <p class="text-medium">
+            <p v-if="btn.background.length" class="text-medium">
               <span v-if="btn.background" class="label">BACKGROUND</span>
               <br/>
               <span class="text-medium" v-html="addLineBreaks(btn.background)"></span>
             </p>
-            <p v-if="btn.text" class="text-medium">
+            <p v-if="btn.text.length" class="text-medium">
               <span class="label">TEXT</span>
               <br/>
               <span class="text-medium" v-html="addLineBreaks(btn.text)"></span>
@@ -40,14 +44,14 @@
               <strong>{{ btn.header }}</strong>
             </p>
             <div class="button-container">
-              <span v-html="outputButtonMarkup(button.classes)"/>
+              <span v-html="outputButtonMarkup(btn.classes)"/>
             </div>
-            <p class="text-medium">
+            <p v-if="btn.background.length" class="text-medium">
               <span v-if="btn.background" class="label">BACKGROUND</span>
               <br/>
               <span class="text-medium" v-html="btn.background"></span>
             </p>
-            <p v-if="btn.text" class="text-medium">
+            <p v-if="btn.text.length" class="text-medium">
               <span class="label">TEXT</span>
               <br/>
               <span class="text-medium" v-html="btn.text"></span>
@@ -203,7 +207,11 @@ export default {
           description: `<p>
               The tertiary button should be used for instances of user actions that are of less importance than those reserved for primary and secondary buttons. Those buttons should be used for card design. Tertiary buttons should not be used in place of ‘text links,’ as tertiary buttons are not used for user navigation.
             </p>`,
-
+          default_text: `color: #1A6AD3;
+                  font-family: "Public Sans";
+                  font-size: 16px;
+                  font-weight: bold;
+                  line-height: 20px;`,
           buttons_4: [
             { header: 'Hover', classes: 'hover-color tertiary', background: '', text: 'color: #004785;' },
             { header: 'Active', classes: 'active-color tertiary', background: '', text: 'color: #122E51;' },
@@ -217,7 +225,6 @@ export default {
           description: `<p>
               The tertiary button should be used for instances of user actions that are of less importance than those reserved for primary and secondary buttons. Those buttons should be used for card design. Tertiary buttons should not be used in place of ‘text links,’ as tertiary buttons are not used for user navigation.
             </p>`,
-
           buttons_4: [
             { 
               header: 'Hover', 
@@ -250,17 +257,27 @@ export default {
     },
     outputButtonMarkup(classes) {
       let btnClasses = this.setButtonClasses(classes)
-      let buttonText = (classes === 'feedback') ? 'Yes' : 'Button'
-      return '<button class="' + btnClasses + '">' + buttonText + '</button>'
+      let buttonText = (classes.indexOf('feedback') >= 0) ? 'Yes' : 'Button'
+      return `<button class="` + btnClasses + `">` + buttonText + `</button>
+              <div class="button-width"></div>
+              <div class="button-dimension">100px</div>`
     }
   }
 }
 </script>
 
 <style>
+  .buttons {
+    padding-bottom: 4rem;
+  }
+  .button-default {
+    padding-top: 3rem;
+  }
   .button-container {
-    display:flex;
-     align-items: flex-start;
-     height: 70px;
+    height: 60px;
+  }
+  .tertiary {
+    position: relative;
+    left: -10px;
   }
 </style>
