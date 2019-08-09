@@ -19,9 +19,7 @@
               <strong>{{ btn.header }}</strong>
             </p>
             <div class="button-container">
-              <div>
-                <div v-html="outputButtonMarkup(btn.classes)" style="display:inline-block"/>
-              </div>
+                <div v-html="outputButtonMarkup(btn.classes, true)" style="display:inline-block"/>
             </div>
             <p v-if="btn.background.length" class="text-medium">
               <span v-if="btn.background" class="label">BACKGROUND</span>
@@ -39,12 +37,12 @@
 
       <div v-if="button.buttons_4" class="container">
         <div class="row">
-          <div v-for="btn in button.buttons_4" class="medium-3">
+          <div v-for="(btn, index) in button.buttons_4" class="medium-3">
             <p>
               <strong>{{ btn.header }}</strong>
             </p>
             <div class="button-container">
-              <span v-html="outputButtonMarkup(btn.classes)"/>
+              <span v-html="outputButtonMarkup(btn.classes, false, index)"/>
             </div>
             <p v-if="btn.background.length" class="text-medium">
               <span v-if="btn.background" class="label">BACKGROUND</span>
@@ -227,8 +225,7 @@ export default {
             </p>`,
           buttons_4: [
             { 
-              header: 'Hover', 
-              classes: 'hover-color feedback', 
+              header: 'Default', classes: 'feedback', 
               background: `border: 2px #1A6AD3;
                             color: #FFFFFF;
                             shadow: 0;1;4;0
@@ -239,29 +236,67 @@ export default {
                       font-weight: bold;
                       line-height: 20px;` 
             },
-            { header: 'Active', classes: 'active-color feedback', background: 'border: 2px #004785;', text: 'color: #004785;' },
-            { header: 'Focus', classes: 'focus-color feedback', background: 'border: 2px #122E51;', text: 'color: #122E51;' },
-            { header: 'Disabled', classes: 'disabled feedback', background: 'border: 2px #122E51; <br> shadow: #1B69D3;', text: 'color: #122E51;' }
+            { 
+              header: 'Hover', classes: 'hover-color feedback', background: 'border: 2px #004785;', text: 'color: #004785;'
+            },
+            { header: 'Active', classes: 'active-color feedback', background: 'border: 2px #122E51;', text: 'color: #122E51;' },
+            { header: 'Focus', classes: 'focus-color feedback', background: 'border: 2px #122E51; <br> shadow: #1B69D3;', text: 'color: #122E51;' }
+
           ],
         },
       ]
     }
   },
   methods: {
+    outputButtonMarkup(classes, showDimensions, index) {
+      let btnClasses = this.setButtonClasses(classes)
+      let dimensions = this.getButtonDimensions(btnClasses)
+      let buttonText = (classes.indexOf('feedback') >= 0) ? 'Yes' : 'Button'
+      let gridClasses = classes ? 'button-grid ' + classes : 'button-grid' 
+      if(classes.indexOf('feedback') >= 0 && index === 0) showDimensions = true
+
+      return showDimensions ? `<div class="` + gridClasses + `">
+                <div class="button">
+                  <button class="` + btnClasses + `">` + buttonText + `</button>
+                </div>
+                <div class="button-height"></div>
+                <div class="button-dimension-height">` + dimensions.height + `px</div>
+                <div class="button-width"></div>
+                <div></div>
+                <div></div>
+                <div class="button-dimension-width">` + dimensions.width + `px</div>
+              </div>`
+              : `<button class="` + btnClasses + `">` + buttonText + `</button>`
+    },    
     setButtonClasses(classes) {
       let baseClasses = 'btn'
       return classes ? baseClasses + ' ' + classes : baseClasses 
     },
+    getButtonDimensions(btnClasses) {
+      let btnWidth = 134;
+      let btnHeight = 42; 
+
+      if(btnClasses.indexOf('sm-btn') >= 0) {
+        btnWidth = 96
+        btnHeight = 32
+      }
+
+      if(btnClasses.indexOf('lg-btn') >= 0) {
+        btnWidth = 216
+        btnHeight = 52
+      }
+
+      if(btnClasses.indexOf('feedback') >= 0) {
+        btnWidth = 64
+        btnHeight = 64
+      }
+
+      return { width: btnWidth, height: btnHeight }
+    },
     addLineBreaks(text) {
       return text.trim().replace(/(?:\r\n|\r|\n)/g, '<br>');
     },
-    outputButtonMarkup(classes) {
-      let btnClasses = this.setButtonClasses(classes)
-      let buttonText = (classes.indexOf('feedback') >= 0) ? 'Yes' : 'Button'
-      return `<button class="` + btnClasses + `">` + buttonText + `</button>
-              <div class="button-width"></div>
-              <div class="button-dimension">100px</div>`
-    }
+    
   }
 }
 </script>
@@ -272,9 +307,6 @@ export default {
   }
   .button-default {
     padding-top: 3rem;
-  }
-  .button-container {
-    height: 60px;
   }
   .tertiary {
     position: relative;
