@@ -7,16 +7,16 @@
       <span v-html="markup"/>
     </div>
 
-    <p v-if="examples.background" class="text-medium">
-      <span v-if="examples.background" class="label">BACKGROUND</span>
+    <p v-if="code.background" class="text-medium">
+      <span v-if="code.background" class="label">BACKGROUND</span>
       <br/>
-      <span class="text-medium" v-html="addLineBreaks(examples.background)"></span>
+      <span class="text-medium" v-html="addLineBreaks(code.background)"></span>
     </p>
     
-    <p v-if="examples.text" class="text-medium">
+    <p v-if="code.text" class="text-medium">
       <span class="label">TEXT</span>
       <br/>
-      <span class="text-medium" v-html="addLineBreaks(examples.text)"></span>
+      <span class="text-medium" v-html="addLineBreaks(code.text)"></span>
     </p>
   </div>
 </template>
@@ -32,7 +32,7 @@
       },
       header: String,
       markup: String,
-      examples: [ Object, Array ]
+      code: [ Object, Array ]
     },
     methods: {
       setFlexClass() {
