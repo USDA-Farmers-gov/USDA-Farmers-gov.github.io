@@ -86,18 +86,9 @@ export default {
         {
           header: 'Primary Buttons',
           classes: '',
-          description: `<p>
-              Primary buttons carry a strong visual prominence to signify that they are the expected action, versus possible secondary or tertiary actions.
-            </p>
-            <p>
-              Our primary buttons are blue as the color allows for distinct contrast with the rest of the
-              visuals on the site (mostly white and green), and thus support its purpose of highlighting an important action. We recommend using upper case for the labels with those buttons, as
-              well as keeping the actions within the buttons discrete and simple. Avoid wrapping button
-              labels in two rows of text.
-            </p>
-            <p>
-              We utilize, and have provided, a variety of button sizes to accommodate different space constrictions and intended uses.
-            </p>`,
+          description: `<p>Primary buttons carry a strong visual prominence to signify that they are the expected action, versus possible secondary or tertiary actions.</p>
+            <p>Our primary buttons are blue as the color allows for distinct contrast with the rest of the visuals on the site (mostly white and green), and thus support its purpose of highlighting an important action. We recommend using upper case for the labels with those buttons, as well as keeping the actions within the buttons discrete and simple. Avoid wrapping button labels in two rows of text.</p>
+            <p>We utilize, and have provided, a variety of button sizes to accommodate different space constrictions and intended uses.</p>`,
           buttons_3: [
             { 
               header: 'Default', 
@@ -147,9 +138,7 @@ export default {
         {
           header: 'Secondary Buttons',
           classes: 'outline',
-          description: `<p>
-              Secondary buttons carry less visual weight than primary buttons, which helps ensure that when they are used together the primary action will be more noticeable. The difference between their “weight” is immediately noticeable, so that users can make the correct choice. These buttons utilize the same blue as primary buttons but only as an outline.
-            </p>`,
+          description: `<p>Secondary buttons carry less visual weight than primary buttons, which helps ensure that when they are used together the primary action will be more noticeable. The difference between their “weight” is immediately noticeable, so that users can make the correct choice. These buttons utilize the same blue as primary buttons but only as an outline.</p>`,
           buttons_3: [
             { 
               header: 'Default', 
@@ -202,9 +191,7 @@ export default {
         {
           header: 'Tertiary Buttons',
           classes: 'tertiary',
-          description: `<p>
-              The tertiary button should be used for instances of user actions that are of less importance than those reserved for primary and secondary buttons. Those buttons should be used for card design. Tertiary buttons should not be used in place of ‘text links,’ as tertiary buttons are not used for user navigation.
-            </p>`,
+          description: `<p>The tertiary button should be used for instances of user actions that are of less importance than those reserved for primary and secondary buttons. Those buttons should be used for card design. Tertiary buttons should not be used in place of ‘text links,’ as tertiary buttons are not used for user navigation.</p>`,
           default_text: `color: #1A6AD3;
                   font-family: "Public Sans";
                   font-size: 16px;
@@ -220,9 +207,7 @@ export default {
         {
           header: 'Feedback Buttons',
           classes: 'feedback',
-          description: `<p>
-              The tertiary button should be used for instances of user actions that are of less importance than those reserved for primary and secondary buttons. Those buttons should be used for card design. Tertiary buttons should not be used in place of ‘text links,’ as tertiary buttons are not used for user navigation.
-            </p>`,
+          description: `<p>The tertiary button should be used for instances of user actions that are of less importance than those reserved for primary and secondary buttons. Those buttons should be used for card design. Tertiary buttons should not be used in place of ‘text links,’ as tertiary buttons are not used for user navigation.</p>`,
           buttons_4: [
             { 
               header: 'Default', classes: 'feedback', 

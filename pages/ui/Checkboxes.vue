@@ -6,10 +6,10 @@
     </p>
 
     <h3>Form Checkboxes</h3>
+
     <p>
       This style of checkboxes is commonly used in forms. Users can select one or more options. If only one option can be selected, use <a href="#">radio buttons</a>. Checkbox icons and their labels should be left-aligned and vertical for better scannability when appropriate.
     </p>
-
     <p>
       <input type="checkbox" name="example-1" value="Option 1" title="Option 1" tabindex="-1">
       <label for="example-1" tabindex="-1" class="checkbox">Checkbox Label</label>
@@ -19,57 +19,26 @@
       <label for="option-2" tabindex="-1" class="checkbox" checked="">Checkbox Label</label>
     </p>
 
-    <div class="container">
+    <div v-if="checkboxes.length" class="container">
       <div class="row">
-        <div class="medium-3">
-          <strong>Unselected</strong>
-          <br/>
-          <input type="checkbox" name="example-1" value="Option 1" title="Option 1" tabindex="-1">
-          <label for="example-1" tabindex="-1" class="checkbox"></label>
-          <div class="text-medium">
-            <div class="label">BACKGROUND</div>
-            color: #FFFFFF;
+        <div v-for="item in checkboxes" class="medium-3">
+          <strong>{{ item.type }}</strong>
             <br/>
-            border: 2px #707070;
-            <br/>
-            border-radius: 2px;
-          </div>
-        </div>
-        <div class="medium-3">
-          <strong>Selected</strong>
-          <br/>
-          <input type="checkbox" checked="" name="option-2" value="Option 2" title="Option 2" tabindex="-1">
-          <label for="option-2" tabindex="-1" class="checkbox" checked=""></label>
-          <div class="text-medium">
-            <div class="label">BACKGROUND</div>
-            <div>color: #006546;</div>
-            <div class="label">CHECKMARK</div>
-            <div>color: #FFFFFF;</div>
-          </div>
-        </div>
-        <div class="medium-3">
-          <strong>Focused</strong>
-          <br/>
-          <input type="checkbox" checked="" name="option-2" value="Option 2" title="Option 2" tabindex="-1">
-          <label for="option-2" tabindex="-1" class="checkbox" checked=""></label>
-          <div class="text-medium">
-            <div class="label">BACKGROUND</div>
-            <div>shadow: #1B69D3;</div>
-          </div>
-        </div>
-        <div class="medium-3">
-          <strong>Disabled</strong>
-          <br/>
-          <input type="checkbox" disabled="" name="option-4" value="Option 4" title="Option 4" tabindex="-1">
-          <label for="option-4" tabindex="-1" class="checkbox"></label>
-          <div class="text-medium">
-            <div class="label">BACKGROUND</div>
-            <div>
-              color: #F7F7F7;
-              <br/>
-              border: 2px #BBBBBB;
+            <div class="checkbox-card card" tabindex="0">
+              <input type="checkbox" name="checkbox-card" value="Card Checkbox" title="Card Checkbox" tabindex="-1">
+              <label for="checkbox-card" tabindex="-1">Card Checkbox</label>
             </div>
-          </div>
+
+            <p v-if="item.background" class="text-medium">
+              <span class="label">BACKGROUND</span>
+              <br/>
+              <span class="text-medium" v-html="addLineBreaks(item.background)"></span>
+            </p>
+            <p v-if="item.checkmark" class="text-medium">
+              <span class="label">CHECKMARK</span>
+              <br/>
+              <span class="text-medium" v-html="addLineBreaks(item.checkmark)"></span>
+            </p>
         </div>
       </div>
     </div>
@@ -78,12 +47,12 @@
     <p>
       A checkbox can be selected and deselected by clicking or tapping on the checkbox as well as the text label.
     </p>
-
     <p>
       [CHECKBOX LABEL]
     </p>
 
     <h3>Card Checkboxes</h3>
+
     <p>
       Card checkboxes are used in interactive tools. The element allows space for icons when appropriate, as well as typographical hierarchy. The entire card is a large touch/click target which minimizes user input error and allows for an easier interaction on a mobile device. Users can select one or more options. If only one option can be selected, use <a href="#">card radio buttons</a>.
     </p>
@@ -184,6 +153,32 @@
     layout: 'farmers',
     data() {
       return {
+        checkboxes: [
+          {
+            type: 'Unselected',
+            classes: '',
+            background: `color: #FFFFFF;
+                        border: 2px #707070;
+                        border-radius: 2px;`
+          },
+          {
+            type: 'Selected',
+            classes: '',
+            background: `color: #006546;`,
+            checkmark: `color: #FFFFFF;`
+          },
+          {
+            type: 'Focused',
+            classes: '',
+            background: `shadow: #1B69D3;`
+          },
+          {
+            type: 'Disabled',
+            classes: '',
+            background: `color: #F7F7F7;
+                        border: 2px #BBBBBB;`
+          },
+        ],
         specs: [
           { 
             header: 'Specs',
