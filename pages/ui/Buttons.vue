@@ -15,7 +15,7 @@
       <div v-if="button.buttons_3" class="container">
         <div class="row">
           <div v-for="btn in button.buttons_3" class="medium-4">
-            <p>
+            <p v-if="btn.header">
               <strong>{{ btn.header }}</strong>
             </p>
             <div class="button-container">
