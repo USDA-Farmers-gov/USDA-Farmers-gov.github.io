@@ -7,9 +7,7 @@
     <div class="buttons" v-for="button in data">
       <h3>{{ button.header }}</h3>
       <div v-html="button.description"></div>
-      
       <p class="button-default" v-html="outputButtonMarkup(button.classes)"/>
-
       <p class="medium-text" v-if="button.default_text" v-html="addLineBreaks(button.default_text)"></p>
       
       <div v-if="button.buttons_3" class="container">
@@ -78,6 +76,8 @@
 </template>
 
 <script>
+import utils from '~/assets/js/utils'
+
 export default {
   layout: 'farmers',
   data() {
@@ -294,7 +294,7 @@ export default {
       return { width: btnWidth, height: btnHeight }
     },
     addLineBreaks(text) {
-      return text.trim().replace(/(?:\r\n|\r|\n)/g, '<br>');
+      return utils.addLineBreaks(text)
     },
     
   }
