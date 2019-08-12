@@ -43,12 +43,9 @@ img.logo {
   max-width: 1140px;
   margin: auto;
   display:flex;
-  // display: grid;
-  // grid-template-columns: 217px auto;
 
   @media only screen and (max-width: 760px) {
     flex-direction: column;
-    // grid-template-columns: auto;
   }
 }
 main {

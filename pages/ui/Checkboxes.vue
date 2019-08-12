@@ -18,7 +18,7 @@
         <Example v-for="(item, index) in checkboxes" 
           columns="4" 
           :header="item.type" 
-          :markup="outputCheckboxMarkup({ showLabel: false })" 
+          :markup="outputCheckboxMarkup({ label: '&nbsp;', checked: item.checked })" 
           :code="{ background: item.background, checkmark: item.checkmark }" 
           :key="index"/>
       </div>
@@ -53,14 +53,14 @@
           <Example v-for="(item, index) in checkbox.examples_1" 
             columns="3" 
             :header="item.type" 
-            :markup="outputCardMarkup({ label: 'Card Checkbox' })" 
+            :markup="outputCardMarkup({ label: 'Card Checkbox', checked: item.checked })" 
             :code="{ card: item.card, checkbox: item.checkbox }" 
             :key="index"/>
         </div>
         <div class="row">
           <Example v-for="(item, index) in checkbox.examples_2" 
             columns="3" :header="item.type" 
-            :markup="outputCardMarkup({ label: 'Card Checkbox' })" 
+            :markup="outputCardMarkup({ label: 'Card Checkbox', checked: item.checked })" 
             :code="{ card: item.card, checkbox: item.checkbox }" 
             :key="index"/>
         </div>
@@ -91,8 +91,6 @@
 </template>
 
 <script>
-  import utils from '~/assets/js/utils'
-
   export default {
     layout: 'farmers',
     data() {
@@ -108,6 +106,7 @@
           {
             type: 'Selected',
             classes: '',
+            checked: true,
             background: `color: #006546;`,
             checkmark: `color: #FFFFFF;`
           },
@@ -131,7 +130,7 @@
               {
                 type: 'Unselected',
                 classes: '',
-                selected: false,
+                checked: false,
                 card: `background: #FFFFFF;
                     border: 2px #BBBBBB;
                     box-shadow: 0 1px 4px 0 #BBBBBB;
@@ -143,7 +142,7 @@
               {
                 type: 'Selected',
                 classes: '',
-                selected: true,
+                checked: true,
                 card: `background: #FFFFFF;
                       border: 2px #49A564;
                       box-shadow: 0 1px 4px 0 #BBBBBB;
@@ -156,7 +155,6 @@
               {
                 type: 'Hover',
                 classes: '',
-                selected: false,
                 card: `border: 2px #49A564;`,
                 checkbox: `background: #FFFFFF;
                           border: 2px #49A564;`
@@ -164,7 +162,7 @@
               {
                 type: 'Focus',
                 classes: '',
-                selected: true,
+                checked: true,
                 card: `shadow: #1B69D3;`,
                 checkbox: `background: #49A564;
                           checkmark: #FFFFFF;`
@@ -172,7 +170,6 @@
               {
                 type: 'Disabled',
                 classes: '',
-                selected: true,
                 card: `border: 2px #BBBBBB;`,
                 checkbox: `background: #F7F7F7;
                           border: 2px #BBBBBB;`
@@ -183,9 +180,6 @@
       }
     },
     methods: {
-      addLineBreaks(text) {
-        return utils.addLineBreaks(text)
-      },
       outputCardMarkup(options) {
         return `<div class="checkbox-card card" tabindex="0">` + this.outputCheckboxMarkup(options) + `</div>`
       },

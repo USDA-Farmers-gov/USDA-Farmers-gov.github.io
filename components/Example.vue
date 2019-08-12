@@ -3,32 +3,15 @@
     <p>
       <strong>{{ header }}</strong>
     </p>
-    <div class="button-container">
-      <span v-html="markup"/>
-    </div>
+    <div v-html="markup" class="example-container"></div>
 
-    <p v-if="code.background" class="text-medium">
-      <span class="label">BACKGROUND</span>
+    <p v-if="code.background || code.card || code.checkbox || code.text" class="text-medium">
+      <span v-if="code.background" class="label">BACKGROUND</span>
+      <span v-if="code.card" class="label">CARD</span>
+      <span v-if="code.checkbox" class="label">CHECKBOX</span>
+      <span v-if="code.text" class="label">TEXT</span>
       <br/>
       <span class="text-medium" v-html="addLineBreaks(code.background)"></span>
-    </p>
-    
-    <p v-if="code.text" class="text-medium">
-      <span class="label">TEXT</span>
-      <br/>
-      <span class="text-medium" v-html="addLineBreaks(code.text)"></span>
-    </p>
-
-    <p v-if="code.card" class="text-medium">
-      <span class="label">CARD</span>
-      <br/>
-      <span class="text-medium" v-html="addLineBreaks(code.card)"></span>
-    </p>
-
-    <p v-if="code.checkbox" class="text-medium">
-      <span class="label">CHECKBOX</span>
-      <br/>
-      <span class="text-medium" v-html="addLineBreaks(code.checkbox)"></span>
     </p>
   </div>
 </template>
