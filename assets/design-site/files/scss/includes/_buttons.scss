@@ -9,7 +9,7 @@
   }
   .button-grid {
     height: 60px;
-    display: grid;
+    display: inline-grid;
     grid-template-columns: auto 20px 100px;
     margin-bottom: 3rem;
 
