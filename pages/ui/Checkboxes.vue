@@ -180,7 +180,7 @@
         let labelClass = 'checkbox'
         let checked = ''
 
-        if(!!options && !options.showLabel) labelClass = labelClass + ' visually-hidden'
+        if(!!options && options.showLabel === false) labelClass = labelClass + ' visually-hidden'
         if(!!options && options.checked) checked = ' checked'
 
         return `<input type="checkbox" name="example-1" value="Option 1" title="Option 1" tabindex="-1" ` + checked + `>

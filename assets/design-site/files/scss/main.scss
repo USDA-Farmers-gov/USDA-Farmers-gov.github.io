@@ -42,8 +42,14 @@ img.logo {
 .page {
   max-width: 1140px;
   margin: auto;
-  display: grid;
-  grid-template-columns: 217px auto;
+  display:flex;
+  // display: grid;
+  // grid-template-columns: 217px auto;
+
+  @media only screen and (max-width: 760px) {
+    flex-direction: column;
+    // grid-template-columns: auto;
+  }
 }
 main {
   padding-left:6rem;
@@ -60,4 +66,9 @@ main {
 
 .container {
   padding-left: 0;
+}
+
+.visually-hidden {
+   position: absolute;
+   left: -999em;
 }
