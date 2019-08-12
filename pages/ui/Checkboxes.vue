@@ -15,7 +15,12 @@
 
     <div v-if="checkboxes.length" class="container">
       <div class="row">
-        <Example v-for="(item, index) in checkboxes" columns="4" :header="item.type" :markup="outputCheckboxMarkup({ showLabel: false })" :code="{ background: item.background, checkmark: item.checkmark }" :key="index"/>
+        <Example v-for="(item, index) in checkboxes" 
+          columns="4" 
+          :header="item.type" 
+          :markup="outputCheckboxMarkup({ showLabel: false })" 
+          :code="{ background: item.background, checkmark: item.checkmark }" 
+          :key="index"/>
       </div>
     </div>
 
@@ -45,10 +50,19 @@
       <p v-if="checkbox.description" v-html="checkbox.description"/>
       <div v-if="checkbox.examples_1.length" class="container">
         <div class="row">
-          <Example v-for="(item, index) in checkbox.examples_1" columns="3" :header="item.type" :markup="outputCardMarkup({ label: 'Card Checkbox' })" :code="{ card: item.card, checkbox: item.checkbox }" :key="index"/>
+          <Example v-for="(item, index) in checkbox.examples_1" 
+            columns="3" 
+            :header="item.type" 
+            :markup="outputCardMarkup({ label: 'Card Checkbox' })" 
+            :code="{ card: item.card, checkbox: item.checkbox }" 
+            :key="index"/>
         </div>
         <div class="row">
-          <Example v-for="(item, index) in checkbox.examples_2" columns="3" :header="item.type" :markup="outputCardMarkup({ label: 'Card Checkbox' })" :code="{ card: item.card, checkbox: item.checkbox }" :key="index"/>
+          <Example v-for="(item, index) in checkbox.examples_2" 
+            columns="3" :header="item.type" 
+            :markup="outputCardMarkup({ label: 'Card Checkbox' })" 
+            :code="{ card: item.card, checkbox: item.checkbox }" 
+            :key="index"/>
         </div>
       </div>
     </div>
