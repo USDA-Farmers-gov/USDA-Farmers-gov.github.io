@@ -10,22 +10,12 @@
     <p>
       This style of checkboxes is commonly used in forms. Users can select one or more options. If only one option can be selected, use <a href="#">radio buttons</a>. Checkbox icons and their labels should be left-aligned and vertical for better scannability when appropriate.
     </p>
-    <p>
-      <input type="checkbox" name="example-1" value="Option 1" title="Option 1" tabindex="-1">
-      <label for="example-1" tabindex="-1" class="checkbox">Checkbox Label</label>
-    </p>  
-    <p>
-      <input type="checkbox" checked="" name="option-2" value="Option 2" title="Option 2" tabindex="-1">
-      <label for="option-2" tabindex="-1" class="checkbox" checked="">Checkbox Label</label>
-    </p>
+    <p v-html="outputCheckboxMarkup({ label: 'Checkbox Label' })"></p>  
+    <p v-html="outputCheckboxMarkup({ label: 'Checkbox Label', checked: true })"></p>  
 
     <div v-if="checkboxes.length" class="container">
       <div class="row">
-        <Example v-if="checkboxes.length" v-for="item in checkboxes" 
-              :columns="3"
-              :header="item.type" 
-              :markup="outputCheckboxMarkup()" 
-              :examples="{ background: item.background, text: item.checkmark }"/>
+        <Example v-for="(item, index) in checkboxes" columns="4" :header="item.type" :markup="outputCheckboxMarkup({ showLabel: false })" :code="{ background: item.background, checkmark: item.checkmark }" :key="index"/>
       </div>
     </div>
 
@@ -45,18 +35,8 @@
 
     <div class="container">
       <div class="row">
-        <div class="medium-4">
-          <div class="checkbox-card card" tabindex="0">
-            <input type="checkbox" name="checkbox-card" value="Card Checkbox" title="Card Checkbox" tabindex="-1">
-            <label for="checkbox-card" tabindex="-1">Card Checkbox</label>
-          </div>
-        </div>
-        <div class="medium-4">
-          <div class="checkbox-card card" tabindex="0">
-            <input type="checkbox" name="checkbox-card" value="Card Checkbox" title="Card Checkbox" tabindex="-1">
-            <label for="checkbox-card" tabindex="-1">Card Checkbox</label>
-          </div>
-        </div>
+        <div v-html="outputCardMarkup({ label: 'Card Checkbox' })" class="medium-4"></div>
+        <div v-html="outputCardMarkup({ label: 'Card Checkbox', checked: true })" class="medium-4"></div>
       </div>
     </div>
 
@@ -65,46 +45,10 @@
       <p v-if="checkbox.description" v-html="checkbox.description"/>
       <div v-if="checkbox.examples_1.length" class="container">
         <div class="row">
-          <div v-for="item in checkbox.examples_1" class="medium-4">
-            <strong>{{ item.type }}</strong>
-            <br/>
-            <div class="checkbox-card card" tabindex="0">
-              <input type="checkbox" name="checkbox-card" value="Card Checkbox" title="Card Checkbox" tabindex="-1">
-              <label for="checkbox-card" tabindex="-1">Card Checkbox</label>
-            </div>
-
-            <p v-if="item.card" class="text-medium">
-              <span class="label">CARD</span>
-              <br/>
-              <span class="text-medium" v-html="addLineBreaks(item.card)"></span>
-            </p>
-            <p v-if="item.checkbox.length" class="text-medium">
-              <span class="label">CHECKBOX</span>
-              <br/>
-              <span class="text-medium" v-html="addLineBreaks(item.checkbox)"></span>
-            </p>
-          </div>
+          <Example v-for="(item, index) in checkbox.examples_1" columns="3" :header="item.type" :markup="outputCardMarkup({ label: 'Card Checkbox' })" :code="{ card: item.card, checkbox: item.checkbox }" :key="index"/>
         </div>
         <div class="row">
-          <div v-for="item in checkbox.examples_2" class="medium-4">
-            <strong>{{ item.type }}</strong>
-            <br/>
-            <div class="checkbox-card card" tabindex="0">
-              <input type="checkbox" name="checkbox-card" value="Card Checkbox" title="Card Checkbox" tabindex="-1">
-              <label for="checkbox-card" tabindex="-1">Card Checkbox</label>
-            </div>
-
-            <p v-if="item.card" class="text-medium">
-              <span class="label">CARD</span>
-              <br/>
-              <span class="text-medium" v-html="addLineBreaks(item.card)"></span>
-            </p>
-            <p v-if="item.checkbox.length" class="text-medium">
-              <span class="label">CHECKBOX</span>
-              <br/>
-              <span class="text-medium" v-html="addLineBreaks(item.checkbox)"></span>
-            </p>
-          </div>
+          <Example v-for="(item, index) in checkbox.examples_2" columns="3" :header="item.type" :markup="outputCardMarkup({ label: 'Card Checkbox' })" :code="{ card: item.card, checkbox: item.checkbox }" :key="index"/>
         </div>
       </div>
     </div>
@@ -225,13 +169,23 @@
       }
     },
     methods: {
-      outputCheckboxMarkup() {
-        return `<input type="checkbox" name="checkbox-card" value="Card Checkbox" title="Card Checkbox" tabindex="-1">
-              <label for="checkbox-card" tabindex="-1">Card Checkbox</label>`
-      },
       addLineBreaks(text) {
         return utils.addLineBreaks(text)
       },
+      outputCardMarkup(options) {
+        return `<div class="checkbox-card card" tabindex="0">` + this.outputCheckboxMarkup(options) + `</div>`
+      },
+      outputCheckboxMarkup(options) {
+        let label = (!! options && options.label) ? options.label : 'Label'
+        let labelClass = 'checkbox'
+        let checked = ''
+
+        if(!!options && !options.showLabel) labelClass = labelClass + ' visually-hidden'
+        if(!!options && options.checked) checked = ' checked'
+
+        return `<input type="checkbox" name="example-1" value="Option 1" title="Option 1" tabindex="-1" ` + checked + `>
+          <label for="example-1" tabindex="-1" class="` + labelClass + `">` + label + `</label>`
+      }
     }
   }
 </script>

@@ -8,7 +8,7 @@
     </div>
 
     <p v-if="code.background" class="text-medium">
-      <span v-if="code.background" class="label">BACKGROUND</span>
+      <span class="label">BACKGROUND</span>
       <br/>
       <span class="text-medium" v-html="addLineBreaks(code.background)"></span>
     </p>
@@ -17,6 +17,18 @@
       <span class="label">TEXT</span>
       <br/>
       <span class="text-medium" v-html="addLineBreaks(code.text)"></span>
+    </p>
+
+    <p v-if="code.card" class="text-medium">
+      <span class="label">CARD</span>
+      <br/>
+      <span class="text-medium" v-html="addLineBreaks(code.card)"></span>
+    </p>
+
+    <p v-if="code.checkbox" class="text-medium">
+      <span class="label">CHECKBOX</span>
+      <br/>
+      <span class="text-medium" v-html="addLineBreaks(code.checkbox)"></span>
     </p>
   </div>
 </template>
@@ -27,7 +39,7 @@
   export default {
     props: {
       columns: {
-        type: Number,
+        type: [ String, Number ],
         required: true
       },
       header: String,

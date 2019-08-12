@@ -12,22 +12,23 @@
       
       <div v-if="button.buttons_3" class="container">
         <div class="row">
-          <!-- TODO: create array in data, do not put it together in tag -->
-          <Example v-if="button.buttons_3" v-for="btn in button.buttons_3" 
-              :columns="3" 
+          <Example v-if="button.buttons_3" v-for="(btn, index) in button.buttons_3" 
+              columns="3" 
               :header="btn.header" 
               :markup="outputButtonMarkup(btn.classes, true)" 
-              :code="{ background: btn.background, text: btn.text }"/>
+              :code="{ background: btn.background, text: btn.text }"
+              :key="index" />
         </div>
       </div>
 
       <div v-if="button.buttons_4" class="container">
         <div class="row">
           <Example v-for="(btn, index) in button.buttons_4" 
-            :columns="4" 
+            columns="4" 
             :header="btn.header" 
             :markup="outputButtonMarkup(btn.classes, false, index)" 
-            :code="{ background: btn.background, text: btn.text }" />
+            :code="{ background: btn.background, text: btn.text }"
+            :key="index" />
         </div>
       </div>
     </div>
