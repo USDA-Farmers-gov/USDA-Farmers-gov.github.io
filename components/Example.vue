@@ -31,7 +31,7 @@
         return 'medium-' + 12/Number(this.columns)
       },
       setContentHeader() {
-        let header = ''
+        let header
 
         if(this.code.background) header = 'BACKGROUND'
         if(this.code.card) header = 'CARD'
@@ -41,7 +41,7 @@
         return header
       },
       setCode() {
-        let code = ''
+        let code
 
         if(this.code.background) code = this.code.background
         if(this.code.card) code = this.code.card

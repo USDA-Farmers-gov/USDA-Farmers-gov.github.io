@@ -33,9 +33,7 @@
       </thead>
       <tbody>
         <tr v-for="font in public_sans">
-          <td>
-            <div v-html="font.name"></div>
-          </td>
+          <td v-html="font.name"></td>
           <td>{{ font.font_family }}</td>
           <td>{{ font.weight }}</td>
           <td>{{ font.font_size }}</td>
@@ -59,9 +57,7 @@
           </td>
         </tr>
         <tr v-for="font in merriweather">
-          <td>
-            <div v-html="font.name"></div>
-          </td>
+          <td v-html="font.name"></td>
           <td>{{ font.font_family }}</td>
           <td>{{ font.weight }}</td>
           <td>{{ font.font_size }}</td>

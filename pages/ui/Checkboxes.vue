@@ -130,7 +130,6 @@
               {
                 type: 'Unselected',
                 classes: '',
-                checked: false,
                 card: `background: #FFFFFF;
                     border: 2px #BBBBBB;
                     box-shadow: 0 1px 4px 0 #BBBBBB;
@@ -186,7 +185,7 @@
       outputCheckboxMarkup(options) {
         let label = (!! options && options.label) ? options.label : 'Label'
         let labelClass = 'checkbox'
-        let checked = ''
+        let checked
 
         if(!!options && options.showLabel === false) labelClass = labelClass + ' visually-hidden'
         if(!!options && options.checked) checked = ' checked'
