@@ -2,21 +2,16 @@
   <div>
     <img class="logo" src="../assets/images/farmers-logo.svg"/>
     <ul class="menu-container">
-      <li>
-        <div class="category" @click="goToUrl($event, '/')" @keypress="goToUrl($event, '/')" tabindex="0">
-          Overview
-        </div>
-      </li>
       <li v-for="item in menu">
-        <div :class="setCategoryClass(item.category)" 
-              @click="setActiveCategoryOnEvent($event, item.category)"
-              @keypress="setActiveCategoryOnEvent($event, item.category)"
+        <div :class="setClassesByCategory(item.category)" 
+              @click="setActiveCategoryOnEvent($event, item)"
+              @keypress="setActiveCategoryOnEvent($event, item)"
               tabindex="0">
                 {{ item.category }}
-                <i v-if="activeCategory === item.category" class="arrow up"></i>
-                <i v-if="activeCategory !== item.category" class="arrow down"></i>
+                <i v-if="activeCategory === item.category && !item.path" class="arrow up"></i>
+                <i v-if="activeCategory !== item.category && !item.path" class="arrow down"></i>
         </div>
-        
+
         <ul v-if="activeCategory === item.category" class="menu-links">
           <li :class="currentPath === link.path ? 'active soft-green' : ''" v-for="link in item.links">
             <a :href="link.path">{{ link.name }}</a>
@@ -31,13 +26,17 @@
   export default {
     data() {
       return {
-        currentPath: this.$route.path.replace(/\/$/, ""), // remove trailing slashes
+        currentPath: this.$route.path !== '/' ? this.$route.path.replace(/\/$/, "") : this.$route.path, // .replace removes trailing slashes
         activeCategory: '',
+        categoryClasses: 'category',
         menu: [
+          {
+            category: 'Overview',
+            path: '/'
+          },
           {
             category: 'Primary Elements',
             links:  [
-                      // { name: 'Button', path: '/elements/Button'},
                       { name: 'Colors', path: '/elements/Colors'},
                       { name: 'Grid', path: '/elements/Grid'},
                       { name: 'Typography', path: '/elements/Typography'},
@@ -63,27 +62,32 @@
       this.setActiveCategoryOnLoad()
     },
     methods: {
-      setCategoryClass(category) {
-        let baseClasses = 'category'
-        return (this.activeCategory === category) ? baseClasses + ' active' : baseClasses
+      setClassesByPath(path) {
+        return (path === this.currentPath) ? this.categoryClasses + ' active' : this.categoryClasses
+      },
+      setClassesByCategory(category) {
+        return (this.activeCategory === category) ? this.categoryClasses + ' active' : this.categoryClasses
       },
       setActiveCategoryOnLoad() {
         let data = this.menu.map(row => (row.links) ? row.links.filter(link => link.path === this.currentPath).length : 0)
         let index = data.findIndex(row => row)
         this.activeCategory = (index !== -1) ? this.menu[index].category : ''
       },
-      setActiveCategoryOnEvent(e, name) {
+      setActiveCategoryOnEvent(e, item) {
         if(e.type === 'keypress') {
-          if(e.code === 'Enter') this.activeCategory = name
+          (e.code === 'Enter' && item.path) ? this.goToUrl(e, item.path) : this.setActiveCategory(item.category)
         } else {
-          this.activeCategory = name
+          item.path ? this.goToUrl(e, item.path) : this.setActiveCategory(item.category)
         }
       },
-      goToUrl(e, url) {
+      setActiveCategory(category) {
+        this.activeCategory = category
+      },
+      goToUrl(e, path) {
         if(e.type === 'keypress') {
-          if(e.code === 'Enter') this.$router.push({ path: url })
+          if(e.code === 'Enter') this.$router.push({ path: path })
         } else {
-          this.$router.push({ path: url })
+          this.$router.push({ path: path })
         }
       }
     }
