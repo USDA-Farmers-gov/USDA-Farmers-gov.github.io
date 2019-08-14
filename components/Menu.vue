@@ -2,9 +2,16 @@
   <div>
     <img class="logo" src="../assets/images/farmers-logo.svg"/>
     <ul class="menu-container">
+      <li>
+        <div class="category" @click="goToUrl($event, '/')" @keypress="goToUrl($event, '/')" tabindex="0">
+          Overview
+        </div>
+      </li>
       <li v-for="item in menu">
         <div :class="setCategoryClass(item.category)" 
-              @click="setActiveCategoryOnClick(item.category)">
+              @click="setActiveCategoryOnEvent($event, item.category)"
+              @keypress="setActiveCategoryOnEvent($event, item.category)"
+              tabindex="0">
                 {{ item.category }}
                 <i v-if="activeCategory === item.category" class="arrow up"></i>
                 <i v-if="activeCategory !== item.category" class="arrow down"></i>
@@ -65,8 +72,19 @@
         let index = data.findIndex(row => row)
         this.activeCategory = (index !== -1) ? this.menu[index].category : ''
       },
-      setActiveCategoryOnClick(name) {
-        this.activeCategory = name
+      setActiveCategoryOnEvent(e, name) {
+        if(e.type === 'keypress') {
+          if(e.code === 'Enter') this.activeCategory = name
+        } else {
+          this.activeCategory = name
+        }
+      },
+      goToUrl(e, url) {
+        if(e.type === 'keypress') {
+          if(e.code === 'Enter') this.$router.push({ path: url })
+        } else {
+          this.$router.push({ path: url })
+        }
       }
     }
   }
