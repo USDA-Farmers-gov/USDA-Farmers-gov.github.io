@@ -75,9 +75,9 @@
       },
       setActiveCategoryOnEvent(e, item) {
         if(e.type === 'keypress') {
-          (e.code === 'Enter' && item.path) ? this.$router.push({ path: path }) : this.activeCategory = category
+          (e.code === 'Enter' && item.path) ? this.$router.push({ path: item.path }) : this.activeCategory = item.category
         } else {
-          item.path ? this.$router.push({ path: path }) : this.activeCategory = category
+          item.path ? this.$router.push({ path: item.path }) : this.activeCategory = item.category
         }
       }
     }
