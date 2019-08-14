@@ -26,7 +26,7 @@
   export default {
     data() {
       return {
-        currentPath: this.$route.path !== '/' ? this.$route.path.replace(/\/$/, "") : this.$route.path, // .replace removes trailing slashes
+        currentPath: this.$route.path !== '/' ? this.$route.path.replace(/\/$/, "") : this.$route.path, // .replace() removes trailing slashes
         activeCategory: '',
         categoryClasses: 'category',
         menu: [
@@ -75,19 +75,9 @@
       },
       setActiveCategoryOnEvent(e, item) {
         if(e.type === 'keypress') {
-          (e.code === 'Enter' && item.path) ? this.goToUrl(e, item.path) : this.setActiveCategory(item.category)
+          (e.code === 'Enter' && item.path) ? this.$router.push({ path: path }) : this.activeCategory = category
         } else {
-          item.path ? this.goToUrl(e, item.path) : this.setActiveCategory(item.category)
-        }
-      },
-      setActiveCategory(category) {
-        this.activeCategory = category
-      },
-      goToUrl(e, path) {
-        if(e.type === 'keypress') {
-          if(e.code === 'Enter') this.$router.push({ path: path })
-        } else {
-          this.$router.push({ path: path })
+          item.path ? this.$router.push({ path: path }) : this.activeCategory = category
         }
       }
     }
