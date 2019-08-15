@@ -2,7 +2,7 @@
   <div>
     <h1>Typography</h1>
 
-    <div>
+    <div class="intro-text">
       The Farmers.gov site uses Public Sans for all of its text except for the blog body copy and pullquotes, which uses Merriweather.
     </div>
 

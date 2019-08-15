@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Colors</h2>
-    <p>
+    <p class="intro-text">
       Colors play a vital role in establishing the look and feel of any digital property. Our palette draws inspiration from the USDA branding combined with color recommendations from the U.S. Web Design System to create a unique style for Farmers.gov.
     </p>
     <p>

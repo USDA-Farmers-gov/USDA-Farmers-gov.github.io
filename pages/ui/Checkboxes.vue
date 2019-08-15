@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Checkboxes</h2>
-    <p>
+    <p class="intro-text">
       Checkboxes are used when the user can make one or more selections from a list or group of options.
     </p>
 
