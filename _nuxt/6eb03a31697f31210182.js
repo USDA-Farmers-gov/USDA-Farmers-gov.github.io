@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{248:function(n,e,t){"use strict";t.r(e);var r={layout:"farmers"},l=t(5),component=Object(l.a)(r,function(){var n=this.$createElement;return(this._self._c||n)("div",[this._v("\n  Breadcrumbs\n")])},[],!1,null,null,null);e.default=component.exports}}]);
