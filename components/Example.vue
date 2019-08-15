@@ -26,9 +26,6 @@
       markup: String,
       code: [ Object, Array ]
     },
-    mounted() {
-      console.log(this.code)
-    },
     methods: {
       setFlexClass() {
         return 'medium-' + 12/Number(this.columns)
