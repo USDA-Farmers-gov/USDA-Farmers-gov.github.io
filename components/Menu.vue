@@ -46,6 +46,8 @@
             category: 'UI Components',
             links:  [
                       { name: 'Buttons', path: '/ui/Buttons'},
+                      // { name: 'Checkboxes', path: '/ui/Checkboxes'},
+                      // { name: 'Dividers', path: '/ui/Dividers'},
                       // { name: 'Links', path: '/ui/Links'},
                     ]
           },

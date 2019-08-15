@@ -12,22 +12,22 @@
       
       <div v-if="button.buttons_3" class="container">
         <div class="row">
-          <Example v-if="button.buttons_3" v-for="(btn, index) in button.buttons_3" 
+          <Example v-if="button.buttons_3" v-for="(item, index) in button.buttons_3" 
               columns="3" 
-              :header="btn.header" 
-              :markup="outputButtonMarkup(btn.classes, true)" 
-              :code="{ background: btn.background, text: btn.text }"
+              :header="item.header" 
+              :markup="outputButtonMarkup(item.classes, true)" 
+              :code="item.code"
               :key="index" />
         </div>
       </div>
 
       <div v-if="button.buttons_4" class="container">
         <div class="row">
-          <Example v-for="(btn, index) in button.buttons_4" 
+          <Example v-for="(item, index) in button.buttons_4" 
             columns="4" 
-            :header="btn.header" 
-            :markup="outputButtonMarkup(btn.classes, false, index)" 
-            :code="{ background: btn.background, text: btn.text }"
+            :header="item.header" 
+            :markup="outputButtonMarkup(item.classes, false, index)" 
+            :code="item.code"
             :key="index" />
         </div>
       </div>
@@ -69,46 +69,52 @@ export default {
             { 
               header: 'Default', 
               classes: '', 
-              background: `border-radius: 4px;
+              code: {
+                background: `border-radius: 4px;
                             color: #1A6AD3;
                             shadow: 0;1;4;0  #BBBBBB;`, 
-              text: `color: #FFFFFF;
-                      font-family: "Public Sans";
-                      font-size: 16px;
-                      font-weight: bold;
-                      line-height: 20px;` 
+                text: `color: #FFFFFF;
+                        font-family: "Public Sans";
+                        font-size: 16px;
+                        font-weight: bold;
+                        line-height: 20px;` 
+              }
             },
             { 
               header: 'Small', 
               classes: 'sm-btn', 
-              background: `border-radius: 4px;
+              code: {
+                background: `border-radius: 4px;
                             color: #1A6AD3;
                             shadow: 0;1;4;0  #BBBBBB;`, 
-              text: `color: #FFFFFF;
-                      font-family: "Public Sans";
-                      font-size: 16px;
-                      font-weight: bold;
-                      line-height: 20px;`
+                text: `color: #FFFFFF;
+                        font-family: "Public Sans";
+                        font-size: 16px;
+                        font-weight: bold;
+                        line-height: 20px;`
+              }
             },
             { 
               header: 'Large', 
               classes: 'lg-btn', 
-              background: `border-radius: 4px;
+              code: {
+                background: `border-radius: 4px;
                             color: #1A6AD3;
                             shadow: 0;1;4;0  #BBBBBB;`, 
-              text: `color: #FFFFFF;
-                      font-family: "Public Sans";
-                      font-size: 20px;
-                      font-weight: bold;
-                      line-height: 26px;` 
+                text: `color: #FFFFFF;
+                        font-family: "Public Sans";
+                        font-size: 20px;
+                        font-weight: bold;
+                        line-height: 26px;` 
               }
+            }
           ],
 
           buttons_4: [
-            { header: 'Hover', classes: 'hover-color', background: 'color: #004785;', text: '' },
-            { header: 'Active', classes: 'active-color', background: 'color: #122E51;', text: '' },
-            { header: 'Focus', classes: 'focus-color', background: 'shadow: #1B69D3;', text: '' },
-            { header: 'Disabled', classes: 'disabled', background: 'color: #BBBBBB;', text: '' }
+            { header: 'Hover', classes: 'hover-color', code: { background: 'color: #004785;' } },
+            { header: 'Active', classes: 'active-color', code: { background: 'color: #122E51;' } },
+            { header: 'Focus', classes: 'focus-color', code: { background: 'shadow: #1B69D3;' } },
+            { header: 'Disabled', classes: 'disabled', code: { background: 'color: #BBBBBB;' } }
           ],
         },
         {
@@ -119,49 +125,83 @@ export default {
             { 
               header: 'Default', 
               classes: 'outline', 
-              background: `border: 1px #1A6AD3;
+              code: {
+                background: `border: 1px #1A6AD3;
                             border-radius: 4px;
                             color: #FFFFFF;
                             shadow: 0;1;4;0  #BBBBBB;`, 
-              text: `color: #1A6AD3;
-                      font-family: "Public Sans";
-                      font-size: 16px;
-                      font-weight: bold;
-                      line-height: 20px;` 
+                text: `color: #1A6AD3;
+                        font-family: "Public Sans";
+                        font-size: 16px;
+                        font-weight: bold;
+                        line-height: 20px;` 
+              }
             },
             { 
               header: 'Small', 
               classes: 'sm-btn outline', 
-              background: `border: 1px #1A6AD3;
+              code: {
+                background: `border: 1px #1A6AD3;
                             border-radius: 4px;
                             color: #FFFFFF;
                             shadow: 0;1;4;0  #BBBBBB;`, 
-              text: `color: #1A6AD3;
-                      font-family: "Public Sans";
-                      font-size: 16px;
-                      font-weight: bold;
-                      line-height: 20px;`
+                text: `color: #1A6AD3;
+                        font-family: "Public Sans";
+                        font-size: 16px;
+                        font-weight: bold;
+                        line-height: 20px;`
+              }
             },
             { 
               header: 'Large', 
               classes: 'lg-btn outline', 
-              background: `border: 1px #1A6AD3;
+              code: {
+                background: `border: 1px #1A6AD3;
                             border-radius: 4px;
                             color: #FFFFFF;
                             shadow: 0;1;4;0  #BBBBBB;`, 
-              text: `color: #1A6AD3;
-                      font-family: "Public Sans";
-                      font-size: 20px;
-                      font-weight: bold;
-                      line-height: 26px;` 
+                text: `color: #1A6AD3;
+                        font-family: "Public Sans";
+                        font-size: 20px;
+                        font-weight: bold;
+                        line-height: 26px;` 
+              }
             }
           ],
 
           buttons_4: [
-            { header: 'Hover', classes: 'hover-color outline', background: 'border: #004785;', text: 'color: #004785;' },
-            { header: 'Active', classes: 'active-color outline', background: 'border: #122E51;', text: 'color: #122E51;' },
-            { header: 'Focus', classes: 'focus-color outline', background: 'shadow: #1B69D3;', text: 'color: #122E51;' },
-            { header: 'Disabled', classes: 'disabled outline', background: 'border: #BBBBBB;', text: 'color: #BBBBBB;' }
+            { 
+              header: 'Hover', 
+              classes: 'hover-color outline', 
+              code: {
+                background: 'border: #004785;', 
+                text: 'color: #004785;' 
+              }
+            },
+            { 
+              header: 'Active', 
+              classes: 'active-color outline', 
+              code: {
+                background: 'border: #122E51;', 
+                text: 'color: #122E51;' 
+              }
+            },
+            { 
+              header: 'Focus', 
+              classes: 'focus-color outline', 
+              code: {
+                background: 'shadow: #1B69D3;', 
+                text: 'color: #122E51;' 
+              }
+            },
+            { 
+              header: 'Disabled', 
+              classes: 'disabled outline', 
+              code: {
+                background: 'border: #BBBBBB;', 
+                text: 'color: #BBBBBB;' 
+              }
+            }
           ],
         },
         {
@@ -174,10 +214,10 @@ export default {
                   font-weight: bold;
                   line-height: 20px;`,
           buttons_4: [
-            { header: 'Hover', classes: 'hover-color tertiary', background: '', text: 'color: #004785;' },
-            { header: 'Active', classes: 'active-color tertiary', background: '', text: 'color: #122E51;' },
-            { header: 'Focus', classes: 'focus-color tertiary', background: '', text: 'shadow: #1B69D3;' },
-            { header: 'Disabled', classes: 'disabled tertiary', background: '', text: 'color: #BBBBBB;' }
+            { header: 'Hover', classes: 'hover-color tertiary', code: { text: 'color: #004785;' } },
+            { header: 'Active', classes: 'active-color tertiary', code: { text: 'color: #122E51;' } },
+            { header: 'Focus', classes: 'focus-color tertiary', code: { text: 'shadow: #1B69D3;' } },
+            { header: 'Disabled', classes: 'disabled tertiary', code: { text: 'color: #BBBBBB;' } }
           ],
         },
         {
@@ -187,22 +227,42 @@ export default {
           buttons_4: [
             { 
               header: 'Default', classes: 'feedback', 
-              background: `border: 2px #1A6AD3;
+              code: {
+                background: `border: 2px #1A6AD3;
                             color: #FFFFFF;
                             shadow: 0;1;4;0
                             #BBBBBB;`, 
-              text: `color: #1A6AD3;
-                      font-family: "Public Sans";
-                      font-size: 16px;
-                      font-weight: bold;
-                      line-height: 20px;` 
+                text: `color: #1A6AD3;
+                        font-family: "Public Sans";
+                        font-size: 16px;
+                        font-weight: bold;
+                        line-height: 20px;` 
+              }
             },
             { 
-              header: 'Hover', classes: 'hover-color feedback', background: 'border: 2px #004785;', text: 'color: #004785;'
+              header: 'Hover', 
+              classes: 'hover-color feedback', 
+              code: {
+                background: 'border: 2px #004785;', 
+                text: 'color: #004785;'
+              }
             },
-            { header: 'Active', classes: 'active-color feedback', background: 'border: 2px #122E51;', text: 'color: #122E51;' },
-            { header: 'Focus', classes: 'focus-color feedback', background: 'border: 2px #122E51; <br> shadow: #1B69D3;', text: 'color: #122E51;' }
-
+            { 
+              header: 'Active', 
+              classes: 'active-color feedback', 
+              code: {
+                background: 'border: 2px #122E51;', 
+                text: 'color: #122E51;' 
+              }
+            },
+            { 
+              header: 'Focus', 
+              classes: 'focus-color feedback', 
+              code: {
+                background: 'border: 2px #122E51; <br> shadow: #1B69D3;', 
+                text: 'color: #122E51;' 
+              }
+            }
           ],
         },
       ]
@@ -218,7 +278,7 @@ export default {
 
       return showDimensions ? `<div class="` + gridClasses + `">
                 <div class="button">
-                  <button class="` + btnClasses + `">` + buttonText + `</button>
+                  <button class="` + btnClasses + `" tabindex="-1">` + buttonText + `</button>
                 </div>
                 <div class="button-height"></div>
                 <div class="button-dimension-height">` + dimensions.height + `px</div>
@@ -227,7 +287,7 @@ export default {
                 <div></div>
                 <div class="button-dimension-width">` + dimensions.width + `px</div>
               </div>`
-              : `<button class="` + btnClasses + `">` + buttonText + `</button>`
+              : `<button class="` + btnClasses + `" tabindex="-1">` + buttonText + `</button>`
     },    
     setButtonClasses(classes) {
       let baseClasses = 'btn'

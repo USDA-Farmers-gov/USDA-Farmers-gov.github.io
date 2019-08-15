@@ -3,12 +3,12 @@
     <p>
       <strong>{{ header }}</strong>
     </p>
-    <div v-html="markup" class="example-container"></div>
+    <div v-if="markup" v-html="markup" class="example-container"></div>
 
-    <p v-if="code.background || code.card || code.checkbox || code.text" class="text-medium">
-      <span class="label">{{ setContentHeader() }}</span>
+    <p v-if="Object.keys(code).length" v-for="(row, key) in code" class="text-medium">
+      <span class="label">{{ setContentHeader(key) }}</span>
       <br/>
-      <span class="text-medium" v-html="setCode()"></span>
+      <span class="text-medium" v-html="setCode(row)"></span>
     </p>
   </div>
 </template>
@@ -26,33 +26,26 @@
       markup: String,
       code: [ Object, Array ]
     },
+    mounted() {
+      console.log(this.code)
+    },
     methods: {
       setFlexClass() {
         return 'medium-' + 12/Number(this.columns)
       },
-      setContentHeader() {
-        let header
-
-        if(this.code.background) header = 'BACKGROUND'
-        if(this.code.card) header = 'CARD'
-        if(this.code.checkbox) header = 'CHECKBOX'
-        if(this.code.text) header = 'TEXT'
-
-        return header
+      setContentHeader(key) {
+        return key.replace('_', ' ').toUpperCase()
       },
-      setCode() {
-        let code
-
-        if(this.code.background) code = this.code.background
-        if(this.code.card) code = this.code.card
-        if(this.code.checkbox) code = this.code.checkbox
-        if(this.code.text) code = this.code.text
-
-        return utils.addLineBreaks(code)
+      setCode(row) {
+        return utils.addLineBreaks(row)
       },
       addLineBreaks(text) {
         return utils.addLineBreaks(text)
-      }
+      },
+      // for intercepting click events
+      // setMarkup(markup) {
+      //   return '<div class="cover"></div>' + markup
+      // }
     }
   }
 </script>

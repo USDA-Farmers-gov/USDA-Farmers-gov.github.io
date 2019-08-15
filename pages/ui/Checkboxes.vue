@@ -19,7 +19,7 @@
           columns="4" 
           :header="item.type" 
           :markup="outputCheckboxMarkup({ label: '&nbsp;', checked: item.checked })" 
-          :code="{ background: item.background, checkmark: item.checkmark }" 
+          :code="item.code" 
           :key="index"/>
       </div>
     </div>
@@ -54,14 +54,14 @@
             columns="3" 
             :header="item.type" 
             :markup="outputCardMarkup({ label: 'Card Checkbox', checked: item.checked })" 
-            :code="{ card: item.card, checkbox: item.checkbox }" 
+            :code="item.code" 
             :key="index"/>
         </div>
         <div class="row">
           <Example v-for="(item, index) in checkbox.examples_2" 
             columns="3" :header="item.type" 
             :markup="outputCardMarkup({ label: 'Card Checkbox', checked: item.checked })" 
-            :code="{ card: item.card, checkbox: item.checkbox }" 
+            :code="item.code" 
             :key="index"/>
         </div>
       </div>
@@ -99,27 +99,33 @@
           {
             type: 'Unselected',
             classes: '',
-            background: `color: #FFFFFF;
+            code: {
+              background: `color: #FFFFFF;
                         border: 2px #707070;
                         border-radius: 2px;`
+            }
           },
           {
             type: 'Selected',
             classes: '',
             checked: true,
-            background: `color: #006546;`,
-            checkmark: `color: #FFFFFF;`
+            code: {
+              background: `color: #006546;`,
+              checkmark: `color: #FFFFFF;`
+            }
           },
           {
             type: 'Focused',
             classes: '',
-            background: `shadow: #1B69D3;`
+            code: { background: `shadow: #1B69D3;` }
           },
           {
             type: 'Disabled',
             classes: '',
-            background: `color: #F7F7F7;
+            code: { 
+                    background: `color: #F7F7F7;
                         border: 2px #BBBBBB;`
+                  }
           },
         ],
         specs: [
@@ -130,48 +136,58 @@
               {
                 type: 'Unselected',
                 classes: '',
-                card: `background: #FFFFFF;
+                code: {
+                  card: `background: #FFFFFF;
                     border: 2px #BBBBBB;
                     box-shadow: 0 1px 4px 0 #BBBBBB;
                     border-radius: 2px;`,
-                checkbox: `background: #FFFFFF;
+                  checkbox: `background: #FFFFFF;
                       border: 2px #49A564;
                       border-radius: 2px;`
+                }
               },
               {
                 type: 'Selected',
                 classes: '',
                 checked: true,
-                card: `background: #FFFFFF;
+                code: {
+                  card: `background: #FFFFFF;
                       border: 2px #49A564;
                       box-shadow: 0 1px 4px 0 #BBBBBB;
                       border-radius: 2px;`,
-                checkbox:  `background: #49A564;
+                  checkbox:  `background: #49A564;
                           border-radius: 2px;`
+                }
               }
             ],
             examples_2: [
               {
                 type: 'Hover',
                 classes: '',
-                card: `border: 2px #49A564;`,
-                checkbox: `background: #FFFFFF;
+                code: {
+                  card: `border: 2px #49A564;`,
+                  checkbox: `background: #FFFFFF;
                           border: 2px #49A564;`
+                }
               },
               {
                 type: 'Focus',
                 classes: '',
                 checked: true,
-                card: `shadow: #1B69D3;`,
-                checkbox: `background: #49A564;
+                code: {
+                  card: `shadow: #1B69D3;`,
+                  checkbox: `background: #49A564;
                           checkmark: #FFFFFF;`
+                }
               },
               {
                 type: 'Disabled',
                 classes: '',
-                card: `border: 2px #BBBBBB;`,
-                checkbox: `background: #F7F7F7;
+                code: {
+                  card: `border: 2px #BBBBBB;`,
+                  checkbox: `background: #F7F7F7;
                           border: 2px #BBBBBB;`
+                }
               }
             ]
           }
@@ -180,7 +196,12 @@
     },
     methods: {
       outputCardMarkup(options) {
-        return `<div class="checkbox-card card" tabindex="0">` + this.outputCheckboxMarkup(options) + `</div>`
+        let cardClasses = 'checkbox-card card'
+        let checked
+        if(!!options && options.checked) checked = ' checked'
+        if(checked) cardClasses = cardClasses + ' checked'
+
+        return `<div class="` + cardClasses + `" tabindex="-1">` + this.outputCheckboxMarkup(options) + `</div>`
       },
       outputCheckboxMarkup(options) {
         let label = (!! options && options.label) ? options.label : 'Label'

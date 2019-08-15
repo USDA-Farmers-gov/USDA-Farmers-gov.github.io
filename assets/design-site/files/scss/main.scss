@@ -7,7 +7,7 @@
 @import 'includes/_tables.scss';
 @import 'includes/_typography.scss';
 @import 'includes/_kitchen-sink.scss';
-@import 'includes/_grid_override.scss';
+@import 'includes/_overrides.scss';
 /** TODO: May need to adjust these numbers as they are overriding the design system **/
 
 body {
@@ -69,6 +69,22 @@ main {
 .container {
   padding-left: 0;
 }
+
+.example-container {
+  position: relative;
+}
+
+// DISABLES CLICK
+// .cover{
+//   width:100%;
+//   height:100%;
+//   background:transparent;
+//   position:absolute;
+//   z-index:2;
+//   top:0;
+//   left:0;
+//   display:none;
+// }
 
 .visually-hidden {
    position: absolute;
