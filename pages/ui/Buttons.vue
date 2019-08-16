@@ -36,8 +36,10 @@
 
     <p>Feedback buttons provide users with a quick and simple way to indicate if the specific page or feature they visited was useful to them, by simple clicking Yes or No. Feedback buttons are blue and round so they may be easily distinguished from primary and secondary action buttons. They should be placed at the bottom of the page to minimize distraction.</p>
 
-    <button class="btn feedback">Yes</button>
-
+    <p>
+      <button class="btn feedback">Yes</button>
+    </p>
+    
     <ExampleRow :data="feedback_button" columns="4"/>
 
     <h3>Accessibility</h3>

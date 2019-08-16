@@ -1,16 +1,18 @@
 <template>
-  <div class="row">
-    <div v-for="item in data" :class="setFlexClass()">
-      <p v-if="item.header">
-        <strong>{{ item.header }}</strong>
-      </p>
-      <div v-if="item.markup" v-html="item.markup" class="example-container"></div>
+  <div class="container">
+    <div class="row">
+      <div v-for="item in data" :class="setFlexClass()">
+        <p v-if="item.header">
+          <strong>{{ item.header }}</strong>
+        </p>
+        <div v-if="item.markup" v-html="item.markup" class="example-container"></div>
 
-      <p v-if="Object.keys(item.code).length" v-for="(row, key) in item.code" class="text-medium">
-        <span class="label">{{ setContentHeader(key) }}</span>
-        <br/>
-        <span class="text-medium" v-html="setCode(row)"></span>
-      </p>
+        <p v-if="Object.keys(item.code).length" v-for="(row, key) in item.code" class="text-medium">
+          <span class="label">{{ setContentHeader(key) }}</span>
+          <br/>
+          <span class="text-medium" v-html="setCode(row)"></span>
+        </p>
+      </div>
     </div>
   </div>
 </template>

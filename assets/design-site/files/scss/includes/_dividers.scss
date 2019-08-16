@@ -1,3 +1,101 @@
+.primary-line-grid {
+    display: grid;
+    grid-template-columns: 20px 16px auto 28px auto;
+    grid-template-rows: 2.6rem repeat(2, 0.5rem);
+
+    .pixel-height {
+      top: 1rem;
+      grid-row: 1;
+      height: 0.5rem;
+      margin-right: 0.5rem;
+    }
+
+    .pixel-height-specs {
+      top: 0.4rem;
+    }
+
+    .divider-line {
+      margin: 0;
+      grid-column: 3 / span 3;
+      grid-row: 1;
+      margin-top: 1.3rem;
+    }
+
+    .pixel-box {
+      z-index: 100;
+      border-left: 1px #0D7CD7 dashed;
+      border-right: 1px #0D7CD7 dashed;
+      background: #E5F1FA;
+      width: 12px;
+    }
+
+    .pixel-box-left {
+      grid-column: 3;
+      grid-row: 1;
+      justify-self: end;
+    }
+
+    .pixel-box-right {
+      grid-column: 5;
+      grid-row: 1;
+      justify-self: start;
+    }
+
+    .pixel-width {
+      font-size: 1rem;
+      color: #0D7CD7;
+      padding-top: 0.8rem;
+
+    }
+    .pixel-width-right {
+      grid-column: 3;
+      grid-row: 3;
+      justify-self: end;
+      position: relative;
+      left: 0.3rem;
+    }
+
+    .pixel-width-left {
+      grid-column: 5;
+      grid-row: 3;
+      justify-self: start;
+      position: relative;
+      right: 0.6rem;
+    }
+    
+    .pixel-span {
+      position: relative;
+      z-index: 100;
+      border-left: 1px #0D7CD7 solid;
+      border-right: 1px #0D7CD7 solid;
+      width: 12px;
+      height: 0.7rem;
+      font-size: 1rem;
+      color: #0D7CD7;
+    }
+
+    .pixel-span-right {
+      grid-column: 3;
+      grid-row: 3;
+      justify-self: end;
+    }
+
+    .pixel-span-left {
+      grid-column: 5;
+      grid-row: 3;
+      justify-self: start;
+    }
+
+    .pixel-span-right:before, .pixel-span-left:before {
+      content: "\00A0\00A0\00A0\00A0\00A0";
+      width: 12px;
+      border-top: 1px #0D7CD7 solid;
+      position: relative;
+      top: 0.4rem;
+      left: -0.1rem;
+    }
+}
+
 .double-line-grid {
     display: grid;
     grid-template-columns: 20px 11px auto;
@@ -66,96 +164,3 @@
     font-size: 1rem;
     color: #E52207;
   }
-
-  // .primary-specs-grid {
-  //   position:relative;
-  //   display: grid;
-  //   grid-template-columns: 20px 11px auto 2.8rem auto;
-  //   grid-template-rows: repeat(4, 0.75rem);
-    
-  //   .pixel-height {
-  //     grid-column: 2;
-  //     grid-row: 2;
-  //   }
-
-  //   .pixel-height-specs {
-  //     grid-column: 1;
-  //     grid-row: 1;
-  //     font-size: 1rem;
-  //     color: #E52207;
-  //   }
-  //   .divider-line {
-  //     margin: 1rem 0 0 0;
-  //     grid-column: 3 / span 3;
-  //     grid-row: 1 / 4;
-  //   }
-
-  //   .pixel-12 {
-  //     width: 1.2rem;
-
-  //     &.left {   
-  //       border-left: 1px #0D7CD7 dashed;
-  //       border-right: 1px #0D7CD7 dashed;
-  //       background: #E5F1FA;  
-  //       z-index: 100; 
-  //       grid-column: 3;
-  //       grid-row: 1 / 4;
-  //       justify-self: end;
-  //       // &:after {
-  //       //   top: 2rem;
-  //       //   content: "";
-  //       //   border-left: #000;
-  //       // }
-  //     }
-
-  //     &.right {
-  //       border-left: 1px #0D7CD7 dashed;
-  //       border-right: 1px #0D7CD7 dashed;
-  //       background: #E5F1FA;
-  //       z-index: 100; 
-  //       grid-column: 5;
-  //       grid-row: 1 / 4;
-  //       justify-self: start;
-  //       // left: 22.8rem;
-  //     }
-
-  //     &.indicator-left {
-  //       position: relative;
-  //       margin-top: 0.25rem;
-  //       border-left: 1px #0D7CD7 solid;
-  //       border-right: 1px #0D7CD7 solid;
-  //       grid-column: 3;
-  //       grid-row: 4;
-  //       justify-self: end;
-
-  //       &:after {
-  //         content: "";
-  //         position: absolute;
-  //         top: 0.25rem;
-  //         width: 11px;
-  //         border-bottom: 1px #0D7CD7 solid;
-  //       }
-  //     }
-
-  //     &.indicator-right {
-  //       position: relative;
-  //       border-left: 1px #0D7CD7 solid;
-  //       border-right: 1px #0D7CD7 solid;
-  //       grid-column: 5;
-  //       grid-row: 4;
-  //       justify-self: start;
-
-  //       &:after {
-  //         content: "";
-  //         position: absolute;
-  //         top: 0.25rem;
-  //         width: 11px;
-  //         border-bottom: 1px #0D7CD7 solid;
-  //       }
-  //     }
-  //   }
-  // }
-    // .divider-line.example {
-    //   grid-column: 3;
-    //   margin: 0.15rem 0 0 0.5rem;
-    // }

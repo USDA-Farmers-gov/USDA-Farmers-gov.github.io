@@ -30,7 +30,21 @@
       The width of the divider is flexible. However, the leaf icon should be center-aligned and the dividers on the left and right should be equal in width. 
     </p>
     <p>
-        [ PRIMARY SPECS IMAGE]
+      <div class="row">
+        <div class="medium-7">
+          <div class="primary-line-grid">
+            <div class="pixel-height-specs">1px</div>
+            <div class="pixel-height"></div>
+            <div class="divider-line"></div>
+            <div class="pixel-box pixel-box-left"></div>
+            <div class="pixel-box pixel-box-right"></div>
+            <div class="pixel-span pixel-span-right">&nbsp;</div>
+            <div class="pixel-span pixel-span-left">&nbsp;</div>
+            <div class="pixel-width pixel-width-right">12px</div>
+            <div class="pixel-width pixel-width-left">12px</div>
+          </div>
+        </div>
+      </div>
     </p>
     <ExampleRow :data="primary_specs" columns="3" />
 
