@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div v-for="item in data" :class="setFlexClass()">
-      <p>
+      <p v-if="item.header">
         <strong>{{ item.header }}</strong>
       </p>
       <div v-if="item.markup" v-html="item.markup" class="example-container"></div>

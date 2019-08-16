@@ -32,6 +32,14 @@
     <ExampleRow v-if="tertiary_button_default" :data="tertiary_button_default" columns="1" />
     <ExampleRow v-if="tertiary_button" :data="tertiary_button" columns="4" />
 
+    <h3>Feedback Button</h3>
+
+    <p>Feedback buttons provide users with a quick and simple way to indicate if the specific page or feature they visited was useful to them, by simple clicking Yes or No. Feedback buttons are blue and round so they may be easily distinguished from primary and secondary action buttons. They should be placed at the bottom of the page to minimize distraction.</p>
+
+    <button class="btn feedback">Yes</button>
+
+    <ExampleRow :data="feedback_button" columns="4"/>
+
     <h3>Accessibility</h3>
     <p>Buttons should show a visible focus state when tabbed to by a user.</p>
     <p>Avoid using <strong>&lt;div&gt;</strong> or <strong>&lt;img&gt;</strong> tags for buttons as screen readers may not know that these are usable buttons.</p>
@@ -246,6 +254,51 @@ export default {
           classes: 'disabled tertiary', 
           markup: this.outputButtonMarkup('disabled tertiary'),
           code: { text: 'color: #BBBBBB;' } }
+      ],
+      feedback_button: [
+        { 
+          header: 'Default', 
+          classes: 'feedback', 
+          markup: this.outputButtonMarkup('feedback'),
+          code: {
+            background: `border: 2px #1A6AD3;
+                        color: #FFFFFF;
+                        shadow: 0;1;4;0
+                        #BBBBBB;`, 
+            text: `color: #1A6AD3;
+                    font-family: "Public Sans";
+                    font-size: 16px;
+                    font-weight: bold;
+                    line-height: 20px;` 
+          }
+        },
+        { 
+          header: 'Hover', 
+          classes: 'hover-color feedback', 
+          markup: this.outputButtonMarkup('hover-color feedback'),
+          code: {
+            background: 'border: 2px #004785;', 
+            text: 'color: #004785;'
+          }
+        },
+        { 
+          header: 'Active', 
+          classes: 'active-color feedback', 
+          markup: this.outputButtonMarkup('active-color feedback'),
+          code: {
+            background: 'border: 2px #122E51;', 
+            text: 'color: #122E51;' 
+          }
+        },
+        { 
+          header: 'Focus', 
+          classes: 'focus-color feedback', 
+          markup: this.outputButtonMarkup('focus-color feedback'),
+          code: {
+            background: 'border: 2px #122E51; <br> shadow: #1B69D3;', 
+            text: 'color: #122E51;' 
+          }
+        }
       ]
     }
   },

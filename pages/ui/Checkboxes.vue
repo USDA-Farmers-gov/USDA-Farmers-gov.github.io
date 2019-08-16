@@ -13,16 +13,7 @@
     <p v-html="outputCheckboxMarkup({ label: 'Checkbox Label' })"></p>  
     <p v-html="outputCheckboxMarkup({ label: 'Checkbox Label', checked: true })"></p>  
 
-    <div v-if="checkboxes.length" class="container">
-      <div class="row">
-        <Example v-for="(item, index) in checkboxes" 
-          columns="4" 
-          :header="item.type" 
-          :markup="outputCheckboxMarkup({ label: '&nbsp;', checked: item.checked })" 
-          :code="item.code" 
-          :key="index"/>
-      </div>
-    </div>
+    <ExampleRow :data="checkboxes" columns="4" />
 
     <h3>Click Target</h3>
     <p>
@@ -45,27 +36,14 @@
       </div>
     </div>
 
-    <div v-for="checkbox in specs">
-      <h3 v-if="checkbox.header">{{ checkbox.header }}</h3>
-      <p v-if="checkbox.description" v-html="checkbox.description"/>
-      <div v-if="checkbox.examples_1.length" class="container">
-        <div class="row">
-          <Example v-for="(item, index) in checkbox.examples_1" 
-            columns="3" 
-            :header="item.type" 
-            :markup="outputCardMarkup({ label: 'Card Checkbox', checked: item.checked })" 
-            :code="item.code" 
-            :key="index"/>
-        </div>
-        <div class="row">
-          <Example v-for="(item, index) in checkbox.examples_2" 
-            columns="3" :header="item.type" 
-            :markup="outputCardMarkup({ label: 'Card Checkbox', checked: item.checked })" 
-            :code="item.code" 
-            :key="index"/>
-        </div>
-      </div>
-    </div>
+    <h3>Specs</h3>
+
+    <p>
+      Card height and width are flexible based on specific use cases. The cards are most commonly used in a &frac13; or &frac14; grid layout. Icons can be used with different typography hierarchy inside the card. All elements should stay within the specified padding requirements below.
+    </p>
+
+    <ExampleRow :data="specs" columns="3" />
+    <ExampleRow :data="specs_states" columns="3" />
 
     <h3>Click Target</h3>
     <p>
@@ -97,8 +75,9 @@
       return {
         checkboxes: [
           {
-            type: 'Unselected',
+            header: 'Unselected',
             classes: '',
+            markup: this.outputCheckboxMarkup({ label: '&nbsp;' }),
             code: {
               background: `color: #FFFFFF;
                         border: 2px #707070;
@@ -106,92 +85,93 @@
             }
           },
           {
-            type: 'Selected',
+            header: 'Selected',
             classes: '',
-            checked: true,
+            markup: this.outputCheckboxMarkup({ label: '&nbsp;', checked: true }),
             code: {
               background: `color: #006546;`,
               checkmark: `color: #FFFFFF;`
             }
           },
           {
-            type: 'Focused',
+            header: 'Focused',
             classes: '',
+            markup: this.outputCheckboxMarkup({ label: '&nbsp;' }),
             code: { background: `shadow: #1B69D3;` }
           },
           {
-            type: 'Disabled',
+            header: 'Disabled',
             classes: '',
+            markup: this.outputCheckboxMarkup({ label: '&nbsp;' }),
             code: { 
                     background: `color: #F7F7F7;
                         border: 2px #BBBBBB;`
                   }
           },
         ],
+
         specs: [
-          { 
-            header: 'Specs',
-            description: `Card height and width are flexible based on specific use cases. The cards are most commonly used in a &frac13; or &frac14; grid layout. Icons can be used with different typography hierarchy inside the card. All elements should stay within the specified padding requirements below.`,
-            examples_1: [
-              {
-                type: 'Unselected',
-                classes: '',
-                code: {
-                  card: `background: #FFFFFF;
-                    border: 2px #BBBBBB;
-                    box-shadow: 0 1px 4px 0 #BBBBBB;
-                    border-radius: 2px;`,
-                  checkbox: `background: #FFFFFF;
-                      border: 2px #49A564;
+          {
+            header: 'Unselected',
+            classes: '',
+            markup: this.outputCardMarkup({ label: 'Card Checkbox' }),
+            code: {
+              card: `background: #FFFFFF;
+                border: 2px #BBBBBB;
+                box-shadow: 0 1px 4px 0 #BBBBBB;
+                border-radius: 2px;`,
+              checkbox: `background: #FFFFFF;
+                  border: 2px #49A564;
+                  border-radius: 2px;`
+            }
+          },
+          {
+            header: 'Selected',
+            classes: '',
+            markup: this.outputCardMarkup({ label: 'Card Checkbox', checked: true }),
+            code: {
+              card: `background: #FFFFFF;
+                  border: 2px #49A564;
+                  box-shadow: 0 1px 4px 0 #BBBBBB;
+                  border-radius: 2px;`,
+              checkbox:  `background: #49A564;
                       border-radius: 2px;`
-                }
-              },
-              {
-                type: 'Selected',
-                classes: '',
-                checked: true,
-                code: {
-                  card: `background: #FFFFFF;
-                      border: 2px #49A564;
-                      box-shadow: 0 1px 4px 0 #BBBBBB;
-                      border-radius: 2px;`,
-                  checkbox:  `background: #49A564;
-                          border-radius: 2px;`
-                }
-              }
-            ],
-            examples_2: [
-              {
-                type: 'Hover',
-                classes: '',
-                code: {
-                  card: `border: 2px #49A564;`,
-                  checkbox: `background: #FFFFFF;
-                          border: 2px #49A564;`
-                }
-              },
-              {
-                type: 'Focus',
-                classes: '',
-                checked: true,
-                code: {
-                  card: `shadow: #1B69D3;`,
-                  checkbox: `background: #49A564;
-                          checkmark: #FFFFFF;`
-                }
-              },
-              {
-                type: 'Disabled',
-                classes: '',
-                code: {
-                  card: `border: 2px #BBBBBB;`,
-                  checkbox: `background: #F7F7F7;
-                          border: 2px #BBBBBB;`
-                }
-              }
-            ]
+            }
+          }
+        ],
+        specs_states: [
+          {
+            header: 'Hover',
+            classes: '',
+            markup: this.outputCardMarkup({ label: 'Card Checkbox' }),
+            code: {
+              card: `border: 2px #49A564;`,
+              checkbox: `background: #FFFFFF;
+                      border: 2px #49A564;`
+            }
+          },
+          {
+            header: 'Focus',
+            classes: '',
+            markup: this.outputCardMarkup({ label: 'Card Checkbox', checked: true }),
+            code: {
+              card: `shadow: #1B69D3;`,
+              checkbox: `background: #49A564;
+                      checkmark: #FFFFFF;`
+            }
+          },
+          {
+            header: 'Disabled',
+            classes: '',
+            markup: this.outputCardMarkup({ label: 'Card Checkbox' }),
+            code: {
+              card: `border: 2px #BBBBBB;`,
+              checkbox: `background: #F7F7F7;
+                      border: 2px #BBBBBB;`
+            }
           }
         ]
+
       }
     },
     methods: {

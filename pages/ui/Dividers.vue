@@ -14,9 +14,7 @@
       The divider should be full-width. It should stay within the max width of the page. Tool dividers should not be used by themselves; they must be used above and below the tool callout content.
     </p>      
     
-    <div class="row">
-      <Example columns="1" :markup="default_specs.markup" :code="default_specs.code" />
-    </div>
+    <ExampleRow :data="default_specs" columns="1" />
 
     <h3>Primary Divider</h3>
     <p>
@@ -34,13 +32,7 @@
     <p>
         [ PRIMARY SPECS IMAGE]
     </p>
-    <div class="row">
-      <Example v-for="(item, index) in primary_specs" 
-        columns="3" 
-        :header="item.header"
-        :code="item.code" 
-        :key="index" />
-    </div>
+    <ExampleRow :data="primary_specs" columns="3" />
 
     <h3>Secondary Dividers</h3>
     <p>
@@ -57,12 +49,7 @@
       <div class="pixel-height"></div>
       <div class="divider-dot example"></div>
     </div>
-    <div class="row">
-      <Example v-for="(item, index) in secondary_specs" 
-        columns="3" 
-        :code="item.code" 
-        :key="index" />
-    </div>
+
 
     <h3>Accessibility</h3>
     <p>
@@ -79,15 +66,17 @@
     layout: 'farmers',
     data() {
       return {
-        default_specs: {
-          markup: `<div class="double-line-grid">
+        default_specs: [
+          {
+            markup: `<div class="double-line-grid">
                     <div class="pixel-height-specs">6px</div>
                     <div class="pixel-height"></div>
                     <div class="highlight"></div>
                     <div class="double-line"></div>
                   </div>`,
-          code: { line: `border: 2px solid #BBBBBB;` }
-        },
+            code: { line: `border: 2px solid #BBBBBB;` }
+          }
+        ],
         primary_specs: [
           {
             header: 'Used with Icon',
