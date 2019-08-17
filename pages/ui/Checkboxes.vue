@@ -20,6 +20,7 @@
       A checkbox can be selected and deselected by clicking or tapping on the checkbox as well as the text label.
     </p>
     <p>
+      <!-- TODO: get image -->
       [CHECKBOX LABEL]
     </p>
 
@@ -29,6 +30,7 @@
       Card checkboxes are used in interactive tools. The element allows space for icons when appropriate, as well as typographical hierarchy. The entire card is a large touch/click target which minimizes user input error and allows for an easier interaction on a mobile device. Users can select one or more options. If only one option can be selected, use <a href="#">card radio buttons</a>.
     </p>
 
+    <!-- TODO: add images to cards when they become available. -->
     <div class="container">
       <div class="row">
         <div v-html="outputCardMarkup({ label: 'Card Checkbox' })" class="medium-4"></div>
@@ -50,6 +52,7 @@
       The entire card in card checkboxes should be clickable.
     </p>
     <p>
+      <!-- TODO: get image -->
       [ CHECKBOX HOVER ]
     </p>
 
@@ -77,7 +80,7 @@
           {
             header: 'Unselected',
             classes: '',
-            markup: this.outputCheckboxMarkup({ label: '&nbsp;' }),
+            markup: this.outputCheckboxMarkup({ label: 'Checkbox Label', showDimensions: true }),
             code: {
               background: `color: #FFFFFF;
                         border: 2px #707070;
@@ -87,7 +90,7 @@
           {
             header: 'Selected',
             classes: '',
-            markup: this.outputCheckboxMarkup({ label: '&nbsp;', checked: true }),
+            markup: this.outputCheckboxMarkup({ label: 'Checkbox Label', checked: true }),
             code: {
               background: `color: #006546;`,
               checkmark: `color: #FFFFFF;`
@@ -96,13 +99,13 @@
           {
             header: 'Focused',
             classes: '',
-            markup: this.outputCheckboxMarkup({ label: '&nbsp;' }),
+            markup: this.outputCheckboxMarkup({ label: 'Checkbox Label' }),
             code: { background: `shadow: #1B69D3;` }
           },
           {
             header: 'Disabled',
             classes: '',
-            markup: this.outputCheckboxMarkup({ label: '&nbsp;' }),
+            markup: this.outputCheckboxMarkup({ label: 'Checkbox Label' }),
             code: { 
                     background: `color: #F7F7F7;
                         border: 2px #BBBBBB;`
@@ -128,7 +131,7 @@
           {
             header: 'Selected',
             classes: '',
-            markup: this.outputCardMarkup({ label: 'Card Checkbox', checked: true }),
+            markup: this.outputCardMarkup({ label: 'Card Checkbox', checked: true, showCardDimensions: true }),
             code: {
               card: `background: #FFFFFF;
                   border: 2px #49A564;
@@ -180,19 +183,55 @@
         let checked
         if(!!options && options.checked) checked = ' checked'
         if(checked) cardClasses = cardClasses + ' checked'
+        let card = `<div class="` + cardClasses + `" tabindex="-1">` + this.outputCheckboxMarkup(options) + `</div>`
 
-        return `<div class="` + cardClasses + `" tabindex="-1">` + this.outputCheckboxMarkup(options) + `</div>`
+        return options.showCardDimensions 
+          ? `<div class="checkbox-card-grid">
+              <div class="top"></div>
+              <div class="bottom"></div>
+              <div class="left"></div>
+              <div class="right"></div>
+              <div class="height-span top-right"></div>
+              <div class="height-span bottom-right"></div>
+              <div class="width-span bottom-left"></div>
+              <div class="width-span bottom-right"></div>
+              <div class="height-span-dimension top-right">20px</div>
+              <div class="height-span-dimension bottom-right">20px</div>
+              <div class="width-span-dimension bottom-left">20px</div>
+              <div class="width-span-dimension bottom-right">20px</div>
+              <div class="checkbox-span checkbox-span-top"></div>
+              <div class="checkbox-span checkbox-span-left"></div>
+
+              <div class="checkbox-dimension checkbox-dimension-top">32px</div>
+              <div class="checkbox-dimension checkbox-dimension-left">32px</div>
+              ` + card  + `</div>`
+          : card
       },
       outputCheckboxMarkup(options) {
         let label = (!! options && options.label) ? options.label : 'Label'
         let labelClass = 'checkbox'
+        let gridClass
         let checked
 
         if(!!options && options.showLabel === false) labelClass = labelClass + ' visually-hidden'
+        if(!!options && options.showDimensions) gridClass = ' checkbox-dimensions'
         if(!!options && options.checked) checked = ' checked'
 
-        return `<input type="checkbox" name="example-1" value="Option 1" title="Option 1" tabindex="-1" ` + checked + `>
+        let checkbox = `<input type="checkbox" name="example-1" value="Option 1" title="Option 1" tabindex="-1" ` + checked + `>
           <label for="example-1" tabindex="-1" class="` + labelClass + `">` + label + `</label>`
+
+        return options.showDimensions ? `<div class="checkbox-grid`+ gridClass + `">
+                <div class="checkbox-dimension-height">24 px</div>
+                <div class="checkbox-height"></div>
+                <div class="checkbox">
+                  ` + checkbox + `
+                </div>
+                <div class="checkbox-width"></div>
+                <div></div>
+                <div></div>
+                <div class="checkbox-dimension-width">24 px</div>
+              </div>`
+              : checkbox
       }
     }
   }
