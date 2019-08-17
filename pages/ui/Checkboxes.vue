@@ -201,7 +201,6 @@
               <div class="width-span-dimension bottom-right">20px</div>
               <div class="checkbox-span checkbox-span-top"></div>
               <div class="checkbox-span checkbox-span-left"></div>
-
               <div class="checkbox-dimension checkbox-dimension-top">32px</div>
               <div class="checkbox-dimension checkbox-dimension-left">32px</div>
               ` + card  + `</div>`
