@@ -195,10 +195,10 @@
               <div class="height-span bottom-right"></div>
               <div class="width-span bottom-left"></div>
               <div class="width-span bottom-right"></div>
-              <div class="height-span-dimension top-right">20px</div>
-              <div class="height-span-dimension bottom-right">20px</div>
-              <div class="width-span-dimension bottom-left">20px</div>
-              <div class="width-span-dimension bottom-right">20px</div>
+              <div class="height-dimension top-right">20px</div>
+              <div class="height-dimension bottom-right">20px</div>
+              <div class="width-dimension bottom-left">20px</div>
+              <div class="width-dimension bottom-right">20px</div>
               <div class="checkbox-span checkbox-span-top"></div>
               <div class="checkbox-span checkbox-span-left"></div>
               <div class="checkbox-dimension checkbox-dimension-top">32px</div>
