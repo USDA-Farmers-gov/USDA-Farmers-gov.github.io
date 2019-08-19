@@ -13,7 +13,9 @@
     <p v-html="outputCheckboxMarkup({ label: 'Checkbox Label' })"></p>  
     <p v-html="outputCheckboxMarkup({ label: 'Checkbox Label', checked: true })"></p>  
 
-    <ExampleRow :data="checkboxes" columns="4" />
+    <div class="checkbox-page-container">
+      <ExampleRow :data="checkboxes" columns="4" />
+    </div>
 
     <h3>Click Target</h3>
     <p>
@@ -239,3 +241,11 @@
     }
   }
 </script>
+
+<style scoped>
+  @media only screen and (max-width: 600px) {
+    .checkbox-page-container {
+      margin-left: 3.5rem;
+    }
+  }
+</style>

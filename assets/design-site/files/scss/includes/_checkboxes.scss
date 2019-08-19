@@ -1,11 +1,6 @@
 .checkbox-dimensions {
   position: absolute;
   left: -3.8rem;
-
-  @media only screen and (max-width: 600px) {
-    position: relative;
-    left: 0.2rem;
-  }
 }
 .checkbox-click-target {
   position: relative;
