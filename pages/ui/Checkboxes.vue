@@ -22,7 +22,7 @@
       A checkbox can be selected and deselected by clicking or tapping on the checkbox as well as the text label.
     </p>
     
-    <div class="row">
+    <div class="row click-target">
       <div class="medium-3 highlight-overlay" v-html="outputCheckboxMarkup({ label: 'Checkbox Label' })"></div> 
     </div>
     <div class="checkbox-click-target hover-hand"></div>
@@ -55,9 +55,11 @@
       The entire card in card checkboxes should be clickable.
     </p>
     
-    <div class="row card-highlight">
-      <div class="medium-4">
-        <div class="highlight-overlay" v-html="outputCardMarkup({ label: 'Card Checkbox' })"></div>  
+    <div class="container">
+      <div class="row card-highlight">
+        <div class="medium-4">
+          <div class="highlight-overlay" v-html="outputCardMarkup({ label: 'Card Checkbox' })"></div>  
+        </div>
       </div>
     </div>
     <div class="checkbox-card-click-target hover-hand"></div>

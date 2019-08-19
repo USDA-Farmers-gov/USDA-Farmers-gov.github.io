@@ -9,6 +9,12 @@
   position: relative;
   top: -1.3rem;
   left: 1.4rem;
+
+  &.hover-hand {
+    @media only screen and (max-width: 600px) {
+      left: 0.5rem;
+    }
+  }
 }
 .checkbox-card-click-target {
   position: relative;
@@ -273,15 +279,23 @@
 }
 .card-highlight {
   position:relative;
-  left: -1rem;
+  
+  
+}
+.click-target {
+  .highlight-overlay {    
+    position: relative;
+    left: 1rem;
+    
+    .checkbox-card label:before, [type=checkbox] + label::before {
+      background: $highlight_bg_color;
+    }
+
+    @media only screen and (max-width: 600px) {
+      left: 0;
+    }
+  }
 }
 .dimension-margins .example-container {
   margin-bottom: 4rem;
-}
-.highlight-overlay {    
-  position: relative;
-  left: 1rem;
-  .checkbox-card label:before, [type=checkbox] + label::before {
-    background: $highlight_bg_color;
-  }
 }
