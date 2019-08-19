@@ -5,10 +5,8 @@ export default {
   ** Headers of the page
   */
   head: {
-    // title: 'Farmers Design System',
     titleTemplate: (titleChunk) => {
-      // If undefined or blank then we don't need the hyphen
-      return titleChunk ? `${titleChunk}: Farmers Design System` : 'Farmers Design System';
+      return titleChunk ? `${titleChunk} | Farmers Design System` : 'Farmers Design System';
     },
     meta: [
       { charset: 'utf-8' },
