@@ -1,6 +1,8 @@
-/** GRID **/
-.medium-greyscale {
-  flex-basis: 20%;
+/** OLD DESIGN SYSTEM **/
+@media screen and (max-width: 800px) {
+  p br {
+    display: block;
+  }
 }
 
 // ** DISABLES HOVER, Etc. **//

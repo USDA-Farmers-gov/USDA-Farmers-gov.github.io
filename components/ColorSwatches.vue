@@ -13,12 +13,12 @@
         <p>
           <strong>Examples</strong>
         </p>
-        <div class="container">
-          <div v-if="example.description" v-for="example in data" class="row">
-            <div>
+        <div class="color-examples">
+          <div v-if="example.description" v-for="example in data" class="color-row">
+            <div class="container-square">
               <div :class="'color-square ' + example.classes"></div>
             </div>
-            <div class="medium-11">
+            <div class="color-description">
               {{ example.description }}
             </div>
           </div>

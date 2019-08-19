@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Radio Buttons</h2>
-    <p>
+    <p class="intro-text">
       Radio buttons are used when the user can only make one selection from a list or group of options.
     </p>
 

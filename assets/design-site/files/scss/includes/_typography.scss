@@ -17,8 +17,12 @@
 .typography-example {
   padding-top: 2rem;
   line-height: 2rem;
-  letter-spacing: 10px;
+  letter-spacing: 1rem;
   border-top: 1px solid #bbb;
+
+  @media only screen and (max-width: 600px) {
+    letter-spacing: 0.5rem;
+  }
 }
 .typography-footnote {
   padding: 3rem 0 4rem 0;
@@ -38,4 +42,10 @@
 .merriweather-container {
   padding-top: 5rem;
   padding-bottom: 4rem;
+  
+  @media only screen and (max-width: 600px) {
+    .typography-example {
+      letter-spacing: 0.4rem;
+    }
+  }
 }

@@ -103,8 +103,8 @@
 
     .highlight {
       position: relative;
-      border-top: 1px #E52207 dashed;
-      border-bottom: 1px #E52207 dashed;
+      border-top: 1px $dss_red dashed;
+      border-bottom: 1px $dss_red dashed;
       background: #FCE8E6;
       height: 6px;
       z-index: 100;
@@ -145,12 +145,12 @@
     position: relative;
     grid-column: 2;
     grid-row: 1 / 3;
-    border-top: 1px #E52207 solid;
-    border-bottom: 1px #E52207 solid;
+    border-top: 1px $dss_red solid;
+    border-bottom: 1px $dss_red solid;
 
     &:after {
       content: "";
-      border-right: 1px solid #E52207;
+      border-right: 1px solid $dss_red;
       position: absolute;
       height: 100%;
       left: 5px;
@@ -162,5 +162,5 @@
     grid-column: 1;
     grid-row: 1;
     font-size: 1rem;
-    color: #E52207;
+    color: $dss_red;
   }
