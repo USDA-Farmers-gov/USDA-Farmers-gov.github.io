@@ -261,7 +261,7 @@ export default {
         { 
           header: 'Default', 
           classes: 'feedback', 
-          markup: this.outputButtonMarkup('feedback'),
+          markup: this.outputButtonMarkup('feedback', true),
           code: {
             background: `border: 2px #1A6AD3;
                         color: #FFFFFF;
