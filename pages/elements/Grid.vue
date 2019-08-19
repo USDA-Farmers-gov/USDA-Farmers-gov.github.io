@@ -68,6 +68,11 @@
 
 <script>
 export default {
-  layout: 'farmers'
+  layout: 'farmers',
+  head() {
+    return {
+      title: 'Grid'
+    }
+  },
 }
 </script>

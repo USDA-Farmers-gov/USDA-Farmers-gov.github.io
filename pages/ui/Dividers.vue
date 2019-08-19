@@ -78,6 +78,11 @@
 <script>
   export default {
     layout: 'farmers',
+    head() {
+      return {
+        title: 'Dividers'
+      }
+    },
     data() {
       return {
         default_specs: [

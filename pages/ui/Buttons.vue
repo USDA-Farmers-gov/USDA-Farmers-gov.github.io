@@ -57,6 +57,11 @@ import utils from '~/assets/js/utils'
 
 export default {
   layout: 'farmers',
+  head() {
+    return {
+      title: 'Buttons'
+    }
+  },
   data() {
     return {
       primary_button: [

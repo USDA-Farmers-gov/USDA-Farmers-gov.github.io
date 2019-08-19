@@ -18,5 +18,10 @@
 
 export default {
   layout: 'farmers',
+  head() {
+    return {
+      title: 'Links'
+    }
+  },
 }
 </script>

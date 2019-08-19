@@ -4,17 +4,17 @@ $highlight_border_color: #9355DC;
 
 @import 'farmers/old/styles.scss';
 @import 'farmers/new/styles.scss';
-@import 'includes/_borders.scss';
-@import 'includes/_buttons.scss';
-@import 'includes/_checkboxes.scss';
-@import 'includes/_colors.scss';
-@import 'includes/_dividers.scss';
-@import 'includes/_elements.scss';
-@import 'includes/_menu.scss';
-@import 'includes/_tables.scss';
-@import 'includes/_typography.scss';
-@import 'includes/_kitchen-sink.scss';
-@import 'includes/_overrides.scss';
+@import 'includes/borders.scss';
+@import 'includes/buttons.scss';
+@import 'includes/checkboxes.scss';
+@import 'includes/colors.scss';
+@import 'includes/dividers.scss';
+@import 'includes/elements.scss';
+@import 'includes/menu.scss';
+@import 'includes/tables.scss';
+@import 'includes/typography.scss';
+@import 'includes/kitchen-sink.scss';
+@import 'includes/overrides.scss';
 /** TODO: May need to adjust these numbers as they are overriding the design system **/
 
 body {

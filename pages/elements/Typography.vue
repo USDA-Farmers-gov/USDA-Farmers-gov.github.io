@@ -158,6 +158,11 @@
 <script>
 export default {
   layout: 'farmers',
+  head() {
+    return {
+      title: 'Typography'
+    }
+  },
   data() {
     return {
       public_sans: [

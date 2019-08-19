@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img class="logo" src="../assets/images/farmers-logo.svg"/>
+    <img class="logo" alt="Farmers.gov" src="../assets/images/farmers-logo.svg"/>
     <ul class="menu-container">
       <li v-for="item in menu">
         <div :class="setClassesByCategory(item.category)" 
@@ -49,7 +49,7 @@
                       { name: 'Buttons', path: '/ui/Buttons'},
                       { name: 'Checkboxes', path: '/ui/Checkboxes'},
                       { name: 'Dividers', path: '/ui/Dividers'},
-                      // { name: 'Radio Buttons', path: '/ui/RadioButtons'},
+                      { name: 'Radio Buttons', path: '/ui/RadioButtons'},
                     ]
           },
           // {

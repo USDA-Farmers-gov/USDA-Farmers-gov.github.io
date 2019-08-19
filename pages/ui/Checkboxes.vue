@@ -8,7 +8,7 @@
     <h3>Form Checkboxes</h3>
 
     <p>
-      This style of checkboxes is commonly used in forms. Users can select one or more options. If only one option can be selected, use <a href="#">radio buttons</a>. Checkbox icons and their labels should be left-aligned and vertical for better scannability when appropriate.
+      This style of checkboxes is commonly used in forms. Users can select one or more options. If only one option can be selected, use <nuxt-link to="/ui/RadioButtons">radio buttons</nuxt-link>. Checkbox icons and their labels should be left-aligned and vertical for better scannability when appropriate.
     </p>
     <p v-html="outputCheckboxMarkup({ label: 'Checkbox Label' })"></p>  
     <p v-html="outputCheckboxMarkup({ label: 'Checkbox Label', checked: true })"></p>  
@@ -30,7 +30,7 @@
     <h3>Card Checkboxes</h3>
 
     <p>
-      Card checkboxes are used in interactive tools. The element allows space for icons when appropriate, as well as typographical hierarchy. The entire card is a large touch/click target which minimizes user input error and allows for an easier interaction on a mobile device. Users can select one or more options. If only one option can be selected, use <a href="#">card radio buttons</a>.
+      Card checkboxes are used in interactive tools. The element allows space for icons when appropriate, as well as typographical hierarchy. The entire card is a large touch/click target which minimizes user input error and allows for an easier interaction on a mobile device. Users can select one or more options. If only one option can be selected, use <nuxt-link to="/ui/RadioButtons#card-radio-buttons">card radio buttons</nuxt-link>.
     </p>
 
     <!-- TODO: add images to cards when they become available. -->
@@ -80,6 +80,11 @@
 <script>
   export default {
     layout: 'farmers',
+    head() {
+      return {
+        title: 'Checkboxes'
+      }
+    },
     data() {
       return {
         checkboxes: [
@@ -241,11 +246,3 @@
     }
   }
 </script>
-
-<style scoped>
-  @media only screen and (max-width: 600px) {
-    .checkbox-mobile-container {
-      margin-left: 3.5rem;
-    }
-  }
-</style>

@@ -54,6 +54,11 @@
 <script>
 export default {
   layout: 'farmers',
+  head() {
+    return {
+      title: 'Colors'
+    }
+  },
   data() {
     return {
       primary_colors: [        

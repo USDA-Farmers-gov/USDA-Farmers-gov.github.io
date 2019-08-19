@@ -263,6 +263,12 @@
     }
 }
 
+@media only screen and (max-width: 600px) {
+  .checkbox-mobile-container {
+    margin-left: 3.5rem;
+  }
+}
+
 .highlight-overlay {
   .checkbox-card label:before, [type=checkbox] + label::before {
     background: $highlight_bg_color;
