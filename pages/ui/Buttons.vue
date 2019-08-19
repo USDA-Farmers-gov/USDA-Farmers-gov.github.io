@@ -9,7 +9,7 @@
     <p>We utilize, and have provided, a variety of button sizes to accommodate different space constrictions and intended uses.</p>
 
     <p>
-      <button class="btn">button</button>
+      <button class="btn" tabindex="-1">button</button>
     </p>
 
    <ExampleRow v-if="primary_button" :data="primary_button" columns="3" />
@@ -20,7 +20,7 @@
     <p>Secondary buttons carry less visual weight than primary buttons, which helps ensure that when they are used together the primary action will be more noticeable. The difference between their “weight” is immediately noticeable, so that users can make the correct choice. These buttons utilize the same blue as primary buttons but only as an outline.</p>
 
     <p>
-      <button class="btn outline">button</button>
+      <button class="btn outline" tabindex="-1">button</button>
     </p>
 
     <ExampleRow v-if="secondary_button" :data="secondary_button" columns="3" />
@@ -37,7 +37,7 @@
     <p>Feedback buttons provide users with a quick and simple way to indicate if the specific page or feature they visited was useful to them, by simple clicking Yes or No. Feedback buttons are blue and round so they may be easily distinguished from primary and secondary action buttons. They should be placed at the bottom of the page to minimize distraction.</p>
 
     <p>
-      <button class="btn feedback">Yes</button>
+      <button class="btn feedback" tabindex="-1">Yes</button>
     </p>
     
     <ExampleRow :data="feedback_button" columns="4"/>

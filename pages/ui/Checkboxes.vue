@@ -13,7 +13,7 @@
     <p v-html="outputCheckboxMarkup({ label: 'Checkbox Label' })"></p>  
     <p v-html="outputCheckboxMarkup({ label: 'Checkbox Label', checked: true })"></p>  
 
-    <div class="checkbox-page-container">
+    <div class="checkbox-mobile-container">
       <ExampleRow :data="checkboxes" columns="4" />
     </div>
 
@@ -244,7 +244,7 @@
 
 <style scoped>
   @media only screen and (max-width: 600px) {
-    .checkbox-page-container {
+    .checkbox-mobile-container {
       margin-left: 3.5rem;
     }
   }
