@@ -1,7 +1,7 @@
 <template>
-  <div class="container">
+  <div class="container examples">
     <div class="row">
-      <div v-for="item in data" :class="setFlexClass()">
+      <div v-for="item in data" :class="setClasses(item)">
         <p v-if="item.header">
           <strong>{{ item.header }}</strong>
         </p>
@@ -29,8 +29,9 @@
       }
     },
     methods: {
-      setFlexClass() {
-        return 'medium-' + 12/Number(this.columns)
+      setClasses(item) {
+        let flexClass = 'medium-' + 12/Number(this.columns)
+        return (item.classes_cell) ? flexClass + ' ' + item.classes_cell :  flexClass
       },
       setContentHeader(key) {
         return key.replace('_', ' ').toUpperCase()
@@ -40,7 +41,7 @@
       },
       addLineBreaks(text) {
         return utils.addLineBreaks(text)
-      },
+      }
       // for intercepting click events
       // setMarkup(markup) {
       //   return '<div class="cover"></div>' + markup

@@ -1,3 +1,6 @@
+.container.examples {
+  margin-bottom: 4rem;
+}
 .checkbox-dimensions {
   position: absolute;
   left: -3.8rem;
@@ -5,7 +8,7 @@
 .checkbox-click-target {
   position: relative;
   top: -1.3rem;
-  left: 0.4rem;
+  left: 1.4rem;
 }
 .checkbox-card-click-target {
   position: relative;
@@ -268,8 +271,16 @@
     margin-left: 3.5rem;
   }
 }
-
-.highlight-overlay {
+.card-highlight {
+  position:relative;
+  left: -1rem;
+}
+.dimension-margins .example-container {
+  margin-bottom: 4rem;
+}
+.highlight-overlay {    
+  position: relative;
+  left: 1rem;
   .checkbox-card label:before, [type=checkbox] + label::before {
     background: $highlight_bg_color;
   }

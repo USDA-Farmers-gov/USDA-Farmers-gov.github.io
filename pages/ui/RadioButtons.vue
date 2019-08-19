@@ -65,7 +65,7 @@
       The entire card in card radio buttons should be clickable.
     </p>
 
-    <div class="row">
+    <div class="row card-highlight">
       <div class="medium-4">
         <div class="highlight-overlay" v-html="outputCardMarkup({ label: 'Card Radio Button' })"></div>
       </div>
@@ -139,8 +139,8 @@ export default {
         specs: [
           {
             header: 'Unselected',
-            classes: '',
-            markup: this.outputCardMarkup({ label: 'Card Checkbox' }),
+            classes_cell: 'dimension-margins',
+            markup: this.outputCardMarkup({ label: 'Card Radio Button' }),
             code: {
               card: `background: #FFFFFF;
                     border: 2px #BBBBBB;
@@ -153,7 +153,7 @@ export default {
           {
             header: 'Selected',
             classes: '',
-            markup: this.outputCardMarkup({ label: 'Card Checkbox', checked: true, showCardDimensions: true }),
+            markup: this.outputCardMarkup({ label: 'Card Radio Button', checked: true, showCardDimensions: true }),
             code: {
               card: `background: #FFFFFF;
                   border: 2px #49A564;

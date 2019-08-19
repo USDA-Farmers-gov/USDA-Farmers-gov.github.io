@@ -34,7 +34,7 @@
     </p>
 
     <!-- TODO: add images to cards when they become available. -->
-    <div class="container">
+    <div class="container examples">
       <div class="row">
         <div v-html="outputCardMarkup({ label: 'Card Checkbox' })" class="medium-4"></div>
         <div v-html="outputCardMarkup({ label: 'Card Checkbox', checked: true })" class="medium-4"></div>
@@ -55,7 +55,7 @@
       The entire card in card checkboxes should be clickable.
     </p>
     
-    <div class="row">
+    <div class="row card-highlight">
       <div class="medium-4">
         <div class="highlight-overlay" v-html="outputCardMarkup({ label: 'Card Checkbox' })"></div>  
       </div>
@@ -127,7 +127,7 @@
         specs: [
           {
             header: 'Unselected',
-            classes: '',
+            classes_cell: 'dimension-margins',
             markup: this.outputCardMarkup({ label: 'Card Checkbox' }),
             code: {
               card: `background: #FFFFFF;
