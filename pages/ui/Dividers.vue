@@ -33,8 +33,8 @@
       <div class="row">
         <div class="medium-7">
           <div class="primary-line-grid">
-            <div class="pixel-height-specs">1px</div>
-            <div class="pixel-height"></div>
+            <div class="pixel-height-dimension dimension-red">1px</div>
+            <div class="pixel-height span-red horizontal"></div>
             <div class="divider-line"></div>
             <div class="pixel-box pixel-box-left"></div>
             <div class="pixel-box pixel-box-right"></div>
@@ -88,9 +88,9 @@
         default_specs: [
           {
             markup: `<div class="double-line-grid">
-                    <div class="pixel-height-specs">6px</div>
-                    <div class="pixel-height"></div>
-                    <div class="highlight"></div>
+                    <div class="pixel-height-dimension dimension-red">6px</div>
+                    <div class="pixel-height span-red horizontal"></div>
+                    <div class="highlight dashed-red horizontal"></div>
                     <div class="double-line"></div>
                   </div>`,
             code: { line: `border: 2px solid #BBBBBB;` }
