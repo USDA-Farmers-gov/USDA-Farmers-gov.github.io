@@ -279,7 +279,6 @@
 }
 .card-highlight {
   position:relative;
-  // TODO: make this a mixin
   .checkbox-card label:before, [type=checkbox] + label::before {
     background: $highlight_bg_color;
   }
@@ -288,7 +287,6 @@
   .highlight-overlay {    
     position: relative;
     left: 1rem;
-    // TODO: replace this with mixin
     .checkbox-card label:before, [type=checkbox] + label::before {
       background: $highlight_bg_color;
     }
