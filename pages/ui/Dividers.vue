@@ -33,15 +33,15 @@
       <div class="row">
         <div class="medium-7">
           <div class="primary-line-grid">
-            <div class="pixel-height-dimension dimension-red">1px</div>
-            <div class="pixel-height span-red horizontal"></div>
+            <div class="primary-line-height dimension dimension-red">1px</div>
+            <div class="primary-line-height span-red horizontal"></div>
             <div class="divider-line"></div>
-            <div class="pixel-box pixel-box-left"></div>
-            <div class="pixel-box pixel-box-right"></div>
-            <div class="pixel-span pixel-span-right">&nbsp;</div>
-            <div class="pixel-span pixel-span-left">&nbsp;</div>
-            <div class="pixel-width pixel-width-right">12px</div>
-            <div class="pixel-width pixel-width-left">12px</div>
+            <div class="primary-line-box-left dashed-blue vertical"></div>
+            <div class="primary-line-box-right dashed-blue vertical"></div>
+            <div class="primary-line-span right span-blue vertical"></div>
+            <div class="primary-line-span left span-blue vertical"></div>
+            <div class="primary-line-width right dimension-blue">12px</div>
+            <div class="primary-line-width left dimension-blue">12px</div>
           </div>
         </div>
       </div>
@@ -59,11 +59,10 @@
       The width of the divider is flexible. However, it should not stretch across the edges of the page and/or card.
     </p>
     <div class="secondary-specs-grid">
-      <div class="pixel-height-specs">1px</div>
-      <div class="pixel-height"></div>
+      <div class="pixel-height-dimension dimension-red">1px</div>
+      <div class="pixel-height span-red horizontal"></div>
       <div class="divider-dot example"></div>
     </div>
-
 
     <h3>Accessibility</h3>
     <p>
