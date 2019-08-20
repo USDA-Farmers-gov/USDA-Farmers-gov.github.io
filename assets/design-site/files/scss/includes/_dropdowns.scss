@@ -2,7 +2,7 @@
   display: grid;
   // select: 246px width
   grid-template-columns: 12px 16px 128px 116px 16px 10px 20px;
-  grid-template-rows: 20px 7px 16px 20px 16px 10px 20px;
+  grid-template-rows: 20px 7px 16px 16px 16px 10px 20px;
   
   label {
     grid-column: 2 / 5;
@@ -13,70 +13,129 @@
     grid-row: 3;
   }
 
-  .dropdown-label-dashed {
-    grid-column: 2 / 4;
-    grid-row: 2;
-    height: 4px;
-    background: rgba(252, 232, 230, 0.5);
-    border-top: 1px $dss_red dashed;
-    border-bottom: 1px $dss_red dashed;   
-    position: relative;
-    top: 0.6rem; 
-  }
-
-  .dropdown-label-dimension {
-    grid-column: 4;
-    grid-row: 2;
-    color: $dss_red;
-    font-size: 1rem;
-    position: relative;
-    left: 1.5rem;
-  }
-
-  .dropdown-label-span {
-    position: relative;
-    left:140px;
-    width: 9px;
-    height: 4px;
-    grid-column: 2;
-    grid-row: 2;
-    border-top: 1px $dss_red solid;
-    border-bottom: 1px $dss_red solid;
-    position: relative;
-    top: 0.6rem; 
-
-    &:after {
-        content: "";
-        border-right: 1px solid $dss_red;      
-        position:absolute;
-        height: 100%;
-        left: 4px;    
-      }
-  }
-
-  .dropdown-select-left-span {
-    position: relative;
-    top: 0.4rem;
-    grid-column: 1;
-    grid-row: 3 / 5;
-    border-top: 1px $dss_red solid;
-    border-bottom: 1px $dss_red solid;
-    width: 9px;
-    &:after {
-      content: "";
-      border-right: 1px solid $dss_red;      
-      position:absolute;
-      height: 100%;
-      left: 4px;    
+  .label {
+    &.dashed {
+      grid-column: 2 / 4;
+      grid-row: 2;
+      height: 4px;
+      position: relative;
+      top: 0.6rem; 
+    }
+    &.dimension {
+      grid-column: 4;
+      grid-row: 2;
+      position: relative;
+      left: 1.5rem;
+      top: -0.4rem;
+    }
+    &.span {
+      position: relative;
+      left:140px;
+      width: 9px;
+      height: 4px;
+      grid-column: 2;
+      grid-row: 2;
+      position: relative;
+      top: 0.6rem; 
     }
   }
 
-  .dropdown-select-left-dimension {
-    color: $dss_red;
-    font-size: 1rem;
-    grid-column: 1;
-    grid-row: 4;
-    position: relative;
-    left: -2.5rem;
+  .select-top {
+    &.dashed {
+      grid-column: 2 / 6;
+      grid-row: 3;
+      position: relative;
+      top: 0.3rem;
+    }
+    &.span {
+      grid-column: 6;
+      grid-row: 3;
+      position: relative;
+      top:0.3rem;
+      margin-left: 0.2rem;
+    }
+    &.dimension {
+     grid-column: 7;
+     grid-row: 3;
+    }
+  }
+
+  .select-bottom {
+    &.dashed {
+      grid-column: 2 / 6;
+      grid-row: 5;
+      position: relative;
+      top: -0.1rem;
+    }
+    &.span {
+      grid-column: 6;
+      grid-row: 5;
+      position: relative;
+      margin-left: 0.2rem;
+    }
+    &.dimension {
+      grid-column: 7;
+      grid-row: 5;
+    }
+  }
+
+  .select-left {
+    &.span {
+      position: relative;
+      top: 0.4rem;
+      grid-column: 1;
+      grid-row: 3 / 5;
+      width: 9px;
+      height: 42px;
+    }
+    &.dimension {
+      grid-column: 1;
+      grid-row: 4;
+      position: relative;
+      left: -2.5rem;
+    }
+  }
+
+  .bottom-left {
+    &.dashed {
+      grid-column: 2;
+      grid-row: 3 / 6;
+      width: 16px;
+      position: relative;
+      margin-top: 0.3rem;
+      margin-bottom: 0.1rem;
+    }
+
+    &.span {
+      position: relative;
+      grid-column: 2;
+      grid-row: 6;
+      margin-top: 0.2rem;
+    }
+    &.dimension {
+      grid-column: 2;
+      grid-row: 7;
+    }
+  }
+
+  .bottom-right {
+    &.dashed {
+      grid-column: 5;
+      grid-row: 3 / 6;
+      width: 16px;
+      position: relative;
+      margin-top: 0.3rem;
+      margin-bottom: 0.1rem;
+    }
+    &.span {
+      position: relative;
+      grid-column: 5;
+      grid-row: 6;
+      margin-top: 0.2rem;
+    }
+    &.dimension {
+      grid-column: 5;
+      grid-row: 7;
+    }
   }
 }

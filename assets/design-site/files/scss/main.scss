@@ -1,9 +1,6 @@
-$dss_red: #E62D14;
-$highlight_bg_color: #F7F3FC;
-$highlight_border_color: #9355DC;
-
 @import 'farmers/old/styles.scss';
 @import 'farmers/new/styles.scss';
+@import 'includes/variables.scss';
 @import 'includes/borders.scss';
 @import 'includes/buttons.scss';
 @import 'includes/checkboxes.scss';

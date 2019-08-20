@@ -43,11 +43,9 @@
     </p>
 
     <!-- TODO: add images to cards when they become available. -->
-    <div class="container">
-      <div class="row">
-        <div v-html="outputCardMarkup({ label: 'Card Radio Button' })" class="medium-4"></div>
-        <div v-html="outputCardMarkup({ label: 'Card Radio Button', checked: true })" class="medium-4"></div>
-      </div>
+    <div class="row">
+      <div v-html="outputCardMarkup({ label: 'Card Radio Button' })" class="medium-4"></div>
+      <div v-html="outputCardMarkup({ label: 'Card Radio Button', checked: true })" class="medium-4"></div>
     </div>
 
     <h3>Specs</h3>

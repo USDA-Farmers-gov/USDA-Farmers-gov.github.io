@@ -85,7 +85,7 @@
     grid-row: 1 / span 4;
   }
   .top, .bottom {
-    background: rgba(252, 232, 230, 0.5);
+    background: $red_opaque_bg;
     border-top: 1px $dss_red dashed;
     border-bottom: 1px $dss_red dashed;
     // opacity: 0.5;
@@ -100,9 +100,9 @@
   }
   .left, .right {
     position: relative;
-    background: rgba(229, 241, 250, 0.5);
-    border-left: 1px #0D7DD8 dashed;
-    border-right: 1px #0D7DD8 dashed;
+    background: $blue_opaque_bg;
+    border-left: 1px $dss_blue dashed;
+    border-right: 1px $dss_blue dashed;
     opacity: 0.5;
     grid-row: 1 / span 4;
   }

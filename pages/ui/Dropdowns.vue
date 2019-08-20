@@ -59,12 +59,28 @@ export default {
       dropdown = dropdown + `</select>`
 
       return showDimensions ? `<div class="dropdown-grid">
-                                <div class="dropdown-label-dashed"></div>
-                                <div class="dropdown-label-dimension">4px</div>
-                                <div class="dropdown-label-span"></div>
+                                <div class="label dashed dashed-red horizontal"></div>
+                                <div class="label span span-red horizontal"></div>
+                                <div class="label dimension dimension-red">4px</div>
 
-                                <div class="dropdown-select-left-span"></div>
-                                <div class="dropdown-select-left-dimension">52px</div>
+                                <div class="select-top dashed dashed-red horizontal"></div>
+                                <div class="select-top span span-red horizontal"></div>
+                                <div class="select-top dimension dimension-red">16px</div>
+
+                                <div class="select-bottom dashed dashed-red horizontal"></div>
+                                <div class="select-bottom span span-red horizontal"></div>
+                                <div class="select-bottom dimension dimension-red">16px</div>
+
+                                <div class="bottom-left dashed dashed-blue vertical"></div>
+                                <div class="bottom-left span span-blue vertical"></div>
+                                <div class="bottom-left dimension dimension-blue">16px</div>
+
+                                <div class="bottom-right dashed dashed-blue vertical"></div>
+                                <div class="bottom-right span span-blue vertical"></div>
+                                <div class="bottom-right dimension dimension-blue">16px</div>
+                                
+                                <div class="select-left span span-red horizontal"></div>
+                                <div class="select-left dimension dimension-red">52px</div>
                                 ` + dropdown + `
                                 </div>` 
                             : dropdown
