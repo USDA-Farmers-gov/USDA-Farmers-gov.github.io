@@ -59,8 +59,8 @@
       The width of the divider is flexible. However, it should not stretch across the edges of the page and/or card.
     </p>
     <div class="secondary-specs-grid">
-      <div class="pixel-height-dimension dimension-red">1px</div>
-      <div class="pixel-height span-red horizontal"></div>
+      <div class="secondary-specs-height-dimension dimension-red">1px</div>
+      <div class="secondary-specs-height span-red horizontal"></div>
       <div class="divider-dot example"></div>
     </div>
 
@@ -87,8 +87,8 @@
         default_specs: [
           {
             markup: `<div class="double-line-grid">
-                    <div class="pixel-height-dimension dimension-red">6px</div>
-                    <div class="pixel-height span-red horizontal"></div>
+                    <div class="double-line-height-dimension dimension-red">6px</div>
+                    <div class="double-line-height span-red horizontal"></div>
                     <div class="highlight dashed-red horizontal"></div>
                     <div class="double-line"></div>
                   </div>`,
