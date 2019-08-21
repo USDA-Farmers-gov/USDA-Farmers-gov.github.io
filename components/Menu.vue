@@ -8,8 +8,8 @@
               @keypress="setActiveCategoryOnEvent($event, item)"
               tabindex="0">
                 {{ item.category }}
-                <i v-if="activeCategory === item.category && !item.path" class="arrow up"></i>
-                <i v-if="activeCategory !== item.category && !item.path" class="arrow down"></i>
+                <i v-if="activeCategory === item.category && !item.path" class="arrow arrow-up"></i>
+                <i v-if="activeCategory !== item.category && !item.path" class="arrow arrow-down"></i>
         </div>
 
         <ul v-if="activeCategory === item.category" class="menu-links">

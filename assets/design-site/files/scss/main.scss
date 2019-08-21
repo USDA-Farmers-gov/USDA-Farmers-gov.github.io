@@ -1,18 +1,19 @@
 @import 'farmers/old/styles.scss';
 @import 'farmers/new/styles.scss';
-
 @import 'includes/variables.scss';
+
+@import 'includes/elements/colors.scss';
+@import 'includes/elements.scss';
+
+@import 'includes/ui/buttons.scss';
+@import 'includes/ui/checkboxes.scss';
+@import 'includes/ui/dividers.scss';
+@import 'includes/ui/dropdowns.scss';
+@import 'includes/ui/tables.scss';
 
 @import 'includes/page.scss';
 @import 'includes/borders.scss';
-@import 'includes/ui/buttons.scss';
-@import 'includes/ui/checkboxes.scss';
-@import 'includes/elements/colors.scss';
-@import 'includes/ui/dividers.scss';
-@import 'includes/ui/dropdowns.scss';
-@import 'includes/elements.scss';
 @import 'includes/menu.scss';
-@import 'includes/ui/tables.scss';
 @import 'includes/elements/typography.scss';
 @import 'includes/kitchen-sink.scss';
 @import 'includes/overrides.scss';

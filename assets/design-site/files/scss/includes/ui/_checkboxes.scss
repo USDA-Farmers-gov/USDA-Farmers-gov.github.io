@@ -48,24 +48,24 @@
     grid-column: 1 / span 5;
     grid-row: 1 / span 4;
   }
-  .top, .bottom {
+  .checkbox-card-top, .checkbox-card-bottom {
     grid-column: 1 / span 5;
   }
-  .top {
+  .checkbox-card-top {
     grid-row: 1;
   }
-  .bottom {
+  .checkbox-card-bottom {
     grid-column: 4 / 6;
     grid-row: 4;
   }
-  .left, .right {
+  .checkbox-card-left, .checkbox-card-right {
     position: relative;
     grid-row: 1 / span 4;
   }
-  .left {
+  .checkbox-card-left {
     grid-column: 1;
   }
-  .right {
+  .checkbox-card-right {
     grid-column: 5;
     position: relative;
     left: -2px;

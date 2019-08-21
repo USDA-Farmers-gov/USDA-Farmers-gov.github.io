@@ -48,10 +48,6 @@ main {
   }
 }
 
-*, ::after, ::before {
-    box-sizing: border-box;
-}
-
 .container {
   padding-left: 0;
 }
@@ -61,6 +57,9 @@ main {
    left: -999em;
 }
 
+*, ::after, ::before {
+    box-sizing: border-box;
+}
 // DISABLES CLICK
 // .cover{
 //   width:100%;
