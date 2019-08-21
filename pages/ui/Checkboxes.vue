@@ -200,17 +200,17 @@
 
         return options.showCardDimensions 
           ? `<div class="checkbox-card-grid">
-              <div class="top dashed-red horizontal"></div>
-              <div class="bottom dashed-red horizontal"></div>
+              <div class="top dashed-red dashed-red-horizontal"></div>
+              <div class="bottom dashed-red dashed-red-horizontal"></div>
 
-              <div class="left dashed-blue vertical"></div>
-              <div class="right dashed-blue vertical"></div>
+              <div class="left dashed-blue dashed-blue-vertical"></div>
+              <div class="right dashed-blue dashed-blue-vertical"></div>
 
-              <div class="height-span top-right span-red horizontal"></div>
-              <div class="height-span bottom-right span-red horizontal"></div>
+              <div class="height-span top-right span-red span-red-horizontal"></div>
+              <div class="height-span bottom-right span-red span-red-horizontal"></div>
 
-              <div class="width-span bottom-left span-blue vertical"></div>
-              <div class="width-span bottom-right span-blue vertical"></div>
+              <div class="width-span bottom-left span-blue span-blue-vertical"></div>
+              <div class="width-span bottom-right span-blue span-blue-vertical"></div>
 
               <div class="height-dimension top-right dimension-red">20px</div>
               <div class="height-dimension bottom-right dimension-red">20px</div>
@@ -218,8 +218,8 @@
               <div class="width-dimension bottom-left dimension-blue">20px</div>
               <div class="width-dimension bottom-right dimension-blue">20px</div>
 
-              <div class="checkbox-span checkbox-span-top span-blue vertical"></div>
-              <div class="checkbox-span checkbox-span-left span-red horizontal"></div>
+              <div class="checkbox-span checkbox-span-top span-blue span-blue-vertical"></div>
+              <div class="checkbox-span checkbox-span-left span-red span-red-horizontal"></div>
 
               <div class="checkbox-dimension-top dimension-blue">32px</div>
               <div class="checkbox-dimension-left dimension-red">32px</div>
@@ -241,11 +241,11 @@
 
         return options.showDimensions ? `<div class="checkbox-grid`+ gridClass + `">
                 <div class="checkbox-dimension-height dimension-red">24 px</div>
-                <div class="checkbox-height span-red horizontal"></div>
+                <div class="checkbox-height span-red span-red-horizontal"></div>
                 <div class="checkbox">
                   ` + checkbox + `
                 </div>
-                <div class="checkbox-width span-blue vertical"></div>
+                <div class="checkbox-width span-blue span-blue-vertical"></div>
                 <div></div>
                 <div></div>
                 <div class="checkbox-dimension-width dimension-blue">24 px</div>

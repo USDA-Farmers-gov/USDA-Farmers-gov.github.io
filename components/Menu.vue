@@ -49,7 +49,7 @@
                       { name: 'Buttons', path: '/ui/Buttons'},
                       { name: 'Checkboxes', path: '/ui/Checkboxes'},
                       { name: 'Dividers', path: '/ui/Dividers'},
-                      { name: 'Dropdowns', path: '/ui/Dropdowns'},
+                      // { name: 'Dropdowns', path: '/ui/Dropdowns'},
                       { name: 'Radio Buttons', path: '/ui/RadioButtons'},
                     ]
           },

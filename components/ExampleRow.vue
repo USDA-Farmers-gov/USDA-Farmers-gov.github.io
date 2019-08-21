@@ -1,18 +1,16 @@
 <template>
-  <div class="container examples">
-    <div class="row">
-      <div v-for="item in data" :class="setClasses(item)">
-        <p v-if="item.header">
-          <strong>{{ item.header }}</strong>
-        </p>
-        <div v-if="item.markup" v-html="item.markup" class="example-container"></div>
+  <div class="row examples">
+    <div v-for="item in data" :class="setClasses(item)">
+      <p v-if="item.header">
+        <strong>{{ item.header }}</strong>
+      </p>
+      <div v-if="item.markup" v-html="item.markup" class="example-container"></div>
 
-        <p v-if="Object.keys(item.code).length" v-for="(row, key) in item.code" class="text-medium">
-          <span class="label">{{ setContentHeader(key) }}</span>
-          <br/>
-          <span class="text-medium" v-html="setCode(row)"></span>
-        </p>
-      </div>
+      <p v-if="Object.keys(item.code).length" v-for="(row, key) in item.code" class="text-medium">
+        <span class="label" v-if="key">{{ setContentHeader(key) }}</span>
+        <br/>
+        <span class="text-medium" v-html="addLineBreaks(row)"></span>
+      </p>
     </div>
   </div>
 </template>
@@ -35,9 +33,6 @@
       },
       setContentHeader(key) {
         return key.replace('_', ' ').toUpperCase()
-      },
-      setCode(row) {
-        return utils.addLineBreaks(row)
       },
       addLineBreaks(text) {
         return utils.addLineBreaks(text)

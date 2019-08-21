@@ -1,15 +1,35 @@
 .example-container {
+  position: relative;
   min-height: 4rem;
+}
+
+.intro-text {
+  font-size: 2.2rem;
+  padding-bottom: 3.5rem;
+}
+
+.highlight-overlay {
+  background: $highlight_bg_color;
+  border: 1px $highlight_border_color solid;
+  padding: 0.8rem;
+  z-index: 100;
+}
+
+.hover-hand {
+  z-index: 100;
+  height: 22px;
+  width: 22px;
+  background: url('../../../../assets/images/hover-hand.png') no-repeat;
 }
 
 .dashed-blue {
   z-index: 100;
-  &.horizontal {
+  &.dashed-blue-horizontal {
     background: $blue_opaque_bg;
     border-top: 1px $dss_blue dashed;
     border-bottom: 1px $dss_blue dashed; 
   }
-  &.vertical {
+  &.dashed-blue-vertical {
     background: $blue_opaque_bg;
     border-left: 1px $dss_blue dashed;
     border-right: 1px $dss_blue dashed;     
@@ -18,12 +38,12 @@
 
 .dashed-red {
   z-index: 100;
-  &.horizontal {
+  &.dashed-red-horizontal {
     background: $red_opaque_bg;
     border-top: 1px $dss_red dashed;
     border-bottom: 1px $dss_red dashed; 
   }
-  &.vertical {
+  &.dashed-red-vertical {
     background: $red_opaque_bg;
     border-left: 1px $dss_red dashed;
     border-right: 1px $dss_red dashed;     
@@ -32,7 +52,7 @@
 
 .span-blue {
   position: relative;
-  &.horizontal {
+  &.span-blue-horizontal {
     border-top: 1px $dss_blue solid;
     border-bottom: 1px $dss_blue solid;
 
@@ -44,7 +64,7 @@
         left: 4px;    
       }
   }
-  &.vertical {
+  &.span-blue-vertical {
     position: relative;
     border-left: 1px $dss_blue solid;
     border-right: 1px $dss_blue solid;
@@ -60,7 +80,7 @@
 }
 
 .span-red {
-  &.horizontal {
+  &.span-red-horizontal {
     position: relative;
     border-top: 1px $dss_red solid;
     border-bottom: 1px $dss_red solid;
@@ -74,7 +94,7 @@
         left: 4px;    
       }
   }
-  &.vertical {
+  &.span-red-vertical {
     position: relative;
     border-left: 1px $dss_red solid;
     border-right: 1px $dss_red solid;

@@ -34,12 +34,12 @@
         <div class="medium-7">
           <div class="primary-line-grid">
             <div class="primary-line-height dimension dimension-red">1px</div>
-            <div class="primary-line-height span-red horizontal"></div>
+            <div class="primary-line-height span-red span-red-horizontal"></div>
             <div class="divider-line"></div>
-            <div class="primary-line-box-left dashed-blue vertical"></div>
-            <div class="primary-line-box-right dashed-blue vertical"></div>
-            <div class="primary-line-span right span-blue vertical"></div>
-            <div class="primary-line-span left span-blue vertical"></div>
+            <div class="primary-line-box-left dashed-blue dashed-blue-vertical"></div>
+            <div class="primary-line-box-right dashed-blue dashed-blue-vertical"></div>
+            <div class="primary-line-span right span-blue span-blue-vertical"></div>
+            <div class="primary-line-span left span-blue span-blue-vertical"></div>
             <div class="primary-line-width right dimension-blue">12px</div>
             <div class="primary-line-width left dimension-blue">12px</div>
           </div>
@@ -60,7 +60,7 @@
     </p>
     <div class="secondary-specs-grid">
       <div class="secondary-specs-height-dimension dimension-red">1px</div>
-      <div class="secondary-specs-height span-red horizontal"></div>
+      <div class="secondary-specs-height span-red span-red-horizontal"></div>
       <div class="divider-dot example"></div>
     </div>
 
@@ -88,8 +88,8 @@
           {
             markup: `<div class="double-line-grid">
                     <div class="double-line-height-dimension dimension-red">6px</div>
-                    <div class="double-line-height span-red horizontal"></div>
-                    <div class="highlight dashed-red horizontal"></div>
+                    <div class="double-line-height span-red span-red-horizontal"></div>
+                    <div class="highlight dashed-red dashed-red-horizontal"></div>
                     <div class="double-line"></div>
                   </div>`,
             code: { line: `border: 2px solid #BBBBBB;` }

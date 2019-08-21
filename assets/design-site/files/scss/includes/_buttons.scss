@@ -8,49 +8,27 @@
   height: 60px;
   display: inline-grid;
   grid-template-columns: auto 20px 100px;
+  grid-template-rows: auto auto 10px;
   margin-bottom: 3rem;
 
   .button-width {
     position: relative;
-    height: 1.2rem;
+    height: 0.9rem;
     margin-top: 0.75rem;
-    border-right: 1px solid $blue;
-    border-left: 1px solid $blue;
   }      
-  .button-width:before {
-    content: "";
-    display: block;
-    border-top: solid 1px $blue;
-    width: 100%;
-    height: 1px;
-    position: absolute;
-    top: 50%;
-    z-index: 1;
-  }
   .button-height {
     position:relative;
     width: 9px;
-    border-top: 1px solid $blue;
-    border-bottom: 1px solid $blue;
     margin-left:10px;
-  }
-  .button-height::after {
-    content: "";
-    border-right: 1px solid $blue;      
-    position:absolute;
-    height: 100%;
-    left: 4px;
   }
   .button-dimension-height {
     position: relative;
     align-self: center;
-    color: $blue;
-    font-size: 1rem;
   }
   .button-dimension-width {
+    grid-column: 1;
+    grid-row: 3;
     text-align: center;
-    color: $blue;
-    font-size: 1rem;
   }
 } 
 .button-grid.feedback {
