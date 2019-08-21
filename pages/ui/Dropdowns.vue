@@ -27,6 +27,8 @@
     <div class="row">
       <div class="medium-12" v-html="getDropdownMarkup('Dropdown Label', dropdown_single, true)"/>
     </div>
+
+    <ExampleRow :data="dropdown_states" columns="4" />
   </div>
 </template>
 
@@ -44,6 +46,33 @@ export default {
         { text: 'Option 1', value: '01' },
         { text: 'Option 2', value: '02' },
         { text: 'Option 3', value: '03' },
+      ],
+      dropdown_states: [
+        { 
+          code: { 
+                    dropdown_label: `font-family: Public Sans;
+                            font-size: 16px;
+                            line-height: 26px;
+                            color: #212121;
+                            font-weight: regular;` 
+                }
+        },
+        { 
+          code: { 
+                    dropdown_box: `background: #FFFFFF;
+                          border: 1px #707070;
+                          border-radius: 2px;`
+                }
+        },
+        { 
+          code: {
+                    dropdown_box_text: `font-family: Public Sans
+                              font-size: 16px;
+                              line-height: 20px;
+                              color: #212121;
+                              font-weight: bold;`
+                }
+        },
       ]
     }
   },
