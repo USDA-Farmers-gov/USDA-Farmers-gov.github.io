@@ -78,17 +78,17 @@ export default {
         { classes: 'soft-red', caption: 'Soft Red #EEDAD9',  description: 'Soft Red: warning status ' }
       ],
       greyscale_colors: [        
-        { classes: 'grey-1', caption: '#F7F7F7',  description: '' },
-        { classes: 'grey-2', caption: '#EDEDED',  description: '' },
-        { classes: 'grey-3', caption: '#BBBBBB',  description: '' },
-        { classes: 'grey-4', caption: '#707070',  description: '' },
-        { classes: 'grey-5', caption: '#494440',  description: '' },
+        { classes: 'grey-1', caption: '#F7F7F7' },
+        { classes: 'grey-2', caption: '#EDEDED' },
+        { classes: 'grey-3', caption: '#BBBBBB' },
+        { classes: 'grey-4', caption: '#707070' },
+        { classes: 'grey-5', caption: '#494440' },
       ],
       special_states: [        
-        { classes: 'visited-color', caption: 'Visited #4C2C92',  description: '' },
-        { classes: 'focus-color', caption: 'Focus #1B69D3',  description: '' },
-        { classes: 'hover-color', caption: 'Hover #004785',  description: '' },
-        { classes: 'active-color', caption: 'Active #122E51',  description: '' },
+        { classes: 'visited-color', caption: 'Visited #4C2C92' },
+        { classes: 'focus-color', caption: 'Focus #1B69D3' },
+        { classes: 'hover-color', caption: 'Hover #004785' },
+        { classes: 'active-color', caption: 'Active #122E51' },
       ]    
     }
   }

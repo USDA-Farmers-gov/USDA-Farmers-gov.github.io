@@ -92,7 +92,6 @@
         checkboxes: [
           {
             header: 'Unselected',
-            classes: '',
             markup: this.outputCheckboxMarkup({ label: 'Checkbox Label', showDimensions: true }),
             code: {
               background: `color: #FFFFFF;
@@ -102,7 +101,6 @@
           },
           {
             header: 'Selected',
-            classes: '',
             markup: this.outputCheckboxMarkup({ label: 'Checkbox Label', checked: true }),
             code: {
               background: `color: #006546;`,
@@ -111,7 +109,6 @@
           },
           {
             header: 'Focused',
-            classes: '',
             markup: this.outputCheckboxMarkup({ label: 'Checkbox Label' }),
             code: { background: `shadow: #1B69D3;` }
           },
@@ -143,7 +140,6 @@
           },
           {
             header: 'Selected',
-            classes: '',
             markup: this.outputCardMarkup({ label: 'Card Checkbox', checked: true, showCardDimensions: true }),
             code: {
               card: `background: #FFFFFF;
@@ -158,7 +154,6 @@
         specs_states: [
           {
             header: 'Hover',
-            classes: '',
             markup: this.outputCardMarkup({ label: 'Card Checkbox' }),
             code: {
               card: `border: 2px #49A564;`,
@@ -168,7 +163,6 @@
           },
           {
             header: 'Focus',
-            classes: '',
             markup: this.outputCardMarkup({ label: 'Card Checkbox', checked: true }),
             code: {
               card: `shadow: #1B69D3;`,
@@ -178,7 +172,6 @@
           },
           {
             header: 'Disabled',
-            classes: '',
             markup: this.outputCardMarkup({ label: 'Card Checkbox' }),
             code: {
               card: `border: 2px #BBBBBB;`,

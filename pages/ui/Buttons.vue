@@ -67,7 +67,6 @@ export default {
       primary_button: [
         { 
           header: 'Default', 
-          classes: '', 
           markup: this.outputButtonMarkup('', true),
           code: {
             background: `border-radius: 4px;

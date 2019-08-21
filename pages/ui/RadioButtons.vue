@@ -101,7 +101,6 @@ export default {
       radio_buttons: [
           {
             header: 'Unselected',
-            classes: '',
             markup: this.outputRadioButtonMarkup({ label: 'Radio Label', showDimensions: true }),
             code: {
               background: `color: #FFFFFF;
@@ -110,7 +109,6 @@ export default {
           },
           {
             header: 'Selected',
-            classes: '',
             markup: this.outputRadioButtonMarkup({ label: 'Radio Label', checked: true }),
             code: {
               background: `color: #006546;
@@ -119,13 +117,11 @@ export default {
           },
           {
             header: 'Focused',
-            classes: '',
             markup: this.outputRadioButtonMarkup({ label: 'Radio Label' }),
             code: { background: `shadow: #1B69D3;` }
           },
           {
             header: 'Disabled',
-            classes: '',
             markup: this.outputRadioButtonMarkup({ label: 'Radio Label' }),
             code: { 
                     background: `color: #F7F7F7;
@@ -150,7 +146,6 @@ export default {
           },
           {
             header: 'Selected',
-            classes: '',
             markup: this.outputCardMarkup({ label: 'Card Radio Button', checked: true, showCardDimensions: true }),
             code: {
               card: `background: #FFFFFF;
@@ -165,7 +160,6 @@ export default {
         specs_states: [
           {
             header: 'Hover',
-            classes: '',
             markup: this.outputCardMarkup({ label: 'Card Radio Button' }),
             code: {
               card: `border: 2px #49A564;`,
@@ -175,7 +169,6 @@ export default {
           },
           {
             header: 'Focus',
-            classes: '',
             markup: this.outputCardMarkup({ label: 'Card Radio Button', checked: true }),
             code: {
               card: `shadow: #1B69D3;`,
@@ -185,7 +178,6 @@ export default {
           },
           {
             header: 'Disabled',
-            classes: '',
             markup: this.outputCardMarkup({ label: 'Card Radio Button' }),
             code: {
               card: `border: 2px #BBBBBB;`,
