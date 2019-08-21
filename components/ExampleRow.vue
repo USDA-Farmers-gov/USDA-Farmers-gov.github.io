@@ -32,7 +32,7 @@
         return (item.classes_cell) ? flexClass + ' ' + item.classes_cell :  flexClass
       },
       setContentHeader(key) {
-        return key.replace('_', ' ').toUpperCase()
+        return key.replace(/_/g, ' ').toUpperCase()
       },
       addLineBreaks(text) {
         return utils.addLineBreaks(text)
