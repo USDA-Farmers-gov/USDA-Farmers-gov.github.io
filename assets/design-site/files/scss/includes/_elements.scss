@@ -1,3 +1,5 @@
+$span_dimension: 9px;
+
 .example-container {
   position: relative;
   min-height: 4rem;
@@ -55,6 +57,7 @@
   &.span-blue-horizontal {
     border-top: 1px $dss_blue solid;
     border-bottom: 1px $dss_blue solid;
+    width: $span_dimension;
 
     &:after {
         content: "";
@@ -68,6 +71,7 @@
     position: relative;
     border-left: 1px $dss_blue solid;
     border-right: 1px $dss_blue solid;
+    height: $span_dimension;
 
     &:after {
         content: "";
@@ -112,9 +116,27 @@
 .dimension-blue {
   color: $dss_blue;
   font-size: 1rem;
+  
+  &.dimension-blue-horizontal {
+    justify-self: center;
+    align-self: center;
+  }
+
+  &.dimension-blue-vertical {
+    align-self: center;
+  }
 }
 
 .dimension-red {
   color: $dss_red;
   font-size: 1rem;
+
+  &.dimension-red-horizontal {
+    justify-self: center;
+    align-self: center;
+  }
+
+  &.dimension-red-vertical {
+    align-self: center;
+  }
 }

@@ -240,7 +240,7 @@
           <label for="example-1" tabindex="-1" class="` + labelClass + `">` + label + `</label>`
 
         return options.showDimensions ? `<div class="checkbox-grid`+ gridClass + `">
-                <div class="checkbox-dimension-height dimension-red">24 px</div>
+                <div class="dimension-red dimension-red-horizontal">24 px</div>
                 <div class="checkbox-height span-red span-red-horizontal"></div>
                 <div class="checkbox">
                   ` + checkbox + `
@@ -248,7 +248,7 @@
                 <div class="checkbox-width span-blue span-blue-vertical"></div>
                 <div></div>
                 <div></div>
-                <div class="checkbox-dimension-width dimension-blue">24 px</div>
+                <div class="dimension-blue dimension-blue-vertical">24 px</div>
               </div>`
               : checkbox
       }

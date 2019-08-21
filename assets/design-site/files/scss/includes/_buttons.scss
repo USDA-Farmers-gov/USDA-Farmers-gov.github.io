@@ -13,22 +13,18 @@
 
   .button-width {
     position: relative;
-    height: 0.9rem;
     margin-top: 0.75rem;
   }      
   .button-height {
     position:relative;
-    width: 9px;
     margin-left:10px;
   }
   .button-dimension-height {
     position: relative;
-    align-self: center;
   }
   .button-dimension-width {
     grid-column: 1;
     grid-row: 3;
-    text-align: center;
   }
 } 
 .button-grid.feedback {

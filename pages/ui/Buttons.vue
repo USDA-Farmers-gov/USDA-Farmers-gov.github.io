@@ -324,9 +324,9 @@ export default {
                   <button class="` + btnClasses + `" tabindex="-1">` + buttonText + `</button>
                 </div>
                 <div class="button-height span-blue span-blue-horizontal"></div>
-                <div class="button-dimension-height dimension-blue">` + dimensions.height + `px</div>
+                <div class="button-dimension-height dimension-blue dimension-blue-vertical">` + dimensions.height + `px</div>
                 <div class="button-width span-blue span-blue-vertical"></div>
-                <div class="button-dimension-width dimension-blue">` + dimensions.width + `px</div>
+                <div class="button-dimension-width dimension-blue dimension-blue-horizontal">` + dimensions.width + `px</div>
               </div>`
               : `<button class="` + btnClasses + `" tabindex="-1">` + buttonText + `</button>`
     },
