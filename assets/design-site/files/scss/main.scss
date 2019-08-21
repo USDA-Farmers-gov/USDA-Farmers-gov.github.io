@@ -5,14 +5,14 @@
 
 @import 'includes/page.scss';
 @import 'includes/borders.scss';
-@import 'includes/buttons.scss';
-@import 'includes/checkboxes.scss';
-@import 'includes/colors.scss';
-@import 'includes/dividers.scss';
-@import 'includes/dropdowns.scss';
+@import 'includes/ui/buttons.scss';
+@import 'includes/ui/checkboxes.scss';
+@import 'includes/elements/colors.scss';
+@import 'includes/ui/dividers.scss';
+@import 'includes/ui/dropdowns.scss';
 @import 'includes/elements.scss';
 @import 'includes/menu.scss';
-@import 'includes/tables.scss';
-@import 'includes/typography.scss';
+@import 'includes/ui/tables.scss';
+@import 'includes/elements/typography.scss';
 @import 'includes/kitchen-sink.scss';
 @import 'includes/overrides.scss';
