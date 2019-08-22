@@ -1,19 +1,20 @@
 @import 'farmers/old/styles.scss';
 @import 'farmers/new/styles.scss';
-@import 'includes/variables.scss';
+@import 'includes/dss_variables.scss';
 
-@import 'includes/elements/colors.scss';
-@import 'includes/elements.scss';
+@import 'includes/elements/dss_colors.scss';
+@import 'includes/elements/_dss_typography.scss';
 
-@import 'includes/ui/buttons.scss';
-@import 'includes/ui/checkboxes.scss';
-@import 'includes/ui/dividers.scss';
-@import 'includes/ui/dropdowns.scss';
-@import 'includes/ui/tables.scss';
+@import 'includes/ui/dss_buttons.scss';
+@import 'includes/ui/dss_checkboxes.scss';
+@import 'includes/ui/dss_dividers.scss';
+@import 'includes/ui/dss_dropdowns.scss';
+@import 'includes/ui/dss_tables.scss';
+@import 'includes/ui/dss_accordions.scss';
 
-@import 'includes/page.scss';
-@import 'includes/borders.scss';
-@import 'includes/menu.scss';
-@import 'includes/elements/typography.scss';
-@import 'includes/kitchen-sink.scss';
-@import 'includes/overrides.scss';
+@import 'includes/dss_elements.scss';
+@import 'includes/dss_page.scss';
+@import 'includes/dss_borders.scss';
+@import 'includes/dss_menu.scss';
+@import 'includes/dss_kitchen-sink.scss';
+@import 'includes/dss_overrides.scss';

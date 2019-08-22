@@ -131,7 +131,7 @@
           <strong>Large Text</strong>
           <div class="contrast-stats">
             <p>
-              &#8805;19px sizeat 700 weight or &#8805;24px size
+              &#8805;19px size at 700 weight or &#8805;24px size
             </p>
             <p>
               <strong>AA</strong> 3:1 minimum contrast ratio

@@ -45,7 +45,7 @@
           {
             category: 'UI Components',
             links:  [
-                      // { name: 'Accordions', path: '/ui/Accordions'},
+                      { name: 'Accordions', path: '/ui/Accordions'},
                       { name: 'Buttons', path: '/ui/Buttons'},
                       { name: 'Checkboxes', path: '/ui/Checkboxes'},
                       { name: 'Dividers', path: '/ui/Dividers'},
