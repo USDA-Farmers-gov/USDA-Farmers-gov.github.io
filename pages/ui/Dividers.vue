@@ -112,10 +112,7 @@
         ],
         secondary_specs: [
           {
-            code: 
-              {
-                line: `border: 1px dotted #BBBBBB;`,
-              }
+            code: { line: `border: 1px dotted #BBBBBB;` }
           }
         ]
       }
