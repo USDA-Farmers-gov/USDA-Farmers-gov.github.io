@@ -133,7 +133,7 @@ export default {
     },
     defaultAccordionDimensions() {
       return `<div class="default-accordion-grid">
-              
+              ` + this.defaultAccordionMarkup() + `
               <div class="default-accordion-top dashed-red dashed-red-horizontal"></div>
               <div class="default-accordion-top-span span-red span-red-horizontal"></div>
               <div class="default-accordion-top-dimension dimension-red dimension-red-horizontal">32px</div>
@@ -153,12 +153,11 @@ export default {
               <div class="default-accordion-right dashed-blue dashed-blue-vertical"></div>
               <div class="default-accordion-right-span span-blue span-blue-vertical"></div>
               <div class="default-accordion-right-dimension dimension-blue dimension-blue-vertical">32px</div>
-
-              ` + this.defaultAccordionMarkup() + `
               </div>`
     },
     clickTargetAccordionDimensions() {
       return `<div class="click-target-accordion-grid">
+                ` + this.defaultAccordionMarkup() + `
                 <div class="click-target-accordion-top dashed-red dashed-red-horizontal"></div>
                 <div class="click-target-accordion-top-span span-red span-red-horizontal"></div>
                 <div class="click-target-accordion-top-dimension dimension-red dimension-red-horizontal">24px</div>
@@ -168,7 +167,6 @@ export default {
                 <div class="click-target-accordion-bottom-dimension dimension-red dimension-red-horizontal">24px</div>
 
                 <div class="click-target-accordion-highlight"></div>
-              ` + this.defaultAccordionMarkup() + `
               </div>`
     },
     defaultBoxAccordionMarkup(expanded) {
@@ -202,7 +200,7 @@ export default {
     },
     boxAccordionDimensions() {
       return `<div class="box-accordion-grid">
-
+              ` + this.defaultBoxAccordionMarkup() + `
               <div class="box-accordion-top dashed-red dashed-red-horizontal"></div>
               <div class="box-accordion-top-span span-red span-red-horizontal"></div>
               <div class="box-accordion-top-dimension dimension-red dimenstion-horizontal">24px</div>
@@ -223,7 +221,7 @@ export default {
               <div class="box-accordion-right-span span-blue span-blue-vertical"></div>
               <div class="box-accordion-right-dimension dimension-blue dimenstion-vertical">24px</div>
 
-              ` + this.defaultBoxAccordionMarkup() + `
+              
               </div>`
     },
   }

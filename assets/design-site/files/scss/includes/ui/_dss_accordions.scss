@@ -179,18 +179,22 @@
 .box-accordion-grid {
   display: grid;
   grid-template-columns: 24px 316px 24px 10px 10px;
-  grid-template-rows: 10px 10px 24px 105px 16px 31px 24px;
+  grid-template-rows: 16px 16px 24px 105px 16px 31px 24px;
 
   .box-accordion {
     grid-column: 1 / span 3;
     grid-row: 3 / span 5;
     position: relative;
-    top: -1rem;
+    top: -1rem;    
+
   }
 
   .box-accordion-top {
     grid-column: 1 / 4;
-    grid-row: 3;
+    grid-row: 3;    
+    &.dashed-red.dashed-red-horizontal {
+      margin: 0 0.8rem 0 1rem;
+    }
   }
 
   .box-accordion-top-span {
@@ -206,6 +210,9 @@
   .box-accordion-middle {
     grid-column: 1 / 4;
     grid-row: 5;
+    &.dashed-red.dashed-red-horizontal {
+      margin: 0 0.8rem 0 1rem;
+    }
   }
 
   .box-accordion-middle-span {
@@ -221,6 +228,9 @@
   .box-accordion-bottom {
     grid-column: 1 / 4;
     grid-row: 7;
+    &.dashed-red.dashed-red-horizontal {
+      margin: 0 0.8rem 0 1rem;
+    }
   }
 
   .box-accordion-bottom-span {
@@ -258,20 +268,20 @@
     grid-column: 3;
     grid-row: 3 / 8;
     position: relative;
-    left: -0.5rem;
+    left: -0.6rem;
   }
 
   .box-accordion-right-span {
     grid-column: 3;
     grid-row: 2;
     position: relative;
-    left: -0.5rem;
+    left: -0.6rem;
   }
 
   .box-accordion-right-dimension {
     grid-column: 3;
     grid-row: 1;
     position: relative;
-    left: -0.5rem;
+    left: -0.6rem;
   }
 }
