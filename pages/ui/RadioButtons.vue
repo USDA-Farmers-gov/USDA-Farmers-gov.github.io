@@ -198,18 +198,18 @@ export default {
 
         return options.showCardDimensions 
           ? `<div class="checkbox-card-grid">
-               <div class="top dashed-red dashed-red-horizontal"></div>
-              <div class="bottom dashed-red dashed-red-horizontal"></div>
+              <div class="checkbox-card-top dashed-red dashed-red-horizontal"></div>
+              <div class="checkbox-card-bottom dashed-red dashed-red-horizontal"></div>
 
-              <div class="left dashed-blue dashed-blue-vertical"></div>
-              <div class="right dashed-blue dashed-blue-vertical"></div>
+              <div class="checkbox-card-left dashed-blue dashed-blue-vertical"></div>
+              <div class="checkbox-card-right dashed-blue dashed-blue-vertical"></div>
 
               <div class="height-span top-right span-red span-red-horizontal"></div>
               <div class="height-span bottom-right span-red span-red-horizontal"></div>
 
               <div class="width-span bottom-left span-blue span-blue-vertical"></div>
               <div class="width-span bottom-right span-blue span-blue-vertical"></div>
-              
+
               <div class="height-dimension top-right dimension-red">20px</div>
               <div class="height-dimension bottom-right dimension-red">20px</div>
 
