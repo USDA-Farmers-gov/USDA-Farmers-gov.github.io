@@ -41,7 +41,7 @@
         </tr>
         <tr>
           <td colspan="5" class="merriweather merriweather-container">
-            <h2 class="merriweather">Merriweather*</h2>
+            <h2 class="merriweather">Merriweather</h2>
             <div class="container">
               <div class="row">
                 <div class="medium-2 text-large typography-letters">A a</div>
@@ -65,9 +65,6 @@
         </tr>
       </tbody>
     </table>
-    <div class="typography-footnote text-small">
-      *Currently used on blog only
-    </div>
 
     <h2>Lists</h2>
     <div>
@@ -98,7 +95,7 @@
 
     <h2>Text Contrast</h2>
     <p>
-      All Text must meet the minimum AA Web Content Accessibliity Guidlines to be 508 compliant. This is so that text is accessible for for all users. The text and background color combinations below are used throughout the farmers.gov site and are an integral part of our visual styles.
+      All Text must meet the minimum AA Web Content Accessibliity Guidelines to be 508 compliant. This is so that text is accessible for for all users. The text and background color combinations below are used throughout the farmers.gov site and are an integral part of our visual styles.
     </p>
 
     <div class="container">
@@ -179,8 +176,8 @@ export default {
         { name_and_markup: '<div class="caption">Caption*</div>', font_family: 'Public Sans', weight: '400', font_size: '14px', line_height: '22px' },
       ],
       merriweather: [
-        { name_and_markup: '<div class="blog-body-p">Blog Body Copy*</div>', font_family: 'Merriweather', weight: '400', font_size: '18px', line_height: '30px' },
-        { name_and_markup: '<div class="blog-block-quote">Blog Quote*</div>', font_family: 'Merriweather', weight: '300', font_size: '28px', line_height: '34px' },
+        { name_and_markup: '<div class="blog-body-p">Blog Body Copy</div>', font_family: 'Merriweather', weight: '400', font_size: '18px', line_height: '30px' },
+        { name_and_markup: '<div class="blog-block-quote">Blog Quote</div>', font_family: 'Merriweather', weight: '300', font_size: '28px', line_height: '34px' },
       ],
       contrast_buttons_normal: [
         { classes: 'heritage heritage-border white-txt', description: 'White on Heritage Green'},
