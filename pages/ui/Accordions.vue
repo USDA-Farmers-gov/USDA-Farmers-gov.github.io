@@ -1,6 +1,8 @@
 <template>
   <div>
     <h2>Accordions</h2>
+  
+  <img src="~/assets/images/images-example1.jpg" />
 
     <p class="intro-text">
       An accordion hides or reveals additional information. Accordions are used when large amounts of information need to be organized within a small space.
