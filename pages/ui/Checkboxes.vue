@@ -22,7 +22,7 @@
       A checkbox can be selected and deselected by clicking or tapping on the checkbox as well as the text label.
     </p>
     
-    <div class="row click-target">
+    <div class="row">
       <div class="medium-3 highlight-overlay" v-html="outputCheckboxMarkup({ label: 'Checkbox Label' })"></div> 
     </div>
     <div class="checkbox-click-target hover-hand"></div>

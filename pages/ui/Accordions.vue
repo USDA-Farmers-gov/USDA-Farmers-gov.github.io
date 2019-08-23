@@ -18,7 +18,7 @@
       The height and width of the accordion is flexible but it should follow the grid system and the specs outlined below. 
     </p>
 
-    <ExampleRow :data="specs_default_accordion" columns="4" />
+    <ExampleRow :data="specs_default_accordion" columns="1" />
   
     <h3>Click Target</h3>
     <p>
@@ -32,7 +32,7 @@
       Box accordions are sets of headers displayed in a &frac13; grid layout. They are used when groups of information can be categorized into related sections and help conserve space on content-heavy pages. Only one accordion should open at a time.
     </p>
 
-    <div v-html="defaultBoxAccordionMarkup()" />
+    <div v-html="boxMarkup" />
     <h3>Specs</h3>
     <p>
       The width of the accordion should follow the &frac13; grid layout and the specs outlined below. 
@@ -40,15 +40,19 @@
     
     <div v-html="boxAccordionDimensions()" />
     <ExampleRow :data="specs_box_accordion" columns="4" />
-    [ EXPANDED BOX ACCORDION AND SPECS ]
+    
+    <div id="accordionGroup" ref="accordionGroup" class="Accordion row">
+      <div v-html="boxMarkupExpanded" />
+    </div>
 
     <h3>Click Target</h3>
     <p>
       Larger targets are easier for users to manipulate. Allow users to expand or collapse content by clicking on the entire box accordion.
     </p>
-
-    [ COLLAPSED BOX ACCORDION ]
-
+  
+    <div class="row">
+      <div class="highlight-overlay higlight-box-accordion" v-html="boxMarkup" />
+    </div>
     <h3>Accessibility</h3>
 
     <p>
@@ -77,6 +81,9 @@ export default {
   },
   data() {
     return {
+      boxAccordionWidth: 0,
+      boxMarkup: '',
+      boxMarkupExpanded: '',
       specs_default_accordion: [
         {
           markup: this.defaultAccordionDimensions(),
@@ -108,6 +115,11 @@ export default {
         }
       ]
     }
+  },
+  mounted() {
+    this.boxAccordionWidth = this.$refs.accordionGroup.clientWidth
+    this.boxMarkup = this.defaultBoxAccordionMarkup()
+    this.boxMarkupExpanded = this.defaultBoxAccordionMarkup(true)
   },
   methods: {
     defaultAccordionMarkup() {
@@ -172,31 +184,33 @@ export default {
     defaultBoxAccordionMarkup(expanded) {
       let labelText = expanded ? 'Expanded Box Accordion Headline 3' : 'Collapsed Box Accordion Headline 3'
       let ariaExpanded = expanded ? 'true' : 'false'
+      let hidden = expanded ? '' : 'hidden'
 
       return `<div class="box-accordion">
-          <div class="box-accordion-top Accordion-trigger"
-                tabindex="-1"
-                aria-expanded="` + ariaExpanded + `"
-                aria-controls="sect1"
-                id="accordion1id">
-            <h3>
-                <span class="Accordion-title headline-3">
-                  ` + labelText + `
-                  <span class="Accordion-icon"></span>
-                </span>
-            </h3>
-            <div class="down-arrow"></div>
-          </div>
-          <div id="sect1"
-                role="region"
-                aria-labelledby="accordion1id"
-                class="Accordion-panel"
-                hidden="">
-              <p>
-                Farmers.gov provides farmers, ranchers, private foresters, and agricultural producers with online self-service applications, educational materials, engagement opportunities, and business tools to increase efficiency and productivity while preserving and fostering long-held traditional relationships between local USDA offices and producers.
-              </p>
-          </div>
-        </div>`
+            <div class="box-accordion-top Accordion-trigger"
+                  tabindex="-1"
+                  aria-expanded="` + ariaExpanded + `"
+                  aria-controls="sect1"
+                  id="accordion1id">
+              <h3>
+                  <span class="Accordion-title headline-3">
+                    ` + labelText + `
+                    <span class="Accordion-icon"></span>
+                  </span>
+              </h3>
+              <div class="down-arrow"></div>
+            </div>
+            <div id="sect1"
+                  role="region"
+                  aria-labelledby="accordion1id"
+                  class="Accordion-panel"
+                  ` + hidden + `
+                  style="width: ` + this.boxAccordionWidth + `px">
+                <p>
+                  Farmers.gov provides farmers, ranchers, private foresters, and agricultural producers with online self-service applications, educational materials, engagement opportunities, and business tools to increase efficiency and productivity while preserving and fostering long-held traditional relationships between local USDA offices and producers.
+                </p>
+            </div>
+          </div>`
     },
     boxAccordionDimensions() {
       return `<div class="box-accordion-grid">
@@ -220,8 +234,6 @@ export default {
               <div class="box-accordion-right dashed-blue dashed-blue-vertical"></div>
               <div class="box-accordion-right-span span-blue span-blue-vertical"></div>
               <div class="box-accordion-right-dimension dimension-blue dimenstion-vertical">24px</div>
-
-              
               </div>`
     },
   }
