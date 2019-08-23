@@ -131,10 +131,10 @@ export default {
               </p>
               <div class="row">
                 <div class="medium-6">
-                  <img src="/_nuxt/assets/images/images-example1.jpg" />
+                  <img src="/images/images-example1.jpg" />
                 </div>
                 <div class="medium-6">
-                  <img src="/_nuxt/assets/images/images-example1.jpg" />
+                  <img src="/images/images-example1.jpg" />
                 </div>
               </div>
             </div>
