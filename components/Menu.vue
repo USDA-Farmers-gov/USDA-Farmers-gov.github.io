@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img class="logo" alt="Farmers.gov" src="../assets/images/farmers-logo.svg"/>
+    <img class="logo" alt="Farmers.gov" src="/images/farmers-logo.svg"/>
     <ul class="menu-container">
       <li v-for="item in menu">
         <div :class="setClassesByCategory(item.category)" 
