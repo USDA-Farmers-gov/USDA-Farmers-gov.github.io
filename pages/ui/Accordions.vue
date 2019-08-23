@@ -131,10 +131,10 @@ export default {
               </p>
               <div class="row">
                 <div class="medium-6">
-                  <img src="/images/images-example1.jpg" />
+                  <img src="/images/images-example1.jpg" style="max-width: 100%" />
                 </div>
                 <div class="medium-6">
-                  <img src="/images/images-example1.jpg" />
+                  <img src="/images/images-example1.jpg" style="max-width: 100%" />
                 </div>
               </div>
             </div>
@@ -185,9 +185,48 @@ export default {
       let labelText = expanded ? 'Expanded Box Accordion Headline 3' : 'Collapsed Box Accordion Headline 3'
       let ariaExpanded = expanded ? 'true' : 'false'
       let hidden = expanded ? '' : 'hidden'
+      let boxGridClass = expanded ? ' box-accordion-top-grid' : ''
+      let markup = this.boxAccordionMarkup(expanded)
+      let markupTop = expanded ? `<div class="box-accordion-top-grid">
+                                      <div class="box-top dashed-red dashed-red-horizontal"></div>
+                                      <div class="box-top-span span-red span-red-horizontal"></div>
+                                      <div class="box-top-dimension dimension-red dimension-red-horizontal">24px</div>
 
-      return `<div class="box-accordion">
-            <div class="box-accordion-top Accordion-trigger"
+                                      <div class="box-middle dashed-red dashed-red-horizontal"></div>
+                                      <div class="box-middle-span span-red span-red-horizontal"></div>
+                                      <div class="box-middle-dimension dimension-red dimension-red-horizontal">16px</div>
+                                      
+                                      <div class="box-bottom dashed-red dashed-red-horizontal"></div>
+                                      <div class="box-bottom-span span-red span-red-horizontal"></div>
+                                      <div class="box-bottom-dimension dimension-red dimension-red-horizontal">24px</div>
+
+                                      <div class="box-left dashed-blue dashed-blue-vertical"></div>
+                                      <div class="box-left-span span-blue span-blue-vertical"></div>
+                                      <div class="box-left-dimension dimension-blue dimension-blue-vertical">24px</div>
+
+                                      <div class="box-right dashed-blue dashed-blue-vertical"></div>
+                                      <div class="box-right-span span-blue span-blue-vertical"></div>
+                                      <div class="box-right-dimension dimension-blue dimension-blue-vertical">24px</div>
+
+                                      ` + markup.top + `</div>`
+                                  : markup.top
+      let markupBottom = expanded ? `<div class="box-accordion-bottom-grid">
+                                      <div class"box-content-top-span span-red span-red-horizontal"></div>
+                                      <div class"box-content-top-dimension dimension-red dimension-red-horizontal">8px</div>
+                                      ` + markup.bottom + 
+                                      `</div>`
+                                  : markup.bottom
+
+      return  `<div class="box-accordion">` + markupTop + markupBottom + `</div>`
+    },
+
+    boxAccordionMarkup(expanded) {
+      let labelText = expanded ? 'Expanded Box Accordion Headline 3' : 'Collapsed Box Accordion Headline 3'
+      let ariaExpanded = expanded ? 'true' : 'false'
+      let hidden = expanded ? '' : 'hidden'
+
+      return { 
+            top: `<div class="box-accordion-top Accordion-trigger"
                   tabindex="-1"
                   aria-expanded="` + ariaExpanded + `"
                   aria-controls="sect1"
@@ -199,8 +238,9 @@ export default {
                   </span>
               </h3>
               <div class="down-arrow"></div>
-            </div>
-            <div id="sect1"
+            </div>`,
+            bottom: 
+            `<div id="sect1"
                   role="region"
                   aria-labelledby="accordion1id"
                   class="Accordion-panel"
@@ -209,8 +249,8 @@ export default {
                 <p>
                   Farmers.gov provides farmers, ranchers, private foresters, and agricultural producers with online self-service applications, educational materials, engagement opportunities, and business tools to increase efficiency and productivity while preserving and fostering long-held traditional relationships between local USDA offices and producers.
                 </p>
-            </div>
-          </div>`
+            </div>` }
+
     },
     boxAccordionDimensions() {
       return `<div class="box-accordion-grid">
