@@ -26,6 +26,7 @@
     </p>
 
     <div v-html="clickTargetAccordionDimensions()" />
+    <img class="click-target hover-hand" src="/images/hover-hand.png"/>
 
     <h3>Box Accordions</h3>
     <p>
@@ -50,9 +51,8 @@
       Larger targets are easier for users to manipulate. Allow users to expand or collapse content by clicking on the entire box accordion.
     </p>
   
-    <div class="row">
       <div class="highlight-overlay higlight-box-accordion" v-html="boxMarkup" />
-    </div>
+      <img class="click-target-collapsed hover-hand" src="/images/hover-hand.png"/>
     <h3>Accessibility</h3>
 
     <p>

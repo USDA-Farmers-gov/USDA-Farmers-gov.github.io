@@ -13,6 +13,27 @@
 .example-container {
   width: 100%;
 }
+
+.click-target {
+  &.hover-hand {
+    position: relative;
+    top: -1.8rem;
+    left: -1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 17px;
+  }
+}
+
+.click-target-collapsed {
+  &.hover-hand {
+    position: relative;
+    top: -1.2rem;
+    left: 16rem;
+  }
+}
+
 .default-accordion-grid {
   display: grid;
   grid-template-columns: 32px 1fr 32px 5px 10px;

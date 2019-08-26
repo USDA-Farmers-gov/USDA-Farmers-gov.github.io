@@ -58,7 +58,7 @@
     <div class="card-highlight">
         <div class="highlight-overlay" v-html="outputCardMarkup({ label: 'Card Checkbox' })"></div>  
     </div>
-     <img class="checkbox-card-click-target hover-hand" src="/images/hover-hand.png"/>
+    <img class="checkbox-card-click-target hover-hand" src="/images/hover-hand.png"/>
 
     <h3>Accessibility</h3>
     <p>
