@@ -291,7 +291,7 @@ export default {
 
               <div class="box-accordion-bottom dashed-red dashed-red-horizontal"></div>
               <div class="box-accordion-bottom-span span-red span-red-horizontal"></div>
-              <div class="box-accordion-bottom-dimension dimension-red dimenstion-horizontal">16px</div>
+              <div class="box-accordion-bottom-dimension dimension-red dimenstion-horizontal">24px</div>
 
               <div class="box-accordion-left dashed-blue dashed-blue-vertical"></div>
               <div class="box-accordion-left-span span-blue span-blue-vertical"></div>

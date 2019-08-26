@@ -33,7 +33,7 @@
       <div class="row">
         <div class="medium-7">
           <div class="primary-line-grid">
-            <div class="primary-line-height dimension dimension-red">1px</div>
+            <div class="primary-line-height-dimension dimension dimension-red">1px</div>
             <div class="primary-line-height span-red span-red-horizontal"></div>
             <div class="divider-line"></div>
             <div class="primary-line-box-left dashed-blue dashed-blue-vertical"></div>

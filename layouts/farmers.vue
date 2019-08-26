@@ -1,13 +1,16 @@
 <template>
   <div>
     <header>
+      <a href="#main-content" class="usa-skipnav" role="navigation" aria-label="Skip to Main Content">
+        Skip to main content
+      </a>
       <h1>Farmers Design System</h1>
     </header>
     <div class="container page">
         <div class="menu">
           <Menu/>
         </div>
-        <main>
+        <main id="main-content">
           <nuxt />
         </main>
     </div>
