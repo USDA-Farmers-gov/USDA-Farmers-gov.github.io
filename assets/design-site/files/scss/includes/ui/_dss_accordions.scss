@@ -393,7 +393,7 @@
 
 .box-accordion-bottom-grid {
   display: grid;
-  grid-template-columns: 24px 18px 668px 32px 24px 16px 16px;
+  grid-template-columns: 24px 18px 678px 24px 24px 16px 16px;
   grid-template-rows: 8px 10px 10px 16px 1fr 32px 16px 10px;
 
   .Accordion-panel {
@@ -429,7 +429,7 @@
   }
 
   .box-content-bottom {
-    grid-column: 1 / 4;
+    grid-column: 1 / 5;
     grid-row: 6;
   }
   

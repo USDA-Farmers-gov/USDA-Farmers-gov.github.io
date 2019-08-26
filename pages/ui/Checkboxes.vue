@@ -25,7 +25,7 @@
     <div class="row">
       <div class="medium-3 highlight-overlay" v-html="outputCheckboxMarkup({ label: 'Checkbox Label' })"></div> 
     </div>
-    <div class="checkbox-click-target hover-hand"></div>
+    <img class="checkbox-click-target hover-hand" src="/images/hover-hand.png"/>
     
     <h3>Card Checkboxes</h3>
 
@@ -55,14 +55,10 @@
       The entire card in card checkboxes should be clickable.
     </p>
     
-    <div class="container">
-      <div class="row card-highlight">
-        <div class="medium-4">
-          <div class="highlight-overlay" v-html="outputCardMarkup({ label: 'Card Checkbox' })"></div>  
-        </div>
-      </div>
+    <div class="card-highlight">
+        <div class="highlight-overlay" v-html="outputCardMarkup({ label: 'Card Checkbox' })"></div>  
     </div>
-    <div class="checkbox-card-click-target hover-hand"></div>
+     <img class="checkbox-card-click-target hover-hand" src="/images/hover-hand.png"/>
 
     <h3>Accessibility</h3>
     <p>

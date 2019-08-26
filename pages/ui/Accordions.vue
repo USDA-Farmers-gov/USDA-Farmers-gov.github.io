@@ -224,11 +224,11 @@ export default {
 
                                       <div class="box-content-left dashed-blue dashed-blue-vertical"></div>
                                       <div class="box-content-left-span span-blue span-blue-vertical"></div>
-                                      <div class="box-content-left-dimension dimension-blue dimension-red-vertical">32px</div>
+                                      <div class="box-content-left-dimension dimension-blue dimension-red-vertical">24px</div>
 
                                       <div class="box-content-right dashed-blue dashed-blue-vertical"></div>
                                       <div class="box-content-right-span span-blue span-blue-vertical"></div>
-                                      <div class="box-content-right-dimension dimension-blue dimension-red-vertical">32px</div>
+                                      <div class="box-content-right-dimension dimension-blue dimension-red-vertical">24px</div>
 
                                       ` + markup.bottom + 
                                       `</div>`

@@ -8,7 +8,7 @@
 .checkbox-click-target {
   position: relative;
   top: -1.3rem;
-  left: 1.4rem;
+  left: 0.7rem;
 
   &.hover-hand {
     @media only screen and (max-width: 600px) {
@@ -167,7 +167,7 @@
   }
 }
 .card-highlight {
-  position:relative;
+  width: 27.4rem;
   .checkbox-card label:before, [type=checkbox] + label::before {
     background: $highlight_bg_color;
   }
