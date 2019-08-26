@@ -188,6 +188,7 @@ export default {
       let boxGridClass = expanded ? ' box-accordion-top-grid' : ''
       let markup = this.boxAccordionMarkup(expanded)
       let markupTop = expanded ? `<div class="box-accordion-top-grid">
+                                      ` + markup.top + `
                                       <div class="box-top dashed-red dashed-red-horizontal"></div>
                                       <div class="box-top-span span-red span-red-horizontal"></div>
                                       <div class="box-top-dimension dimension-red dimension-red-horizontal">24px</div>
@@ -207,8 +208,7 @@ export default {
                                       <div class="box-right dashed-blue dashed-blue-vertical"></div>
                                       <div class="box-right-span span-blue span-blue-vertical"></div>
                                       <div class="box-right-dimension dimension-blue dimension-blue-vertical">24px</div>
-
-                                      ` + markup.top + `</div>`
+                                    </div>`
                                   : markup.top
       let markupBottom = expanded ? `<div class="box-accordion-bottom-grid">
                                       <div class="box-content-top-span span-red span-red-horizontal"></div>
