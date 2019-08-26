@@ -221,7 +221,7 @@ export default {
                                     </div>`
                                   : markup.top
       let markupBottom = expanded ? `<div class="box-accordion-bottom-grid">
-                                      
+                                      ` + markup.bottom + `
                                       <div class="box-arrow-span span-blue span-blue-vertical"></div>
                                       <div class="box-arrow-dimension dimension-blue dimension-blue-vertical">40px</div>
 
@@ -243,9 +243,7 @@ export default {
                                       <div class="box-content-right dashed-blue dashed-blue-vertical"></div>
                                       <div class="box-content-right-span span-blue span-blue-vertical"></div>
                                       <div class="box-content-right-dimension dimension-blue dimension-red-vertical">24px</div>
-
-                                      ` + markup.bottom + 
-                                      `</div>`
+                                      </div>`
                                   : markup.bottom
 
       return  `<div class="box-accordion">` + markupTop + markupBottom + `</div>`

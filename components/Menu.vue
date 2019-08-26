@@ -1,24 +1,26 @@
 <template>
   <div>
     <img class="logo" alt="Farmers.gov" src="/images/farmers-logo.svg"/>
-    <ul class="menu-container">
-      <li v-for="item in menu">
-        <div :class="setClassesByCategory(item.category)" 
-              @click="setActiveCategoryOnEvent($event, item)"
-              @keypress="setActiveCategoryOnEvent($event, item)"
-              tabindex="0">
-                {{ item.category }}
-                <i v-if="activeCategory === item.category && !item.path" class="arrow arrow-up"></i>
-                <i v-if="activeCategory !== item.category && !item.path" class="arrow arrow-down"></i>
-        </div>
+    <div id="leftnav" role="navigation">
+      <ul class="menu-container">
+        <li v-for="item in menu">
+          <div :class="setClassesByCategory(item.category)" 
+                @click="setActiveCategoryOnEvent($event, item)"
+                @keypress="setActiveCategoryOnEvent($event, item)"
+                tabindex="0">
+                  {{ item.category }}
+                  <i v-if="activeCategory === item.category && !item.path" class="arrow arrow-up"></i>
+                  <i v-if="activeCategory !== item.category && !item.path" class="arrow arrow-down"></i>
+          </div>
 
-        <ul v-if="activeCategory === item.category" class="menu-links">
-          <li :class="currentPath === link.path ? 'active soft-green' : ''" v-for="link in item.links">
-            <a :href="link.path">{{ link.name }}</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
+          <ul v-if="activeCategory === item.category" class="menu-links">
+            <li :class="currentPath === link.path ? 'active soft-green' : ''" v-for="link in item.links">
+              <a :href="link.path">{{ link.name }}</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
