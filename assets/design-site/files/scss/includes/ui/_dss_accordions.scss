@@ -393,9 +393,8 @@
 
 .box-accordion-bottom-grid {
   display: grid;
-  grid-template-columns: 24px 18px 1fr 24px 16px 16px;
-  grid-template-rows: 8px 10px 10px 16px 1fr 32px 10px 10px;
-  width: 100%;
+  grid-template-columns: 24px 18px 668px 32px 24px 16px 16px;
+  grid-template-rows: 8px 10px 10px 16px 1fr 32px 16px 10px;
 
   .Accordion-panel {
     grid-column: 1 / 5;
@@ -403,10 +402,77 @@
   }
 
   .box-content-top-span {
-
+    grid-column: 5;
+    grid-row: 1;
+    margin-left: 0.5rem;
   }
 
   .box-content-top-dimension {
+    grid-column: 6;
+    grid-row: 1;
+  }
+  
+  .box-content-middle {
+    grid-column: 1 / 5;
+    grid-row: 3;
+  }
+  
+  .box-content-middle-span {
+    grid-column: 5;
+    grid-row: 3;
+    margin-left: 0.5rem;
+  }
 
+  .box-content-middle-dimension {
+    grid-column: 6;
+    grid-row: 3;
+  }
+
+  .box-content-bottom {
+    grid-column: 1 / 4;
+    grid-row: 6;
+  }
+  
+  .box-content-bottom-span {
+    grid-column: 5;
+    grid-row: 6;
+    margin-left: 0.5rem;
+  }
+
+  .box-content-bottom-dimension {
+    grid-column: 6;
+    grid-row: 6;
+  }
+
+  .box-content-left {
+    grid-column: 1;
+    grid-row: 4 / 7;
+  }
+  
+  .box-content-left-span {
+    grid-column: 1;
+    grid-row: 7;
+    margin-top: 0.5rem;
+  }
+
+  .box-content-left-dimension {
+    grid-column: 1;
+    grid-row: 8;
+  }
+
+  .box-content-right {
+    grid-column: 4;
+    grid-row: 4 / 7;
+  }
+  
+  .box-content-right-span {
+    grid-column: 4;
+    grid-row: 7;
+    margin-top: 0.5rem;
+  }
+
+  .box-content-right-dimension {
+    grid-column: 4;
+    grid-row: 8;
   }
 }

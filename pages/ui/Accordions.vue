@@ -211,8 +211,25 @@ export default {
                                       ` + markup.top + `</div>`
                                   : markup.top
       let markupBottom = expanded ? `<div class="box-accordion-bottom-grid">
-                                      <div class"box-content-top-span span-red span-red-horizontal"></div>
-                                      <div class"box-content-top-dimension dimension-red dimension-red-horizontal">8px</div>
+                                      <div class="box-content-top-span span-red span-red-horizontal"></div>
+                                      <div class="box-content-top-dimension dimension-red dimension-red-horizontal">8px</div>
+
+                                      <div class="box-content-middle dashed-red dashed-red-horizontal"></div>
+                                      <div class="box-content-middle-span span-red span-red-horizontal"></div>
+                                      <div class="box-content-middle-dimension dimension-red dimension-red-horizontal">16px</div>
+
+                                      <div class="box-content-bottom dashed-red dashed-red-horizontal"></div>
+                                      <div class="box-content-bottom-span span-red span-red-horizontal"></div>
+                                      <div class="box-content-bottom-dimension dimension-red dimension-red-horizontal">32px</div>
+
+                                      <div class="box-content-left dashed-blue dashed-blue-vertical"></div>
+                                      <div class="box-content-left-span span-blue span-blue-vertical"></div>
+                                      <div class="box-content-left-dimension dimension-blue dimension-red-vertical">32px</div>
+
+                                      <div class="box-content-right dashed-blue dashed-blue-vertical"></div>
+                                      <div class="box-content-right-span span-blue span-blue-vertical"></div>
+                                      <div class="box-content-right-dimension dimension-blue dimension-red-vertical">32px</div>
+
                                       ` + markup.bottom + 
                                       `</div>`
                                   : markup.bottom
@@ -240,12 +257,7 @@ export default {
               <div class="down-arrow"></div>
             </div>`,
             bottom: 
-            `<div id="sect1"
-                  role="region"
-                  aria-labelledby="accordion1id"
-                  class="Accordion-panel"
-                  ` + hidden + `
-                  style="width: ` + this.boxAccordionWidth + `px">
+            `<div id="sect1" role="region" aria-labelledby="accordion1id" class="Accordion-panel" ` + hidden + `>
                 <p>
                   Farmers.gov provides farmers, ranchers, private foresters, and agricultural producers with online self-service applications, educational materials, engagement opportunities, and business tools to increase efficiency and productivity while preserving and fostering long-held traditional relationships between local USDA offices and producers.
                 </p>
