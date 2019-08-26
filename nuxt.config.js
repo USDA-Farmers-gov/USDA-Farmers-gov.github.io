@@ -5,6 +5,9 @@ export default {
   ** Headers of the page
   */
   head: {
+    htmlAttrs: {
+      lang: 'en',
+    },
     titleTemplate: (titleChunk) => {
       return titleChunk ? `${titleChunk} | Farmers Design System` : 'Farmers Design System';
     },

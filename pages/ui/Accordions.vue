@@ -41,7 +41,7 @@
     
     <div v-html="boxAccordionDimensions()" />
     <ExampleRow :data="specs_box_accordion" columns="4" />
-    
+
     <div id="accordionGroup" ref="accordionGroup" class="Accordion row">
       <div v-html="boxMarkupExpanded" />
     </div>
@@ -117,6 +117,14 @@ export default {
     }
   },
   mounted() {
+    let showMoreLinks = document.querySelectorAll(".card-accordion-show-more")
+
+    for(const link of showMoreLinks) {
+      link.addEventListener("click", function(event){
+        event.preventDefault()
+      })
+    }
+
     this.boxAccordionWidth = this.$refs.accordionGroup.clientWidth
     this.boxMarkup = this.defaultBoxAccordionMarkup()
     this.boxMarkupExpanded = this.defaultBoxAccordionMarkup(true)
@@ -129,12 +137,14 @@ export default {
               <p>
                 We recommend that producers who have not participated in a USDA program contact their local USDA service center to establish farm records. To establish a farm tract number, be sure to bring the following items:
               </p>
-              <div class="row">
-                <div class="medium-6">
-                  <img src="/images/images-example1.jpg" style="max-width: 100%" />
-                </div>
-                <div class="medium-6">
-                  <img src="/images/images-example1.jpg" style="max-width: 100%" />
+              <div class="container">
+                <div class="row">
+                  <div class="medium-6">
+                    <img src="/images/images-example1.jpg" style="max-width: 100%" />
+                  </div>
+                  <div class="medium-6">
+                    <img src="/images/images-example1.jpg" style="max-width: 100%" />
+                  </div>
                 </div>
               </div>
             </div>

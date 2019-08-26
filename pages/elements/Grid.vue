@@ -24,7 +24,7 @@
       <div class="row">    
         <div v-for="index in 4" class="medium-3">
           <div class="col-content-example">1/4</div>      
-        </div>  
+        </div>
       </div>
       <div class="row">     
         <div v-for="index in 6" class="medium-2">

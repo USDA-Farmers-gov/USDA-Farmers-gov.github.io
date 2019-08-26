@@ -3,7 +3,7 @@
     <header>
       <h1>Farmers Design System</h1>
     </header>
-    <div class="page">
+    <div class="container page">
         <div class="menu">
           <Menu/>
         </div>
