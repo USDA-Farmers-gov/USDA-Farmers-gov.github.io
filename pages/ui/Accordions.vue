@@ -211,6 +211,10 @@ export default {
                                     </div>`
                                   : markup.top
       let markupBottom = expanded ? `<div class="box-accordion-bottom-grid">
+                                      
+                                      <div class="box-arrow-span span-blue span-blue-vertical"></div>
+                                      <div class="box-arrow-dimension dimension-blue dimension-blue-vertical">40px</div>
+
                                       <div class="box-content-top-span span-red span-red-horizontal"></div>
                                       <div class="box-content-top-dimension dimension-red dimension-red-horizontal">8px</div>
 
