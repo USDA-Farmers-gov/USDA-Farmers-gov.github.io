@@ -19,23 +19,18 @@
 }
 
 .click-target {
-  &.hover-hand {
-    position: relative;
-    top: -1.8rem;
-    left: -1rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 17px;
-  }
+  position: relative;
+  display: block;
+  top: -2rem;
+  left: -2.4rem;
+  width: 100%;
+  text-align: center;
 }
 
 .click-target-collapsed {
-  &.hover-hand {
-    position: relative;
-    top: -1.2rem;
-    left: 16rem;
-  }
+  position: relative;
+  top: -1.1rem;
+  left: 17rem;
 }
 
 .default-accordion-grid {

@@ -25,7 +25,7 @@
     <div class="row">
       <div class="medium-3 highlight-overlay" v-html="outputCheckboxMarkup({ label: 'Checkbox Label' })"></div> 
     </div>
-    <img class="checkbox-click-target hover-hand" src="/images/hover-hand.png"/>
+    <div class="mouse-pointer"></div>
     
     <h3>Card Checkboxes</h3>
 
@@ -56,10 +56,10 @@
     </p>
     
     <div class="card-highlight">
-        <div class="highlight-overlay" v-html="outputCardMarkup({ label: 'Card Checkbox' })"></div>  
+        <div class="highlight-overlay" v-html="outputCardMarkup({ label: 'Card Checkbox' })"></div>
     </div>
-    <img class="checkbox-card-click-target hover-hand" src="/images/hover-hand.png"/>
-
+    <div class="mouse-pointer"></div>
+    
     <h3>Accessibility</h3>
     <p>
       Checkboxes should show a visible focus state when tabbed to by a user. Using the “Space” key toggles the focused checkbox between selected and unselected states. 
@@ -76,6 +76,7 @@
 </template>
 
 <script>
+  import utils from '../../assets/js/utils.js'
   export default {
     layout: 'farmers',
     head() {
@@ -235,9 +236,7 @@
                   ` + checkbox + `
                 </div>
                 <div class="checkbox-width span-blue span-blue-vertical"></div>
-                <div></div>
-                <div></div>
-                <div class="dimension-blue dimension-blue-vertical">24 px</div>
+                <div class="checkbox-width-dimension dimension-blue dimension-blue-vertical">24 px</div>
               </div>`
               : checkbox
       }

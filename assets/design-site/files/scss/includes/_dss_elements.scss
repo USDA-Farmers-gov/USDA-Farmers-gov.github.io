@@ -19,8 +19,18 @@
   }
 }
 
-.hover-hand {
-  z-index: 1000;
+.mouse-pointer {
+  display: inline;
+  position: relative;
+  &:after {
+    content: "";
+    background: url('/images/mouse-pointer.png') no-repeat;
+    width: 20px;
+    height: 20px;
+    z-index: 1000;
+    position: absolute;
+    display: inline-block;
+  }
 }
 
 .dashed-blue {
