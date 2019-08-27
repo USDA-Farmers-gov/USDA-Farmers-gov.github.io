@@ -130,7 +130,7 @@ const radio_buttons_data = {
       : card
     },
     outputRadioButtonMarkup(options) {
-      let label = (!! options && options.label) ? options.label : 'Label'
+      let label = (!!options && options.label) ? options.label : 'Label'
       let labelClass = 'checkbox'
       let gridClass
       let checked
