@@ -170,6 +170,40 @@ const accordions = {
               <div class="box-accordion-right-dimension dimension-blue dimenstion-vertical">24px</div>
               </div>`
     },
+    defaultAccordionSpecs() {
+      return [
+        {
+          markup: accordions.defaultAccordionDimensions(),
+            code: { background: `color: #FFFFFF;
+                          shadow: 0;1;4;0 #BBBBBB;` }
+        }
+      ]
+    },
+    defaultBoxAccordionSpecs() {
+      return [
+        {
+          code: { 
+            text: `color: #212121;
+                  font-family: Public Sans;
+                  font-size: 23px;
+                  font-weight: bold;
+                  line-height: 30px;`, 
+          }
+        },
+        {
+          code: { 
+            background: `color: #FFFFFF;
+                  shadow: 0;1;4;0 #BBBBBB;`, 
+          }
+        },
+                {
+          code: { 
+            icon: `color: #49A564;
+                  size: 32x32;`
+          }
+        }
+      ]
+    }
 }
 
 export default accordions

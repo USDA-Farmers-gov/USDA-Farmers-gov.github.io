@@ -95,36 +95,8 @@ export default {
       defaultAccordionMarkup: accordions.defaultAccordionMarkup(),
       clickTargetAccordionDimensions: accordions.clickTargetAccordionDimensions(),
       boxAccordionDimensions: accordions.boxAccordionDimensions(),
-      specs_default_accordion: [
-        {
-          markup: accordions.defaultAccordionDimensions(),
-            code: { background: `color: #FFFFFF;
-                          shadow: 0;1;4;0 #BBBBBB;` }
-        }
-      ],
-      specs_box_accordion: [
-        {
-          code: { 
-            text: `color: #212121;
-                  font-family: Public Sans;
-                  font-size: 23px;
-                  font-weight: bold;
-                  line-height: 30px;`, 
-          }
-        },
-        {
-          code: { 
-            background: `color: #FFFFFF;
-                  shadow: 0;1;4;0 #BBBBBB;`, 
-          }
-        },
-                {
-          code: { 
-            icon: `color: #49A564;
-                  size: 32x32;`
-          }
-        }
-      ]
+      specs_default_accordion: accordions.defaultAccordionSpecs(),
+      specs_box_accordion: accordions.defaultBoxAccordionSpecs()
     }
   },
   mounted() {
