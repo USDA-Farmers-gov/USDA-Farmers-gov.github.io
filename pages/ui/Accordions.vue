@@ -147,10 +147,10 @@ export default {
               <div class="container">
                 <div class="row">
                   <div class="medium-6">
-                    <img src="/images/images-example1.jpg" style="max-width: 100%" />
+                    <img src="/images/images-example1.jpg" alt="girl in a field holding bushel of vegetables" style="max-width: 100%" />
                   </div>
                   <div class="medium-6">
-                    <img src="/images/images-example1.jpg" style="max-width: 100%" />
+                    <img src="/images/images-example1.jpg" alt="girl in a field holding bushel of vegetables" style="max-width: 100%" />
                   </div>
                 </div>
               </div>
