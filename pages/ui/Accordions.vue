@@ -11,7 +11,7 @@
       Card accordions display part of the content to provide context about the information before users expand the accordion to view the full content.  Users are able to see what information is included before making a decision to continue reading. A transparent gradient overlay is used as a visual indicator to show that there is underlying additional content.
     </p>
 
-    <div v-html="defaultAccordionMarkup()" />
+    <div v-html="defaultAccordionMarkup" />
 
     <h3>Specs</h3>
     <p>
@@ -25,7 +25,7 @@
       Larger targets are easier for users to manipulate. Allow users to expand or collapse content by clicking on large areas of the accordion; for example, the entire bottom portion of card accordions should be clickable and not just the “Show More” button.
     </p>
 
-    <div v-html="clickTargetAccordionDimensions()" />
+    <div v-html="clickTargetAccordionDimensions" />
     <div class="click-target mouse-pointer"></div>
 
     <h3>Box Accordions</h3>
@@ -39,7 +39,7 @@
       The width of the accordion should follow the &frac13; grid layout and the specs outlined below. 
     </p>
     
-    <div v-html="boxAccordionDimensions()" />
+    <div v-html="boxAccordionDimensions" />
     <ExampleRow :data="specs_box_accordion" columns="4" />
 
     <div id="accordionGroup" ref="accordionGroup" class="Accordion row">
@@ -74,6 +74,7 @@
 </template>
 
 <script>
+import accordions from '../_element-modules/accordions.js'
 // Uncomment this only if accordions needs to be functional
 // if (process.browser) {
 //   require('@/farmers/dist/js/farmers.min.js')
@@ -91,9 +92,12 @@ export default {
       boxAccordionWidth: 0,
       boxMarkup: '',
       boxMarkupExpanded: '',
+      defaultAccordionMarkup: accordions.defaultAccordionMarkup(),
+      clickTargetAccordionDimensions: accordions.clickTargetAccordionDimensions(),
+      boxAccordionDimensions: accordions.boxAccordionDimensions(),
       specs_default_accordion: [
         {
-          markup: this.defaultAccordionDimensions(),
+          markup: accordions.defaultAccordionDimensions(),
             code: { background: `color: #FFFFFF;
                           shadow: 0;1;4;0 #BBBBBB;` }
         }
@@ -133,180 +137,8 @@ export default {
     }
 
     this.boxAccordionWidth = this.$refs.accordionGroup.clientWidth
-    this.boxMarkup = this.defaultBoxAccordionMarkup()
-    this.boxMarkupExpanded = this.defaultBoxAccordionMarkup(true)
-  },
-  methods: {
-    defaultAccordionMarkup() {
-      return `<div class="card-accordion" tabindex="-1">
-            <div class="card-accordion-content">
-              <h4>Headline</h4>
-              <p>
-                We recommend that producers who have not participated in a USDA program contact their local USDA service center to establish farm records. To establish a farm tract number, be sure to bring the following items:
-              </p>
-              <div class="container">
-                <div class="row">
-                  <div class="medium-6">
-                    <img src="/images/images-example1.jpg" alt="girl in a field holding bushel of vegetables" style="max-width: 100%" />
-                  </div>
-                  <div class="medium-6">
-                    <img src="/images/images-example1.jpg" alt="girl in a field holding bushel of vegetables" style="max-width: 100%" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card-accordion-toggle">
-              <a href="#" class="card-accordion-show-more" tabindex="-1">Show More</a>
-            </div>
-        </div>`
-    },
-    defaultAccordionDimensions() {
-      return `<div class="default-accordion-grid">
-              ` + this.defaultAccordionMarkup() + `
-              <div class="default-accordion-top dashed-red dashed-red-horizontal"></div>
-              <div class="default-accordion-top-span span-red span-red-horizontal"></div>
-              <div class="default-accordion-top-dimension dimension-red dimension-red-horizontal">32px</div>
-
-              <div class="default-accordion-header dashed-red dashed-red-horizontal"></div>
-              <div class="default-accordion-header-span span-red span-red-horizontal"></div>
-              <div class="default-accordion-header-dimension dimension-red dimension-red-horizontal">8px</div>
-
-              <div class="default-accordion-bottom dashed-red dashed-red-horizontal"></div>
-              <div class="default-accordion-bottom-span span-red span-red-horizontal"></div>
-              <div class="default-accordion-bottom-dimension dimension-red dimension-red-horizontal">24px</div>
-
-              <div class="default-accordion-left dashed-blue dashed-blue-vertical"></div>
-              <div class="default-accordion-left-span span-blue span-blue-vertical"></div>
-              <div class="default-accordion-left-dimension dimension-blue dimension-blue-vertical">32px</div>
-
-              <div class="default-accordion-right dashed-blue dashed-blue-vertical"></div>
-              <div class="default-accordion-right-span span-blue span-blue-vertical"></div>
-              <div class="default-accordion-right-dimension dimension-blue dimension-blue-vertical">32px</div>
-              </div>`
-    },
-    clickTargetAccordionDimensions() {
-      return `<div class="click-target-accordion-grid">
-                ` + this.defaultAccordionMarkup() + `
-                <div class="click-target-accordion-top dashed-red dashed-red-horizontal"></div>
-                <div class="click-target-accordion-top-span span-red span-red-horizontal"></div>
-                <div class="click-target-accordion-top-dimension dimension-red dimension-red-horizontal">24px</div>
-
-                <div class="click-target-accordion-bottom dashed-red dashed-red-horizontal"></div>
-                <div class="click-target-accordion-bottom-span span-red span-red-horizontal"></div>
-                <div class="click-target-accordion-bottom-dimension dimension-red dimension-red-horizontal">24px</div>
-
-                <div class="click-target-accordion-highlight"></div>
-              </div>`
-    },
-    defaultBoxAccordionMarkup(expanded) {
-      let labelText = expanded ? 'Expanded Box Accordion Headline 3' : 'Collapsed Box Accordion Headline 3'
-      let ariaExpanded = expanded ? 'true' : 'false'
-      let hidden = expanded ? '' : 'hidden'
-      let boxGridClass = expanded ? ' box-accordion-top-grid' : ''
-      let markup = this.boxAccordionMarkup(expanded)
-      let markupTop = expanded ? `<div class="box-accordion-top-grid">
-                                      ` + markup.top + `
-                                      <div class="box-top dashed-red dashed-red-horizontal"></div>
-                                      <div class="box-top-span span-red span-red-horizontal"></div>
-                                      <div class="box-top-dimension dimension-red dimension-red-horizontal">24px</div>
-
-                                      <div class="box-middle dashed-red dashed-red-horizontal"></div>
-                                      <div class="box-middle-span span-red span-red-horizontal"></div>
-                                      <div class="box-middle-dimension dimension-red dimension-red-horizontal">16px</div>
-                                      
-                                      <div class="box-bottom dashed-red dashed-red-horizontal"></div>
-                                      <div class="box-bottom-span span-red span-red-horizontal"></div>
-                                      <div class="box-bottom-dimension dimension-red dimension-red-horizontal">24px</div>
-
-                                      <div class="box-left dashed-blue dashed-blue-vertical"></div>
-                                      <div class="box-left-span span-blue span-blue-vertical"></div>
-                                      <div class="box-left-dimension dimension-blue dimension-blue-vertical">24px</div>
-
-                                      <div class="box-right dashed-blue dashed-blue-vertical"></div>
-                                      <div class="box-right-span span-blue span-blue-vertical"></div>
-                                      <div class="box-right-dimension dimension-blue dimension-blue-vertical">24px</div>
-                                    </div>`
-                                  : markup.top
-      let markupBottom = expanded ? `<div class="box-accordion-bottom-grid">
-                                      ` + markup.bottom + `
-                                      <div class="box-arrow-span span-blue span-blue-vertical"></div>
-                                      <div class="box-arrow-dimension dimension-blue dimension-blue-vertical">40px</div>
-
-                                      <div class="box-content-top-span span-red span-red-horizontal"></div>
-                                      <div class="box-content-top-dimension dimension-red dimension-red-horizontal">8px</div>
-
-                                      <div class="box-content-middle dashed-red dashed-red-horizontal"></div>
-                                      <div class="box-content-middle-span span-red span-red-horizontal"></div>
-                                      <div class="box-content-middle-dimension dimension-red dimension-red-horizontal">16px</div>
-
-                                      <div class="box-content-bottom dashed-red dashed-red-horizontal"></div>
-                                      <div class="box-content-bottom-span span-red span-red-horizontal"></div>
-                                      <div class="box-content-bottom-dimension dimension-red dimension-red-horizontal">32px</div>
-
-                                      <div class="box-content-left dashed-blue dashed-blue-vertical"></div>
-                                      <div class="box-content-left-span span-blue span-blue-vertical"></div>
-                                      <div class="box-content-left-dimension dimension-blue dimension-red-vertical">24px</div>
-
-                                      <div class="box-content-right dashed-blue dashed-blue-vertical"></div>
-                                      <div class="box-content-right-span span-blue span-blue-vertical"></div>
-                                      <div class="box-content-right-dimension dimension-blue dimension-red-vertical">24px</div>
-                                      </div>`
-                                  : markup.bottom
-
-      return  `<div class="box-accordion">` + markupTop + markupBottom + `</div>`
-    },
-
-    boxAccordionMarkup(expanded) {
-      let labelText = expanded ? 'Expanded Box Accordion Headline 3' : 'Collapsed Box Accordion Headline 3'
-      let ariaExpanded = expanded ? 'true' : 'false'
-      let hidden = expanded ? '' : 'hidden'
-
-      return { 
-            top: `<div class="box-accordion-top Accordion-trigger"
-                  tabindex="-1"
-                  aria-expanded="` + ariaExpanded + `"
-                  aria-controls="sect1"
-                  id="accordion1id">
-              <h3>
-                  <span class="Accordion-title headline-3">
-                    ` + labelText + `
-                    <span class="Accordion-icon"></span>
-                  </span>
-              </h3>
-              <div class="down-arrow"></div>
-            </div>`,
-            bottom: 
-            `<div id="sect1" role="region" aria-labelledby="accordion1id" class="Accordion-panel" ` + hidden + `>
-                <p>
-                  Farmers.gov provides farmers, ranchers, private foresters, and agricultural producers with online self-service applications, educational materials, engagement opportunities, and business tools to increase efficiency and productivity while preserving and fostering long-held traditional relationships between local USDA offices and producers.
-                </p>
-            </div>` }
-
-    },
-    boxAccordionDimensions() {
-      return `<div class="box-accordion-grid">
-              ` + this.defaultBoxAccordionMarkup() + `
-              <div class="box-accordion-top dashed-red dashed-red-horizontal"></div>
-              <div class="box-accordion-top-span span-red span-red-horizontal"></div>
-              <div class="box-accordion-top-dimension dimension-red dimenstion-horizontal">24px</div>
-
-              <div class="box-accordion-middle dashed-red dashed-red-horizontal"></div>
-              <div class="box-accordion-middle-span span-red span-red-horizontal"></div>
-              <div class="box-accordion-middle-dimension dimension-red dimenstion-horizontal">16px</div>
-
-              <div class="box-accordion-bottom dashed-red dashed-red-horizontal"></div>
-              <div class="box-accordion-bottom-span span-red span-red-horizontal"></div>
-              <div class="box-accordion-bottom-dimension dimension-red dimenstion-horizontal">24px</div>
-
-              <div class="box-accordion-left dashed-blue dashed-blue-vertical"></div>
-              <div class="box-accordion-left-span span-blue span-blue-vertical"></div>
-              <div class="box-accordion-left-dimension dimension-blue dimenstion-vertical">24px</div>
-
-              <div class="box-accordion-right dashed-blue dashed-blue-vertical"></div>
-              <div class="box-accordion-right-span span-blue span-blue-vertical"></div>
-              <div class="box-accordion-right-dimension dimension-blue dimenstion-vertical">24px</div>
-              </div>`
-    },
+    this.boxMarkup = accordions.defaultBoxAccordionMarkup()
+    this.boxMarkupExpanded = accordions.defaultBoxAccordionMarkup(true)
   }
 }
 </script>
