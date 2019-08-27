@@ -5,6 +5,15 @@
     background-color: $highlight_bg_color;
   }
 }
+
+.highlight-pointer {
+    position: relative;
+    top: -1rem;
+    display: block;
+    width: 30px;
+    margin: auto; 
+  }
+
 .dropdown-grid {
   display: grid;
   grid-template-columns: 12px 16px 120px 124px 16px 10px 20px;

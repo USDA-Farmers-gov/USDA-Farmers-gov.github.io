@@ -76,17 +76,21 @@ const dropdowns_data = {
     ]
   },
   getDropdownMarkup(label, options, showDimensions, highlight) {
-    let dropdown = `<label for="scl-select-one">` + label + `</label>`
-
-    if(highlight) dropdown = dropdown + `<div class="highlight-overlay">`
-
-    dropdown = dropdown + `<select class="simpler-select scl-select" name="` + label + `" aria-label="Select a State">
+    let ddLabel = `<label for="scl-select-one">` + label + `</label>`
+    let ddSelect = `<select class="simpler-select scl-select" name="` + ddLabel + `" aria-label="Select a State">
                 <option>- Please select -</option>`
+
     options.forEach(function(element){
-      dropdown = dropdown + `<option value="` + element.value + `">` + element.text + `</option>`
+      ddSelect = ddSelect + `<option value="` + element.value + `">` + element.text + `</option>`
     })
-    dropdown = dropdown + `</select>`
-    if(highlight) dropdown = dropdown + `</div>`
+    
+    ddSelect = ddSelect + `</select>`
+
+    let dropdown = (highlight) ? `<div class="highlight-overlay">`
+                                    + ddSelect + 
+                                    `<div class="highlight-pointer mouse-pointer"></div>
+                                  </div>`
+                                  : ddSelect
 
     return showDimensions ? `<div class="dropdown-grid">
                               <div class="label-dashed dashed-red dashed-red-horizontal"></div>

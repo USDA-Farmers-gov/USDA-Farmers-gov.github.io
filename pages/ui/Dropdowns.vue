@@ -45,7 +45,7 @@
       A label should always be present with a dropdown. The label should not be replaced with the dropdown box text.
     </p>
     <p>
-    8User interface components should meet 3:1 color contrast ratio requirements. This includes the contrast of the border of the dropdown to the background.
+    User interface components should meet 3:1 color contrast ratio requirements. This includes the contrast of the border of the dropdown to the background.
     </p>
   </div>
 </template>
