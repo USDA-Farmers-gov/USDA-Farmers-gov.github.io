@@ -53,7 +53,7 @@
 </template>
 
 <script>
-import buttons_data from '../_components-data/buttons.js'
+import buttons_data from '../_components-data/ui/buttons.js'
 
 export default {
   layout: 'farmers',

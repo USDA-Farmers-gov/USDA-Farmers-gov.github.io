@@ -76,7 +76,7 @@
 </template>
 
 <script>
-  import checkboxes_data from '../_components-data/checkboxes.js'
+  import checkboxes_data from '../_components-data/ui/checkboxes.js'
   
   export default {
     layout: 'farmers',
