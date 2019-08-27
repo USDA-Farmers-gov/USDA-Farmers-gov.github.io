@@ -20,7 +20,6 @@ const typography_data = {
           { name_and_markup: '<div class="blog-block-quote">Blog Quote</div>', font_family: 'Merriweather', weight: '300', font_size: '28px', line_height: '34px' },
         ]
   },
-
   contrastButtonsNormal() {
     return [
           { classes: 'heritage heritage-border white-txt', description: 'White on Heritage Green'},
@@ -33,7 +32,6 @@ const typography_data = {
           { classes: 'grey-2 grey-2-border asphalt-txt', description: 'Asphalt on Light Gray'},
         ]
   },
-
   contrastButtonsLargeText() {
     return [
           { classes: 'sweet-grass sweet-grass-border white-txt', description: 'White on Sweet Grass'},
@@ -42,7 +40,6 @@ const typography_data = {
           { classes: 'big-sky-txt grey-3-border', description: 'Big Sky on White'},
         ]
   }
-
 }
 
 export default typography_data

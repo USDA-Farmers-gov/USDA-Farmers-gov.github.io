@@ -33,9 +33,9 @@ const checkboxes_data = {
                   }
           },
         ]
-  },
-  specs() {
-    return [
+    },
+    specs() {
+      return [
           {
             header: 'Unselected',
             classes_cell: 'dimension-margins',
@@ -63,9 +63,9 @@ const checkboxes_data = {
             }
           }
         ]
-  },
-  specsStates() {
-    return [
+    },
+    specsStates() {
+      return [
           {
             header: 'Hover',
             markup: checkboxes_data.outputCardMarkup({ label: 'Card Checkbox' }),
@@ -94,8 +94,8 @@ const checkboxes_data = {
             }
           }
         ]
-  },
-  outputCardMarkup(options) {
+    },
+    outputCardMarkup(options) {
       let cardClasses = 'checkbox-card card'
       let checked
       if(!!options && options.checked) checked = ' checked'

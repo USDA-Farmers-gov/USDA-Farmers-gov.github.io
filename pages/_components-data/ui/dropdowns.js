@@ -71,7 +71,7 @@ const dropdowns_data = {
                               ` + dropdown + `
                               </div>` 
                           : dropdown
-          }
+    }
 }
 
 export default dropdowns_data
