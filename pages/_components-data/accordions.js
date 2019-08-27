@@ -1,4 +1,4 @@
-const accordions = {
+const accordions_data = {
   defaultAccordionMarkup() {
     return `<div class="card-accordion" tabindex="-1">
             <div class="card-accordion-content">
@@ -24,7 +24,7 @@ const accordions = {
   },
   defaultAccordionDimensions() {
       return `<div class="default-accordion-grid">
-              ` + accordions.defaultAccordionMarkup() + `
+              ` + accordions_data.defaultAccordionMarkup() + `
               <div class="default-accordion-top dashed-red dashed-red-horizontal"></div>
               <div class="default-accordion-top-span span-red span-red-horizontal"></div>
               <div class="default-accordion-top-dimension dimension-red dimension-red-horizontal">32px</div>
@@ -48,7 +48,7 @@ const accordions = {
     },
     clickTargetAccordionDimensions() {
       return `<div class="click-target-accordion-grid">
-                ` + accordions.defaultAccordionMarkup() + `
+                ` + accordions_data.defaultAccordionMarkup() + `
                 <div class="click-target-accordion-top dashed-red dashed-red-horizontal"></div>
                 <div class="click-target-accordion-top-span span-red span-red-horizontal"></div>
                 <div class="click-target-accordion-top-dimension dimension-red dimension-red-horizontal">24px</div>
@@ -65,7 +65,7 @@ const accordions = {
       let ariaExpanded = expanded ? 'true' : 'false'
       let hidden = expanded ? '' : 'hidden'
       let boxGridClass = expanded ? ' box-accordion-top-grid' : ''
-      let markup = accordions.boxAccordionMarkup(expanded)
+      let markup = accordions_data.boxAccordionMarkup(expanded)
       let markupTop = expanded ? `<div class="box-accordion-top-grid">
                                       ` + markup.top + `
                                       <div class="box-top dashed-red dashed-red-horizontal"></div>
@@ -148,7 +148,7 @@ const accordions = {
 
     boxAccordionDimensions() {
       return `<div class="box-accordion-grid">
-              ` + accordions.defaultBoxAccordionMarkup() + `
+              ` + accordions_data.defaultBoxAccordionMarkup() + `
               <div class="box-accordion-top dashed-red dashed-red-horizontal"></div>
               <div class="box-accordion-top-span span-red span-red-horizontal"></div>
               <div class="box-accordion-top-dimension dimension-red dimenstion-horizontal">24px</div>
@@ -173,7 +173,7 @@ const accordions = {
     defaultAccordionSpecs() {
       return [
         {
-          markup: accordions.defaultAccordionDimensions(),
+          markup: accordions_data.defaultAccordionDimensions(),
             code: { background: `color: #FFFFFF;
                           shadow: 0;1;4;0 #BBBBBB;` }
         }
@@ -206,4 +206,4 @@ const accordions = {
     }
 }
 
-export default accordions
+export default accordions_data

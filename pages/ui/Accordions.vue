@@ -74,7 +74,7 @@
 </template>
 
 <script>
-import accordions from '../_element-modules/accordions.js'
+import accordions_data from '../_components-data/accordions.js'
 // Uncomment this only if accordions needs to be functional
 // if (process.browser) {
 //   require('@/farmers/dist/js/farmers.min.js')
@@ -92,11 +92,11 @@ export default {
       boxAccordionWidth: 0,
       boxMarkup: '',
       boxMarkupExpanded: '',
-      defaultAccordionMarkup: accordions.defaultAccordionMarkup(),
-      clickTargetAccordionDimensions: accordions.clickTargetAccordionDimensions(),
-      boxAccordionDimensions: accordions.boxAccordionDimensions(),
-      specs_default_accordion: accordions.defaultAccordionSpecs(),
-      specs_box_accordion: accordions.defaultBoxAccordionSpecs()
+      defaultAccordionMarkup: accordions_data.defaultAccordionMarkup(),
+      clickTargetAccordionDimensions: accordions_data.clickTargetAccordionDimensions(),
+      boxAccordionDimensions: accordions_data.boxAccordionDimensions(),
+      specs_default_accordion: accordions_data.defaultAccordionSpecs(),
+      specs_box_accordion: accordions_data.defaultBoxAccordionSpecs()
     }
   },
   mounted() {
@@ -109,8 +109,8 @@ export default {
     }
 
     this.boxAccordionWidth = this.$refs.accordionGroup.clientWidth
-    this.boxMarkup = accordions.defaultBoxAccordionMarkup()
-    this.boxMarkupExpanded = accordions.defaultBoxAccordionMarkup(true)
+    this.boxMarkup = accordions_data.defaultBoxAccordionMarkup()
+    this.boxMarkupExpanded = accordions_data.defaultBoxAccordionMarkup(true)
   }
 }
 </script>
