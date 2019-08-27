@@ -153,7 +153,7 @@
 </template>
 
 <script>
-  import typography_data from '../_components-data/elements/typography.js'
+  import typography_data from '@/pages/_components-data/elements/typography.js'
 
   export default {
     layout: 'farmers',

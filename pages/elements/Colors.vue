@@ -52,7 +52,7 @@
 </template>
 
 <script>
-  import colors_data from '../_components-data/elements/colors.js'
+  import colors_data from '@/pages/_components-data/elements/colors.js'
 
   export default {
     layout: 'farmers',

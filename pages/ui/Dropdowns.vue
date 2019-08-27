@@ -33,7 +33,7 @@
 </template>
 
 <script>
-  import dropdowns_data from '../_components-data/ui/dropdowns.js'
+  import dropdowns_data from '@/pages/_components-data/ui/dropdowns.js'
 
   export default {
     layout: 'farmers',

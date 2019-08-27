@@ -75,7 +75,7 @@
 </template>
 
 <script>
-  import dividers_data from '../_components-data/ui/dividers.js'
+  import dividers_data from '@/pages/_components-data/ui/dividers.js'
 
   export default {
     layout: 'farmers',

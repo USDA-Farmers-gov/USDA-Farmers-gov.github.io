@@ -89,8 +89,8 @@
 </template>
 
 <script>
-  import radio_buttons_data from '../_components-data/ui/radio-buttons.js'
-  import utils from '../../assets/js/utils.js'
+  import radio_buttons_data from '@/pages/_components-data/ui/radio-buttons.js'
+  import utils from '@/assets/js/utils.js'
   
   export default {
     layout: 'farmers',
