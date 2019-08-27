@@ -1,3 +1,10 @@
+.highlight-overlay {
+  padding: 0.1rem 0.4rem;
+
+  .simpler-select {
+    background-color: $highlight_bg_color;
+  }
+}
 .dropdown-grid {
   display: grid;
   grid-template-columns: 12px 16px 120px 124px 16px 10px 20px;

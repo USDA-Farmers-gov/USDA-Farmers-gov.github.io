@@ -1,12 +1,24 @@
+const options = [ 
+  { text: 'Option 1', value: '01' },
+  { text: 'Option 2', value: '02' },
+  { text: 'Option 3', value: '03' },
+  { text: 'Option 4', value: '04' },
+  { text: 'Option 5', value: '05' },
+  { text: 'Option 6', value: '06' },
+  { text: 'Option 7', value: '07' },
+  { text: 'Option 8', value: '08' },
+]
 const dropdowns_data = {
   dropdownSingle() {
-    return [
-          { text: 'Option 1', value: '01' },
-          { text: 'Option 2', value: '02' },
-          { text: 'Option 3', value: '03' },
-        ]
+    return dropdowns_data.getDropdownMarkup('Dropdown Label', options)
   },
-  dropdownStates() {
+  dropdownDimensions() {
+    return dropdowns_data.getDropdownMarkup('Dropdown Label', options, true)
+  },
+  dropdownHighlight() {
+    return dropdowns_data.getDropdownMarkup('Dropdown Label', options, false, true)
+  },
+  dropdownSpecs() {
     return [
           { 
             code: { 
@@ -35,15 +47,46 @@ const dropdowns_data = {
           },
         ]
   },
-  getDropdownMarkup(label, options, showDimensions) {
-    let dropdown = `
-            <label for="scl-select-one">` + label + `</label>
-            <select class="simpler-select scl-select" name="` + label + `" aria-label="Select a State">
+  dropDownStates() {
+    return [
+      { 
+        header: 'Hover', 
+        markup: dropdowns_data.getDropdownMarkup('Dropdown Label', options),
+        code: {
+          dropdown_box: `background: #DBEDE0;
+                        border: 1px #212121;`, 
+        }
+      },
+      { 
+        header: 'Focus', 
+        markup: dropdowns_data.getDropdownMarkup('Dropdown Label', options),
+        code: {
+          dropdown_box: `shadow: #1B69D3;`, 
+        }
+      },
+      { 
+        header: 'Disabled', 
+        markup: dropdowns_data.getDropdownMarkup('Dropdown Label', options),
+        code: {
+          dropdown_box: `background: #F7F7F7;
+                          border: 1px #BBBBBB;`, 
+          dropdown_box_text: `color: #BBBBBB;`
+        }
+      }
+    ]
+  },
+  getDropdownMarkup(label, options, showDimensions, highlight) {
+    let dropdown = `<label for="scl-select-one">` + label + `</label>`
+
+    if(highlight) dropdown = dropdown + `<div class="highlight-overlay">`
+
+    dropdown = dropdown + `<select class="simpler-select scl-select" name="` + label + `" aria-label="Select a State">
                 <option>- Please select -</option>`
     options.forEach(function(element){
       dropdown = dropdown + `<option value="` + element.value + `">` + element.text + `</option>`
     })
     dropdown = dropdown + `</select>`
+    if(highlight) dropdown = dropdown + `</div>`
 
     return showDimensions ? `<div class="dropdown-grid">
                               <div class="label-dashed dashed-red dashed-red-horizontal"></div>

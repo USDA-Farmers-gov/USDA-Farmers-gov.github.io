@@ -10,7 +10,7 @@
     </p>
 
     <div class="row">
-      <div class="medium-4" v-html="getDropdownMarkup('Dropdown Label', dropdown_single)"/>
+      <div class="medium-4" v-html="dropdown_single"/>
     </div>
 
     <h3>Specs</h3>
@@ -25,10 +25,28 @@
     <h3>Default</h3>
 
     <div class="row">
-      <div class="medium-12" v-html="getDropdownMarkup('Dropdown Label', dropdown_single, true)"/>
+      <div class="medium-12" v-html="dropdown_dimensions"/>
     </div>
 
-    <ExampleRow :data="dropdown_states" columns="4" />
+    <ExampleRow :data="dropdown_specs" columns="4" />
+    <ExampleRow :data="dropdown_states" columns="3" />
+
+    <h3>Click Target</h3>
+    <p>
+      The entire dropdown field box should be clickable.
+    </p>
+
+    <div class="row">
+      <div class="medium-5" v-html="dropdown_highlight"/>
+    </div>
+
+    <h4>Accessibility</h4>
+    <p>
+      A label should always be present with a dropdown. The label should not be replaced with the dropdown box text.
+    </p>
+    <p>
+    8User interface components should meet 3:1 color contrast ratio requirements. This includes the contrast of the border of the dropdown to the background.
+    </p>
   </div>
 </template>
 
@@ -45,12 +63,10 @@
     data() {
       return {
         dropdown_single: dropdowns_data.dropdownSingle(),
-        dropdown_states: dropdowns_data.dropdownStates()
-      }
-    },
-    methods: {
-      getDropdownMarkup(label, options, showDimensions) {
-        return dropdowns_data.getDropdownMarkup(label, options, showDimensions)
+        dropdown_dimensions: dropdowns_data.dropdownDimensions(),
+        dropdown_highlight: dropdowns_data.dropdownHighlight(),
+        dropdown_specs: dropdowns_data.dropdownSpecs(),
+        dropdown_states: dropdowns_data.dropDownStates()
       }
     }
   }
