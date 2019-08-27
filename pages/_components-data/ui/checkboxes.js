@@ -1,5 +1,5 @@
 const checkboxes_data = {
-  Default() {
+  default() {
     return [
           {
             header: 'Unselected',
@@ -34,8 +34,7 @@ const checkboxes_data = {
           },
         ]
   },
-
-  Specs() {
+  specs() {
     return [
           {
             header: 'Unselected',
@@ -65,8 +64,7 @@ const checkboxes_data = {
           }
         ]
   },
-
-  SpecsStates() {
+  specsStates() {
     return [
           {
             header: 'Hover',
@@ -97,7 +95,6 @@ const checkboxes_data = {
           }
         ]
   },
-
   outputCardMarkup(options) {
       let cardClasses = 'checkbox-card card'
       let checked

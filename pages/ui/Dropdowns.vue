@@ -44,8 +44,8 @@
     },
     data() {
       return {
-        dropdown_single: dropdowns_data.DropdownSingle(),
-        dropdown_states: dropdowns_data.DropdownStates()
+        dropdown_single: dropdowns_data.dropdownSingle(),
+        dropdown_states: dropdowns_data.dropdownStates()
       }
     },
     methods: {

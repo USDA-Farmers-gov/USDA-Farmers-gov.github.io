@@ -87,17 +87,17 @@
     },
     data() {
       return {
-        checkboxes: checkboxes_data.Default(),
-        specs: checkboxes_data.Specs(),
-        specs_states: checkboxes_data.SpecsStates()
+        checkboxes: checkboxes_data.default(),
+        specs: checkboxes_data.specs(),
+        specs_states: checkboxes_data.specsStates()
       }
     },
     methods: {
       outputCardMarkup(options) {
-        checkboxes_data.outputCardMarkup(options)
+        return checkboxes_data.outputCardMarkup(options)
       },
       outputCheckboxMarkup(options) {
-        checkboxes_data.outputCheckboxMarkup(options)
+        return checkboxes_data.outputCheckboxMarkup(options)
       }
     }
   }

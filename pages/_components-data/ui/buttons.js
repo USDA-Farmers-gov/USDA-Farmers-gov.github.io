@@ -47,7 +47,6 @@ const buttons_data = {
         }
       ]
   },
-
   primaryButtonStates() {
     return [
         { 
@@ -76,7 +75,6 @@ const buttons_data = {
         }
       ]
   },
-
   secondaryButton() {
     return [
         { 
@@ -129,7 +127,6 @@ const buttons_data = {
         }
       ]
   },
-
   secondaryButtonStates() {
     return [
         {  
@@ -170,7 +167,6 @@ const buttons_data = {
         }
       ]
   },
-
   tertiaryButtonDefault() {
     return [
         {
@@ -185,7 +181,6 @@ const buttons_data = {
         }
       ]
   },
-
   tertiaryButton() {
     return [
         { 
@@ -214,7 +209,6 @@ const buttons_data = {
         }
       ]
   },
-
   feedbackButton() {
     return [
         { 
@@ -263,7 +257,6 @@ const buttons_data = {
         }
       ]
   },
-
   outputButtonMarkup(classes, showDimensions, index) {
       let btnClasses = buttons_data.setButtonClasses(classes)
       let dimensions = buttons_data.getButtonDimensions(btnClasses)
@@ -294,6 +287,6 @@ const buttons_data = {
       if(btnClasses.indexOf('feedback') >= 0) dimensions = { width: 64, height: 64 }
 
       return dimensions
-    },
+    }
 }
 export default buttons_data

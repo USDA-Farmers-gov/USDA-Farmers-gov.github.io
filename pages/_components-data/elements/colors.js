@@ -7,7 +7,6 @@ const colors_data = {
         { classes: 'asphalt', caption: 'Asphalt #212121', description: 'Asphalt: typography and icons' }
         ]
   },
-
   secondaryColors() {
     return [        
           { classes: 'usda-blue', caption: 'USDA Blue #004785',  description: '' },
@@ -15,7 +14,6 @@ const colors_data = {
           { classes: 'dandelion', caption: 'Dandelion #F7BE00',  description: 'Dandelion: heading styling, decorative elements' }
         ] 
   },
-
   lowSaturationColors() {
     return [        
           { classes: 'soft-green', caption: 'Soft Green #DBEDE0',  description: 'Soft Green: good status' },
@@ -23,7 +21,6 @@ const colors_data = {
           { classes: 'soft-red', caption: 'Soft Red #EEDAD9',  description: 'Soft Red: warning status ' }
         ]
   },
-
   greyscaleColors() {
     return [        
           { classes: 'grey-1', caption: '#F7F7F7' },
@@ -33,7 +30,6 @@ const colors_data = {
           { classes: 'grey-5', caption: '#494440' },
         ]
   },
-
   specialStates() {
     return [        
           { classes: 'visited-color', caption: 'Visited #4C2C92' },

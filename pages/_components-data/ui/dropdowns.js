@@ -1,12 +1,12 @@
 const dropdowns_data = {
-  DropdownSingle() {
+  dropdownSingle() {
     return [
           { text: 'Option 1', value: '01' },
           { text: 'Option 2', value: '02' },
           { text: 'Option 3', value: '03' },
         ]
   },
-  DropdownStates() {
+  dropdownStates() {
     return [
           { 
             code: { 
@@ -35,7 +35,6 @@ const dropdowns_data = {
           },
         ]
   },
-
   getDropdownMarkup(label, options, showDimensions) {
     let dropdown = `
             <label for="scl-select-one">` + label + `</label>

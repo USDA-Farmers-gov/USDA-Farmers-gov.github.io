@@ -34,7 +34,6 @@ const radio_buttons_data = {
             },
           ]
   },
-
   specs() {
     return [
             {
@@ -64,7 +63,6 @@ const radio_buttons_data = {
             }
           ]
   },
-
   specsStates() {
     return [
             {
@@ -96,7 +94,6 @@ const radio_buttons_data = {
             }
           ]
   },
-
   outputCardMarkup(options) {
       let cardClasses = 'checkbox-card card'
       let checked
