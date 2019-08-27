@@ -40,7 +40,7 @@
       <button class="btn feedback" tabindex="-1">Yes</button>
     </p>
     
-    <ExampleRow :data="feedback_button" columns="4"/>
+    <ExampleRow :data="feedback_button" :rowClasses="'feedback'" columns="4"/>
 
     <h3>Accessibility</h3>
     <p>Buttons should show a visible focus state when tabbed to by a user.</p>

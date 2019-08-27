@@ -1,5 +1,5 @@
 <template>
-  <div class="row examples">
+  <div :class="setRowClasses()">
     <div v-for="item in data" :class="setClasses(item)">
       <p v-if="item.header">
         <strong>{{ item.header }}</strong>
@@ -24,12 +24,18 @@
       columns: {
         type: [ String, Number ],
         required: true
-      }
+      },
+      rowClasses: String
     },
     methods: {
       setClasses(item) {
         let flexClass = 'medium-' + 12/Number(this.columns)
         return (item.classes_cell) ? flexClass + ' ' + item.classes_cell :  flexClass
+      },
+      setRowClasses() {
+        let baseClass = 'row examples'
+        return this.rowClasses ? baseClass  + ' ' + this.rowClasses : baseClass
+
       },
       setContentHeader(key) {
         return key.replace(/_/g, ' ').toUpperCase()
