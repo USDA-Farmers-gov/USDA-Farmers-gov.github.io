@@ -134,12 +134,12 @@ const radio_buttons_data = {
     card = card + card_bottom
 
     return options.showCardDimensions 
-      ? `<div class="checkbox-card-grid">
-          <div class="checkbox-card-top dashed-red dashed-red-horizontal"></div>
-          <div class="checkbox-card-bottom dashed-red dashed-red-horizontal"></div>
+      ? `<div class="checkbox-radio-card-grid">
+          <div class="checkbox-radio-card-top dashed-red dashed-red-horizontal"></div>
+          <div class="checkbox-radio-card-bottom dashed-red dashed-red-horizontal"></div>
 
-          <div class="checkbox-card-left dashed-blue dashed-blue-vertical"></div>
-          <div class="checkbox-card-right dashed-blue dashed-blue-vertical"></div>
+          <div class="checkbox-radio-card-left dashed-blue dashed-blue-vertical"></div>
+          <div class="checkbox-radio-card-right dashed-blue dashed-blue-vertical"></div>
 
           <div class="height-span top-right span-red span-red-horizontal"></div>
           <div class="height-span bottom-right span-red span-red-horizontal"></div>
@@ -153,12 +153,12 @@ const radio_buttons_data = {
           <div class="width-dimension bottom-left dimension-blue">20px</div>
           <div class="width-dimension bottom-right dimension-blue">20px</div>
 
-          <div class="checkbox-span checkbox-span-top span-blue span-blue-vertical"></div>
-          <div class="checkbox-span checkbox-span-left span-red span-red-horizontal"></div>
+          <div class="checkbox-radio-span checkbox-radio-span-top span-blue span-blue-vertical"></div>
+          <div class="checkbox-radio-span checkbox-radio-span-left span-red span-red-horizontal"></div>
 
-          <div class="checkbox-dimension-top dimension-blue">32px</div>
-          <div class="checkbox-dimension-left dimension-red">32px</div>
-          <div class="checkbox-card">` + card  + `</div>
+          <div class="checkbox-radio-dimension-top dimension-blue">32px</div>
+          <div class="checkbox-radio-dimension-left dimension-red">32px</div>
+          <div class="checkbox-radio-card">` + card  + `</div>
           </div>`
       : card
     },
@@ -171,20 +171,20 @@ const radio_buttons_data = {
       let name = (!!options && options.name) ? options.name : utils.randomString()
 
       if(!!options && options.showLabel === false) labelClass = labelClass + ' visually-hidden'
-      if(!!options && options.showDimensions) gridClass = ' checkbox-dimensions'
+      if(!!options && options.showDimensions) gridClass = ' checkbox-radio-dimensions'
       if(!!options && options.checked) checked = ' checked'
 
       let radioButton = `<input type="radio" class="radio-input" name="` + name + `" id="` + id + `" value="1" tabindex="-1"` + checked + `>
       <label for="` + id + `" class="radio-label">` + label + `</label>`
 
-      return options.showDimensions ? `<div class="checkbox-grid`+ gridClass + `">
+      return options.showDimensions ? `<div class="checkbox-radio-grid`+ gridClass + `">
               <div class="dimension-red dimension-red-horizontal">24 px</div>
-              <div class="checkbox-height span-red span-red-horizontal"></div>
+              <div class="checkbox-radio-height span-red span-red-horizontal"></div>
               <div class="checkbox">
                 ` + radioButton + `
               </div>
-              <div class="checkbox-width span-blue span-blue-vertical"></div>
-              <div class="checkbox-width-dimension dimension-blue dimension-blue-vertical">24 px</div>
+              <div class="checkbox-radio-width span-blue span-blue-vertical"></div>
+              <div class="checkbox-radio-width-dimension dimension-blue dimension-blue-vertical">24 px</div>
             </div>`
             : radioButton
     }

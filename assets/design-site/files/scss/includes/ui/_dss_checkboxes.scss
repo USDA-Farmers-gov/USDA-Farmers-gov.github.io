@@ -1,7 +1,7 @@
 .container.examples {
   margin-bottom: 4rem;
 }
-.checkbox-dimensions {
+.checkbox-radio-dimensions {
   position: absolute;
   left: -4rem;
 
@@ -10,7 +10,7 @@
     padding-left: 0.4rem;
   }
 }
-.checkbox-click-target {
+.checkbox-radio-click-target {
   position: relative;
   top: -1.3rem;
   left: 0.7rem;
@@ -21,31 +21,31 @@
     }
   }
 }
-.checkbox-card-click-target {
+.checkbox-radio-card-click-target {
   position: relative;
   top: -1.1rem;
   left: 14rem;
 }
-.checkbox-grid {
+.checkbox-radio-grid {
   display: grid;
   grid-template-columns: auto 12px auto;
   grid-template-rows: 22px auto;
   margin-bottom: 3rem;
 
-  .checkbox-width {
+  .checkbox-radio-width {
     position: relative;
     grid-column: 3;
     width: 24px;
     margin-top: 0.75rem;
     margin-left: 0.4rem;
   }      
-  .checkbox-height {
+  .checkbox-radio-height {
     position:relative;
     top: 0.2rem;
     margin: 0 0.2rem 0.2rem 0.2rem;
   }
 
-  .checkbox-width-dimension {
+  .checkbox-radio-width-dimension {
     grid-column: 3;
     grid-row: 3;
     position: relative;
@@ -53,33 +53,33 @@
   }
 } 
 
-.checkbox-card-grid {
+.checkbox-radio-card-grid {
   display: grid;
   grid-template-columns: 20px 146px 42px 32px 20px 6px 9px 25px;
   grid-template-rows: 20px 76px 32px 20px 5px 10px 9px;
   
-  .checkbox-card {
+  .checkbox-radio-card {
     grid-column: 1 / span 5;
     grid-row: 1 / span 4;
   }
-  .checkbox-card-top, .checkbox-card-bottom {
+  .checkbox-radio-card-top, .checkbox-radio-card-bottom {
     grid-column: 1 / span 5;
   }
-  .checkbox-card-top {
+  .checkbox-radio-card-top {
     grid-row: 1;
   }
-  .checkbox-card-bottom {
+  .checkbox-radio-card-bottom {
     grid-column: 4 / 6;
     grid-row: 4;
   }
-  .checkbox-card-left, .checkbox-card-right {
+  .checkbox-radio-card-left, .checkbox-radio-card-right {
     position: relative;
     grid-row: 1 / span 4;
   }
-  .checkbox-card-left {
+  .checkbox-radio-card-left {
     grid-column: 1;
   }
-  .checkbox-card-right {
+  .checkbox-radio-card-right {
     grid-column: 5;
     position: relative;
     left: -2px;
@@ -137,8 +137,8 @@
       }
     }
 
-    .checkbox-span {
-      &.checkbox-span-top {
+    .checkbox-radio-span {
+      &.checkbox-radio-span-top {
         position: relative;
         grid-column: 4;
         grid-row: 2;
@@ -148,7 +148,7 @@
         margin-bottom: 2px;
       }
 
-      &.checkbox-span-left {
+      &.checkbox-radio-span-left {
         position: relative;
         grid-column: 3;
         grid-row: 3;
@@ -158,7 +158,7 @@
       }
     }
 
-    .checkbox-dimension-top {
+    .checkbox-radio-dimension-top {
       grid-column: 4;
       grid-row: 2;
       align-self: end;
@@ -168,7 +168,7 @@
       left: 0.3rem;
     }
 
-    .checkbox-dimension-left {
+    .checkbox-radio-dimension-left {
       grid-column: 3;
       grid-row: 3;
       align-self: end;
@@ -179,7 +179,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .checkbox-mobile-container {
+  .checkbox-radio-mobile-container {
     margin-left: 3.5rem;
   }
 }
@@ -190,12 +190,12 @@
     padding: 0.7rem;
   }
 
-  .checkbox-card-label, .radio-card-label, .checkbox-card label:before, [type=checkbox] + label::before {
+  .checkbox-card-label, .radio-card-label, .checkbox-radio-card label:before, [type=checkbox] + label::before {
     background: $highlight_bg_color;
   }
 }
 
-.checkbox-click-target {
+.checkbox-radio-click-target {
   margin: 2rem 0 5rem 0;
   &.highlight-overlay {
     padding-top: 0.5rem;

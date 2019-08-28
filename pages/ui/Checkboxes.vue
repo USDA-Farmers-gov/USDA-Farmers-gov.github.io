@@ -14,7 +14,7 @@
     <p v-html="outputCheckboxMarkup({ label: 'Checkbox Label' })"></p>  
     <p v-html="outputCheckboxMarkup({ label: 'Checkbox Label', checked: true })"></p>  
 
-    <div class="checkbox-mobile-container">
+    <div class="checkbox-radio-mobile-container">
       <ExampleRow :data="checkboxes" columns="4" />
     </div>
 
@@ -24,9 +24,9 @@
     </p>
     
     <div class="row">
-      <div class="medium-3 checkbox-click-target highlight-overlay" v-html="outputCheckboxMarkup({ label: 'Checkbox Label' })"></div> 
+      <div class="medium-3 checkbox-radio-click-target highlight-overlay" v-html="outputCheckboxMarkup({ label: 'Checkbox Label' })"></div> 
     </div>
-    <div class="checkbox-click-target mouse-pointer"></div>
+    <div class="checkbox-radio-click-target mouse-pointer"></div>
     
     <h3>Card Checkboxes</h3>
 
@@ -59,7 +59,7 @@
     <div class="card-highlight">
         <div class="highlight-overlay" v-html="outputCardMarkup({ label: 'Card Checkbox' })"></div>
     </div>
-    <div class="checkbox-card-click-target mouse-pointer"></div>
+    <div class="checkbox-radio-card-click-target mouse-pointer"></div>
     
     <h3>Accessibility</h3>
     <p>

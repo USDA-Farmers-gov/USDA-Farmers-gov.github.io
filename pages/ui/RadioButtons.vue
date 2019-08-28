@@ -13,7 +13,7 @@
 
     <p v-html="outputRadioButtonMarkup({ label: 'Radio Label' })"></p>  
     <p v-html="outputRadioButtonMarkup({ label: 'Radio Label', checked: true })"></p>  
-    <div class="checkbox-mobile-container">
+    <div class="checkbox-radio-mobile-container">
       <ExampleRow :data="radio_buttons" columns="4" />
     </div>
 
@@ -25,7 +25,7 @@
     <div class="card-highlight">
       <div class="highlight-overlay" v-html="outputRadioButtonMarkup({ label: 'Radio Label' })"></div> 
     </div>
-    <div class="checkbox-card-click-target mouse-pointer"></div>
+    <div class="checkbox-radio-card-click-target mouse-pointer"></div>
     
     <h3 id="card-radio-buttons">Card Radio Buttons</h3>
 
@@ -57,7 +57,7 @@
     <div class="card-highlight">
         <div class="highlight-overlay" v-html="outputCardMarkup({ label: 'Card Radio Button' })"></div>
     </div>
-    <div class="checkbox-card-click-target mouse-pointer"></div>
+    <div class="checkbox-radio-card-click-target mouse-pointer"></div>
 
     <h3>Accessibility</h3>
 
