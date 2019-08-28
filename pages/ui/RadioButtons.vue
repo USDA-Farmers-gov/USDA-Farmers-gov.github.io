@@ -65,6 +65,7 @@
     <h3>Accessibility</h3>
 
     <p>
+      <!-- TODO: find where link should go and update -->
       Radio button functionality must be available through <nuxt-link to="#">keyboard interactions</nuxt-link>.
     </p>
     <p>

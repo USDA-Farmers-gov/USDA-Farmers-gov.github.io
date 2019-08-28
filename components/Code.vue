@@ -21,7 +21,17 @@
       }
     },
     mounted() {
-      this.code = beautifyHTML(this.$el.getElementsByClassName("preview")[0].innerHTML)
+      this.setCode()
+    },
+    updated: function() {
+      this.$nextTick(function () {
+        this.setCode()
+      })
+    },
+    methods: {
+      setCode() {
+        this.code = beautifyHTML(document.querySelector('.preview').innerHTML)
+      }
     }
   }
 </script>
