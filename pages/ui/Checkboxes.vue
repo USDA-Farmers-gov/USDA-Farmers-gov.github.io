@@ -34,11 +34,10 @@
       Card checkboxes are used in interactive tools. The element allows space for icons when appropriate, as well as typographical hierarchy. The entire card is a large touch/click target which minimizes user input error and allows for an easier interaction on a mobile device. Users can select one or more options. If only one option can be selected, use <nuxt-link to="/ui/RadioButtons#card-radio-buttons">card radio buttons</nuxt-link>.
     </p>
 
-    <!-- TODO: add images to cards when they become available. -->
     <div class="container examples">
       <div class="row">
         <div v-html="outputCardMarkup({ label: 'Card Checkbox' })" class="medium-4"></div>
-        <div v-html="outputCardMarkup({ label: 'Card Checkbox', card_classes: 'focus', checked: true })" class="medium-4"></div>
+        <div v-html="outputCardMarkup({ label: 'Card Checkbox', checked: true })" class="medium-4"></div>
       </div>
     </div>
 

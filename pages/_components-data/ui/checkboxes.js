@@ -20,7 +20,7 @@ const checkboxes_data = {
           },
           {
             header: 'Focused',
-            markup: checkboxes_data.outputCheckboxMarkup({ label: 'Checkbox Label' }),
+            markup: checkboxes_data.outputCheckboxMarkup({ label: 'Checkbox Label', labelClass: 'focus' }),
             code: { background: `shadow: #1B69D3;` }
           },
           {
@@ -55,7 +55,6 @@ const checkboxes_data = {
             markup: checkboxes_data.outputCardMarkup({ 
                                         label: 'Card Checkbox', 
                                         image: '/images/MFP2-icon.jpg', 
-                                        card_classes: 'focus', 
                                         checked: true, 
                                         showCardDimensions: true }),
             code: {
@@ -73,7 +72,7 @@ const checkboxes_data = {
       return [
           {
             header: 'Hover',
-            markup: checkboxes_data.outputCardMarkup({ label: 'Card Checkbox', card_classes: 'focus', image: '/images/MFP2-icon.jpg' }),
+            markup: checkboxes_data.outputCardMarkup({ label: 'Card Checkbox', hover: true, image: '/images/MFP2-icon.jpg' }),
             code: {
               card: `border: 2px #49A564;`,
               checkbox: `background: #FFFFFF;
@@ -84,7 +83,7 @@ const checkboxes_data = {
             header: 'Focus',
             markup: checkboxes_data.outputCardMarkup({ 
                             label: 'Card Checkbox', 
-                            card_classes: 'focus', 
+                            labelClasses: 'focus',
                             image: '/images/MFP2-icon.jpg', 
                             checked: true }),
             code: {
@@ -110,7 +109,12 @@ const checkboxes_data = {
 
       if(!!options && options.image) labelClasses = labelClasses + ' with-image'
       if(!!options && options.card_classes) labelClasses = labelClasses + ' ' + options.card_classes
-      if(!!options && options.checked) checked = ' checked'
+      if(!!options && options.checked) {
+        checked = ' checked'
+        labelClasses = labelClasses + ' checked'
+      }
+      if(!!options && options.hover) labelClasses = labelClasses + ' checked'
+      if(!!options && options.labelClasses) labelClasses = labelClasses + ' ' + options.labelClasses
       if(!!options && options.disabled) labelClasses = labelClasses + ' disabled '
 
       let card = `<label tabindex="-1" for="checkbox-card-3" class="` + labelClasses + `">`
@@ -163,9 +167,15 @@ const checkboxes_data = {
       let disabled = ''
 
       if(!!options && options.showLabel === false) labelClass = labelClass + ' visually-hidden'
+      if(!!options && options.labelClass) labelClass = labelClass + ' ' + options.labelClass
       if(!!options && options.showDimensions) gridClass = ' checkbox-radio-dimensions'
       if(!!options && options.checked) checked = ' checked '
       if(!!options && options.disabled) disabled = ' disabled '
+
+
+        // <input type="checkbox" id="cb-1" name="example-1" tabindex="-1" class="checkbox-input">
+        // <label tabindex="0" for="cb-1" class="checkbox-label">Option 1</label>
+
 
       let checkbox = `<input type="checkbox" name="example" value="Option" title="Option" tabindex="-1"` + checked + disabled + ` class="checkbox-input">
         <label for="example" tabindex="-1" class="` + labelClass + `">` + label + `</label>`

@@ -73,7 +73,7 @@ const radio_buttons_data = {
     return [
             {
               header: 'Hover',
-              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', image: '/images/MFP2-icon.jpg' }),
+              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', image: '/images/MFP2-icon.jpg', hover: true }),
               code: {
                 card: `border: 2px #49A564;`,
                 radio_button: `background: #FFFFFF;
@@ -106,26 +106,17 @@ const radio_buttons_data = {
 
     if(!!options && options.image) labelClasses = labelClasses + ' with-image'
     if(!!options && options.card_classes) labelClasses = labelClasses + ' ' + options.card_classes
-    if(!!options && options.checked) checked = ' checked'
-    if(!!options && options.disabled) labelClasses = labelClasses + ' disabled '
-
-
-// <label tabindex="0" for="radio-card-2" class="radio-card-label with-image">
-//         <div class="radio-img-card-top">
-//           <img src="/themes/farmers_update/img/leaves.svg">
-//         </div>
-//         <div class="radio-img-card-bottom">
-//           <input type="radio" id="radio-card-2" class="radio-card-input" name="radio-example" title="Card Radio" tabindex="-1">
-//           Card Radio w/ Image
-//           <span class="radio-icon"></span>
-//         </div>
-//       </label>
+    if(!!options && options.checked) {
+      checked = ' checked'
+      labelClasses = labelClasses + ' checked'
+    }
+    if(!!options && options.hover) labelClasses = labelClasses + ' checked'
 
     let card = `<label tabindex="-1" for="radio-card-3" class="` + labelClasses + `">`
     if(options.image) card = card + `<div class="radio-img-card-top">
                                         <img src="` + options.image + `">
                                       </div>`
-    let radio_button = `<input type="radio" id="radio-card-2" class="radio-card-input" name="radio-example" title="` + options.label + `" tabindex="-1">
+    let radio_button = `<input type="radio" id="radio-card-2" class="radio-card-input" name="radio-example-` + utils.randomString() + `" title="` + options.label + `" tabindex="-1"` + checked + `>
            ` + options.label + `
            <span class="radio-icon"></span>`
 

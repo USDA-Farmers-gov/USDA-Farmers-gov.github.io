@@ -21,9 +21,14 @@
     }
   }
 }
+
+.row-click-target {
+  padding-bottom: 3rem;
+}
+
 .checkbox-radio-card-click-target {
   position: relative;
-  top: -1.1rem;
+  top: -5.1rem;
   left: 14rem;
 }
 .checkbox-radio-grid {
@@ -185,6 +190,7 @@
 }
 .card-highlight {
   width: 27.4rem;
+  margin-bottom: 4rem;
 
   .highlight-overlay {
     padding: 0.7rem;
@@ -198,12 +204,14 @@
 .checkbox-radio-click-target {
   margin: 2rem 0 5rem 0;
   &.highlight-overlay {
-    padding-top: 0.5rem;
+    padding-top: 0.5rem ;
+    padding-bottom: 0.4rem;
   }
 
   &.mouse-pointer {
     position: relative;
     top: -7.3rem;
+    left: 0.7rem;
   }
 }
 .dimension-margins .example-container {

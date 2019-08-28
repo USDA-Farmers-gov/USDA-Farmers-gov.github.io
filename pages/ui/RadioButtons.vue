@@ -1,6 +1,7 @@
 <template>
   <div>
     <h2>Radio Buttons</h2>
+
     <p class="intro-text">
       Radio buttons are used when the user can only make one selection from a list or group of options.
     </p>
@@ -22,10 +23,10 @@
       A radio button can be selected and deselected by clicking or tapping on the radio button as well as the text label.
     </p>
 
-    <div class="card-highlight">
-      <div class="highlight-overlay" v-html="outputRadioButtonMarkup({ label: 'Radio Label' })"></div> 
+    <div class="row">
+      <div class="medium-3 checkbox-radio-click-target highlight-overlay" v-html="outputRadioButtonMarkup({ label: 'Radio Label' })"></div> 
     </div>
-    <div class="checkbox-radio-card-click-target mouse-pointer"></div>
+    <div class="checkbox-radio-click-target mouse-pointer"></div>
     
     <h3 id="card-radio-buttons">Card Radio Buttons</h3>
 
@@ -33,8 +34,7 @@
       Card radio buttons are used in interactive tools. The element allows space for icons when appropriate, as well as typographical hierarchy. The entire card is a large touch/click target which minimizes user input error and allows for an easier interaction on a mobile device. Users can only make a single selection. If users can make more than one selection, use <nuxt-link to="/ui/Checkboxes">checkboxes</nuxt-link>.
     </p>
 
-    <!-- TODO: add images to cards when they become available. -->
-    <div class="row">
+    <div class="row row-click-target">
       <div v-html="outputCardMarkup({ label: 'Card Radio Button' })" class="medium-4"></div>
       <div v-html="outputCardMarkup({ label: 'Card Radio Button', checked: true })" class="medium-4"></div>
     </div>
