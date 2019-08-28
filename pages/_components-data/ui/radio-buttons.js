@@ -1,4 +1,4 @@
-import utils from '../../../assets/js/utils.js'
+import utils from '@/assets/js/utils.js'
 
 const radio_buttons_data = {
   radioButtons() {
@@ -140,7 +140,7 @@ const radio_buttons_data = {
       if(!!options && options.showDimensions) gridClass = ' checkbox-dimensions'
       if(!!options && options.checked) checked = ' checked'
 
-      let radioButton = `<input type="radio" name="group1" id="` + id + `" value="2" tabindex="-1">
+      let radioButton = `<input type="radio" name="` + utils.randomString() + `" id="` + id + `" value="2" tabindex="-1"` + checked + `>
       <label for="` + id + `">` + label + `</label>`
 
       return options.showDimensions ? `<div class="checkbox-grid`+ gridClass + `">

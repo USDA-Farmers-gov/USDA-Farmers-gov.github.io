@@ -140,8 +140,8 @@ const checkboxes_data = {
       if(!!options && options.showDimensions) gridClass = ' checkbox-dimensions'
       if(!!options && options.checked) checked = ' checked'
 
-      let checkbox = `<input type="checkbox" name="example-1" value="Option 1" title="Option 1" tabindex="-1" ` + checked + `>
-        <label for="example-1" tabindex="-1" class="` + labelClass + `">` + label + `</label>`
+      let checkbox = `<input type="checkbox" name="example" value="Option" title="Option" tabindex="-1" ` + checked + `>
+        <label for="example" tabindex="-1" class="` + labelClass + `">` + label + `</label>`
 
       return options.showDimensions ? `<div class="checkbox-grid`+ gridClass + `">
               <div class="dimension-red dimension-red-horizontal">24 px</div>
