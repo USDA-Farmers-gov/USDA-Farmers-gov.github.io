@@ -1,6 +1,12 @@
 import utils from '@/assets/js/utils.js'
 
 const radio_buttons_data = {
+  buttonsDefault() {
+    return [
+      { markup: radio_buttons_data.outputRadioButtonMarkup({ label: 'Radio Label', name: 'default' }) },
+      { markup: radio_buttons_data.outputRadioButtonMarkup({ label: 'Radio Label', name: 'default', checked: true }) },
+    ]
+  },
   radioButtons() {
     return [
             {
@@ -21,7 +27,7 @@ const radio_buttons_data = {
             },
             {
               header: 'Focused',
-              markup: radio_buttons_data.outputRadioButtonMarkup({ label: 'Radio Label' }),
+              markup: radio_buttons_data.outputRadioButtonMarkup({ label: 'Radio Label', checked: true }),
               code: { background: `shadow: #1B69D3;` }
             },
             {
@@ -135,12 +141,13 @@ const radio_buttons_data = {
       let gridClass
       let checked
       let id = utils.randomString()
+      let name = (!!options && options.name) ? options.name : utils.randomString()
 
       if(!!options && options.showLabel === false) labelClass = labelClass + ' visually-hidden'
       if(!!options && options.showDimensions) gridClass = ' checkbox-dimensions'
       if(!!options && options.checked) checked = ' checked'
 
-      let radioButton = `<input type="radio" name="` + utils.randomString() + `" id="` + id + `" value="2" tabindex="-1"` + checked + `>
+      let radioButton = `<input type="radio" name="` + name + `" id="` + id + `" value="2" tabindex="-1"` + checked + `>
       <label for="` + id + `">` + label + `</label>`
 
       return options.showDimensions ? `<div class="checkbox-grid`+ gridClass + `">

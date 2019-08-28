@@ -12,14 +12,7 @@
     </p>
 
     <div class="row">
-      <div class="medium-2">
-        <input type="radio" name="default" id="r1" value="1" tabindex="-1">
-        <label for="r1">Choice 1</label>
-      </div>
-      <div class="medium-2">
-        <input type="radio" name="default" id="r2" value="2" tabindex="-1">
-        <label for="r2">Choice 2</label>      
-      </div>
+      <div v-for="markup in buttons_default" v-html="markup.markup" class="medium-12 default-radio-buttons"></div>
     </div>
 
     <div class="checkbox-mobile-container">
@@ -101,6 +94,7 @@
     },
     data() {
       return {
+        buttons_default: radio_buttons_data.buttonsDefault(),
         radio_buttons: radio_buttons_data.radioButtons(),
         specs: radio_buttons_data.specs(),
         specs_states: radio_buttons_data.specsStates()
