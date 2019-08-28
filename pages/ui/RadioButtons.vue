@@ -11,9 +11,8 @@
       This style of radio buttons is commonly used in forms. All available options are visible. Users can only make a single selection. If users can make more than one selection, use checkboxes. Radio button icons and their labels should be left-aligned and vertical for better scannability when appropriate.
     </p>
 
-    <div class="row">
-      <div v-for="markup in buttons_default" v-html="markup.markup" class="medium-12 default-radio-buttons"></div>
-    </div>
+    <p v-html="outputRadioButtonMarkup({ label: 'Radio Label' })"></p>  
+    <p v-html="outputRadioButtonMarkup({ label: 'Radio Label', checked: true })"></p>  
 
     <div class="checkbox-mobile-container">
       <ExampleRow :data="radio_buttons" columns="4" />
