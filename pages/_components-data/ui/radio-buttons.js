@@ -27,7 +27,7 @@ const radio_buttons_data = {
             },
             {
               header: 'Focused',
-              markup: radio_buttons_data.outputRadioButtonMarkup({ label: 'Radio Label', checked: true }),
+              markup: radio_buttons_data.outputRadioButtonMarkup({ label: 'Radio Label', labelClasses: 'focus', checked: true }),
               code: { background: `shadow: #1B69D3;` }
             },
             {
@@ -82,7 +82,7 @@ const radio_buttons_data = {
             },
             {
               header: 'Focus',
-              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', image: '/images/MFP2-icon.jpg', checked: true }),
+              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', labelClasses: 'focus', image: '/images/MFP2-icon.jpg', checked: true }),
               code: {
                 card: `shadow: #1B69D3;`,
                 radio_button: `background: #49A564;
@@ -111,6 +111,7 @@ const radio_buttons_data = {
       labelClasses = labelClasses + ' checked'
     }
     if(!!options && options.hover) labelClasses = labelClasses + ' checked'
+    if(!!options && options.labelClasses) labelClasses = labelClasses + ' ' + options.labelClasses
 
     let card = `<label tabindex="-1" for="radio-card-3" class="` + labelClasses + `">`
     if(options.image) card = card + `<div class="radio-img-card-top">
@@ -155,18 +156,19 @@ const radio_buttons_data = {
     },
     outputRadioButtonMarkup(options) {
       let label = (!!options && options.label) ? options.label : 'Label'
-      let labelClass = 'checkbox'
+      let labelClass = 'radio-label'
       let gridClass
       let checked
       let id = utils.randomString()
       let name = (!!options && options.name) ? options.name : utils.randomString()
 
       if(!!options && options.showLabel === false) labelClass = labelClass + ' visually-hidden'
+      if(!!options && options.labelClasses) labelClass = labelClass + ' ' + options.labelClasses
       if(!!options && options.showDimensions) gridClass = ' checkbox-radio-dimensions'
       if(!!options && options.checked) checked = ' checked'
 
       let radioButton = `<input type="radio" class="radio-input" name="` + name + `" id="` + id + `" value="1" tabindex="-1"` + checked + `>
-      <label for="` + id + `" class="radio-label">` + label + `</label>`
+      <label for="` + id + `" class="` + labelClass + `">` + label + `</label>`
 
       return options.showDimensions ? `<div class="checkbox-radio-grid`+ gridClass + `">
               <div class="dimension-red dimension-red-horizontal">24 px</div>
