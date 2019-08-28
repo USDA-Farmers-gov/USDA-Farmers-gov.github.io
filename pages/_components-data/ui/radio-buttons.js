@@ -45,7 +45,7 @@ const radio_buttons_data = {
             {
               header: 'Unselected',
               classes_cell: 'dimension-margins',
-              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button' }),
+              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', image: '/images/MFP2-icon.jpg' }),
               code: {
                 card: `background: #FFFFFF;
                       border: 2px #BBBBBB;
@@ -57,7 +57,7 @@ const radio_buttons_data = {
             },
             {
               header: 'Selected',
-              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', checked: true, showCardDimensions: true }),
+              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', image: '/images/MFP2-icon.jpg', checked: true, showCardDimensions: true }),
               code: {
                 card: `background: #FFFFFF;
                     border: 2px #49A564;
@@ -73,7 +73,7 @@ const radio_buttons_data = {
     return [
             {
               header: 'Hover',
-              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button' }),
+              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', image: '/images/MFP2-icon.jpg' }),
               code: {
                 card: `border: 2px #49A564;`,
                 radio_button: `background: #FFFFFF;
@@ -82,7 +82,7 @@ const radio_buttons_data = {
             },
             {
               header: 'Focus',
-              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', checked: true }),
+              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', image: '/images/MFP2-icon.jpg', checked: true }),
               code: {
                 card: `shadow: #1B69D3;`,
                 radio_button: `background: #49A564;
@@ -91,7 +91,7 @@ const radio_buttons_data = {
             },
             {
               header: 'Disabled',
-              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button' }),
+              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', image: '/images/MFP2-icon.jpg' }),
               code: {
                 card: `border: 2px #BBBBBB;`,
                 radio_button: `background: #F7F7F7;
@@ -101,11 +101,37 @@ const radio_buttons_data = {
           ]
   },
   outputCardMarkup(options) {
-    let cardClasses = 'checkbox-card card'
-    let checked
+    let labelClasses = 'radio-card-label'
+    let checked = ''
+
+    if(!!options && options.image) labelClasses = labelClasses + ' with-image'
+    if(!!options && options.card_classes) labelClasses = labelClasses + ' ' + options.card_classes
     if(!!options && options.checked) checked = ' checked'
-    if(checked) cardClasses = cardClasses + ' checked'
-    let card = `<div class="` + cardClasses + `" tabindex="-1">` + radio_buttons_data.outputRadioButtonMarkup(options) + `</div>`
+    if(!!options && options.disabled) labelClasses = labelClasses + ' disabled '
+
+
+// <label tabindex="0" for="radio-card-2" class="radio-card-label with-image">
+//         <div class="radio-img-card-top">
+//           <img src="/themes/farmers_update/img/leaves.svg">
+//         </div>
+//         <div class="radio-img-card-bottom">
+//           <input type="radio" id="radio-card-2" class="radio-card-input" name="radio-example" title="Card Radio" tabindex="-1">
+//           Card Radio w/ Image
+//           <span class="radio-icon"></span>
+//         </div>
+//       </label>
+
+    let card = `<label tabindex="-1" for="radio-card-3" class="` + labelClasses + `">`
+    if(options.image) card = card + `<div class="radio-img-card-top">
+                                        <img src="` + options.image + `">
+                                      </div>`
+    let radio_button = `<input type="radio" id="radio-card-2" class="radio-card-input" name="radio-example" title="` + options.label + `" tabindex="-1">
+           ` + options.label + `
+           <span class="radio-icon"></span>`
+
+    let card_bottom = (options.image) ? `<div class="radio-img-card-bottom">` + radio_button + `</div>` : radio_button
+
+    card = card + card_bottom
 
     return options.showCardDimensions 
       ? `<div class="checkbox-card-grid">
@@ -132,7 +158,8 @@ const radio_buttons_data = {
 
           <div class="checkbox-dimension-top dimension-blue">32px</div>
           <div class="checkbox-dimension-left dimension-red">32px</div>
-          ` + card  + `</div>`
+          <div class="checkbox-card">` + card  + `</div>
+          </div>`
       : card
     },
     outputRadioButtonMarkup(options) {
@@ -147,8 +174,8 @@ const radio_buttons_data = {
       if(!!options && options.showDimensions) gridClass = ' checkbox-dimensions'
       if(!!options && options.checked) checked = ' checked'
 
-      let radioButton = `<input type="radio" name="` + name + `" id="` + id + `" value="2" tabindex="-1"` + checked + `>
-      <label for="` + id + `">` + label + `</label>`
+      let radioButton = `<input type="radio" class="radio-input" name="` + name + `" id="` + id + `" value="1" tabindex="-1"` + checked + `>
+      <label for="` + id + `" class="radio-label">` + label + `</label>`
 
       return options.showDimensions ? `<div class="checkbox-grid`+ gridClass + `">
               <div class="dimension-red dimension-red-horizontal">24 px</div>

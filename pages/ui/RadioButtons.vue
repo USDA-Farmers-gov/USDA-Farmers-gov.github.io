@@ -13,7 +13,6 @@
 
     <p v-html="outputRadioButtonMarkup({ label: 'Radio Label' })"></p>  
     <p v-html="outputRadioButtonMarkup({ label: 'Radio Label', checked: true })"></p>  
-
     <div class="checkbox-mobile-container">
       <ExampleRow :data="radio_buttons" columns="4" />
     </div>
@@ -23,10 +22,10 @@
       A radio button can be selected and deselected by clicking or tapping on the radio button as well as the text label.
     </p>
 
-    <div class="row">
-      <div class="medium-3 highlight-overlay" v-html="outputRadioButtonMarkup({ label: 'Radio Label' })"></div> 
+    <div class="card-highlight">
+      <div class="highlight-overlay" v-html="outputRadioButtonMarkup({ label: 'Radio Label' })"></div> 
     </div>
-    <div class="mouse-pointer"></div>
+    <div class="checkbox-card-click-target mouse-pointer"></div>
     
     <h3 id="card-radio-buttons">Card Radio Buttons</h3>
 
@@ -55,12 +54,10 @@
       The entire card in card radio buttons should be clickable.
     </p>
 
-    <div class="row card-highlight">
-      <div class="medium-4">
+    <div class="card-highlight">
         <div class="highlight-overlay" v-html="outputCardMarkup({ label: 'Card Radio Button' })"></div>
-      </div>
     </div>
-    <div class="mouse-pointer"></div>
+    <div class="checkbox-card-click-target mouse-pointer"></div>
 
     <h3>Accessibility</h3>
 

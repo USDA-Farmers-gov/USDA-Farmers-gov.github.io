@@ -190,7 +190,7 @@
     padding: 0.7rem;
   }
 
-  .checkbox-card-label, .checkbox-card label:before, [type=checkbox] + label::before {
+  .checkbox-card-label, .radio-card-label, .checkbox-card label:before, [type=checkbox] + label::before {
     background: $highlight_bg_color;
   }
 }
