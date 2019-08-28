@@ -67,6 +67,11 @@
     mounted() {
       this.setActiveCategoryOnLoad()
     },
+    watch: {
+      '$route': function() {
+        this.currentPath = this.$route.path
+      }
+    },
     methods: {
       setClassesByPath(path) {
         return (path === this.currentPath) ? this.categoryClasses + ' active' : this.categoryClasses
