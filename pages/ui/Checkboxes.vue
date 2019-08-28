@@ -1,6 +1,7 @@
 <template>
   <div>
     <h2>Checkboxes</h2>
+
     <p class="intro-text">
       Checkboxes are used when the user can make one or more selections from a list or group of options.
     </p>
@@ -23,9 +24,9 @@
     </p>
     
     <div class="row">
-      <div class="medium-3 highlight-overlay" v-html="outputCheckboxMarkup({ label: 'Checkbox Label' })"></div> 
+      <div class="medium-3 checkbox-click-target highlight-overlay" v-html="outputCheckboxMarkup({ label: 'Checkbox Label' })"></div> 
     </div>
-    <div class="mouse-pointer"></div>
+    <div class="checkbox-click-target mouse-pointer"></div>
     
     <h3>Card Checkboxes</h3>
 
@@ -37,7 +38,7 @@
     <div class="container examples">
       <div class="row">
         <div v-html="outputCardMarkup({ label: 'Card Checkbox' })" class="medium-4"></div>
-        <div v-html="outputCardMarkup({ label: 'Card Checkbox', checked: true })" class="medium-4"></div>
+        <div v-html="outputCardMarkup({ label: 'Card Checkbox', card_classes: 'focus', checked: true })" class="medium-4"></div>
       </div>
     </div>
 
@@ -58,7 +59,7 @@
     <div class="card-highlight">
         <div class="highlight-overlay" v-html="outputCardMarkup({ label: 'Card Checkbox' })"></div>
     </div>
-    <div class="mouse-pointer"></div>
+    <div class="checkbox-card-click-target mouse-pointer"></div>
     
     <h3>Accessibility</h3>
     <p>

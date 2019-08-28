@@ -37,23 +37,26 @@
     grid-column: 3;
     width: 24px;
     margin-top: 0.75rem;
+    margin-left: 0.4rem;
   }      
   .checkbox-height {
     position:relative;
     top: 0.2rem;
-    margin: 0 0.2rem;
+    margin: 0 0.2rem 0.2rem 0.2rem;
   }
 
   .checkbox-width-dimension {
     grid-column: 3;
     grid-row: 3;
+    position: relative;
+    margin-left: 0.4rem;
   }
 } 
 
 .checkbox-card-grid {
   display: grid;
   grid-template-columns: 20px 146px 42px 32px 20px 6px 9px 25px;
-  grid-template-rows: 20px 82px 32px 20px 5px 10px 9px;
+  grid-template-rows: 20px 76px 32px 20px 5px 10px 9px;
   
   .checkbox-card {
     grid-column: 1 / span 5;
@@ -155,21 +158,24 @@
       }
     }
 
-      .checkbox-dimension-top {
-        grid-column: 4;
-        grid-row: 2;
-        align-self: end;
-        margin-bottom: 1rem;
-      }
+    .checkbox-dimension-top {
+      grid-column: 4;
+      grid-row: 2;
+      align-self: end;
+      margin-bottom: 1rem;
+      z-index: 100;
+      position: relative;
+      left: 0.3rem;
+    }
 
-      .checkbox-dimension-left {
-        grid-column: 3;
-        grid-row: 3;
-        align-self: end;
-        margin-bottom: 1rem;
-        position: relative;
-        left: 0.5rem;
-      }
+    .checkbox-dimension-left {
+      grid-column: 3;
+      grid-row: 3;
+      align-self: end;
+      margin-bottom: 1rem;
+      position: relative;
+      left: 0.5rem;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -179,21 +185,25 @@
 }
 .card-highlight {
   width: 27.4rem;
-  .checkbox-card label:before, [type=checkbox] + label::before {
+
+  .highlight-overlay {
+    padding: 0.7rem;
+  }
+
+  .checkbox-card-label, .checkbox-card label:before, [type=checkbox] + label::before {
     background: $highlight_bg_color;
   }
 }
-.click-target {
-  .highlight-overlay {    
-    position: relative;
-    left: 1rem;
-    .checkbox-card label:before, [type=checkbox] + label::before {
-      background: $highlight_bg_color;
-    }
 
-    @media only screen and (max-width: 600px) {
-      left: 0;
-    }
+.checkbox-click-target {
+  margin: 2rem 0 5rem 0;
+  &.highlight-overlay {
+    padding-top: 0.5rem;
+  }
+
+  &.mouse-pointer {
+    position: relative;
+    top: -7.3rem;
   }
 }
 .dimension-margins .example-container {
