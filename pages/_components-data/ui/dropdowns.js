@@ -1,3 +1,5 @@
+import utils from '@/assets/js/utils.js'
+
 const selectOptions = [ 
   { text: 'Option 1', value: '01' },
   { text: 'Option 2', value: '02' },
@@ -76,13 +78,14 @@ const dropdowns_data = {
     ]
   },
   getDropdownMarkup(label, selectOptions, options, highlight) {
-    let selectBaseClasses = 'simpler-select scl-select'
+    let selectBaseClasses = 'simpler-select'
 
     let labelClasses = (!!options && options.labelClasses) ? options.labelClasses : ''
     let selectClasses = (!!options && options.selectClasses) ? selectBaseClasses + ' ' + options.selectClasses : selectBaseClasses
+    let name = utils.lowerCaseAndHyphenate(label) + '-' + utils.randomString()
 
-    let ddLabel = `<label for="scl-select-one" class="` + labelClasses + `">` + label + `</label>`
-    let ddSelect = `<select class="` + selectClasses + `" name="` + label + `" tabindex="-1">
+    let ddLabel = `<label for="` + name + `" class="` + labelClasses + `">` + label + `</label>`
+    let ddSelect = `<select class="` + selectClasses + `" name="` + name + `" tabindex="-1">
                 <option>- Please select -</option>`
 
     selectOptions.forEach(function(element){

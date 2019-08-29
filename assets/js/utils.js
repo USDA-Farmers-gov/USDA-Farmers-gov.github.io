@@ -11,6 +11,10 @@ const utils = {
     var min = min ? min : 1; 
     var max = max ? max : 10000;  
     return Math.floor(Math.random() * (+max - +min)) + +min; 
+  },
+
+  lowerCaseAndHyphenate(text) {
+    return text.replace(/ /g, '-').toLowerCase()
   }
 }
 
