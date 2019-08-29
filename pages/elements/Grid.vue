@@ -5,7 +5,7 @@
       This 12-column grid provides the basic structure for website content and creates flexibility to accommodate different viewport sizes. Grids enable a consistent experience across different pages of the site and create a way to effortlessly organize design elements through uniformity and precise alignment.
     </p>
 
-    <div class="container grid-example">
+    <div class="grid-example">
       <div class="row">
         <div class="medium-12">
           <div class="col-content-example">1/1</div>
@@ -37,9 +37,11 @@
         </div>
     </div>
   </div>
-
-  <div class="container grid-example-text">
-    <h3>Grid Examples</h3>
+  
+  <h3 class="grid-example-header">Grid Examples</h3>
+  
+  <div class="grid-example-text">
+    
     <div class="row"> 
       <div v-for="index in 2" class="medium-6">
         <div class="col-content-example">

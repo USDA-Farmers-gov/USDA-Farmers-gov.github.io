@@ -4,7 +4,7 @@
       <a href="#main-content" class="usa-skipnav" role="navigation" aria-label="Skip to Main Content">
         Skip to main content
       </a>
-      <h1>Farmers Design System</h1>
+      <h1 id="site-title">Farmers Design System</h1>
     </header>
     <div class="container page">
         <div class="menu">

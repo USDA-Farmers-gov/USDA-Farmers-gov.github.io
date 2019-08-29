@@ -1,12 +1,12 @@
 <template>
   <div>
-    <h1>Typography</h1>
+    <h2>Typography</h2>
 
     <div class="intro-text">
       The Farmers.gov site uses Public Sans for all of its text except for the blog body copy and pullquotes, which uses Merriweather.
     </div>
 
-    <h2>Public Sans</h2>
+    <h3>Public Sans</h3>
 
     <div class="container typography-container">
       <div class="row">
@@ -66,7 +66,7 @@
       </tbody>
     </table>
 
-    <h2>Lists</h2>
+    <h3>Lists</h3>
     <div>
       <p>
         There are two recommended ways of organizing bulleted information. The first is unorganized, where information can be shown in any order. The second list is organized based on priority.
@@ -93,7 +93,7 @@
       </div>
     </div>
 
-    <h2>Text Contrast</h2>
+    <h3>Text Contrast</h3>
     <p>
       All Text must meet the minimum AA Web Content Accessibliity Guidelines to be 508 compliant. This is so that text is accessible for for all users. The text and background color combinations below are used throughout the farmers.gov site and are an integral part of our visual styles.
     </p>

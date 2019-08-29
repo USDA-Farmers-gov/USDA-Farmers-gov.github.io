@@ -5,8 +5,13 @@
   }
 }
 
+#site-title {
+  padding:0 !important;
+  margin: 0 !important;
+}
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 3rem;
+  margin-top: 3rem !important;
+  margin-bottom: 2rem !important;
 }
 
 #main-content h1:first-child,
@@ -15,7 +20,7 @@ h1, h2, h3, h4, h5, h6 {
 #main-content h4:first-child,
 #main-content h5:first-child,
 #main-content h6:first-child, {
-  margin-top: 0;
+  margin-top: 0 !important;
 }
 
 // ** DISABLES HOVER, Etc. **//
