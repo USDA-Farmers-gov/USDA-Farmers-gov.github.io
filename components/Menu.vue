@@ -70,6 +70,7 @@
     watch: {
       '$route': function() {
         this.currentPath = this.$route.path
+        console.log(this.currentPath)
       }
     },
     methods: {
