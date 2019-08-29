@@ -54,7 +54,7 @@
     <div class="container">
       <div class="row">
         <div class="medium-5">
-          <div class="higlight-box-accordion highlight-overlay" v-html="boxMarkup" />
+          <div class="higlight-box-accordion highlight-overlay" v-html="boxClickTargetMarkup" />
           <div class="click-target-collapsed mouse-pointer"></div>
         </div>
       </div>
@@ -110,6 +110,7 @@ export default {
 
     this.boxAccordionWidth = this.$refs.accordionGroup.clientWidth
     this.boxMarkup = accordions_data.defaultBoxAccordionMarkup()
+    this.boxClickTargetMarkup = accordions_data.defaultBoxAccordionMarkup()
     this.boxMarkupExpanded = accordions_data.defaultBoxAccordionMarkup(true)
   }
 }

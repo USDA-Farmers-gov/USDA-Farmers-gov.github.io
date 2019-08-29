@@ -8,7 +8,7 @@ const utils = {
   },
   randomNumber(min, max) {
     var min = min ? min : 1; 
-    var max = max ? max : 1000;  
+    var max = max ? max : 10000;  
     return Math.floor(Math.random() * (+max - +min)) + +min; 
   }
 }
