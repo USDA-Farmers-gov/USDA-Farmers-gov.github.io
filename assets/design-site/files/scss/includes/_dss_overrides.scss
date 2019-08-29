@@ -5,6 +5,19 @@
   }
 }
 
+h1, h2, h3, h4 h5, h6 {
+  margin-top: 3rem;
+}
+
+#main-content h1:first-child,
+#main-content h2:first-child,
+#main-content h3:first-child,
+#main-content h4:first-child,
+#main-content h5:first-child,
+#main-content h6:first-child, {
+  margin-top: 0;
+}
+
 // ** DISABLES HOVER, Etc. **//
 // .checkbox-card:hover {
 //   border: 2px solid #BBBBBB;
