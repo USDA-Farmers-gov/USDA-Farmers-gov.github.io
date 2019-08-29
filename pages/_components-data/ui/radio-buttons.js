@@ -91,7 +91,7 @@ const radio_buttons_data = {
             },
             {
               header: 'Disabled',
-              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', image: '/images/MFP2-icon.jpg' }),
+              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', image: '/images/MFP2-icon.jpg', disabled: true }),
               code: {
                 card: `border: 2px #BBBBBB;`,
                 radio_button: `background: #F7F7F7;
@@ -112,6 +112,7 @@ const radio_buttons_data = {
     }
     if(!!options && options.hover) labelClasses = labelClasses + ' checked'
     if(!!options && options.labelClasses) labelClasses = labelClasses + ' ' + options.labelClasses
+    if(!!options && options.disabled) labelClasses = labelClasses + ' disabled '
 
     let card = `<label tabindex="-1" for="radio-card-3" class="` + labelClasses + `">`
     if(options.image) card = card + `<div class="radio-img-card-top">

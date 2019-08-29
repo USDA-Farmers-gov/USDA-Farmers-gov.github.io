@@ -63,7 +63,7 @@
 
     <p>
       <!-- TODO: find where link should go and update -->
-      Radio button functionality must be available through <nuxt-link to="#">keyboard interactions</nuxt-link>.
+      Radio button functionality must be available through <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#radiobutton">keyboard interactions</a>.
     </p>
     <p>
       User interface components should meet 3:1 color contrast ratio requirements. This includes the border of the radio button and the contrast between a selected radio button background and the filled circle in the radio button. 

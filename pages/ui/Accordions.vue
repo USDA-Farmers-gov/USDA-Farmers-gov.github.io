@@ -54,7 +54,7 @@
     <div class="container">
       <div class="row">
         <div class="medium-5">
-          <div class="highlight-overlay higlight-box-accordion" v-html="boxMarkup" />
+          <div class="higlight-box-accordion highlight-overlay" v-html="boxMarkup" />
           <div class="click-target-collapsed mouse-pointer"></div>
         </div>
       </div>
