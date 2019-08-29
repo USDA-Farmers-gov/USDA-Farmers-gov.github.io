@@ -45,6 +45,17 @@
     border-left: 1px $dss_blue dashed;
     border-right: 1px $dss_blue dashed;     
   }
+
+  &.dashed-blue-dark-bg-horizontal {
+    background: $dss_highlight_blue_on_dark_bg;
+    border-top: 1px $dss_blue dashed;
+    border-bottom: 1px $dss_blue dashed; 
+  }
+  &.dashed-blue-dark-bg-vertical {
+    background: $dss_highlight_blue_on_dark_bg;
+    border-left: 1px $dss_blue dashed;
+    border-right: 1px $dss_blue dashed;     
+  }
 }
 
 .dashed-red {
@@ -56,6 +67,17 @@
   }
   &.dashed-red-vertical {
     background: $red_opaque_bg;
+    border-left: 1px $dss_red dashed;
+    border-right: 1px $dss_red dashed;     
+  }
+
+  &.dashed-red-dark-bg-horizontal {
+    background: $dss_highlight_red_on_dark_bg;
+    border-top: 1px $dss_red dashed;
+    border-bottom: 1px $dss_red dashed; 
+  }
+  &.dashed-red-dark-bg-vertical {
+    background: $dss_highlight_red_on_dark_bg;
     border-left: 1px $dss_red dashed;
     border-right: 1px $dss_red dashed;     
   }

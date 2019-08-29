@@ -70,23 +70,23 @@ const accordions_data = {
       let markup = accordions_data.boxAccordionMarkup(expanded)
       let markupTop = expanded ? `<div class="box-accordion-top-grid">
                                       ` + markup.top + `
-                                      <div class="box-top dashed-red dashed-red-horizontal"></div>
+                                      <div class="box-top dashed-red dashed-red-dark-bg-horizontal"></div>
                                       <div class="box-top-span span-red span-red-horizontal"></div>
                                       <div class="box-top-dimension dimension-red dimension-red-horizontal">24px</div>
 
-                                      <div class="box-middle dashed-red dashed-red-horizontal"></div>
+                                      <div class="box-middle dashed-red dashed-red-dark-bg-horizontal"></div>
                                       <div class="box-middle-span span-red span-red-horizontal"></div>
                                       <div class="box-middle-dimension dimension-red dimension-red-horizontal">16px</div>
                                       
-                                      <div class="box-bottom dashed-red dashed-red-horizontal"></div>
+                                      <div class="box-bottom dashed-red dashed-red-dark-bg-horizontal"></div>
                                       <div class="box-bottom-span span-red span-red-horizontal"></div>
                                       <div class="box-bottom-dimension dimension-red dimension-red-horizontal">24px</div>
 
-                                      <div class="box-left dashed-blue dashed-blue-vertical"></div>
+                                      <div class="box-left dashed-blue dashed-blue-dark-bg-vertical"></div>
                                       <div class="box-left-span span-blue span-blue-vertical"></div>
                                       <div class="box-left-dimension dimension-blue dimension-blue-vertical">24px</div>
 
-                                      <div class="box-right dashed-blue dashed-blue-vertical"></div>
+                                      <div class="box-right dashed-blue dashed-blue-dark-bg-vertical"></div>
                                       <div class="box-right-span span-blue span-blue-vertical"></div>
                                       <div class="box-right-dimension dimension-blue dimension-blue-vertical">24px</div>
                                     </div>`
