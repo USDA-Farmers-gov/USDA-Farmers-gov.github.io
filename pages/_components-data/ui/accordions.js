@@ -1,3 +1,5 @@
+import utils from '@/assets/js/utils.js'
+
 const accordions_data = {
   defaultAccordionMarkup() {
     return `<div class="card-accordion" tabindex="-1">
@@ -122,13 +124,16 @@ const accordions_data = {
       let labelText = expanded ? 'Expanded Box Accordion Headline 3' : 'Collapsed Box Accordion Headline 3'
       let ariaExpanded = expanded ? 'true' : 'false'
       let hidden = expanded ? '' : 'hidden'
+      let randomNumber = utils.randomNumber()
+      let accordionId = 'accordion-' + randomNumber
+      let sectId = 'sect-' + randomNumber
 
       return { 
             top: `<div class="box-accordion-top Accordion-trigger"
                   tabindex="-1"
                   aria-expanded="` + ariaExpanded + `"
-                  aria-controls="sect1"
-                  id="accordion1id">
+                  aria-controls="` + sectId + `"
+                  id="` + accordionId + `">
               <h3>
                   <span class="Accordion-title headline-3">
                     ` + labelText + `
@@ -138,12 +143,11 @@ const accordions_data = {
               <div class="down-arrow"></div>
             </div>`,
             bottom: 
-            `<div id="sect1" role="region" aria-labelledby="accordion1id" class="Accordion-panel" ` + hidden + `>
+            `<div id="` + sectId + `" role="region" aria-labelledby="` + accordionId + `" class="Accordion-panel" ` + hidden + `>
                 <p>
                   Farmers.gov provides farmers, ranchers, private foresters, and agricultural producers with online self-service applications, educational materials, engagement opportunities, and business tools to increase efficiency and productivity while preserving and fostering long-held traditional relationships between local USDA offices and producers.
                 </p>
             </div>` }
-
     },
 
     boxAccordionDimensions() {

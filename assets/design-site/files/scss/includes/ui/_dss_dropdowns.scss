@@ -38,19 +38,15 @@
   .label-dimension {
     grid-column: 4;
     grid-row: 2;
-    position: relative;
-    left: 1.5rem;
-    top: -0.4rem;
   }
   .label-span {
-    position: relative;
-    left:140px;
-    width: 9px;
-    height: 4px;
     grid-column: 2;
     grid-row: 2;
+    width: 9px;
+    height: 4px;
     position: relative;
-    top: 0.6rem; 
+    top: 0.6rem;
+    left:140px; 
   }
 
   .select-top-dashed {
