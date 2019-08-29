@@ -1,4 +1,4 @@
-const options = [ 
+const selectOptions = [ 
   { text: 'Option 1', value: '01' },
   { text: 'Option 2', value: '02' },
   { text: 'Option 3', value: '03' },
@@ -10,13 +10,13 @@ const options = [
 ]
 const dropdowns_data = {
   dropdownSingle() {
-    return dropdowns_data.getDropdownMarkup('Dropdown Label', options)
+    return dropdowns_data.getDropdownMarkup('Dropdown Label', selectOptions)
   },
   dropdownDimensions() {
-    return dropdowns_data.getDropdownMarkup('Dropdown Label', options, true)
+    return dropdowns_data.getDropdownMarkup('Dropdown Label', selectOptions, { showDimensions: true })
   },
   dropdownHighlight() {
-    return dropdowns_data.getDropdownMarkup('Dropdown Label', options, false, true)
+    return dropdowns_data.getDropdownMarkup('Dropdown Label', selectOptions, { highlight: true })
   },
   dropdownSpecs() {
     return [
@@ -51,7 +51,7 @@ const dropdowns_data = {
     return [
       { 
         header: 'Hover', 
-        markup: dropdowns_data.getDropdownMarkup('Dropdown Label', options),
+        markup: dropdowns_data.getDropdownMarkup('Dropdown Label', selectOptions, { selectClasses: 'hover' }),
         code: {
           dropdown_box: `background: #DBEDE0;
                         border: 1px #212121;`, 
@@ -59,14 +59,14 @@ const dropdowns_data = {
       },
       { 
         header: 'Focus', 
-        markup: dropdowns_data.getDropdownMarkup('Dropdown Label', options),
+        markup: dropdowns_data.getDropdownMarkup('Dropdown Label', selectOptions, { selectClasses: 'focus' }),
         code: {
           dropdown_box: `shadow: #1B69D3;`, 
         }
       },
       { 
         header: 'Disabled', 
-        markup: dropdowns_data.getDropdownMarkup('Dropdown Label', options),
+        markup: dropdowns_data.getDropdownMarkup('Dropdown Label', selectOptions, { selectClasses: 'disabled' }),
         code: {
           dropdown_box: `background: #F7F7F7;
                           border: 1px #BBBBBB;`, 
@@ -75,25 +75,30 @@ const dropdowns_data = {
       }
     ]
   },
-  getDropdownMarkup(label, options, showDimensions, highlight) {
-    let ddLabel = `<label for="scl-select-one">` + label + `</label>`
-    let ddSelect = `<select class="simpler-select scl-select" name="` + label + `" tabindex="-1">
+  getDropdownMarkup(label, selectOptions, options, highlight) {
+    let selectBaseClasses = 'simpler-select scl-select'
+
+    let labelClasses = (!!options && options.labelClasses) ? options.labelClasses : ''
+    let selectClasses = (!!options && options.selectClasses) ? selectBaseClasses + ' ' + options.selectClasses : selectBaseClasses
+
+    let ddLabel = `<label for="scl-select-one" class="` + labelClasses + `">` + label + `</label>`
+    let ddSelect = `<select class="` + selectClasses + `" name="` + label + `" tabindex="-1">
                 <option>- Please select -</option>`
 
-    options.forEach(function(element){
+    selectOptions.forEach(function(element){
       ddSelect = ddSelect + `<option value="` + element.value + `">` + element.text + `</option>`
     })
 
     ddSelect = ddSelect + `</select>`
 
-    let ddSelectFull = (highlight) ? `<div class="highlight-overlay">`
+    let ddSelectFull = (!!options && options.highlight) ? `<div class="highlight-overlay">`
                                     + ddSelect + 
                                     `<div class="highlight-pointer mouse-pointer"></div>
                                   </div>`
                                   : ddSelect
     let dropdown = ddLabel + ddSelectFull
 
-    return showDimensions ? `<div class="dropdown-grid">
+    return (!!options && options.showDimensions) ? `<div class="dropdown-grid">
                               <div class="label-dashed dashed-red dashed-red-horizontal"></div>
                               <div class="label-span span-red span-red-horizontal"></div>
                               <div class="label-dimension dimension-red dimension-red-horizontal">4px</div>

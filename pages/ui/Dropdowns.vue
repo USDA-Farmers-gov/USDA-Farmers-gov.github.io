@@ -47,6 +47,11 @@
     <p>
     User interface components should meet 3:1 color contrast ratio requirements. This includes the contrast of the border of the dropdown to the background.
     </p>
+    <p>
+      <a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html">https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html</a>
+      <br/>
+      <a href="https://designsystem.digital.gov/components/form-controls/#dropdown">https://designsystem.digital.gov/components/form-controls/#dropdown</a>
+    </p>
   </div>
 </template>
 

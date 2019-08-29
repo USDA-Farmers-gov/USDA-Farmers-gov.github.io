@@ -1,6 +1,8 @@
 .highlight-overlay {
+  position: relative;
+  left: -0.4rem;  
   padding: 0.1rem 0.4rem;
-
+  
   .simpler-select {
     background-color: $highlight_bg_color;
   }
@@ -38,6 +40,10 @@
   .label-dimension {
     grid-column: 4;
     grid-row: 2;
+    position: relative;
+    top: 0.4rem;
+    left: -35px;
+    z-index: 1000;
   }
   .label-span {
     grid-column: 2;
