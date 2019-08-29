@@ -25,6 +25,10 @@
   left: -2.4rem;
   width: 100%;
   text-align: center;
+
+  &.mouse-pointer {
+    top: -1.2rem;
+  }
 }
 
 .click-target-collapsed {
@@ -195,7 +199,6 @@
     z-index: 100;
     border: 1px $highlight_border_color solid;
     background: $highlight_bg_color;
-    opacity: 0.5;
     grid-column: 1;
     grid-row: 2 / 5;
   }
