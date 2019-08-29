@@ -11,12 +11,12 @@
 }
 
 .highlight-pointer {
-    position: relative;
-    top: -1rem;
-    display: block;
-    width: 30px;
-    margin: auto; 
-  }
+  position: relative;
+  top: -1rem;
+  display: block;
+  width: 30px;
+  margin: auto; 
+}
 
 .dropdown-grid {
   display: grid;
@@ -24,10 +24,6 @@
   grid-template-rows: 20px 7px 16px 16px 16px 10px 20px;
   position: relative;
   left: -1rem;
-
-  @media only screen and (max-width: 600px) {
-    left: 2rem;
-  }
   
   label {
     grid-column: 2 / 5;
@@ -115,40 +111,44 @@
   }
 
   .bottom-left-dashed {
-      grid-column: 2;
-      grid-row: 3 / 6;
-      width: 16px;
-      position: relative;
-      margin-top: 0.3rem;
-      margin-bottom: 0.1rem;
-    }
-    .bottom-left-span {
-      position: relative;
-      grid-column: 2;
-      grid-row: 6;
-      margin-top: 0.2rem;
-    }
-    .bottom-left-dimension {
-      grid-column: 2;
-      grid-row: 7;
-    }
+    grid-column: 2;
+    grid-row: 3 / 6;
+    width: 16px;
+    position: relative;
+    margin-top: 0.3rem;
+    margin-bottom: 0.1rem;
+  }
+  .bottom-left-span {
+    position: relative;
+    grid-column: 2;
+    grid-row: 6;
+    margin-top: 0.2rem;
+  }
+  .bottom-left-dimension {
+    grid-column: 2;
+    grid-row: 7;
+  }
 
-    .bottom-right-dashed {
-      grid-column: 5;
-      grid-row: 3 / 6;
-      width: 16px;
-      position: relative;
-      margin-top: 0.3rem;
-      margin-bottom: 0.1rem;
-    }
-    .bottom-right-span {
-      position: relative;
-      grid-column: 5;
-      grid-row: 6;
-      margin-top: 0.2rem;
-    }
-    .bottom-right-dimension {
-      grid-column: 5;
-      grid-row: 7;
-    }
+  .bottom-right-dashed {
+    grid-column: 5;
+    grid-row: 3 / 6;
+    width: 16px;
+    position: relative;
+    margin-top: 0.3rem;
+    margin-bottom: 0.1rem;
+  }
+  .bottom-right-span {
+    position: relative;
+    grid-column: 5;
+    grid-row: 6;
+    margin-top: 0.2rem;
+  }
+  .bottom-right-dimension {
+    grid-column: 5;
+    grid-row: 7;
+  }
+
+  @media only screen and (max-width: 600px) {
+    left: 2rem;
+  }
 }
