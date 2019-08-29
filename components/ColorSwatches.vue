@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="data" class="container color-groups">
+    <div v-if="data" class="color-groups">
       <div class="row">
         <div v-for="swatch in data" :class="setSwatchClasses(swatch)">
           <div :class="'color-swatch ' + swatch.classes"></div>
