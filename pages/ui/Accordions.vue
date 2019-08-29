@@ -92,6 +92,7 @@ export default {
       boxAccordionWidth: 0,
       boxMarkup: '',
       boxMarkupExpanded: '',
+      boxClickTargetMarkup: '',
       defaultAccordionMarkup: accordions_data.defaultAccordionMarkup(),
       clickTargetAccordionDimensions: accordions_data.clickTargetAccordionDimensions(),
       boxAccordionDimensions: accordions_data.boxAccordionDimensions(),
