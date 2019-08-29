@@ -28,7 +28,7 @@
   export default {
     data() {
       return {
-        currentPath: this.$route.path !== '/' ? this.$route.path.replace(/\/$/, "") : this.$route.path, // .replace() removes trailing slashes
+        currentPath: this.$route.path !== '/' ? this.removeTrailingSlashFromPath(this.$route.path) : this.$route.path, // .replace() removes trailing slashes
         activeCategory: '',
         categoryClasses: 'category',
         menu: [
@@ -69,11 +69,13 @@
     },
     watch: {
       '$route': function() {
-        this.currentPath = this.$route.path
-        console.log(this.currentPath)
+        this.currentPath = this.removeTrailingSlashFromPath(this.$route.path)
       }
     },
     methods: {
+      removeTrailingSlashFromPath(path) {
+        return path.replace(/\/$/, "")
+      },
       setClassesByPath(path) {
         return (path === this.currentPath) ? this.categoryClasses + ' active' : this.categoryClasses
       },
