@@ -99,6 +99,7 @@ const dropdowns_data = {
     let dropdown = ddLabel + ddSelectFull
 
     return (!!options && options.showDimensions) ? `<div class="dropdown-grid">
+                              ` + dropdown + `
                               <div class="label-dashed dashed-red dashed-red-horizontal"></div>
                               <div class="label-span span-red span-red-horizontal"></div>
                               <div class="label-dimension dimension-red dimension-red-horizontal">4px</div>
@@ -121,8 +122,7 @@ const dropdowns_data = {
                               
                               <div class="select-left-span span-red span-red-horizontal"></div>
                               <div class="select-left-dimension dimension-red dimension-red-horizontal">52px</div>
-                              ` + dropdown + `
-                              </div>` 
+                            </div>` 
                           : dropdown
     }
 }
