@@ -91,7 +91,7 @@ const dropdowns_data = {
 
     ddSelect = ddSelect + `</select>`
 
-    let ddSelectFull = (!!options && options.highlight) ? `<div class="highlight-overlay">`
+    let ddSelectFull = (!!options && options.highlight) ? `<div class="click-target-highlight highlight-overlay">`
                                     + ddSelect + 
                                     `<div class="highlight-pointer mouse-pointer"></div>
                                   </div>`
