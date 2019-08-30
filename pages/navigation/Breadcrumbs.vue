@@ -8,7 +8,12 @@
 </template>
 
 <script>
-export default {
-  layout: 'farmers'
-}
+  export default {
+    layout: 'farmers',
+    head() {
+      return {
+        title: 'Breadcrumbs'
+      }
+    }
+  }
 </script>
