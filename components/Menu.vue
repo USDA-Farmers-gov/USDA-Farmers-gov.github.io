@@ -49,6 +49,7 @@
             links:  [
                       { name: 'Accordions', path: '/ui/Accordions'},
                       { name: 'Buttons', path: '/ui/Buttons'},
+                      { name: 'Cards', path: '/ui/Cards'},
                       { name: 'Checkboxes', path: '/ui/Checkboxes'},
                       { name: 'Dividers', path: '/ui/Dividers'},
                       { name: 'Dropdowns', path: '/ui/Dropdowns'},
