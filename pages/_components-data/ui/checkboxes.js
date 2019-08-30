@@ -172,11 +172,6 @@ const checkboxes_data = {
       if(!!options && options.checked) checked = ' checked '
       if(!!options && options.disabled) disabled = ' disabled '
 
-
-        // <input type="checkbox" id="cb-1" name="example-1" tabindex="-1" class="checkbox-input">
-        // <label tabindex="0" for="cb-1" class="checkbox-label">Option 1</label>
-
-
       let checkbox = `<input type="checkbox" name="example" value="Option" title="Option" tabindex="-1"` + checked + disabled + ` class="checkbox-input">
         <label for="example" tabindex="-1" class="` + labelClass + `">` + label + `</label>`
 
