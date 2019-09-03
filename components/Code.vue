@@ -11,7 +11,6 @@
 
 <script>
   import utils from '@/assets/js/utils.js'
-  var beautifyHTML = require('js-beautify').html
 
   export default {
     props: ['html', 'markup'],
