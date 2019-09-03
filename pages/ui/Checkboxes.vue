@@ -2,6 +2,10 @@
   <div>
     <h2>Checkboxes</h2>
 
+    <Code>
+        <div v-html="outputCheckboxMarkup({ label: 'Checkbox Label' })" class="medium-8" />
+    </Code>
+
     <p class="intro-text">
       Checkboxes are used when the user can make one or more selections from a list or group of options.
     </p>

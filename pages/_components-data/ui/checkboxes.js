@@ -185,6 +185,13 @@ const checkboxes_data = {
               <div class="checkbox-radio-width-dimension dimension-blue dimension-blue-vertical">24 px</div>
             </div>`
             : checkbox
+    },
+    markup() {
+      return `<div class="row">
+  <div class="medium-12">
+    <strong>Hello</strong>
+  </div>
+</div>`
     }
   }
 
