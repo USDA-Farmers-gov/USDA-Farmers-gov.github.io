@@ -1,9 +1,7 @@
 <template>
   <div class="code">
     Preview:
-    <div class="preview">
-      <slot></slot>
-    </div>
+    <div v-html="markup" class="preview"></div>
     Code:
     <div class="pre-format soft-yellow">
       <pre>{{ code }}</pre>
@@ -12,10 +10,11 @@
 </template>
 
 <script>
+  import utils from '@/assets/js/utils.js'
   var beautifyHTML = require('js-beautify').html
 
   export default {
-    props: ['html'],
+    props: ['html', 'markup'],
     data() {
       return {
         code: ''
@@ -31,13 +30,13 @@
     },
     methods: {
       setCode() {
-        this.code = this.processHTML(document.querySelector('.preview').innerHTML).trim()
+        this.code = this.processHTML(this.markup)
       },
       processHTML(str) {
-          var div = document.createElement('div')
-          div.innerHTML = str.trim()
-          
-          return this.formatHTML(div, 0).innerHTML
+        var div = document.createElement('div')
+        div.innerHTML = utils.removeLineBreaksAndTrim(str)
+
+        return this.formatHTML(div, 0).innerHTML
       },
       formatHTML(node, level) {
           var indentBefore = new Array(level++ + 1).join('  '),
@@ -45,13 +44,12 @@
               textNode
           
           for (var i = 0; i < node.children.length; i++) {
-              
               textNode = document.createTextNode('\n' + indentBefore)
               node.insertBefore(textNode, node.children[i])
               
               this.formatHTML(node.children[i], level)
               
-              if (node.lastElementChild == node.children[i]) {
+              if (node.lastElementChild === node.children[i]) {
                   textNode = document.createTextNode('\n' + indentAfter)
                   node.appendChild(textNode)
               }
@@ -63,7 +61,7 @@
   }
 </script>
 
-<style>
+<style scoped>
   .pre-format {
     padding: 2rem;
     margin-top: 4rem;
