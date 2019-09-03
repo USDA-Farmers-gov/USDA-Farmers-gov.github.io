@@ -1,6 +1,7 @@
 <template>
   <div>
     <h2>Buttons</h2>
+    
     <p class="intro-text">Buttons are used to communicate important actions the users can take, such as download, apply, or start. Depending on the context and desired outcome of the design, there are multiple styles and sizes of buttons available for use.</p>
 
     <h3>Primary Buttons</h3>

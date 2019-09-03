@@ -260,9 +260,9 @@ const buttons_data = {
   outputButtonMarkup(classes, showDimensions, index) {
       let btnClasses = buttons_data.setButtonClasses(classes)
       let dimensions = buttons_data.getButtonDimensions(btnClasses)
-      let buttonText = (classes.indexOf('feedback') >= 0) ? 'Yes' : 'Button'
+      let buttonText = (!!classes && classes.indexOf('feedback') >= 0) ? 'Yes' : 'Button'
       let gridClasses = classes ? 'button-grid ' + classes : 'button-grid' 
-      if(classes.indexOf('feedback') >= 0 && index === 0) showDimensions = true
+      if(!!classes && classes.indexOf('feedback') >= 0 && index === 0) showDimensions = true
 
       return showDimensions ? `<div class="` + gridClasses + `">
                 <div class="button">
