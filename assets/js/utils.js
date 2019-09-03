@@ -15,6 +15,10 @@ const utils = {
 
   lowerCaseAndHyphenate(text) {
     return text.replace(/ /g, '-').toLowerCase()
+  },
+
+  removeLineBreaks(text) {
+    return text.replace(/(\r\n|\n|\r)/gm,"")
   }
 }
 

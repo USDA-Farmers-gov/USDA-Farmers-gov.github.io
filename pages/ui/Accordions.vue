@@ -75,6 +75,7 @@
 
 <script>
 import accordions_data from '@/pages/_components-data/ui/accordions.js'
+import utils from '@/assets/js/utils.js'
 // Uncomment this only if accordions need to be functional
 // if (process.browser) {
 //   require('@/farmers/dist/js/farmers.min.js')
