@@ -68,7 +68,7 @@ const dropdowns_data = {
       },
       { 
         header: 'Disabled', 
-        markup: dropdowns_data.getDropdownMarkup('Dropdown Label', selectOptions, { selectClasses: 'disabled' }),
+        markup: dropdowns_data.getDropdownMarkup('Dropdown Label', selectOptions, { selectClasses: 'disabled', disabled: true }),
         code: {
           dropdown_box: `background: #F7F7F7;
                           border: 1px #BBBBBB;`, 
@@ -82,10 +82,11 @@ const dropdowns_data = {
 
     let labelClasses = (!!options && options.labelClasses) ? options.labelClasses : ''
     let selectClasses = (!!options && options.selectClasses) ? selectBaseClasses + ' ' + options.selectClasses : selectBaseClasses
+    let disabled = (!!options && options.disabled) ? ' disabled' : ''
     let name = utils.lowerCaseAndHyphenate(label) + '-' + utils.randomString()
 
     let ddLabel = `<label for="` + name + `" class="` + labelClasses + `">` + label + `</label>`
-    let ddSelect = `<select class="` + selectClasses + `" name="` + name + `" tabindex="-1">
+    let ddSelect = `<select class="` + selectClasses + `" name="` + name + `" tabindex="-1"` + disabled + `>
                 <option>- Please select -</option>`
 
     selectOptions.forEach(function(element){

@@ -46,8 +46,6 @@
               textNode = document.createTextNode('\n' + indentBefore)
               node.insertBefore(textNode, node.children[i])
               
-              this.formatHTML(node.children[i], level)
-              
               if (node.lastElementChild === node.children[i]) {
                   textNode = document.createTextNode('\n' + indentAfter)
                   node.appendChild(textNode)

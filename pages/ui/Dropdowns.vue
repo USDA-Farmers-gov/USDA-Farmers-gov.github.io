@@ -2,6 +2,8 @@
   <div>
     <h2>Dropdowns</h2>
 
+    <Code :markup="dropdown_single" />
+
     <p class="intro-text">
       Dropdowns allow users to make a single selection from a list of options. They are best used when a user needs to make a choice from a long list of items.
     </p>
