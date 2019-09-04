@@ -112,9 +112,9 @@ const dropdowns_data = {
                               <div class="select-top-span span-red span-red-horizontal"></div>
                               <div class="select-top-dimension dimension-red dimension-red-horizontal">16px</div>
 
-                              <div class="select-bottom dashed dashed-red dashed-red-horizontal"></div>
-                              <div class="select-bottom span span-red span-red-horizontal"></div>
-                              <div class="select-bottom dimension dimension-red dimension-red-horizontal">16px</div>
+                              <div class="select-bottom-dashed dashed-red dashed-red-horizontal"></div>
+                              <div class="select-bottom-span span-red span-red-horizontal"></div>
+                              <div class="select-bottom-dimension dimension-red dimension-red-horizontal">16px</div>
 
                               <div class="bottom-left-dashed dashed-blue dashed-blue-vertical"></div>
                               <div class="bottom-left-span span-blue span-blue-vertical"></div>
