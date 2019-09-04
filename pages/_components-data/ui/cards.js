@@ -61,15 +61,27 @@ const cards_data = {
   resourceCardSpecsWithoutLogo() {
     return [
       {
-        footnote: 'Same specs as resource cards with logo.',
+        markup: cards_data.defaultCardMarkup({ footnote: 'Same specs as resource cards with logo.' }),
       },
       {
-        footnote: 'Applies to both resource cards with and without logo.',
+        markup: cards_data.defaultCardMarkup({ footnote: 'Applies to both resource cards with and without logo.' }),
         code: {
           card_container: `box-shadow: 0 4px 16px 0 #BBBBBB;`
         }
       }
     ]
+  },
+  defaultCardMarkup(data) {
+    let img = (!!data && data.img) ? data.img : ''
+    let header = (!!data && data.header) ? data.header : ''
+    let linkText = (!!data && !!data.link && data.link.text) ? data.link.text : ''
+    let linkHref = (!!data && !!data.link && data.link.href) ? data.link.href : ''
+    let description = (!!data && data.description) ? data.description : ''
+
+    let markup = `img: ` + img + `<br> header: ` + header + `<br>link text: ` + linkText + `<br>link href: ` + linkHref + `<br>description: ` + description
+
+    if(!!data && data.footnote) markup = markup + '<div class="card-footnote">*' + data.footnote + '</div>'
+    return markup
   }
 }
 

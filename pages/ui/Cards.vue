@@ -10,7 +10,9 @@
       Content cards provide detailed information about a single subject. The primary focus of the card is the content, however icons may be added to visually communicate to users what information is included. A green accent line can be added to emphasize the headline which will also give the card more visual prominence on the page.
     </p>
 
-    [ EXAMPLE CARD ]
+    <div class="row">
+      <div v-html="default_card" class="medium-6" />
+    </div>
 
     <h3>Specs</h3>
     <p>
@@ -36,6 +38,8 @@
 
     [ LOGO CARDS ]
 
+    <ExampleRow :data="card_specs_no_logo" columns="2" />
+
     <h4>Accessibility</h4>
 
     <p>
@@ -57,7 +61,13 @@
     },
     data() {
       return {
-
+        default_card: cards_data.defaultCardMarkup({ 
+              img: 'zzz.png', 
+              header: 'Example Card Headline', 
+              link: { text: 'Text Link', href: '#' },
+              description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.`
+        }),
+        card_specs_no_logo: cards_data.resourceCardSpecsWithoutLogo()
       }
     }
   }
