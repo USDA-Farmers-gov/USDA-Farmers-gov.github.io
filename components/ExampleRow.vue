@@ -37,10 +37,9 @@
         return this.rowClasses ? baseClass  + ' ' + this.rowClasses : baseClass
       },
       setContentHeader(key) {
-        let newHeader = key
-        newHeader = newHeader.replace('/_op_/g', '(')
-        newHeader = newHeader.replace('/_cp_/g', ')')
-        return newHeader.replace(/_/g, ' ').toUpperCase()
+        key = key.replace(/_op_/g, ' (')
+        key = key.replace(/_cp_/g, ') ')
+        return key.replace(/_/g, ' ').toUpperCase()
       },
       addLineBreaks(text) {
         return utils.addLineBreaks(text)

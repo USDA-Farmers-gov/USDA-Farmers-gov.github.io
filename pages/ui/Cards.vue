@@ -20,14 +20,15 @@
     </p>
 
     <h3>Examples</h3>
-    [ SPEC EXAMPLES ]
+   
+    <ExampleRow :data="specs" columns="3" />
 
     <h3>Resource Cards</h3>
     <p>
       Resource cards are used to display a link to another website or web page that provide additional information about a single subject. They contain a brief overview of the resource, link to the website or web page, and a logo of the organization, if available.
     </p>
 
-    [ RESOURCE CARD ]
+    <div v-html="resource_card_single" />
 
     <h3>Specs</h3>
     <p>
@@ -36,7 +37,10 @@
 
     <h4>Default with Logo</h4>
 
-    [ LOGO CARDS ]
+    <div v-html="resource_card_single" />
+    <ExanpleRow :data="resource_card_specs" columns="4" />
+
+    <h4>Default without Logo</h4>
 
     <ExampleRow :data="card_specs_no_logo" columns="2" />
 
@@ -67,7 +71,10 @@
               link: { text: 'Text Link', href: '#' },
               description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.`
         }),
-        card_specs_no_logo: cards_data.resourceCardSpecsWithoutLogo()
+        resource_card_single: cards_data.resourceCardSingle(),
+        specs: cards_data.specs(),
+        card_specs_no_logo: cards_data.resourceCardSpecsWithoutLogo(),
+        resource_card_specs: cards_data.resourceCardSpecs()
       }
     }
   }
