@@ -84,9 +84,10 @@ const dropdowns_data = {
     let selectClasses = (!!options && options.selectClasses) ? selectBaseClasses + ' ' + options.selectClasses : selectBaseClasses
     let disabled = (!!options && options.disabled) ? ' disabled' : ''
     let name = utils.lowerCaseAndHyphenate(label) + '-' + utils.randomString()
+    let tabIndex = disabled ? '-1' : '0'
 
     let ddLabel = `<label for="` + name + `" class="` + labelClasses + `">` + label + `</label>`
-    let ddSelect = `<select class="` + selectClasses + `" name="` + name + `" tabindex="-1"` + disabled + `>
+    let ddSelect = `<select class="` + selectClasses + `" id="` + name + `" name="` + name + `" tabindex="` + tabIndex + `"` + disabled + `>
                 <option>- Please select -</option>`
 
     selectOptions.forEach(function(element){
