@@ -35,10 +35,12 @@
       setRowClasses() {
         let baseClass = 'row examples'
         return this.rowClasses ? baseClass  + ' ' + this.rowClasses : baseClass
-
       },
       setContentHeader(key) {
-        return key.replace(/_/g, ' ').toUpperCase()
+        let newHeader = key
+        newHeader = newHeader.replace('/_op_/g', '(')
+        newHeader = newHeader.replace('/_cp_/g', ')')
+        return newHeader.replace(/_/g, ' ').toUpperCase()
       },
       addLineBreaks(text) {
         return utils.addLineBreaks(text)

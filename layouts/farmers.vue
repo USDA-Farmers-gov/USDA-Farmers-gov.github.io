@@ -21,7 +21,6 @@
 import Menu from '~/components/Menu.vue'
 
 export default {
-  layout: 'farmers',
   components: {
     Menu
   }
