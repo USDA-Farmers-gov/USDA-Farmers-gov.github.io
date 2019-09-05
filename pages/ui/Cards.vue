@@ -38,7 +38,7 @@
     <h4>Default with Logo</h4>
 
     <div v-html="resource_card_single" />
-    <ExanpleRow :data="resource_card_specs" columns="4" />
+    <ExampleRow :data="resource_card_specs" columns="4" />
 
     <h4>Default without Logo</h4>
 
@@ -66,7 +66,7 @@
     data() {
       return {
         default_card: cards_data.defaultCardMarkup({ 
-              img: 'zzz.png', 
+              img: '/images/tractor.png',  
               header: 'Example Card Headline', 
               link: { text: 'Text Link', href: '#' },
               description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.`

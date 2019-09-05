@@ -3,7 +3,7 @@ const cards_data = {
   cardSingle() {
     return [
       { 
-        icon: 'xxx.png', 
+        img: '/images/tractor.png', 
         title: 'Example Card Headline', 
         link: { text: 'Text Link', href: '#' },
         description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.`
@@ -14,7 +14,7 @@ const cards_data = {
     return [
       {
         markup: cards_data.defaultCardMarkup({ 
-          img: 'tractor.svg', 
+          img: '/images/tractor.png', 
           header: 'Example Card Headline',
           link: { text: 'Text Link', link: '#' },
           description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.`
@@ -28,7 +28,7 @@ const cards_data = {
       },
       {
         markup: cards_data.defaultCardMarkup({ 
-          img: 'tractor.svg', 
+          img: '/images/tractor.png', 
           header: 'Example Card Headline',
           link: { text: 'Text Link', link: '#' },
           description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.`
@@ -45,7 +45,7 @@ const cards_data = {
   },
   resourceCardSingle() {
     return cards_data.defaultCardMarkup({ 
-          img: 'usda.svg', 
+          img: '/images/usda-symbol.svg', 
           header: 'Example Card Headline',
           link: { text: 'External Link Headline', href: '#' },
           description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
@@ -96,7 +96,7 @@ const cards_data = {
     let linkHref = (!!data && !!data.link && data.link.href) ? data.link.href : ''
     let description = (!!data && data.description) ? data.description : ''
 
-    let markup = `<div>img: ` + img + `<br> header: ` + header + `<br>link text: ` + linkText + `<br>link href: ` + linkHref + `<br>description: ` + description + `</div>`
+    let markup = `<div>img: <img src="` + img + `" style="width: 100px;"><br> header: ` + header + `<br>link text: ` + linkText + `<br>link href: ` + linkHref + `<br>description: ` + description + `</div>`
 
     if(!!data && data.footnote) markup = markup + '<div class="card-footnote">*' + data.footnote + '</div>'
     return markup
