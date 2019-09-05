@@ -4,7 +4,7 @@
 # git subtree add --prefix=dist https://github.com/mcalvert2089/mcalvert2089.github.io master
 #
 # Changes in the app must be committed to the repo before you can rebuild the site.
-# This is to prevent the commit message for the Github site from being used in the Nuxt app repo.
+# This is to prevent the generic commit message for the Github site from being used in the Nuxt app repo.
 
 if [ -z "$(git status --porcelain)" ]; then 
   npm run generate

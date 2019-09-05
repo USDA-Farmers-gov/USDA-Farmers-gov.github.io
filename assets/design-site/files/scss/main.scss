@@ -3,10 +3,12 @@
 @import 'includes/dss_variables.scss';
 @import 'includes/dss_elements.scss';
 
+/* ELEMENTS */
 @import 'includes/elements/dss_colors.scss';
 @import 'includes/elements/dss_grid.scss';
 @import 'includes/elements/_dss_typography.scss';
 
+/* UI */
 @import 'includes/ui/dss_buttons.scss';
 @import 'includes/ui/dss_checkboxes.scss';
 @import 'includes/ui/dss_dividers.scss';
@@ -14,7 +16,7 @@
 @import 'includes/ui/dss_tables.scss';
 @import 'includes/ui/dss_accordions.scss';
 
-
+/* MISC */
 @import 'includes/dss_page.scss';
 @import 'includes/dss_borders.scss';
 @import 'includes/dss_menu.scss';
