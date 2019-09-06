@@ -158,16 +158,14 @@ const radio_buttons_data = {
     outputRadioButtonMarkup(options) {
       let label = (!!options && options.label) ? options.label : 'Label'
       let labelClass = 'radio-label'
-      let gridClass
-      let checked
+      let gridClass = (!!options && options.showDimensions) ? ' checkbox-radio-dimensions' : ''
       let id = 'radio-input-' + utils.randomNumber()
+      let checked = (!!options && options.checked) ? ' checked' : ''
       let name = (!!options && options.name) ? options.name : 'radio-button'
       name = name + '-' + utils.randomNumber()
- 
+
       if(!!options && options.showLabel === false) labelClass = labelClass + ' visually-hidden'
       if(!!options && options.labelClasses) labelClass = labelClass + ' ' + options.labelClasses
-      if(!!options && options.showDimensions) gridClass = ' checkbox-radio-dimensions'
-      if(!!options && options.checked) checked = ' checked'
 
       let radioButton = `<input type="radio" class="radio-input" name="` + name + `" id="` + id + `" value="1" tabindex="-1"` + checked + `>
       <label for="` + id + `" class="` + labelClass + `">` + label + `</label>`
