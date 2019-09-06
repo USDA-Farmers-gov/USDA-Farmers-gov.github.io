@@ -162,8 +162,7 @@ const radio_buttons_data = {
       let id = 'radio-input-' + utils.randomNumber()
       let checked = (!!options && options.checked) ? ' checked' : ''
       let disabled = (!!options && options.disabled) ? ' disabled' : ''
-      let name = (!!options && options.name) ? options.name : 'radio-button'
-      name = name + '-' + utils.randomNumber()
+      let name = (!!options && options.name) ? options.name : 'radio-button' + '-' + utils.randomNumber()
 
       if(!!options && options.showLabel === false) labelClass = labelClass + ' visually-hidden'
       if(!!options && options.labelClasses) labelClass = labelClass + ' ' + options.labelClasses
