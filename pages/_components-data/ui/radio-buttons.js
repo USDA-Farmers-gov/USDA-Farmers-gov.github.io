@@ -45,7 +45,7 @@ const radio_buttons_data = {
             {
               header: 'Unselected',
               classes_cell: 'dimension-margins',
-              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', image: '/images/MFP2-icon.jpg' }),
+              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', image: '/images/MFP2-icon.jpg', name: 'specs-1' }),
               code: {
                 card: `background: #FFFFFF;
                       border: 2px #BBBBBB;
@@ -57,7 +57,7 @@ const radio_buttons_data = {
             },
             {
               header: 'Selected',
-              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', image: '/images/MFP2-icon.jpg', checked: true, showCardDimensions: true }),
+              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', image: '/images/MFP2-icon.jpg', name: 'specs-1', checked: true, showCardDimensions: true }),
               code: {
                 card: `background: #FFFFFF;
                     border: 2px #49A564;
@@ -73,7 +73,7 @@ const radio_buttons_data = {
     return [
             {
               header: 'Hover',
-              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', image: '/images/MFP2-icon.jpg', hover: true }),
+              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', image: '/images/MFP2-icon.jpg', name: 'specs-2', hover: true }),
               code: {
                 card: `border: 2px #49A564;`,
                 radio_button: `background: #FFFFFF;
@@ -82,7 +82,7 @@ const radio_buttons_data = {
             },
             {
               header: 'Focus',
-              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', labelClasses: 'focus', image: '/images/MFP2-icon.jpg', checked: true }),
+              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', labelClasses: 'focus', image: '/images/MFP2-icon.jpg', name: 'specs-2', checked: true }),
               code: {
                 card: `shadow: #1B69D3;`,
                 radio_button: `background: #49A564;
@@ -91,7 +91,7 @@ const radio_buttons_data = {
             },
             {
               header: 'Disabled',
-              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', image: '/images/MFP2-icon.jpg', disabled: true }),
+              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', image: '/images/MFP2-icon.jpg', name: 'specs-2', disabled: true }),
               code: {
                 card: `border: 2px #BBBBBB;`,
                 radio_button: `background: #F7F7F7;
@@ -113,12 +113,13 @@ const radio_buttons_data = {
     if(!!options && options.hover) labelClasses = labelClasses + ' checked'
     if(!!options && options.labelClasses) labelClasses = labelClasses + ' ' + options.labelClasses
     if(!!options && options.disabled) labelClasses = labelClasses + ' disabled '
+    let name = (!!options && options.name) ? options.name : 'radio-example-' + utils.randomNumber()
 
     let card = `<label tabindex="-1" for="radio-card-3" class="` + labelClasses + `">`
     if(options.image) card = card + `<div class="radio-img-card-top">
                                         <img src="` + options.image + `">
                                       </div>`
-    let radio_button = `<input type="radio" id="radio-card-2" class="radio-card-input" name="radio-example-` + utils.randomString() + `" title="` + options.label + `" tabindex="-1"` + checked + `>
+    let radio_button = `<input type="radio" id="radio-card-2" class="radio-card-input" name="` + name + `" title="` + options.label + `" tabindex="-1"` + checked + `>
            ` + options.label + `
            <span class="radio-icon"></span>`
 
@@ -162,7 +163,7 @@ const radio_buttons_data = {
       let id = 'radio-input-' + utils.randomNumber()
       let checked = (!!options && options.checked) ? ' checked' : ''
       let disabled = (!!options && options.disabled) ? ' disabled' : ''
-      let name = (!!options && options.name) ? options.name : 'radio-button' + '-' + utils.randomNumber()
+      let name = (!!options && options.name) ? options.name : 'radio-button-' + utils.randomNumber()
 
       if(!!options && options.showLabel === false) labelClass = labelClass + ' visually-hidden'
       if(!!options && options.labelClasses) labelClass = labelClass + ' ' + options.labelClasses

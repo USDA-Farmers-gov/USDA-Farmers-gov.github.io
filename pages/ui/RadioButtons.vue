@@ -36,8 +36,8 @@
     </p>
 
     <div class="row row-click-target">
-      <div v-html="outputCardMarkup({ label: 'Card Radio Button' })" class="medium-4"></div>
-      <div v-html="outputCardMarkup({ label: 'Card Radio Button', checked: true })" class="medium-4"></div>
+      <div v-html="outputCardMarkup({ label: 'Card Radio Button', name: 'click-target' })" class="medium-4"></div>
+      <div v-html="outputCardMarkup({ label: 'Card Radio Button', name: 'click-target', checked: true })" class="medium-4"></div>
     </div>
 
     <h3>Specs</h3>
