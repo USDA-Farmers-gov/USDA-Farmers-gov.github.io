@@ -504,3 +504,33 @@
     justify-self: center;
   }
 }
+
+/* MOBILE OVERRIDES */
+.box-accordion-grid, .box-accordion-top-grid {
+  @media screen and (max-width: 600px) {
+    transform: scale(0.9);
+    position: relative;
+    left: -2rem;
+  }
+}
+
+.box-accordion .box-accordion-top[aria-expanded="true"] .down-arrow {
+  @media screen and (max-width: 600px) {
+    position: relative;
+    top: 4.2rem;
+  }
+}
+
+.box-accordion-bottom-grid {
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 24px 18px 234px 24px 24px 16px;
+    margin-top: -1.1rem;
+  }
+}
+
+.Accordion-panel {
+  @media screen and (max-width: 600px) {
+    width: 300px;
+    z-index: -1;
+  }
+}
