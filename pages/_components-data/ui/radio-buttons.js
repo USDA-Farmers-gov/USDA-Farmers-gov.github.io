@@ -160,9 +160,10 @@ const radio_buttons_data = {
       let labelClass = 'radio-label'
       let gridClass
       let checked
-      let id = utils.randomString()
-      let name = (!!options && options.name) ? options.name : utils.randomString()
-
+      let id = 'radio-input-' + utils.randomNumber()
+      let name = (!!options && options.name) ? options.name : 'radio-button'
+      name = name + '-' + utils.randomNumber()
+ 
       if(!!options && options.showLabel === false) labelClass = labelClass + ' visually-hidden'
       if(!!options && options.labelClasses) labelClass = labelClass + ' ' + options.labelClasses
       if(!!options && options.showDimensions) gridClass = ' checkbox-radio-dimensions'

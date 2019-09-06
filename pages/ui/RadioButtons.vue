@@ -14,6 +14,7 @@
 
     <p v-html="outputRadioButtonMarkup({ label: 'Radio Label' })"></p>  
     <p v-html="outputRadioButtonMarkup({ label: 'Radio Label', checked: true })"></p>  
+    <!-- TODO: find out how to style disabled button (not there right now) -->
     <div class="checkbox-radio-mobile-container">
       <ExampleRow :data="radio_buttons" columns="4" />
     </div>
@@ -62,7 +63,6 @@
     <h3>Accessibility</h3>
 
     <p>
-      <!-- TODO: find where link should go and update -->
       Radio button functionality must be available through <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#radiobutton">keyboard interactions</a>.
     </p>
     <p>
