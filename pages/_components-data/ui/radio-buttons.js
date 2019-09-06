@@ -32,7 +32,7 @@ const radio_buttons_data = {
             },
             {
               header: 'Disabled',
-              markup: radio_buttons_data.outputRadioButtonMarkup({ label: 'Radio Label' }),
+              markup: radio_buttons_data.outputRadioButtonMarkup({ label: 'Radio Label', disabled: true }),
               code: { 
                       background: `color: #F7F7F7;
                               border: 2px #BBBBBB;`
@@ -161,13 +161,14 @@ const radio_buttons_data = {
       let gridClass = (!!options && options.showDimensions) ? ' checkbox-radio-dimensions' : ''
       let id = 'radio-input-' + utils.randomNumber()
       let checked = (!!options && options.checked) ? ' checked' : ''
+      let disabled = (!!options && options.disabled) ? ' disabled' : ''
       let name = (!!options && options.name) ? options.name : 'radio-button'
       name = name + '-' + utils.randomNumber()
 
       if(!!options && options.showLabel === false) labelClass = labelClass + ' visually-hidden'
       if(!!options && options.labelClasses) labelClass = labelClass + ' ' + options.labelClasses
 
-      let radioButton = `<input type="radio" class="radio-input" name="` + name + `" id="` + id + `" value="1" tabindex="-1"` + checked + `>
+      let radioButton = `<input type="radio" class="radio-input" name="` + name + `" id="` + id + `" value="1" tabindex="-1"` + checked + disabled + `>
       <label for="` + id + `" class="` + labelClass + `">` + label + `</label>`
 
       return options.showDimensions ? `<div class="checkbox-radio-grid`+ gridClass + `">
