@@ -114,13 +114,15 @@ const radio_buttons_data = {
       checked = ' checked'
       labelClasses = labelClasses + ' checked'
     }
-    let name = (!!options && options.name) ? options.name : 'radio-example-' + utils.randomNumber()
 
-    let card = `<label tabindex="0" for="radio-card-3" class="` + labelClasses + `">`
+    let name = (!!options && options.name) ? options.name : 'radio-example-' + utils.randomNumber()
+    let id = (!!options && options.id) ? options.id : 'radio-card-' + utils.randomNumber()
+    let card = `<label tabindex="0" for="` + id + `" class="` + labelClasses + `">`
+
     if(options.image) card = card + `<div class="radio-img-card-top">
                                         <img src="` + options.image + `">
                                       </div>`
-    let radio_button = `<input type="radio" id="radio-card-2" class="radio-card-input" name="` + name + `" title="` + options.label + `" tabindex="0"` + checked + `>
+    let radio_button = `<input type="radio" id="` + id + `" class="radio-card-input" name="` + name + `" title="` + options.label + `" tabindex="0"` + checked + `>
            ` + options.label + `
            <span class="radio-icon"></span>`
 
