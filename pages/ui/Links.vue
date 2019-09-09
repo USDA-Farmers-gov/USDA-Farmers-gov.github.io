@@ -12,7 +12,7 @@
       <a href="#">Text Link</a>
     </p>
 
-    [ LINK EXAMPLES ]
+    <ExampleRow :data="text_links" columns="4" />
 
     <h3>External Text Link</h3>
 
@@ -22,7 +22,7 @@
 
     [ EXTERNAL LINK SINGLE ]
     <br>
-    [ EXTERNAL LINK EXAMPLES ]
+    <ExampleRow :data="external_text_links" columns="4" />
 
     <h3>Inline Textual Link</h3>
     <p>
@@ -31,7 +31,7 @@
 
     [ INLINE LINK SINGLE ]
     <br>
-    [ INLINE LINK EXAMPLES ]
+    <ExampleRow :data="inline_text_links" columns="4" />
 
     <h3>Anchor Link</h3>
     <p>
@@ -40,7 +40,7 @@
 
     [ ANCHOR LINK SINGLE ]
     <br>
-    [ ANCHOR LINK EXAMPLES ]
+    <ExampleRow :data="anchor_links" columns="4" />
 
     <h4>Click Target</h4>
     <p>
@@ -65,13 +65,22 @@
 </template>
 
 <script>
+  import links_data from '@/pages/_components-data/ui/links.js'
 
-export default {
-  layout: 'farmers',
-  head() {
-    return {
-      title: 'Links'
+  export default {
+    layout: 'farmers',
+    head() {
+      return {
+        title: 'Links'
+      }
+    },
+    data() {
+      return {
+        text_links: links_data.textLinks(),
+        external_text_links: links_data.externalTextLinks(),
+        inline_text_links: links_data.inlineTextLinks(),
+        anchor_links: links_data.anchorLinks(),
+      }
     }
-  },
-}
+  }
 </script>
