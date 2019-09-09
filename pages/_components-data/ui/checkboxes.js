@@ -166,11 +166,11 @@ const checkboxes_data = {
         : card
     },
     outputCheckboxMarkup(options) {
-      let label = (!! options && options.label) ? options.label : 'Label'
-      let labelClass = 'checkbox-label'
-      let gridClass
-      let checked = ''
-      let disabled = ''
+      let label       = (!! options && options.label) ? options.label : 'Label'
+      let labelClass  = 'checkbox-label'
+      let gridClass   = ''
+      let checked     = ''
+      let disabled    = ''
 
       if(!!options && options.showLabel === false)    labelClass = labelClass + ' visually-hidden'
       if(!!options && options.labelClass)             labelClass = labelClass + ' ' + options.labelClass
