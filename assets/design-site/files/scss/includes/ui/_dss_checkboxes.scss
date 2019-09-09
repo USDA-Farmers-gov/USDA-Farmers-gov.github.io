@@ -180,8 +180,11 @@
     }
 }
 
-@media only screen and (max-width: 600px) {
-  .checkbox-radio-mobile-container {
+.checkbox-radio-mobile-container, .example-container  {
+  label.focus:focus {
+    box-shadow: 0px 0px 4px 0 #000;
+  }
+  @media only screen and (max-width: 600px) {
     margin-left: 3.5rem;
   }
 }

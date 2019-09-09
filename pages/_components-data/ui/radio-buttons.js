@@ -115,11 +115,11 @@ const radio_buttons_data = {
     if(!!options && options.disabled) labelClasses = labelClasses + ' disabled '
     let name = (!!options && options.name) ? options.name : 'radio-example-' + utils.randomNumber()
 
-    let card = `<label tabindex="-1" for="radio-card-3" class="` + labelClasses + `">`
+    let card = `<label tabindex="0" for="radio-card-3" class="` + labelClasses + `">`
     if(options.image) card = card + `<div class="radio-img-card-top">
                                         <img src="` + options.image + `">
                                       </div>`
-    let radio_button = `<input type="radio" id="radio-card-2" class="radio-card-input" name="` + name + `" title="` + options.label + `" tabindex="-1"` + checked + `>
+    let radio_button = `<input type="radio" id="radio-card-2" class="radio-card-input" name="` + name + `" title="` + options.label + `" tabindex="0"` + checked + `>
            ` + options.label + `
            <span class="radio-icon"></span>`
 
@@ -168,8 +168,8 @@ const radio_buttons_data = {
       if(!!options && options.showLabel === false) labelClass = labelClass + ' visually-hidden'
       if(!!options && options.labelClasses) labelClass = labelClass + ' ' + options.labelClasses
 
-      let radioButton = `<input type="radio" class="radio-input" name="` + name + `" id="` + id + `" value="1" tabindex="-1"` + checked + disabled + `>
-      <label for="` + id + `" class="` + labelClass + `">` + label + `</label>`
+      let radioButton = `<input type="radio" class="radio-input" name="` + name + `" id="` + id + `" value="1"` + checked + disabled + `>
+      <label for="` + id + `" class="` + labelClass + `" tabindex="0">` + label + `</label>`
 
       return options.showDimensions ? `<div class="checkbox-radio-grid`+ gridClass + `">
               <div class="dimension-red dimension-red-horizontal">24 px</div>
