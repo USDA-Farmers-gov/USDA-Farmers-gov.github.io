@@ -1,0 +1,3 @@
+[submodule "static/farmers"]
+	path = static/farmers
+	url = https://github.com/jasonglisson/Farmers.Gov-Design-System.git
