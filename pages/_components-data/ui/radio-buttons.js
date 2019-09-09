@@ -101,8 +101,8 @@ const radio_buttons_data = {
           ]
   },
   outputCardMarkup(options) {
-    let labelClasses = 'radio-card-label'
-    let checked = ''
+    let labelClasses  = 'radio-card-label'
+    let checked       = ''
 
     if(!!options && options.image)          labelClasses = labelClasses + ' with-image'
     if(!!options && options.card_classes)   labelClasses = labelClasses + ' ' + options.card_classes
@@ -111,13 +111,13 @@ const radio_buttons_data = {
     if(!!options && options.disabled)       labelClasses = labelClasses + ' disabled '
 
     if(!!options && options.checked) {
-      checked = ' checked'
-      labelClasses = labelClasses + ' checked'
+      checked       = ' checked'
+      labelClasses  = labelClasses + ' checked'
     }
 
-    let name = (!!options && options.name) ? options.name : 'radio-example-' + utils.randomNumber()
-    let id = (!!options && options.id) ? options.id : 'radio-card-' + utils.randomNumber()
-    let card = `<label tabindex="0" for="` + id + `" class="` + labelClasses + `">`
+    let name  = (!!options && options.name) ? options.name : 'radio-example-' + utils.randomNumber()
+    let id    = (!!options && options.id) ? options.id : 'radio-card-' + utils.randomNumber()
+    let card  = `<label tabindex="0" for="` + id + `" class="` + labelClasses + `">`
 
     if(options.image) card = card + `<div class="radio-img-card-top">
                                         <img src="` + options.image + `">

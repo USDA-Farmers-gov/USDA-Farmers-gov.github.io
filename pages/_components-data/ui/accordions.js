@@ -63,12 +63,12 @@ const accordions_data = {
               </div>`
     },
     defaultBoxAccordionMarkup(expanded) {
-      let labelText = expanded ? 'Expanded Box Accordion Headline 3' : 'Collapsed Box Accordion Headline 3'
-      let ariaExpanded = expanded ? 'true' : 'false'
-      let hidden = expanded ? '' : 'hidden'
-      let boxGridClass = expanded ? ' box-accordion-top-grid' : ''
-      let markup = accordions_data.boxAccordionMarkup(expanded)
-      let markupTop = expanded ? `<div class="box-accordion-top-grid">
+      let labelText     = expanded ? 'Expanded Box Accordion Headline 3' : 'Collapsed Box Accordion Headline 3'
+      let ariaExpanded  = expanded ? 'true' : 'false'
+      let hidden        = expanded ? '' : 'hidden'
+      let boxGridClass  = expanded ? ' box-accordion-top-grid' : ''
+      let markup        = accordions_data.boxAccordionMarkup(expanded)
+      let markupTop     = expanded ? `<div class="box-accordion-top-grid">
                                       ` + markup.top + `
                                       <div class="box-top dashed-red dashed-red-dark-bg-horizontal"></div>
                                       <div class="box-top-span span-red span-red-horizontal"></div>

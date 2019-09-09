@@ -106,9 +106,9 @@ const checkboxes_data = {
         ]
     },
     outputCardMarkup(options) {
-      let labelClasses = 'checkbox-card-label'
-      let checked = ''
-      let disabled = ''
+      let labelClasses  = 'checkbox-card-label'
+      let checked       = ''
+      let disabled      = ''
       let id = (!!options && options.id) ? options.id : 'checkbox-card-' + utils.randomNumber()
       
       if(!!options && options.image)          labelClasses = labelClasses + ' with-image'
