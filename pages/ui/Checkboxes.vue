@@ -18,7 +18,7 @@
       <ExampleRow :data="checkboxes" :itemClasses="[{ index: 0, classes: 'checkbox-grid-container' }]" columns="4" />
     </div>
 
-    <h3>Click Target</h3>
+    <h4>Click Target</h4>
     <p>
       A checkbox can be selected and deselected by clicking or tapping on the checkbox as well as the text label.
     </p>

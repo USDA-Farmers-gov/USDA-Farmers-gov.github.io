@@ -31,7 +31,7 @@
     <ExampleRow :data="dropdown_specs" columns="4" />
     <ExampleRow :data="dropdown_states" columns="3" />
 
-    <h3>Click Target</h3>
+    <h4>Click Target</h4>
     <p>
       The entire dropdown field box should be clickable.
     </p>
