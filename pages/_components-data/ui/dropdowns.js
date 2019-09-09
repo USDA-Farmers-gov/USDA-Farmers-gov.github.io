@@ -80,14 +80,13 @@ const dropdowns_data = {
   getDropdownMarkup(label, selectOptions, options, highlight) {
     let selectBaseClasses = 'simpler-select'
 
-    let labelClasses = (!!options && options.labelClasses) ? options.labelClasses : ''
-    let selectClasses = (!!options && options.selectClasses) ? selectBaseClasses + ' ' + options.selectClasses : selectBaseClasses
-    let disabled = (!!options && options.disabled) ? ' disabled' : ''
-    let name = utils.lowerCaseAndHyphenate(label) + '-' + utils.randomString()
-    let tabIndex = disabled ? '-1' : '0'
-
-    let ddLabel = `<label for="` + name + `" class="` + labelClasses + `">` + label + `</label>`
-    let ddSelect = `<select class="` + selectClasses + `" id="` + name + `" name="` + name + `" tabindex="` + tabIndex + `"` + disabled + `>
+    let labelClasses    = (!!options && options.labelClasses) ? options.labelClasses : ''
+    let selectClasses   = (!!options && options.selectClasses) ? selectBaseClasses + ' ' + options.selectClasses : selectBaseClasses
+    let disabled        = (!!options && options.disabled) ? ' disabled' : ''
+    let name            = utils.lowerCaseAndHyphenate(label) + '-' + utils.randomString()
+    let tabIndex        = disabled ? '-1' : '0'
+    let ddLabel         = `<label for="` + name + `" class="` + labelClasses + `">` + label + `</label>`
+    let ddSelect        = `<select class="` + selectClasses + `" id="` + name + `" name="` + name + `" tabindex="` + tabIndex + `"` + disabled + `>
                 <option>- Please select -</option>`
 
     selectOptions.forEach(function(element){

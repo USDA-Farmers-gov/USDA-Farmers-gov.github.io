@@ -258,10 +258,10 @@ const buttons_data = {
       ]
   },
   outputButtonMarkup(classes, showDimensions, index) {
-      let btnClasses = buttons_data.setButtonClasses(classes)
-      let dimensions = buttons_data.getButtonDimensions(btnClasses)
-      let buttonText = (!!classes && classes.indexOf('feedback') >= 0) ? 'Yes' : 'Button'
-      let gridClasses = classes ? 'button-grid ' + classes : 'button-grid' 
+      let btnClasses    = buttons_data.setButtonClasses(classes)
+      let dimensions    = buttons_data.getButtonDimensions(btnClasses)
+      let buttonText    = (!!classes && classes.indexOf('feedback') >= 0) ? 'Yes' : 'Button'
+      let gridClasses   = classes ? 'button-grid ' + classes : 'button-grid' 
       if(!!classes && classes.indexOf('feedback') >= 0 && index === 0) showDimensions = true
 
       return showDimensions ? `<div class="` + gridClasses + `">
@@ -282,9 +282,9 @@ const buttons_data = {
     getButtonDimensions(btnClasses) {
       let dimensions = { width: 134, height: 42 }
 
-      if(btnClasses.indexOf('sm-btn') >= 0) dimensions = { width: 96, height: 32 }
-      if(btnClasses.indexOf('lg-btn') >= 0) dimensions = { width: 216, height: 52 }
-      if(btnClasses.indexOf('feedback') >= 0) dimensions = { width: 64, height: 64 }
+      if(btnClasses.indexOf('sm-btn') >= 0) dimensions    = { width: 96, height: 32 }
+      if(btnClasses.indexOf('lg-btn') >= 0) dimensions    = { width: 216, height: 52 }
+      if(btnClasses.indexOf('feedback') >= 0) dimensions  = { width: 64, height: 64 }
 
       return dimensions
     }

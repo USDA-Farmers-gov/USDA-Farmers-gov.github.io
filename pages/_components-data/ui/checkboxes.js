@@ -109,20 +109,20 @@ const checkboxes_data = {
       let labelClasses = 'checkbox-card-label'
       let checked = ''
       let disabled = ''
-
-      if(!!options && options.image) labelClasses = labelClasses + ' with-image'
-      if(!!options && options.card_classes) labelClasses = labelClasses + ' ' + options.card_classes
-      if(!!options && options.checked) {
-        checked = ' checked'
-        labelClasses = labelClasses + ' checked'
-      }
-      if(!!options && options.hover) labelClasses = labelClasses + ' checked'
-      if(!!options && options.labelClasses) labelClasses = labelClasses + ' ' + options.labelClasses
-      if(!!options && options.disabled) {
-        disabled = ' disabled'
-        labelClasses = labelClasses + ' disabled '
-      }
       let id = (!!options && options.id) ? options.id : 'checkbox-card-' + utils.randomNumber()
+      
+      if(!!options && options.image)          labelClasses = labelClasses + ' with-image'
+      if(!!options && options.hover)          labelClasses = labelClasses + ' checked'
+      if(!!options && options.labelClasses)   labelClasses = labelClasses + ' ' + options.labelClasses
+
+      if(!!options && options.checked) {
+        checked       = ' checked'
+        labelClasses  = labelClasses + ' checked'
+      }
+      if(!!options && options.disabled) {
+        disabled      = ' disabled'
+        labelClasses  = labelClasses + ' disabled '
+      }
 
       let card = `<label for="` + id + `" class="` + labelClasses + `" tabindex="0">`
       if(options.image) card = card + `<div class="cb-img-card-top">
@@ -138,6 +138,7 @@ const checkboxes_data = {
 
       return options.showCardDimensions 
         ? `<div class="checkbox-radio-card-grid">
+            <div class="checkbox-radio-card">` + card  + `</div>
             <div class="checkbox-radio-card-top dashed-red dashed-red-horizontal"></div>
             <div class="checkbox-radio-card-bottom dashed-red dashed-red-horizontal"></div>
 
@@ -161,9 +162,7 @@ const checkboxes_data = {
 
             <div class="checkbox-radio-dimension-top dimension-blue">32px</div>
             <div class="checkbox-radio-dimension-left dimension-red">32px</div>
-            
-            <div class="checkbox-radio-card">` + card  + `</div>
-            </div>`
+          </div>`
         : card
     },
     outputCheckboxMarkup(options) {
@@ -173,11 +172,11 @@ const checkboxes_data = {
       let checked = ''
       let disabled = ''
 
-      if(!!options && options.showLabel === false) labelClass = labelClass + ' visually-hidden'
-      if(!!options && options.labelClass) labelClass = labelClass + ' ' + options.labelClass
-      if(!!options && options.showDimensions) gridClass = ' checkbox-radio-dimensions'
-      if(!!options && options.checked) checked = ' checked '
-      if(!!options && options.disabled) disabled = ' disabled '
+      if(!!options && options.showLabel === false)    labelClass = labelClass + ' visually-hidden'
+      if(!!options && options.labelClass)             labelClass = labelClass + ' ' + options.labelClass
+      if(!!options && options.showDimensions)         gridClass = ' checkbox-radio-dimensions'
+      if(!!options && options.checked)                checked = ' checked '
+      if(!!options && options.disabled)               disabled = ' disabled '
       let id = (!!options && options.id) ? options.id : 'checkbox-card-' + utils.randomNumber()
 
       let checkbox = `<input id="` + id + `" type="checkbox" name="example" value="Option" title="Option"` + checked + disabled + ` class="checkbox-input">
@@ -193,13 +192,6 @@ const checkboxes_data = {
               <div class="checkbox-radio-width-dimension dimension-blue dimension-blue-vertical">24 px</div>
             </div>`
             : checkbox
-    },
-    markup() {
-      return `<div class="row">
-  <div class="medium-12">
-    <strong>Hello</strong>
-  </div>
-</div>`
     }
   }
 

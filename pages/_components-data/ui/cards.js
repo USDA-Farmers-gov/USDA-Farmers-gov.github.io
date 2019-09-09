@@ -90,11 +90,11 @@ const cards_data = {
     ]
   },
   defaultCardMarkup(data) {
-    let img = (!!data && data.img) ? data.img : ''
-    let header = (!!data && data.header) ? data.header : ''
-    let linkText = (!!data && !!data.link && data.link.text) ? data.link.text : ''
-    let linkHref = (!!data && !!data.link && data.link.href) ? data.link.href : ''
-    let description = (!!data && data.description) ? data.description : ''
+    let img           = (!!data && data.img) ? data.img : ''
+    let header        = (!!data && data.header) ? data.header : ''
+    let linkText      = (!!data && !!data.link && data.link.text) ? data.link.text : ''
+    let linkHref      = (!!data && !!data.link && data.link.href) ? data.link.href : ''
+    let description   = (!!data && data.description) ? data.description : ''
 
     let markup = `<div>img: <img src="` + img + `" style="width: 100px;"><br> header: ` + header + `<br>link text: ` + linkText + `<br>link href: ` + linkHref + `<br>description: ` + description + `</div>`
 

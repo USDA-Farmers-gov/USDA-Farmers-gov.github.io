@@ -121,12 +121,12 @@ const accordions_data = {
     },
 
     boxAccordionMarkup(expanded) {
-      let labelText = expanded ? 'Expanded Box Accordion Headline 3' : 'Collapsed Box Accordion Headline 3'
-      let ariaExpanded = expanded ? 'true' : 'false'
-      let hidden = expanded ? '' : 'hidden'
-      let randomString = utils.randomNumber()
-      let accordionId = 'accordion-' + randomString
-      let sectId = 'sect-' + randomString
+      let labelText     = expanded ? 'Expanded Box Accordion Headline 3' : 'Collapsed Box Accordion Headline 3'
+      let ariaExpanded  = expanded ? 'true' : 'false'
+      let hidden        = expanded ? '' : 'hidden'
+      let randomString  = utils.randomNumber()
+      let accordionId   = 'accordion-' + randomString
+      let sectId        = 'sect-' + randomString
 
       return { 
             top: `<div class="box-accordion-top Accordion-trigger"
