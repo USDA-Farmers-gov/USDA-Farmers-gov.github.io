@@ -1,3 +1,5 @@
+import utils from '@/assets/js/utils.js'
+
 const checkboxes_data = {
   default() {
     return [
@@ -106,6 +108,7 @@ const checkboxes_data = {
     outputCardMarkup(options) {
       let labelClasses = 'checkbox-card-label'
       let checked = ''
+      let disabled = ''
 
       if(!!options && options.image) labelClasses = labelClasses + ' with-image'
       if(!!options && options.card_classes) labelClasses = labelClasses + ' ' + options.card_classes
@@ -115,13 +118,17 @@ const checkboxes_data = {
       }
       if(!!options && options.hover) labelClasses = labelClasses + ' checked'
       if(!!options && options.labelClasses) labelClasses = labelClasses + ' ' + options.labelClasses
-      if(!!options && options.disabled) labelClasses = labelClasses + ' disabled '
+      if(!!options && options.disabled) {
+        disabled = ' disabled'
+        labelClasses = labelClasses + ' disabled '
+      }
+      let id = (!!options && options.id) ? options.id : 'checkbox-card-' + utils.randomNumber()
 
-      let card = `<label tabindex="-1" for="checkbox-card-3" class="` + labelClasses + `">`
+      let card = `<label for="` + id + `" class="` + labelClasses + `" tabindex="-1">`
       if(options.image) card = card + `<div class="cb-img-card-top">
                                           <img src="` + options.image + `">
                                         </div>`
-      let checkbox = `<input type="checkbox" id="checkbox-card-3" class="checkbox-card-input" title="` + options.label + `" tabindex="-1" ` + checked + `>`
+      let checkbox = `<input type="checkbox" id="` + id + `" class="checkbox-card-input" title="` + options.label + `" tabindex="-1" ` + checked + disabled + `>`
                     + options.label + `
                     <span class="cb-icon"></span>`
 
@@ -171,9 +178,10 @@ const checkboxes_data = {
       if(!!options && options.showDimensions) gridClass = ' checkbox-radio-dimensions'
       if(!!options && options.checked) checked = ' checked '
       if(!!options && options.disabled) disabled = ' disabled '
+      let id = (!!options && options.id) ? options.id : 'checkbox-card-' + utils.randomNumber()
 
-      let checkbox = `<input type="checkbox" name="example" value="Option" title="Option" tabindex="-1"` + checked + disabled + ` class="checkbox-input">
-        <label for="example" tabindex="-1" class="` + labelClass + `">` + label + `</label>`
+      let checkbox = `<input id="` + id + `" type="checkbox" name="example" value="Option" title="Option" tabindex="-1"` + checked + disabled + ` class="checkbox-input">
+        <label for="` + id + `" tabindex="-1" class="` + labelClass + `">` + label + `</label>`
 
       return options.showDimensions ? `<div class="checkbox-radio-grid`+ gridClass + `">
               <div class="dimension-red dimension-red-horizontal">24 px</div>

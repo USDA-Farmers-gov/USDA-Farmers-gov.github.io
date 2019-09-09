@@ -17,11 +17,23 @@
   top: -5.1rem;
   left: 14rem;
 }
+
+.checkbox-grid-container {
+  .text-medium {
+    margin-top: 3.3rem;
+  }
+}
+
 .checkbox-radio-grid {
   display: grid;
   grid-template-columns: auto 12px auto;
   grid-template-rows: 22px auto;
+  margin-top: 1.5rem;
   margin-bottom: 3rem;
+
+  label {
+    margin-top: -0.3rem;
+  }
 
   .checkbox-radio-width {
     position: relative;
@@ -32,7 +44,7 @@
   }      
   .checkbox-radio-height {
     position:relative;
-    top: 0.2rem;
+    // top: 0.2rem;
     margin: 0 0.2rem 0.2rem 0.2rem;
   }
 
@@ -40,7 +52,6 @@
     grid-column: 3;
     grid-row: 3;
     position: relative;
-    margin-left: 0.4rem;
   }
 } 
 
@@ -192,6 +203,11 @@
   &.highlight-overlay {
     padding-top: 0.5rem ;
     padding-bottom: 0.4rem;
+
+    label {
+      margin-top: 0.2rem;
+      margin-bottom: 0.2rem;
+    }
   }
 
   &.mouse-pointer {

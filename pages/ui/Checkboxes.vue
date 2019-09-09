@@ -15,7 +15,7 @@
     <p v-html="outputCheckboxMarkup({ label: 'Checkbox Label', checked: true })"></p>  
 
     <div class="checkbox-radio-mobile-container">
-      <ExampleRow :data="checkboxes" columns="4" />
+      <ExampleRow :data="checkboxes" :itemClasses="[{ index: 0, classes: 'checkbox-grid-container' }]" columns="4" />
     </div>
 
     <h3>Click Target</h3>
@@ -91,6 +91,11 @@
         specs: checkboxes_data.specs(),
         specs_states: checkboxes_data.specsStates()
       }
+    },
+    mounted() {
+      let checkboxScript = document.createElement('script')
+      checkboxScript.setAttribute('src', '/farmers/js/Components/checkbox.js')
+      document.head.appendChild(checkboxScript)
     },
     methods: {
       outputCardMarkup(options) {

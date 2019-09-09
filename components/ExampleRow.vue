@@ -1,6 +1,6 @@
 <template>
   <div :class="setRowClasses()">
-    <div v-for="item in data" :class="setClasses(item)">
+    <div v-for="(item, index) in data" :class="setClasses(item, index)">
       <p v-if="item.header">
         <strong>{{ item.header }}</strong>
       </p>
@@ -25,12 +25,19 @@
         type: [ String, Number ],
         required: true
       },
-      rowClasses: String
+      rowClasses: String,
+      itemClasses: [ Object, Array ]
     },
     methods: {
-      setClasses(item) {
-        let flexClass = 'medium-' + 12/Number(this.columns)
-        return (item.classes_cell) ? flexClass + ' ' + item.classes_cell :  flexClass
+      setClasses(item, index) {
+        let classes = 'medium-' + 12/Number(this.columns)
+
+        if(!!this.itemClasses && this.itemClasses.length) {
+          let itemClass = this.itemClasses.filter(row => row.index === index)[0]
+          classes = (itemClass) ? classes + ' ' + itemClass.classes : classes
+        }
+        
+        return (item.classes_cell) ? classes + ' ' + item.classes_cell :  classes
       },
       setRowClasses() {
         let baseClass = 'row examples'
