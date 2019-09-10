@@ -68,7 +68,7 @@ const cards_data = {
       },
       {
         code: {
-        'Link': `Use appropriate link style from <nuxt-link to="ui/Links">Links</nuxt-link> page`
+        'Link': `Use appropriate link style from <a href="/ui/Links">Links</a> page`
         }
       },
       {
@@ -85,12 +85,14 @@ const cards_data = {
   resourceCardSpecsWithoutLogo() {
     return [
       {
+        header: 'Default without Logo',
         markup: cards_data.resourceCardMarkup({ 
           link: { text: 'External Link Headline', href: '#' },
           description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.`,
           footnote: 'Same specs as resource cards with logo.' }),
       },
       {
+        header: 'Hover',
         markup: cards_data.resourceCardMarkup({ 
           link: { text: 'External Link Headline', href: '#' },
           description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.`,
@@ -123,9 +125,7 @@ const cards_data = {
                             <a class="text-link">` + linkText + `</a>
                           </div>`
                         : ``
-    let footnote = (!!data && data.footnote) ? `<div class="card-footnote">*` + data.footnote + `</div>` : ``
-
-    return `<div class="content-card` + accentTop + `">` + icon + content + link + footnote + `</div>`
+    return `<div class="content-card` + accentTop + `">` + icon + content + link + `</div>`
   },
   defaultCardWithGrid(data) {
     let grid = `<div class="default-card-grid">` 
@@ -158,10 +158,13 @@ const cards_data = {
                       <a class="external-link">External Link Headline</a>
                     </div>
                     <div class="content">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
+                      <p>
+                      ` + data.description + `
+                      </p>
                     </div>`
+    let footnote = (!!data && data.footnote) ? `<div class="card-footnote">*` + data.footnote + `</div>` : ``
 
-    return `<div class="resource-card">` + img + content + `</div>`
+    return `<div class="resource-card">` + img + content + `</div>` + footnote
   },
   resourceCardGrid() {
     let data = { 

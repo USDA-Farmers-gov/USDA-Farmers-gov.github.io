@@ -29,7 +29,7 @@
     </p>
 
     <div class="row">
-      <div v-html="resource_card_with_grid" class="medium-5" />
+      <div v-html="resource_card_single" class="medium-5" />
     </div>
     <h3>Specs</h3>
     <p>
@@ -39,11 +39,9 @@
     <h4>Default with Logo</h4>
 
     <div class="row">
-      <div v-html="resource_card_single" class="medium-5" />
+      <div v-html="resource_card_with_grid" class="medium-6" />
     </div>
     <ExampleRow :data="resource_card_specs" columns="4" />
-
-    <h4>Default without Logo</h4>
 
     <ExampleRow :data="card_specs_no_logo" columns="2" />
 
