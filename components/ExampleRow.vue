@@ -44,8 +44,6 @@
         return this.rowClasses ? baseClass  + ' ' + this.rowClasses : baseClass
       },
       setContentHeader(key) {
-        key = key.replace(/_op_/g, ' (')
-        key = key.replace(/_cp_/g, ') ')
         return key.replace(/_/g, ' ').toUpperCase()
       },
       addLineBreaks(text) {

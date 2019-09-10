@@ -41,7 +41,7 @@
 </template>
 
 <script>
-  import breadcrumb_data from '@/pages/_components-data/ui/breadcrumb.js'
+  import breadcrumb_data from '@/pages/_components-data/navigation/breadcrumb.js'
 
   export default {
     layout: 'farmers',

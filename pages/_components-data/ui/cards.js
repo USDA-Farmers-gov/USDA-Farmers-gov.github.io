@@ -23,7 +23,7 @@ const cards_data = {
           card_container: `background: #FFFFFF;
             box-shadow: 0 1px 4px 0 #BBBBBB;
             border-radius: 2px;`,
-          green_accent_line_op_optional_cp_: `color: #006546;`
+          "green_accent_line_(optional)": `color: #006546;`
         }
       },
       {
@@ -37,7 +37,7 @@ const cards_data = {
           card_container: `background: #FFFFFF;
             box-shadow: 0 1px 4px 0 #BBBBBB;
             border-radius: 2px;`,
-          green_accent_line_op_options_cp_: `color: #006546;
+          "green_accent_line_(options)": `color: #006546;
             border-radius: 2px 2px 0 0;`
         }
       },
