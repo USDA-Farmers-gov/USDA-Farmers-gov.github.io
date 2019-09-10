@@ -20,7 +20,6 @@
     </p>
 
     <h3>Examples</h3>
-   
     <ExampleRow :data="specs" columns="2" />
 
     <h3>Resource Cards</h3>
@@ -42,11 +41,9 @@
       <div v-html="resource_card_with_grid" class="medium-6" />
     </div>
     <ExampleRow :data="resource_card_specs" columns="4" />
-
     <ExampleRow :data="card_specs_no_logo" columns="2" />
 
     <h4>Accessibility</h4>
-
     <p>
       All elements within cards must be available through the use of screen readers and keyboards.
     </p>
