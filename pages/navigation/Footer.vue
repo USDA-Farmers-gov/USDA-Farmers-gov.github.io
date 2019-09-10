@@ -19,9 +19,26 @@
       <li>Secondary logo (optional)</li>
       <li>Social media links (optional)</li>
     </ul>
+
+    [ FOOTER EXAMPLE ]
+
+    <h4>Specs</h4>
+    <p>
+      Main navigation links should follow the grid system and the specified padding requirements outlined below. Secondary links should follow the grid system. All links should display an underline on hover. 
+    </p>
+
+    [ FOOTER EXAMPLE WITH GRID ]
+    <ExampleRow :data="specs" columns="4" />
+
+    <h4>Accessibility</h4>
+    <p>
+       Footer links should show a visible focus state when tabbed to by a user.
+    </p>
   </div>
 </template>
 <script>
+  import footer_data from '@/pages/_components-data/navigation/footer.js'
+
   export default {
     layout: 'farmers',
     head() {
@@ -31,7 +48,7 @@
     },
     data() {
       return {
-      
+        specs: footer_data.specs()
       }
     }
   }

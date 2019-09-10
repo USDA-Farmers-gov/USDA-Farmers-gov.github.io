@@ -66,6 +66,7 @@
             links:  [
                       { name: 'Breadcrumb', path: '/navigation/Breadcrumb'},
                       { name: 'Header', path: '/navigation/Header'},
+                      { name: 'Footer', path: '/navigation/Footer'},
                     ]
           }
         ]
