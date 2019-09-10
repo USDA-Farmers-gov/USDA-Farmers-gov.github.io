@@ -22,7 +22,7 @@
     <p>
       <strong>Examples</strong>
     </p>
-    <ExampleRow :data="specs" :itemClasses="[{ index: 0, classes: 'default-grid-container' }]" columns="2" />
+    <ExampleRow :data="specs" rowClasses="default-grid-row" :itemClasses="[{ index: 0, classes: 'default-grid-container' }]" columns="2" />
 
     <h3>Resource Cards</h3>
     <p>

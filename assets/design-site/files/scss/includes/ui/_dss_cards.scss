@@ -1,5 +1,7 @@
-div:not(.default-grid-container) > .text-medium:nth-of-type(1) {
-    margin-top: 4.8rem;
+.default-grid-row {
+  div:not(.default-grid-container) > .text-medium:nth-of-type(1) {
+      margin-top: 4.8rem;
+  }
 }
 
 .resource-cards-no-logo {
