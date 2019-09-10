@@ -1,0 +1,50 @@
+.row {
+  &.feedback {  
+    .text-medium {
+      margin-top: 4.2rem;
+    }
+    div:first-child() {
+      .text-medium {
+        margin-top: -0.2rem;
+      }
+    }
+  }
+}
+
+.buttons {
+  padding-bottom: 4rem;
+}
+.button-default {
+  padding-top: 3rem;
+}
+.button-grid {
+  height: 60px;
+  display: inline-grid;
+  grid-template-columns: auto 20px 100px;
+  grid-template-rows: auto auto 10px;
+  margin-bottom: 3rem;
+
+  .button-width {
+    position: relative;
+    margin-top: 0.75rem;
+  }      
+  .button-height {
+    position:relative;
+    margin-left:10px;
+  }
+  .button-dimension-height {
+    position: relative;
+  }
+  .button-dimension-width {
+    grid-column: 1;
+    grid-row: 3;
+  }
+} 
+.button-grid.feedback {
+  grid-template-columns: auto 24px 125px;
+  margin-bottom: 5rem;
+}
+.tertiary {
+  position: relative;
+  left: -10px;
+}
