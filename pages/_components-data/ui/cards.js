@@ -13,7 +13,7 @@ const cards_data = {
   specs() {
     return [
       {
-        markup: cards_data.defaultCardMarkup({ 
+        markup: cards_data.defaultCardWithGrid({ 
           img: '/images/tractor.png', 
           header: 'Example Card Headline',
           link: { text: 'Text Link', link: '#' },
@@ -30,8 +30,8 @@ const cards_data = {
         markup: cards_data.defaultCardMarkup({ 
           img: '/images/tractor.png', 
           header: 'Example Card Headline',
-          link: { text: 'Text Link', link: '#' },
-          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.`
+          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.`,
+          accent_top: true
         }),
         code: {
           'Card Container': `background: #FFFFFF;
@@ -44,7 +44,7 @@ const cards_data = {
     ]
   },
   resourceCardSingle() {
-    return cards_data.defaultCardMarkup({ 
+    return cards_data.resourceCardMarkup({ 
           img: '/images/usda-symbol.svg', 
           header: 'Example Card Headline',
           link: { text: 'External Link Headline', href: '#' },
@@ -85,13 +85,13 @@ const cards_data = {
   resourceCardSpecsWithoutLogo() {
     return [
       {
-        markup: cards_data.defaultCardMarkup({ 
+        markup: cards_data.resourceCardMarkup({ 
           link: { text: 'External Link Headline', href: '#' },
           description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.`,
           footnote: 'Same specs as resource cards with logo.' }),
       },
       {
-        markup: cards_data.defaultCardMarkup({ 
+        markup: cards_data.resourceCardMarkup({ 
           link: { text: 'External Link Headline', href: '#' },
           description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.`,
           footnote: 'Applies to both resource cards with and without logo.' }),
@@ -107,11 +107,43 @@ const cards_data = {
     let linkText      = (!!data && !!data.link && data.link.text) ? data.link.text : ''
     let linkHref      = (!!data && !!data.link && data.link.href) ? data.link.href : ''
     let description   = (!!data && data.description) ? data.description : ''
+    let accentTop     = (!!data && data.accent_top) ? ' accent-top' : ''
 
-    let markup = `<div>img: <img src="` + img + `" style="width: 100px;"><br> header: ` + header + `<br>link text: ` + linkText + `<br>link href: ` + linkHref + `<br>description: ` + description + `</div>`
+    let icon = img ? `<div class="img">
+                        <img src="` + img + `" alt="">
+                      </div>`
+                    : ``
+    let content = `<div class="headline">
+                      <h4>` + header + `</h4>
+                    </div>
+                    <div class="content">
+                      <p>` + description + `</p>
+                    </div>`
+    let link = linkText ? `<div class="link">
+                            <a class="text-link">` + linkText + `</a>
+                          </div>`
+                        : ``
+    let footnote = (!!data && data.footnote) ? `<div class="card-footnote">*` + data.footnote + `</div>` : ``
 
-    if(!!data && data.footnote) markup = markup + '<div class="card-footnote">*' + data.footnote + '</div>'
-    return markup
+    return `<div class="content-card` + accentTop + `">` + icon + content + link + footnote + `</div>`
+  },
+  defaultCardWithGrid(data) {
+    return cards_data.defaultCardMarkup(data)
+  },
+  resourceCardMarkup(data) {
+    let img = (data.img) ? `<div class="logo">
+                              <img src="` + data.img + `" alt="">
+                            </div>`
+                          : ``
+
+    let content = `<div class="link">
+                      <a class="external-link">External Link Headline</a>
+                    </div>
+                    <div class="content">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
+                    </div>`
+
+    return `<div class="resource-card">` + img + content + `</div>`
   }
 }
 

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Flickr Logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Social-Media-Button" transform="translate(-520.000000, -268.000000)">
+            <g id="Flickr-Logo" transform="translate(520.000000, 268.000000)">
+                <rect id="Rectangle-2-Copy-3" stroke="#0063DC" x="0.5" y="0.5" width="43" height="43" rx="2"></rect>
+                <g id="Group-2" transform="translate(12.000000, 18.000000)" fill-rule="nonzero">
+                    <path d="M9.13175569,4.64072096 C9.13175569,7.15416287 7.09430898,9.19161916 4.58085725,9.19161916 C2.06752838,9.19161916 0.0299591617,7.1540491 0.0299591617,4.64072096 C0.0299591617,2.12728024 2.06740599,0.0898223952 4.58085725,0.0898223952 C7.09418611,0.0898223952 9.13175569,2.12739281 9.13175569,4.64072096 Z" id="path4776" fill="#0063DC"></path>
+                    <path d="M19.9101653,4.64072096 C19.9101653,7.15416647 17.8726587,9.19161916 15.3592683,9.19161916 C12.8458766,9.19161916 10.8083701,7.1540515 10.8083701,4.64072096 C10.8083701,2.12727665 12.8458766,0.0898227545 15.3592683,0.0898227545 C17.8726587,0.0898227545 19.9101653,2.12739042 19.9101653,4.64072096 Z" id="path4778" fill="#FF0084"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -18,8 +18,8 @@
       <li>Main navigation links</li>
       <li>Official government website banner</li>
       <li>Search bar: allow users to search key terms on the site</li>
-      <li>Utility navigation links <i>(optional)</i></li>
-      <li>Callout button <i>(optional)</i>: can be used for actions like sign in, or sign up. There should only be one action associated with the callout button.</li>
+      <li>Utility navigation links <em>(optional)</em></li>
+      <li>Callout button <em>(optional)</em>: can be used for actions like sign in, or sign up. There should only be one action associated with the callout button.</li>
     </ul>
 
     [ HEADER EXAMPLE 1 ]

@@ -21,15 +21,16 @@
 
     <h3>Examples</h3>
    
-    <ExampleRow :data="specs" columns="3" />
+    <ExampleRow :data="specs" columns="2" />
 
     <h3>Resource Cards</h3>
     <p>
       Resource cards are used to display a link to another website or web page that provide additional information about a single subject. They contain a brief overview of the resource, link to the website or web page, and a logo of the organization, if available.
     </p>
 
-    <div v-html="resource_card_single" />
-
+    <div class="row">
+      <div v-html="resource_card_single" class="medium-5" />
+    </div>
     <h3>Specs</h3>
     <p>
       Card height and width are flexible based on different use cases. Resource cards are most commonly used in a &frac13; grid layout. They can be used with or without a logo. All elements should stay within the specified padding requirements below. 
@@ -37,7 +38,9 @@
 
     <h4>Default with Logo</h4>
 
-    <div v-html="resource_card_single" />
+    <div class="row">
+      <div v-html="resource_card_single" class="medium-5" />
+    </div>
     <ExampleRow :data="resource_card_specs" columns="4" />
 
     <h4>Default without Logo</h4>
