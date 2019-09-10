@@ -53,15 +53,20 @@
                       { name: 'Checkboxes', path: '/ui/Checkboxes'},
                       { name: 'Dividers', path: '/ui/Dividers'},
                       { name: 'Dropdowns', path: '/ui/Dropdowns'},
+                      { name: 'Icons', path: '/ui/Icons'},
+                      { name: 'Images', path: '/ui/Images'},
+                      { name: 'Links', path: '/ui/Links'},
                       { name: 'Radio Buttons', path: '/ui/RadioButtons'},
+                      { name: 'Stepper', path: '/ui/Stepper'},
+                      { name: 'Tables', path: '/ui/Tables'},
                     ]
           },
-          // {
-          //   category: 'Navigation',
-          //   links:  [
-          //             { name: 'Breadcrumbs', path: '/navigation/Breadcrumbs'},
-          //           ]
-          // }
+          {
+            category: 'Navigation',
+            links:  [
+                      { name: 'Breadcrumb', path: '/navigation/Breadcrumb'},
+                    ]
+          }
         ]
       }
     },
