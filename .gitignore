@@ -86,17 +86,17 @@ sw.*
 modules
 
 # FROM: farmers_update/assets
-assets/design-site/assets
+static/design-site/assets
 
 # FROM: farmers module fonts folder
 # IMPORTANT: Had to combine img folder from module with Drupal site images: docroot/themes/farmers/img
-assets/design-site/fonts
-assets/design-site/img
+static/design-site/fonts
+static/design-site/img
 
 # ALSO FROM: docroot/themes/farmers/img
 # COMBINED WITH: docroot/themes/farmers_update/assets/img
-assets/design-site/files/img
+static/design-site/files/img
 
 # FROM: docroot/themes/farmers
-assets/design-site/files/sass/farmers/images
+static/design-site/files/sass/farmers/images
 
