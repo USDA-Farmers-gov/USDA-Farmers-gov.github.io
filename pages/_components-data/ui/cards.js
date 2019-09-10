@@ -193,11 +193,11 @@ const cards_data = {
 
                   <div class="resource-card-left dashed-blue dashed-blue-vertical"></div>
                   <div class="resource-card-left-span span-blue span-blue-vertical"></div>
-                  <div class="resource-card-left-dimension dimension-blue dimension-blue-vertical">32px</div>
+                  <div class="resource-card-left-dimension dimension-blue dimension-blue-vertical">20px</div>
 
                   <div class="resource-card-right dashed-blue dashed-blue-vertical"></div>
                   <div class="resource-card-right-span span-blue span-blue-vertical"></div>
-                  <div class="resource-card-right-dimension dimension-blue dimension-blue-vertical">32px</div>
+                  <div class="resource-card-right-dimension dimension-blue dimension-blue-vertical">20px</div>
 
                 </div>`
     return grid
