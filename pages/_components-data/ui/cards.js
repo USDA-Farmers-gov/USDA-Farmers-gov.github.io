@@ -128,7 +128,25 @@ const cards_data = {
     return `<div class="content-card` + accentTop + `">` + icon + content + link + footnote + `</div>`
   },
   defaultCardWithGrid(data) {
-    return cards_data.defaultCardMarkup(data)
+    let grid = `<div class="default-card-grid">` 
+                  + cards_data.defaultCardMarkup(data) +
+                  `<div class="default-card-top dashed-red dashed-red-horizontal"></div>
+                  <div class="default-card-top-span span-red span-red-horizontal"></div>
+                  <div class="default-card-top-dimension dimension-red dimension-red-horizontal">20px</div>
+
+                  <div class="default-card-bottom dashed-red dashed-red-horizontal"></div>
+                  <div class="default-card-bottom-span span-red span-red-horizontal"></div>
+                  <div class="default-card-bottom-dimension dimension-red dimension-red-horizontal">20px</div>
+
+                  <div class="default-card-left dashed-blue dashed-blue-vertical"></div>
+                  <div class="default-card-left-span span-blue span-blue-vertical"></div>
+                  <div class="default-card-left-dimension dimension-blue dimension-blue-vertical">20px</div>
+
+                  <div class="default-card-right dashed-blue dashed-blue-vertical"></div>
+                  <div class="default-card-right-span span-blue span-blue-vertical"></div>
+                  <div class="default-card-right-dimension dimension-blue dimension-blue-vertical">20px</div>
+                </div>`
+    return grid
   },
   resourceCardMarkup(data) {
     let img = (data.img) ? `<div class="logo">
@@ -144,6 +162,42 @@ const cards_data = {
                     </div>`
 
     return `<div class="resource-card">` + img + content + `</div>`
+  },
+  resourceCardGrid() {
+    let data = { 
+          img: '/images/usda-symbol.svg', 
+          header: 'Example Card Headline',
+          link: { text: 'External Link Headline', href: '#' },
+          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+        }
+    let grid = `<div class="resource-card-grid">` 
+                  + cards_data.resourceCardMarkup(data) +
+                  `<div class="resource-card-top dashed-red dashed-red-horizontal"></div>
+                  <div class="resource-card-top-span span-red span-red-horizontal"></div>
+                  <div class="resource-card-top-dimension dimension-red dimension-red-horizontal">32px</div>
+
+                  <div class="resource-card-above-link dashed-red dashed-red-horizontal"></div>
+                  <div class="resource-card-above-link-span span-red span-red-horizontal"></div>
+                  <div class="resource-card-above-link-dimension dimension-red dimension-red-horizontal">16px</div>
+
+                  <div class="resource-card-below-link dashed-red dashed-red-horizontal"></div>
+                  <div class="resource-card-below-link-span span-red span-red-horizontal"></div>
+                  <div class="resource-card-below-link-dimension dimension-red dimension-red-horizontal">8px</div>
+
+                  <div class="resource-card-bottom dashed-red dashed-red-horizontal"></div>
+                  <div class="resource-card-bottom-span span-red span-red-horizontal"></div>
+                  <div class="resource-card-bottom-dimension dimension-red dimension-red-horizontal">32px</div>
+
+                  <div class="resource-card-left dashed-blue dashed-blue-vertical"></div>
+                  <div class="resource-card-left-span span-blue span-blue-vertical"></div>
+                  <div class="resource-card-left-dimension dimension-blue dimension-blue-vertical">32px</div>
+
+                  <div class="resource-card-right dashed-blue dashed-blue-vertical"></div>
+                  <div class="resource-card-right-span span-blue span-blue-vertical"></div>
+                  <div class="resource-card-right-dimension dimension-blue dimension-blue-vertical">32px</div>
+
+                </div>`
+    return grid
   }
 }
 

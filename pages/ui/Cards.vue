@@ -29,7 +29,7 @@
     </p>
 
     <div class="row">
-      <div v-html="resource_card_single" class="medium-5" />
+      <div v-html="resource_card_with_grid" class="medium-5" />
     </div>
     <h3>Specs</h3>
     <p>
@@ -75,6 +75,7 @@
               description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.`
         }),
         resource_card_single: cards_data.resourceCardSingle(),
+        resource_card_with_grid: cards_data.resourceCardGrid(),
         specs: cards_data.specs(),
         card_specs_no_logo: cards_data.resourceCardSpecsWithoutLogo(),
         resource_card_specs: cards_data.resourceCardSpecs()
