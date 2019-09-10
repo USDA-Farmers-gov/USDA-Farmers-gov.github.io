@@ -5,13 +5,13 @@ const links_data = {
         header: 'Default',
         markup: '', 
         code: {
-          text: `color: #006546;
+          'Text': `color: #006546;
             font-family: Public Sans;
             font-size: 20px;
             font-weight: bold;
             line-height: 26px;
             text-decoration: underline;`,
-          icon: `color: #212121;
+          'Icon': `color: #212121;
             size: 20x20;`
         }
       },
@@ -19,7 +19,7 @@ const links_data = {
         header: 'Hover',
         markup: '', 
         code: {
-          text: `color: #49A564;`
+          'Text': `color: #49A564;`
         }
       },
       { 
@@ -27,7 +27,7 @@ const links_data = {
         markup: '', 
         classes: 'focus',
         code: {
-          text: `color: #49A564;
+          'Text': `color: #49A564;
             shadow: #1B69D3;`
         }
       },
@@ -36,7 +36,7 @@ const links_data = {
         markup: '', 
         classes: 'visited',
         code: {
-          text: `color: #4C2C92;`
+          'Text': `color: #4C2C92;`
         }
       }
     ]
@@ -47,13 +47,13 @@ const links_data = {
         header: 'Default',
         markup: '', 
         code: {
-          text: `color: #006546;
+          'Text': `color: #006546;
             font-family: Public Sans;
             font-size: 20px;
             font-weight: bold;
             line-height: 26px;
             text-decoration: underline;`,
-          icon: `color: #006546;
+          'Icon': `color: #006546;
             size: 12x12;`
         }
       },
@@ -61,8 +61,8 @@ const links_data = {
         header: 'Hover',
         markup: '', 
         code: {
-          text: `color: #49A564;`,
-          icon: `color: #49A564;`
+          'Text': `color: #49A564;`,
+          'Icon': `color: #49A564;`
         }
       },
       { 
@@ -70,9 +70,9 @@ const links_data = {
         markup: '', 
         classes: 'focus',
         code: {
-          text: `color: #49A564;
+          'Text': `color: #49A564;
             shadow: #1B69D3;`,
-          icon: `color: #49A564;`
+          'Icon': `color: #49A564;`
         }
       },
       { 
@@ -80,8 +80,8 @@ const links_data = {
         markup: '', 
         classes: 'visited',
         code: {
-          text: `color: #4C2C92;`,
-          icon: `color: #4C2C92;`
+          'Text': `color: #4C2C92;`,
+          'Icon': `color: #4C2C92;`
         }
       }
     ]
@@ -92,7 +92,7 @@ const links_data = {
         header: 'Default',
         markup: '', 
         code: {
-          text: `color: #006546;
+          'Text': `color: #006546;
             font-family: Public Sans;
             font-size: 18px;
             font-weight: regular;
@@ -104,7 +104,7 @@ const links_data = {
         header: 'Hover',
         markup: '', 
         code: {
-          text: `font-weight: bold;`
+          'Text': `font-weight: bold;`
         }
       },
       { 
@@ -112,7 +112,7 @@ const links_data = {
         markup: '', 
         classes: 'focus',
         code: {
-          text: `font-weight: bold;
+          'Text': `font-weight: bold;
             shadow: #1B69D3;`
         }
       },
@@ -121,7 +121,7 @@ const links_data = {
         markup: '', 
         classes: 'visited',
         code: {
-          text: `color: #4C2C92;`
+          'Text': `color: #4C2C92;`
         }
       }
     ]
@@ -132,13 +132,13 @@ const links_data = {
         header: 'Default',
         markup: '', 
         code: {
-          text: `color: #006546;
+          'Text': `color: #006546;
             font-family: Public Sans;
             font-size: 18px;
             font-weight: regular;
             line-height: 28px;
             text-decoration: underline;`,
-          icon: `color: #49A564;
+          'Icon': `color: #49A564;
             size: 18x14;`
         }
       },
@@ -146,7 +146,7 @@ const links_data = {
         header: 'Hover',
         markup: '', 
         code: {
-          text: `font-weight: bold;`
+          'Text': `font-weight: bold;`
         }
       },
       { 
@@ -154,7 +154,7 @@ const links_data = {
         markup: '', 
         classes: 'focus',
         code: {
-          text: `font-weight: bold;
+          'Text': `font-weight: bold;
             shadow: #1B69D3;`
         }
       },
@@ -163,7 +163,7 @@ const links_data = {
         markup: '', 
         classes: 'visited',
         code: {
-          text: `color: #4C2C92;`
+          'Text': `color: #4C2C92;`
         }
       }
     ]

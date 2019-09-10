@@ -8,7 +8,7 @@ const dividers_data = {
                     <div class="highlight dashed-red dashed-red-horizontal"></div>
                     <div class="double-line"></div>
                   </div>`,
-            code: { line: `border: 2px solid #BBBBBB;` }
+            code: { 'Line': `border: 2px solid #BBBBBB;` }
           }
         ]
   },
@@ -18,21 +18,21 @@ const dividers_data = {
           header: 'Used with Icon',
           code: 
             {
-              line: `border: 1px solid #DBEDE0;`,
-              icon: `color: #49A564;
+              'Line': `border: 1px solid #DBEDE0;`,
+              'Icon': `color: #49A564;
                 size: 25x20`
             }
         },
         {
           header: 'Used without Icon',
-          code: { line: `border: 1px solid #BBBBBB;` }
+          code: { 'Line': `border: 1px solid #BBBBBB;` }
         },
       ]
   },
   secondarySpecs() {
     return [
           {
-            code: { line: `border: 1px dotted #BBBBBB;` }
+            code: { 'Line': `border: 1px dotted #BBBBBB;` }
           }
         ]
   }

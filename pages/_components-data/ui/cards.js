@@ -20,10 +20,10 @@ const cards_data = {
           description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.`
         }),
         code: {
-          card_container: `background: #FFFFFF;
+          'Card Container': `background: #FFFFFF;
             box-shadow: 0 1px 4px 0 #BBBBBB;
             border-radius: 2px;`,
-          "green_accent_line_(optional)": `color: #006546;`
+          'Green Accent Line (optional)': `color: #006546;`
         }
       },
       {
@@ -34,10 +34,10 @@ const cards_data = {
           description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.`
         }),
         code: {
-          card_container: `background: #FFFFFF;
+          'Card Container': `background: #FFFFFF;
             box-shadow: 0 1px 4px 0 #BBBBBB;
             border-radius: 2px;`,
-          "green_accent_line_(options)": `color: #006546;
+          'Green Accent Line (options)': `color: #006546;
             border-radius: 2px 2px 0 0;`
         }
       },
@@ -55,18 +55,30 @@ const cards_data = {
     return [
       {
         code: {
-          card_container: `background: #FFFFFF;
-            box-shadow: 0 1px 4px 0 #BBBBBB;
-            border-radius: 2px;`,
-          green_accent_line: `color: #006546;
-            border-radius: 2px 2px 0 0;`,
-          link: `Use appropriate link style from <nuxt-link to="ui/Links">Links</nuxt-link> page`,
-          body_text: `font-family: Public Sans
-            font-size: 18px;
-            color: #212121;
-            line-height: 28px;
-            font-weight: regular;`,
-        }      
+        'Card Container': `background: #FFFFFF;
+          box-shadow: 0 1px 4px 0 #BBBBBB;
+          border-radius: 2px;`
+        }
+      },
+      {
+        code: {
+        'Green Accent Line': `color: #006546;
+          border-radius: 2px 2px 0 0;`
+        }
+      },
+      {
+        code: {
+        'Link': `Use appropriate link style from <nuxt-link to="ui/Links">Links</nuxt-link> page`
+        }
+      },
+      {
+        code: {
+        'Body Text': `font-family: Public Sans
+          font-size: 18px;
+          color: #212121;
+          line-height: 28px;
+          font-weight: regular;`
+        }  
       }      
     ]
   },
@@ -84,7 +96,7 @@ const cards_data = {
           description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.`,
           footnote: 'Applies to both resource cards with and without logo.' }),
         code: {
-          card_container: `box-shadow: 0 4px 16px 0 #BBBBBB;`
+          'Card Container': `box-shadow: 0 4px 16px 0 #BBBBBB;`
         }
       }
     ]

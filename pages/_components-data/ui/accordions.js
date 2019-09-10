@@ -178,7 +178,7 @@ const accordions_data = {
       return [
         {
           markup: accordions_data.defaultAccordionDimensions(),
-            code: { background: `color: #FFFFFF;
+            code: { 'Background': `color: #FFFFFF;
                           shadow: 0;1;4;0 #BBBBBB;` }
         }
       ]
@@ -187,7 +187,7 @@ const accordions_data = {
       return [
         {
           code: { 
-            text: `color: #212121;
+            'Text': `color: #212121;
                   font-family: Public Sans;
                   font-size: 23px;
                   font-weight: bold;
@@ -196,13 +196,13 @@ const accordions_data = {
         },
         {
           code: { 
-            background: `color: #FFFFFF;
+            'Background': `color: #FFFFFF;
                   shadow: 0;1;4;0 #BBBBBB;`, 
           }
         },
                 {
           code: { 
-            icon: `color: #49A564;
+            'Icon': `color: #49A564;
                   size: 32x32;`
           }
         }

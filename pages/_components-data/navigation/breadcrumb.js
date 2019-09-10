@@ -4,7 +4,7 @@ const breadcrumb_data = {
       {
         markup: '[ PARENT PAGE LINK ]',
         code: {
-          parent_page_link: `font-family: Public Sans
+          'Parent Page Link': `font-family: Public Sans
             font-size: 12px;
             color: #006546;
             font-weight: regular;
@@ -15,7 +15,7 @@ const breadcrumb_data = {
       {
         markup: '[ PARENT PAGE LINK HOVER ]',
         code: {
-          parent_page_link_hover: `font-family: Public Sans
+          'Parent Page Link Hover': `font-family: Public Sans
             font-size: 12px;
             color: #006546;
             font-weight: bold;
@@ -26,7 +26,7 @@ const breadcrumb_data = {
       {
         markup: '[ CURRENT PAGE TITLE ]',
         code: {
-          current_page_text: `font-family: Public Sans
+          'Current Page Text': `font-family: Public Sans
             font-size: 12px;
             color: #212121;
             font-weight: bold;
@@ -35,7 +35,7 @@ const breadcrumb_data = {
         },
         {
         code: {
-          background: `color: #F7F7F7;`
+          'Background': `color: #F7F7F7;`
           }
         }
       ]

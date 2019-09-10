@@ -33,7 +33,7 @@ const tables_data = {
     return [
       {
         code: {
-        heading_text: `font-family: Public Sans
+        'Heading Text': `font-family: Public Sans
           font-weight: Bold;
           font-size: 18px;
           color: #212121;
@@ -42,7 +42,7 @@ const tables_data = {
       },
       {
         code: {
-          cell_text: `font-family: Public Sans
+          'Cell Text': `font-family: Public Sans
           font-weight: Regular;
           font-size: 18px;
           color: #212121;
@@ -51,15 +51,15 @@ const tables_data = {
       },
       {
         code: {
-          header_cell_background: `background: #EDEDED;
+          'Header Cell Background': `background: #EDEDED;
             border: 1px #BBBBBB;`,
-          cell_background_colors: `background: #FFFFFF;
+          'Cell Background Colors': `background: #FFFFFF;
             background: #F7F7F7;`
         }
       },
       {
         code: {
-          table_container: `border: 1px #BBBBBB;
+          'Table Container': `border: 1px #BBBBBB;
             border-radius: 2px;`,
         }
       },

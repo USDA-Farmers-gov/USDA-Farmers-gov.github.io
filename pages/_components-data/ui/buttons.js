@@ -5,10 +5,10 @@ const buttons_data = {
           header: 'Default', 
           markup: buttons_data.outputButtonMarkup('', true),
           code: {
-            background: `border-radius: 4px;
+            'Background': `border-radius: 4px;
                         color: #1A6AD3;
                         shadow: 0;1;4;0  #BBBBBB;`, 
-            text: `color: #FFFFFF;
+            'Text': `color: #FFFFFF;
                     font-family: "Public Sans";
                     font-size: 16px;
                     font-weight: bold;
@@ -20,10 +20,10 @@ const buttons_data = {
           classes: 'sm-btn', 
           markup: buttons_data.outputButtonMarkup('sm-btn', true),
           code: {
-            background: `border-radius: 4px;
+            'Background': `border-radius: 4px;
                         color: #1A6AD3;
                         shadow: 0;1;4;0  #BBBBBB;`, 
-            text: `color: #FFFFFF;
+            'Text': `color: #FFFFFF;
                     font-family: "Public Sans";
                     font-size: 16px;
                     font-weight: bold;
@@ -35,10 +35,10 @@ const buttons_data = {
           classes: 'lg-btn', 
           markup: buttons_data.outputButtonMarkup('lg-btn', true),
           code: {
-            background: `border-radius: 4px;
+            'Background': `border-radius: 4px;
                         color: #1A6AD3;
                         shadow: 0;1;4;0  #BBBBBB;`, 
-            text: `color: #FFFFFF;
+            'Text': `color: #FFFFFF;
                     font-family: "Public Sans";
                     font-size: 20px;
                     font-weight: bold;
@@ -53,25 +53,25 @@ const buttons_data = {
           header: 'Hover', 
           classes: 'hover-color', 
           markup: buttons_data.outputButtonMarkup('hover-color'), 
-          code: { background: 'color: #004785;' } 
+          code: { 'Background': 'color: #004785;' } 
         },
         { 
           header: 'Active', 
           classes: 'active-color', 
           markup: buttons_data.outputButtonMarkup('active-color'), 
-          code: { background: 'color: #122E51;' } 
+          code: { 'Background': 'color: #122E51;' } 
         },
         { 
           header: 'Focus', 
           classes: 'focus-color', 
           markup: buttons_data.outputButtonMarkup('focus-color'), 
-          code: { background: 'shadow: #1B69D3;' } 
+          code: { 'Background': 'shadow: #1B69D3;' } 
         },
         { 
           header: 'Disabled', 
           classes: 'disabled', 
           markup: buttons_data.outputButtonMarkup('disabled'), 
-          code: { background: 'color: #BBBBBB;' } 
+          code: { 'Background': 'color: #BBBBBB;' } 
         }
       ]
   },
@@ -82,11 +82,11 @@ const buttons_data = {
           classes: 'outline', 
           markup: buttons_data.outputButtonMarkup('outline', true),
           code: {
-            background: `border: 1px #1A6AD3;
+            'Background': `border: 1px #1A6AD3;
                         border-radius: 4px;
                         color: #FFFFFF;
                         shadow: 0;1;4;0  #BBBBBB;`, 
-            text: `color: #1A6AD3;
+            'Text': `color: #1A6AD3;
                     font-family: "Public Sans";
                     font-size: 16px;
                     font-weight: bold;
@@ -98,11 +98,11 @@ const buttons_data = {
           classes: 'sm-btn outline', 
           markup: buttons_data.outputButtonMarkup('sm-btn outline', true),
           code: {
-            background: `border: 1px #1A6AD3;
+            'Background': `border: 1px #1A6AD3;
                         border-radius: 4px;
                         color: #FFFFFF;
                         shadow: 0;1;4;0  #BBBBBB;`, 
-            text: `color: #1A6AD3;
+            'Text': `color: #1A6AD3;
                     font-family: "Public Sans";
                     font-size: 16px;
                     font-weight: bold;
@@ -114,11 +114,11 @@ const buttons_data = {
           classes: 'lg-btn outline', 
           markup: buttons_data.outputButtonMarkup('lg-btn outline', true),
           code: {
-            background: `border: 1px #1A6AD3;
+            'Background': `border: 1px #1A6AD3;
                         border-radius: 4px;
                         color: #FFFFFF;
                         shadow: 0;1;4;0  #BBBBBB;`, 
-            text: `color: #1A6AD3;
+            'Text': `color: #1A6AD3;
                     font-family: "Public Sans";
                     font-size: 20px;
                     font-weight: bold;
@@ -134,8 +134,8 @@ const buttons_data = {
           classes: 'hover-color outline',
           markup: buttons_data.outputButtonMarkup('hover-color outline'), 
           code: {
-            background: 'border: #004785;', 
-            text: 'color: #004785;' 
+            'Background': 'border: #004785;', 
+            'Text': 'color: #004785;' 
           }
         },
         { 
@@ -143,8 +143,8 @@ const buttons_data = {
           classes: 'active-color outline', 
           markup: buttons_data.outputButtonMarkup('active-color outline'), 
           code: {
-            background: 'border: #122E51;', 
-            text: 'color: #122E51;' 
+            'Background': 'border: #122E51;', 
+            'Text': 'color: #122E51;' 
           }
         },
         { 
@@ -152,8 +152,8 @@ const buttons_data = {
           classes: 'focus-color outline',
           markup: buttons_data.outputButtonMarkup('focus-color outline'), 
           code: {
-            background: 'shadow: #1B69D3;', 
-            text: 'color: #122E51;' 
+            'Background': 'shadow: #1B69D3;', 
+            'Text': 'color: #122E51;' 
           }
         },
         { 
@@ -161,8 +161,8 @@ const buttons_data = {
           classes: 'disabled outline',
           markup: buttons_data.outputButtonMarkup('disabled outline'), 
           code: {
-            background: 'border: #BBBBBB;', 
-            text: 'color: #BBBBBB;' 
+            'Background': 'border: #BBBBBB;', 
+            'Text': 'color: #BBBBBB;' 
           }
         }
       ]
@@ -172,7 +172,8 @@ const buttons_data = {
         {
           class: 'tertiary',
           markup: buttons_data.outputButtonMarkup('tertiary'), 
-          code: { text: `color: #1A6AD3;
+          code: { 
+              'Text': `color: #1A6AD3;
                   font-family: "Public Sans";
                   font-size: 16px;
                   font-weight: bold;
@@ -187,25 +188,25 @@ const buttons_data = {
           header: 'Hover', 
           classes: 'hover-color tertiary', 
           markup: buttons_data.outputButtonMarkup('hover-color tertiary'),
-          code: { text: 'color: #004785;' } 
+          code: { 'Text': 'color: #004785;' } 
         },
         { 
           header: 'Active', 
           classes: 'active-color tertiary',
           markup: buttons_data.outputButtonMarkup('active-color tertiary'),
-          code: { text: 'color: #122E51;' } 
+          code: { 'Text': 'color: #122E51;' } 
         },
         { 
           header: 'Focus', 
           classes: 'focus-color tertiary', 
           markup: buttons_data.outputButtonMarkup('focus-color tertiary'),
-          code: { text: 'shadow: #1B69D3;' } 
+          code: { 'Text': 'shadow: #1B69D3;' } 
         },
         { 
           header: 'Disabled', 
           classes: 'disabled tertiary', 
           markup: buttons_data.outputButtonMarkup('disabled tertiary'),
-          code: { text: 'color: #BBBBBB;' } 
+          code: { 'Text': 'color: #BBBBBB;' } 
         }
       ]
   },
@@ -216,11 +217,11 @@ const buttons_data = {
           classes: 'feedback', 
           markup: buttons_data.outputButtonMarkup('feedback', true),
           code: {
-            background: `border: 2px #1A6AD3;
+            'Background': `border: 2px #1A6AD3;
                         color: #FFFFFF;
                         shadow: 0;1;4;0
                         #BBBBBB;`, 
-            text: `color: #1A6AD3;
+            'Text': `color: #1A6AD3;
                     font-family: "Public Sans";
                     font-size: 16px;
                     font-weight: bold;
@@ -232,8 +233,8 @@ const buttons_data = {
           classes: 'hover-color feedback', 
           markup: buttons_data.outputButtonMarkup('hover-color feedback'),
           code: {
-            background: 'border: 2px #004785;', 
-            text: 'color: #004785;'
+            'Background': 'border: 2px #004785;', 
+            'Text': 'color: #004785;'
           }
         },
         { 
@@ -241,8 +242,8 @@ const buttons_data = {
           classes: 'active-color feedback', 
           markup: buttons_data.outputButtonMarkup('active-color feedback'),
           code: {
-            background: 'border: 2px #122E51;', 
-            text: 'color: #122E51;' 
+            'Background': 'border: 2px #122E51;', 
+            'Text': 'color: #122E51;' 
           }
         },
         { 
@@ -250,9 +251,9 @@ const buttons_data = {
           classes: 'focus-color feedback', 
           markup: buttons_data.outputButtonMarkup('focus-color feedback'),
           code: {
-            background: `border: 2px #122E51;
+            'Background': `border: 2px #122E51;
                            shadow: #1B69D3;`, 
-            text: 'color: #122E51;' 
+            'Text': 'color: #122E51;' 
           }
         }
       ]

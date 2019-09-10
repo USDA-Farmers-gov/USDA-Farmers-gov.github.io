@@ -4,14 +4,14 @@ const stepper_data = {
       {
         markup: '',
         code: {
-          stepper_background: `background: #49A564;`,
-          stepper_line: `border: 2px #BBBBBB;`
+          'Stepper Background': `background: #49A564;`,
+          'Stepper Line': `border: 2px #BBBBBB;`
         }
       },
       {
         markup: '',
         code: {
-          stepper_number: `font-family: Public Sans
+          'Stepper Number': `font-family: Public Sans
             font-weight: Bold;
             font-size: 20px;
             color: #FFFFFF;
@@ -21,7 +21,7 @@ const stepper_data = {
       {
         markup: '',
         code: {
-          question_text: `font-family: Public Sans
+          'Question Text': `font-family: Public Sans
             font-weight: Bold;
             font-size: 28px;
             color: #212121;
@@ -31,7 +31,7 @@ const stepper_data = {
       {
         markup: '',
         code: {
-          supporting_text: `font-family: Public Sans
+          'Supporting Text': `font-family: Public Sans
             font-weight: Regular;
             font-size: 18px;
             color: #212121;

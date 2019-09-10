@@ -13,7 +13,7 @@ const radio_buttons_data = {
               header: 'Unselected',
               markup: radio_buttons_data.outputRadioButtonMarkup({ label: 'Radio Label', showDimensions: true }),
               code: {
-                background: `color: #FFFFFF;
+                'Background': `color: #FFFFFF;
                               border: 2px #707070;`
               }
             },
@@ -21,20 +21,20 @@ const radio_buttons_data = {
               header: 'Selected',
               markup: radio_buttons_data.outputRadioButtonMarkup({ label: 'Radio Label', checked: true }),
               code: {
-                background: `color: #006546;
+                'Background': `color: #006546;
                               border: 2px #006546;`,
               }
             },
             {
               header: 'Focused',
               markup: radio_buttons_data.outputRadioButtonMarkup({ label: 'Radio Label', labelClasses: 'focus', checked: true }),
-              code: { background: `shadow: #1B69D3;` }
+              code: { 'Background': `shadow: #1B69D3;` }
             },
             {
               header: 'Disabled',
               markup: radio_buttons_data.outputRadioButtonMarkup({ label: 'Radio Label', disabled: true }),
               code: { 
-                      background: `color: #F7F7F7;
+                      'Background': `color: #F7F7F7;
                               border: 2px #BBBBBB;`
                     }
             },
@@ -47,11 +47,11 @@ const radio_buttons_data = {
               classes_cell: 'dimension-margins',
               markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', image: '/images/MFP2-icon.jpg', name: 'specs-1' }),
               code: {
-                card: `background: #FFFFFF;
+                'Card': `background: #FFFFFF;
                       border: 2px #BBBBBB;
                       box-shadow: 0 1px 4px 0 #BBBBBB;
                       border-radius: 2px;`,
-                radio_button: `background: #FFFFFF;
+                'Radio Button': `background: #FFFFFF;
                       border: 2px #49A564;`
               }
             },
@@ -59,11 +59,11 @@ const radio_buttons_data = {
               header: 'Selected',
               markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', image: '/images/MFP2-icon.jpg', name: 'specs-1', checked: true, showCardDimensions: true }),
               code: {
-                card: `background: #FFFFFF;
+                'Card': `background: #FFFFFF;
                     border: 2px #49A564;
                     box-shadow: 0 1px 4px 0 #BBBBBB;
                     border-radius: 2px;`,
-                radio_button:  `background: #49A564;
+                'Radio Button':  `background: #49A564;
                     border-radius: 2px;`
               }
             }
@@ -75,8 +75,8 @@ const radio_buttons_data = {
               header: 'Hover',
               markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', image: '/images/MFP2-icon.jpg', name: 'specs-2', hover: true }),
               code: {
-                card: `border: 2px #49A564;`,
-                radio_button: `background: #FFFFFF;
+                'Card': `border: 2px #49A564;`,
+                'Radio Button': `background: #FFFFFF;
                         border: 2px #49A564;`
               }
             },
@@ -84,8 +84,8 @@ const radio_buttons_data = {
               header: 'Focus',
               markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', labelClasses: 'focus', image: '/images/MFP2-icon.jpg', name: 'specs-2', checked: true }),
               code: {
-                card: `shadow: #1B69D3;`,
-                radio_button: `background: #49A564;
+                'Card': `shadow: #1B69D3;`,
+                'Radio Button': `background: #49A564;
                         border-radius: 2px;`
               }
             },
@@ -93,8 +93,8 @@ const radio_buttons_data = {
               header: 'Disabled',
               markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', image: '/images/MFP2-icon.jpg', name: 'specs-2', disabled: true }),
               code: {
-                card: `border: 2px #BBBBBB;`,
-                radio_button: `background: #F7F7F7;
+                'Card': `border: 2px #BBBBBB;`,
+                'Radio Button': `background: #F7F7F7;
                         border: 2px #BBBBBB;`
               }
             }

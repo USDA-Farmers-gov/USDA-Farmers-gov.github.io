@@ -24,7 +24,7 @@ const dropdowns_data = {
     return [
           { 
             code: { 
-                      dropdown_label: `font-family: Public Sans;
+                      'Dropdown Label': `font-family: Public Sans;
                               font-size: 16px;
                               line-height: 26px;
                               color: #212121;
@@ -33,14 +33,14 @@ const dropdowns_data = {
           },
           { 
             code: { 
-                      dropdown_box: `background: #FFFFFF;
+                      'Dropdown Box': `background: #FFFFFF;
                             border: 1px #707070;
                             border-radius: 2px;`
                   }
           },
           { 
             code: {
-                      dropdown_box_text: `font-family: Public Sans
+                      'Dropdown Box Text': `font-family: Public Sans
                                 font-size: 16px;
                                 line-height: 20px;
                                 color: #212121;
@@ -55,7 +55,7 @@ const dropdowns_data = {
         header: 'Hover', 
         markup: dropdowns_data.getDropdownMarkup('Dropdown Label', selectOptions, { selectClasses: 'hover' }),
         code: {
-          dropdown_box: `background: #DBEDE0;
+          'Dropdown Box': `background: #DBEDE0;
                         border: 1px #212121;`, 
         }
       },
@@ -63,16 +63,16 @@ const dropdowns_data = {
         header: 'Focus', 
         markup: dropdowns_data.getDropdownMarkup('Dropdown Label', selectOptions, { selectClasses: 'focus' }),
         code: {
-          dropdown_box: `shadow: #1B69D3;`, 
+          'Dropdown Box': `shadow: #1B69D3;`, 
         }
       },
       { 
         header: 'Disabled', 
         markup: dropdowns_data.getDropdownMarkup('Dropdown Label', selectOptions, { selectClasses: 'disabled', disabled: true }),
         code: {
-          dropdown_box: `background: #F7F7F7;
+          'Dropdown Box': `background: #F7F7F7;
                           border: 1px #BBBBBB;`, 
-          dropdown_box_text: `color: #BBBBBB;`
+          'Dropdown Box Text': `color: #BBBBBB;`
         }
       }
     ]

@@ -7,7 +7,7 @@ const checkboxes_data = {
             header: 'Unselected',
             markup: checkboxes_data.outputCheckboxMarkup({ label: 'Checkbox Label', showDimensions: true }),
             code: {
-              background: `color: #FFFFFF;
+              'Background': `color: #FFFFFF;
                         border: 2px #707070;
                         border-radius: 2px;`
             }
@@ -16,21 +16,21 @@ const checkboxes_data = {
             header: 'Selected',
             markup: checkboxes_data.outputCheckboxMarkup({ label: 'Checkbox Label', checked: true }),
             code: {
-              background: `color: #006546;`,
-              checkmark: `color: #FFFFFF;`
+              'Background': `color: #006546;`,
+              'Checkmark': `color: #FFFFFF;`
             }
           },
           {
             header: 'Focused',
             markup: checkboxes_data.outputCheckboxMarkup({ label: 'Checkbox Label', labelClass: 'focus' }),
-            code: { background: `shadow: #1B69D3;` }
+            code: { 'Background': `shadow: #1B69D3;` }
           },
           {
             header: 'Disabled',
             classes: '',
             markup: checkboxes_data.outputCheckboxMarkup({ label: 'Checkbox Label', disabled: true }),
             code: { 
-                    background: `color: #F7F7F7;
+                    'Background': `color: #F7F7F7;
                         border: 2px #BBBBBB;`
                   }
           },
@@ -43,11 +43,11 @@ const checkboxes_data = {
             classes_cell: 'dimension-margins',
             markup: checkboxes_data.outputCardMarkup({ label: 'Card Checkbox', image: '/images/MFP2-icon.jpg' }),
             code: {
-              card: `background: #FFFFFF;
+              'Card': `background: #FFFFFF;
                 border: 2px #BBBBBB;
                 box-shadow: 0 1px 4px 0 #BBBBBB;
                 border-radius: 2px;`,
-              checkbox: `background: #FFFFFF;
+              'Checkbox': `background: #FFFFFF;
                   border: 2px #49A564;
                   border-radius: 2px;`
             }
@@ -60,11 +60,11 @@ const checkboxes_data = {
                                         checked: true, 
                                         showCardDimensions: true }),
             code: {
-              card: `background: #FFFFFF;
+              'Card': `background: #FFFFFF;
                   border: 2px #49A564;
                   box-shadow: 0 1px 4px 0 #BBBBBB;
                   border-radius: 2px;`,
-              checkbox:  `background: #49A564;
+              'Checkbox':  `background: #49A564;
                       border-radius: 2px;`
             }
           }
@@ -76,8 +76,8 @@ const checkboxes_data = {
             header: 'Hover',
             markup: checkboxes_data.outputCardMarkup({ label: 'Card Checkbox', hover: true, image: '/images/MFP2-icon.jpg' }),
             code: {
-              card: `border: 2px #49A564;`,
-              checkbox: `background: #FFFFFF;
+              'Card': `border: 2px #49A564;`,
+              'Checkbox': `background: #FFFFFF;
                       border: 2px #49A564;`
             }
           },
@@ -89,8 +89,8 @@ const checkboxes_data = {
                             image: '/images/MFP2-icon.jpg', 
                             checked: true }),
             code: {
-              card: `shadow: #1B69D3;`,
-              checkbox: `background: #49A564;
+              'Card': `shadow: #1B69D3;`,
+              'Checkbox': `background: #49A564;
                       checkmark: #FFFFFF;`
             }
           },
@@ -98,8 +98,8 @@ const checkboxes_data = {
             header: 'Disabled',
             markup: checkboxes_data.outputCardMarkup({ label: 'Card Checkbox', image: '/images/MFP2-icon.jpg', disabled: true }),
             code: {
-              card: `border: 2px #BBBBBB;`,
-              checkbox: `background: #F7F7F7;
+              'Card': `border: 2px #BBBBBB;`,
+              'Checkbox': `background: #F7F7F7;
                       border: 2px #BBBBBB;`
             }
           }
