@@ -49,10 +49,6 @@
       addLineBreaks(text) {
         return utils.addLineBreaks(text)
       }
-      // for intercepting click events
-      // setMarkup(markup) {
-      //   return '<div class="cover"></div>' + markup
-      // }
     }
   }
 </script>

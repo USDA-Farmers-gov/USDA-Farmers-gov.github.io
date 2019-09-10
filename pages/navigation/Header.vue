@@ -9,7 +9,6 @@
     <p>
       Use clear, concise, and intuitive link navigation labels. An underline should be used as a visual cue to indiciate the current page. If there are lower level pages nested within the main navigation items, use dropdown menus to present those options.
     </p>
-
     <p>
       The header contains:
     </p>
@@ -32,6 +31,33 @@
     [ DEFAULT EXAMPLE ]
 
     <ExampleRow :data="specs" columns="4" />
+
+    <h4>Dropdown Menu</h4>
+    <p>
+      The dropdown menu should expand on click and remain visible on the screen until the user clicks a menu link or anywhere outside the dropdown menu.
+    </p>
+
+    [ DROPDOWN EXAMPLE WITH GRID ]
+
+    <ExampleRow :data="dropdown_grid_specs" columns="4" />
+    <ExampleRow :data="dropdown_item_specs" columns="4" />
+
+    <h5>Callout Button</h5>
+    <ExampleRow :data="callout_button_specs" columns="4" />
+
+    <h5>Search Bar</h5>
+    <ExampleRow :data="search_bar_specs" columns="4" />
+
+    <h3>Accessibility</h3>
+    <p>
+      There should be an invisible link at the top of the page that allows users to skip the navigation and go straight to the main content. It must be the first item that the screen reader reads and the keyboard tabs to. 
+    </p>
+    <p>
+      Navigation links should show a visible focus state when tabbed to by a user.
+    </p>
+
+    <h4>References</h4>
+    <a href="https://webaim.org/techniques/skipnav/">https://webaim.org/techniques/skipnav/</a>
   </div>
 </template>
 <script>
@@ -46,7 +72,11 @@
     },
     data() {
       return {
-        specs: header_data.specs()
+        specs: header_data.specs(),
+        dropdown_grid_specs: header_data.dropdownGridSpecs(),
+        dropdown_item_specs: header_data.dropdownItemSpecs(),
+        callout_button_specs: header_data.calloutButtonSpecs(),
+        search_bar_specs: header_data.searchBarSpecs(),
       }
     }
   }

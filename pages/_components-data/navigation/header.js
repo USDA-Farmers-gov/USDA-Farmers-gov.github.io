@@ -3,32 +3,143 @@ const header_data = {
     return [
       {
         code: {
-          official_gov_banner: `background: #F7F7F7;`,
-          main_header: `background: #FFFFFF;`,
-          main_navigation_bar: `background: #006546;`,
+          'Official Gov Banner': `background: #F7F7F7;`,
+          'Main Header': `background: #FFFFFF;`,
+          'Main Navigation Bar': `background: #006546;`,
         }
       },
       {
         code: {
-          default_nav_item_text: `font-family: Public Sans
+          'Default Nav Item Text': `font-family: Public Sans
             font-weight: Regular;
             font-size: 16px;
             line-height: 24px;
             color: #FFFFFF;`,
-          "current/hover_nav_item": `font-weight: Bold;`,
-          "current/hover_indicator": `background: #FFFFFF;`
+          'Current/Hover Nav Item': `font-weight: Bold;`,
+          'Current/Hover Indicator': `background: #FFFFFF;`
         }
       },
       {
         code: {
-          utility_nav_link: `font-family: Public Sans
+          'Utility Nav Link': `font-family: Public Sans
             font-weight: Regular;
             font-size: 14px;
             line-height: 22px;
             color: #212121;`,
-          utility_nav_link_hover: `text-decoration: underline;`
+          'Utility Nav Link Hover': `text-decoration: underline;`
         }
       }
+    ]
+  },
+  dropdownGridSpecs() {
+    return [
+      {
+        code: {
+          'Dropdown Background': `background: #FFFFFF;
+            box-shadow: 0 2px 8px 0 #BBBBBB;`
+        }
+      },
+      {
+        code: {
+          'Nav Item Title': `font-family: Public Sans;
+            font-weight: Bold;
+            font-size: 16px;
+            color: #006546;
+            line-height: 24px;`
+        }
+      },
+      {
+        code: {
+          'Dropdown Divider': `border: 1px #BBBBBB;`
+        }
+      },
+    ]
+  },
+  dropdownItemSpecs() {
+    return [
+      {
+        markup: '',
+        code: {
+          'Default': `font-family: Public Sans;
+            font-weight: Regular;
+            font-size: 16px;
+            color: #212121;
+            line-height: 24px;`,
+        }
+      },
+      {
+        markup: '',
+        code: {
+          'Selected Background': `background: #DBEDE0;`,
+          'Selected Bar': `background: #006546;`,
+        }
+      },
+      {
+        markup: '',
+        code: {
+          'Hovered': `text-decoration: underline;`,
+        }
+      },
+      {
+        markup: '',
+        code: {
+          'Focused': `text-decoration: underline;
+              shadow: #1B69D3`,
+        }
+      }
+    ]
+  },
+  calloutButtonSpecs() {
+    return [
+      {
+        code: {
+          'Text': `font-family: Public Sans
+            font-weight: Bold;
+            font-size: 16px;
+            color: #212121;
+            line-height: 20px;`
+        }
+      },
+      {
+        code: {
+          'Background': `background: #FFFFFF;
+              box-shadow: 0 2px 8px 0 #BBBBBB;
+              border-radius: 0 0 2px 2px;`
+        }
+      }
+    ]
+  },
+  searchBarSpecs() {
+    return [
+      {
+        code: {
+          'Placeholder Text': `font-family: Public San
+            font-weight: Regular;
+            font-size: 14px;
+            line-height: 22px;
+            color: #707070;`
+        }
+      },
+      {
+        code: {
+          'Active Text': `font-family: Public San
+            font-weight: Regular;
+            font-size: 14px;
+            line-height: 22px;
+            color: #212121;`
+        }
+      },
+      {
+        code: {
+          'Default Search Button': `background: #F7F7F7;
+              border-radius: 0 4px 4px 0;`
+        }
+      },
+      {
+        code: {
+          'Default Search Icon': `background: #212121;`
+        }
+      },
     ]
   }
 }
