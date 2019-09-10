@@ -1,3 +1,15 @@
+div:not(.default-grid-container) > .text-medium:nth-of-type(1) {
+    margin-top: 4.8rem;
+}
+
+.resource-cards-no-logo {
+  [class*='medium-'] {
+    .resource-card {
+      margin-right: 10rem;
+    }
+  }
+}
+
 .card-footnote {
   font-size: 1.4rem;
   margin-top: 1rem;

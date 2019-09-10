@@ -19,8 +19,10 @@
       Card height and width are flexible based on different use cases. Content cards are most commonly used in a &frac12; or &frac13; grid layout. Icons, links, and green accent lines are optional. They can be used with different typography hierarchy inside the card. All elements should stay within the specified padding requirements below. 
     </p>
 
-    <h3>Examples</h3>
-    <ExampleRow :data="specs" columns="2" />
+    <p>
+      <strong>Examples</strong>
+    </p>
+    <ExampleRow :data="specs" :itemClasses="[{ index: 0, classes: 'default-grid-container' }]" columns="2" />
 
     <h3>Resource Cards</h3>
     <p>
@@ -41,13 +43,12 @@
       <div v-html="resource_card_with_grid" class="medium-6" />
     </div>
     <ExampleRow :data="resource_card_specs" columns="4" />
-    <ExampleRow :data="card_specs_no_logo" columns="2" />
+    <ExampleRow :data="card_specs_no_logo" rowClasses="resource-cards-no-logo" columns="2" />
 
     <h4>Accessibility</h4>
     <p>
       All elements within cards must be available through the use of screen readers and keyboards.
     </p>
-
   </div>
 </template>
 
