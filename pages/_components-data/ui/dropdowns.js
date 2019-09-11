@@ -78,10 +78,8 @@ const dropdowns_data = {
     ]
   },
   getDropdownMarkup(label, selectOptions, options, highlight) {
-    let selectBaseClasses = 'simpler-select'
-
     let labelClasses    = (!!options && options.labelClasses) ? options.labelClasses : ''
-    let selectClasses   = (!!options && options.selectClasses) ? selectBaseClasses + ' ' + options.selectClasses : selectBaseClasses
+    let selectClasses   = (!!options && options.selectClasses) ? utils.setClasses('simpler-select', options.selectClasses) : ''
     let disabled        = (!!options && options.disabled) ? ' disabled' : ''
     let name            = utils.lowerCaseAndHyphenate(label) + '-' + utils.randomString()
     let tabIndex        = disabled ? '-1' : '0'

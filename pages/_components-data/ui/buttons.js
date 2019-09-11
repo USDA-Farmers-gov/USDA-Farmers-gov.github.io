@@ -1,3 +1,5 @@
+import utils from '@/assets/js/utils.js'
+
 const buttons_data = {
   primaryButton() {
     return [
@@ -262,7 +264,7 @@ const buttons_data = {
       let btnClasses    = buttons_data.setButtonClasses(classes)
       let dimensions    = buttons_data.getButtonDimensions(btnClasses)
       let buttonText    = (!!classes && classes.indexOf('feedback') >= 0) ? 'Yes' : 'Button'
-      let gridClasses   = classes ? 'button-grid ' + classes : 'button-grid' 
+      let gridClasses   = utils.setClasses('button-grid ', classes)
       if(!!classes && classes.indexOf('feedback') >= 0 && index === 0) showDimensions = true
 
       return showDimensions ? `<div class="` + gridClasses + `">
@@ -277,8 +279,7 @@ const buttons_data = {
               : `<button class="` + btnClasses + `" tabindex="-1">` + buttonText + `</button>`
     },
     setButtonClasses(classes) {
-      let baseClasses = 'btn'
-      return classes ? baseClasses + ' ' + classes : baseClasses 
+      return utils.setClasses('btn', classes)
     },
     getButtonDimensions(btnClasses) {
       let dimensions = { width: 134, height: 42 }
