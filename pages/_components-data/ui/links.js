@@ -1,9 +1,11 @@
+import utils from '@/assets/js/utils.js'
+
 const links_data = {
   textLinks() { 
     return [
       { 
         header: 'Default',
-        markup: '', 
+        markup: links_data.textLinkMarkup(),
         code: {
           'Text': `color: #006546;
             font-family: Public Sans;
@@ -17,14 +19,14 @@ const links_data = {
       },
       { 
         header: 'Hover',
-        markup: '', 
+        markup: links_data.textLinkMarkup({ classes: 'hover' }),
         code: {
           'Text': `color: #49A564;`
         }
       },
       { 
         header: 'Focus',
-        markup: '', 
+        markup: links_data.textLinkMarkup({ classes: 'focus' }),
         classes: 'focus',
         code: {
           'Text': `color: #49A564;
@@ -33,7 +35,7 @@ const links_data = {
       },
       { 
         header: 'Visited',
-        markup: '', 
+        markup: links_data.textLinkMarkup({ classes: 'visited' }),
         classes: 'visited',
         code: {
           'Text': `color: #4C2C92;`
@@ -45,7 +47,7 @@ const links_data = {
     return [
       { 
         header: 'Default',
-        markup: '', 
+        markup: links_data.externalLinkMarkup(),
         code: {
           'Text': `color: #006546;
             font-family: Public Sans;
@@ -59,7 +61,7 @@ const links_data = {
       },
       { 
         header: 'Hover',
-        markup: '', 
+        markup: links_data.externalLinkMarkup({ classes: 'hover' }),
         code: {
           'Text': `color: #49A564;`,
           'Icon': `color: #49A564;`
@@ -67,7 +69,7 @@ const links_data = {
       },
       { 
         header: 'Focus',
-        markup: '', 
+        markup: links_data.externalLinkMarkup({ classes: 'focus' }),
         classes: 'focus',
         code: {
           'Text': `color: #49A564;
@@ -77,7 +79,7 @@ const links_data = {
       },
       { 
         header: 'Visited',
-        markup: '', 
+        markup: links_data.externalLinkMarkup({ classes: 'visited' }),
         classes: 'visited',
         code: {
           'Text': `color: #4C2C92;`,
@@ -168,6 +170,14 @@ const links_data = {
       }
     ]
   },
+  textLinkMarkup(data) {
+    let classes = (!!data && data.classes) ? data.classes : ''
+    return `<a class="` + utils.setClasses('text-link', classes) + `">Text Link</a>`
+  },
+  externalLinkMarkup(data) {
+    let classes = (!!data && data.classes) ? data.classes : ''
+    return `<a class="` + utils.setClasses('external-link', classes) + `">External Link</a>`
+  }
 }
 
 export default links_data

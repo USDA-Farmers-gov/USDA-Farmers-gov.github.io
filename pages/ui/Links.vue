@@ -8,9 +8,7 @@
     <p>
       Text links are used to navigate users from page to page. Text links should be used on its own single line with a right caret icon. 
     </p>
-    <p>
-      <a href="#">Text Link</a>
-    </p>
+    <p v-html="text_link"></p>
 
     <ExampleRow :data="text_links" columns="4" />
 
@@ -20,8 +18,7 @@
       External links are used when directing users to a web page outside of Farmers.gov and USDA. An external link should appear with an external link icon to distinguish between Farmers.gov and USDA to non-Farmers.gov and USDA web pages. They should open in a new browser tab.
     </p>
 
-    [ EXTERNAL LINK SINGLE ]
-    <br>
+    <p v-html="external_link"></p>
     <ExampleRow :data="external_text_links" columns="4" />
 
     <h3>Inline Textual Link</h3>
@@ -76,7 +73,9 @@
     },
     data() {
       return {
+        text_link: links_data.textLinkMarkup(),
         text_links: links_data.textLinks(),
+        external_link: links_data.externalLinkMarkup(),
         external_text_links: links_data.externalTextLinks(),
         inline_text_links: links_data.inlineTextLinks(),
         anchor_links: links_data.anchorLinks(),

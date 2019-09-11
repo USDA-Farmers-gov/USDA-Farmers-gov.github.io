@@ -1,3 +1,4 @@
+import utils from '@/assets/js/utils.js'
 
 const cards_data = {
   cardSingle() {
@@ -150,7 +151,9 @@ const cards_data = {
     return grid
   },
   resourceCardMarkup(data) {
-    let classes = (!!data && data.classes) ? ' ' + data.classes : ''
+    let dataClasses = (!!data && data.classes) ? data.classes : ''
+    let classes = utils.setClasses('resource-card', dataClasses)
+    
     let img = (data.img) ? `<div class="logo">
                               <img src="` + data.img + `" alt="">
                             </div>`
@@ -166,7 +169,7 @@ const cards_data = {
                     </div>`
     let footnote = (!!data && data.footnote) ? `<div class="card-footnote">*` + data.footnote + `</div>` : ``
 
-    return `<div class="resource-card` + classes + `">` + img + content + `</div>` + footnote
+    return `<div class="` + classes + `">` + img + content + `</div>` + footnote
   },
   resourceCardGrid() {
     let data = { 

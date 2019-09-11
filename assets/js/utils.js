@@ -15,7 +15,11 @@ const utils = {
   },
   removeLineBreaksAndTrim(text) {
     return text.replace(/(\r\n|\n|\r)/gm,"").trim()
-  }
+  },
+  setClasses(baseClass, customClasses) {
+    let classes =  customClasses ? [ baseClass, customClasses ] : [ baseClass ]
+    return classes.join(' ')
+  }  
 }
 
 export default utils

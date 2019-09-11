@@ -111,9 +111,9 @@ const checkboxes_data = {
       let disabled      = ''
       let id = (!!options && options.id) ? options.id : 'checkbox-card-' + utils.randomNumber()
       
-      if(!!options && options.image)          labelClasses = labelClasses + ' with-image'
-      if(!!options && options.hover)          labelClasses = labelClasses + ' checked'
-      if(!!options && options.labelClasses)   labelClasses = labelClasses + ' ' + options.labelClasses
+      if(!!options && options.image)          labelClasses = utils.setClasses(labelClasses, ' with-image')
+      if(!!options && options.hover)          labelClasses = utils.setClasses(labelClasses, ' checked')
+      if(!!options && options.labelClasses)   labelClasses = utils.setClasses(labelClasses, options.labelClasses)
 
       if(!!options && options.checked) {
         checked       = ' checked'
@@ -166,18 +166,18 @@ const checkboxes_data = {
         : card
     },
     outputCheckboxMarkup(options) {
+      let id = (!!options && options.id) ? options.id : 'checkbox-card-' + utils.randomNumber()
       let label       = (!! options && options.label) ? options.label : 'Label'
       let labelClass  = 'checkbox-label'
       let gridClass   = ''
       let checked     = ''
       let disabled    = ''
 
-      if(!!options && options.showLabel === false)    labelClass = labelClass + ' visually-hidden'
-      if(!!options && options.labelClass)             labelClass = labelClass + ' ' + options.labelClass
+      if(!!options && options.showLabel === false)    labelClass = utils.setClasses(labelClass, ' visually-hidden')
+      if(!!options && options.labelClass)             labelClass = utils.setClasses(labelClass, options.labelClass)
       if(!!options && options.showDimensions)         gridClass = ' checkbox-radio-dimensions'
       if(!!options && options.checked)                checked = ' checked '
       if(!!options && options.disabled)               disabled = ' disabled '
-      let id = (!!options && options.id) ? options.id : 'checkbox-card-' + utils.randomNumber()
 
       let checkbox = `<input id="` + id + `" type="checkbox" name="example" value="Option" title="Option"` + checked + disabled + ` class="checkbox-input">
         <label for="` + id + `" tabindex="0" class="` + labelClass + `">` + label + `</label>`

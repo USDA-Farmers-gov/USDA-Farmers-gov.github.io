@@ -104,11 +104,11 @@ const radio_buttons_data = {
     let labelClasses  = 'radio-card-label'
     let checked       = ''
 
-    if(!!options && options.image)          labelClasses = labelClasses + ' with-image'
-    if(!!options && options.card_classes)   labelClasses = labelClasses + ' ' + options.card_classes
-    if(!!options && options.hover)          labelClasses = labelClasses + ' checked'
-    if(!!options && options.labelClasses)   labelClasses = labelClasses + ' ' + options.labelClasses
-    if(!!options && options.disabled)       labelClasses = labelClasses + ' disabled '
+    if(!!options && options.image)          labelClasses = utils.setClasses(labelClasses, 'with-image')
+    if(!!options && options.card_classes)   labelClasses = utils.setClasses(labelClasses, options.card_classes)
+    if(!!options && options.hover)          labelClasses = utils.setClasses(labelClasses, 'checked')
+    if(!!options && options.labelClasses)   labelClasses = utils.setClasses(labelClasses, options.labelClasses)
+    if(!!options && options.disabled)       labelClasses = utils.setClasses(labelClasses, 'disabled')
 
     if(!!options && options.checked) {
       checked       = ' checked'
