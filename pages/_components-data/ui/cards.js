@@ -94,6 +94,7 @@ const cards_data = {
       {
         header: 'Hover',
         markup: cards_data.resourceCardMarkup({ 
+          classes: 'hover',
           link: { text: 'External Link Headline', href: '#' },
           description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.`,
           footnote: 'Applies to both resource cards with and without logo.' }),
@@ -149,6 +150,7 @@ const cards_data = {
     return grid
   },
   resourceCardMarkup(data) {
+    let classes = (!!data && data.classes) ? ' ' + data.classes : ''
     let img = (data.img) ? `<div class="logo">
                               <img src="` + data.img + `" alt="">
                             </div>`
@@ -164,7 +166,7 @@ const cards_data = {
                     </div>`
     let footnote = (!!data && data.footnote) ? `<div class="card-footnote">*` + data.footnote + `</div>` : ``
 
-    return `<div class="resource-card">` + img + content + `</div>` + footnote
+    return `<div class="resource-card` + classes + `">` + img + content + `</div>` + footnote
   },
   resourceCardGrid() {
     let data = { 
