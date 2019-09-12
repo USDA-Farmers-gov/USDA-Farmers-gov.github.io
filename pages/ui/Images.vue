@@ -92,7 +92,6 @@
     </p>
 
     <h3>Accessibility</h3>
-
     <p>
       Informative images that represent information need descriptive alternative text.
 

@@ -4,6 +4,7 @@
     <p class="intro-text text-margin-bottom">
       Dividers separate content and different sections of the page. 
     </p>
+    
     <h3>Tool Dividers</h3>
     <p>
       Tool dividers are used to callout interactive tool pages. Double solid lines are used to create a hard separation between sections to allow the content inside to stand out.

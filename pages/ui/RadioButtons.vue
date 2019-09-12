@@ -1,13 +1,11 @@
 <template>
   <div>
     <h2>Radio Buttons</h2>
-
     <p class="intro-text text-margin-bottom">
       Radio buttons are used when the user can only make one selection from a list or group of options.
     </p>
 
     <h3>Form Radio Buttons</h3>
-
     <p>
       This style of radio buttons is commonly used in forms. All available options are visible. Users can only make a single selection. If users can make more than one selection, use checkboxes. Radio button icons and their labels should be left-aligned and vertical for better scannability when appropriate.
     </p>
@@ -30,7 +28,6 @@
     
     
     <h3 id="card-radio-buttons">Card Radio Buttons</h3>
-
     <p>
       Card radio buttons are used in interactive tools. The element allows space for icons when appropriate, as well as typographical hierarchy. The entire card is a large touch/click target which minimizes user input error and allows for an easier interaction on a mobile device. Users can only make a single selection. If users can make more than one selection, use <nuxt-link to="/ui/Checkboxes">checkboxes</nuxt-link>.
     </p>
@@ -41,7 +38,6 @@
     </div>
 
     <h3>Specs</h3>
-
     <p>
       Card height and width are flexible based on specific use cases. The cards are most commonly used in a &frac13; or &frac14; grid layout. Icons can be used with different typography hierarchy inside the card. All elements should stay within the specified padding requirements below. 
     </p>
@@ -50,7 +46,6 @@
     <ExampleRow :data="specs_states" columns="3" />
 
     <h3>Click Target</h3>
-
     <p>
       The entire card in card radio buttons should be clickable.
     </p>
@@ -59,10 +54,8 @@
       <div class="highlight-overlay" v-html="outputCardMarkup({ label: 'Card Radio Button' })"></div>
       <div class="checkbox-radio-card-click-target mouse-pointer"></div>
     </div>
-    
 
     <h3>Accessibility</h3>
-
     <p>
       Radio button functionality must be available through <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#radiobutton">keyboard interactions</a>.
     </p>

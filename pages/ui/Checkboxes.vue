@@ -1,13 +1,11 @@
 <template>
   <div>
     <h2>Checkboxes</h2>
-
     <p class="intro-text text-margin-bottom">
       Checkboxes are used when the user can make one or more selections from a list or group of options.
     </p>
 
     <h3>Form Checkboxes</h3>
-
     <p>
       This style of checkboxes is commonly used in forms. Users can select one or more options. If only one option can be selected, use <nuxt-link to="/ui/RadioButtons">radio buttons</nuxt-link>. Checkbox icons and their labels should be left-aligned and vertical for better scannability when appropriate.
     </p>
@@ -29,7 +27,6 @@
     </div>
     
     <h3>Card Checkboxes</h3>
-
     <p>
       Card checkboxes are used in interactive tools. The element allows space for icons when appropriate, as well as typographical hierarchy. The entire card is a large touch/click target which minimizes user input error and allows for an easier interaction on a mobile device. Users can select one or more options. If only one option can be selected, use <nuxt-link to="/ui/RadioButtons#card-radio-buttons">card radio buttons</nuxt-link>.
     </p>
@@ -42,7 +39,6 @@
     </div>
 
     <h3>Specs</h3>
-
     <p>
       Card height and width are flexible based on specific use cases. The cards are most commonly used in a &frac13; or &frac14; grid layout. Icons can be used with different typography hierarchy inside the card. All elements should stay within the specified padding requirements below.
     </p>

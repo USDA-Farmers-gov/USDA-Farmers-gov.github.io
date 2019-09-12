@@ -29,7 +29,6 @@
     </div>
 
     <h3>Accessibility</h3>
-
     <p>
       Interactive icons need descriptive alternative text. They should meet 3:1 color contrast ratio requirements.
     </p>
@@ -71,7 +70,6 @@
     </p>
 
     <h3>Specs</h3>
-
     <p>
       Illustrative icons have an outlined icon style. Outlined icons have a lighter line weight compared to solid icons, so they don’t overwhelm the associating content. They should use a consistent stroke weight. They should be exported as a .svg file for higher resolution with a smaller file size.
     </p>

@@ -39,9 +39,7 @@
   </div>
   
   <h3 class="grid-example-header">Grid Examples</h3>
-  
   <div class="grid-example-text">
-    
     <div class="row"> 
       <div v-for="index in 2" class="medium-6">
         <div class="col-content-example">

@@ -4,6 +4,7 @@
     <p class="intro-text text-margin-bottom">
       Links direct users to different pages or sections of the site. Links should not be in uppercase to visually differentiate between a link and a button.
     </p>
+    
     <h3>Text Link</h3>
     <p>
       Text links are used to navigate users from page to page. Text links should be used on its own single line with a right caret icon. 
@@ -13,7 +14,6 @@
     <ExampleRow :data="text_links" rowClasses="text-margin-bottom" columns="4" />
 
     <h3>External Text Link</h3>
-
     <p>
       External links are used when directing users to a web page outside of Farmers.gov and USDA. An external link should appear with an external link icon to distinguish between Farmers.gov and USDA to non-Farmers.gov and USDA web pages. They should open in a new browser tab.
     </p>

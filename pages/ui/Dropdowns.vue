@@ -1,7 +1,6 @@
 <template>
   <div>
     <h2>Dropdowns</h2>
-
     <p class="intro-text text-margin-bottom">
       Dropdowns allow users to make a single selection from a list of options. They are best used when a user needs to make a choice from a long list of items.
     </p>
@@ -14,7 +13,6 @@
     </div>
 
     <h3>Specs</h3>
-
     <p>
       The width of the dropdown box can vary based on layout. However, it should follow the grid system and the specs outlined below. The height of the dropdown may be flexible depending on use cases.
     </p>
@@ -23,7 +21,6 @@
     </p>
 
     <h3>Default</h3>
-
     <div class="row">
       <div class="medium-12" v-html="dropdown_dimensions"/>
     </div>

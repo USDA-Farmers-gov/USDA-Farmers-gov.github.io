@@ -1,7 +1,6 @@
 <template>
   <div>
     <h2>Buttons</h2>
-    
     <p class="intro-text text-margin-bottom">
       Buttons are used to communicate important actions the users can take, such as download, apply, or start. Depending on the context and desired outcome of the design, there are multiple styles and sizes of buttons available for use.
     </p>
@@ -23,7 +22,6 @@
    <ExampleRow :data="primary_button_states" rowClasses="text-margin-bottom" columns="4" />
 
     <h3>Secondary Buttons</h3>
-
     <p class="text-margin-bottom">
       Secondary buttons carry less visual weight than primary buttons, which helps ensure that when they are used together the primary action will be more noticeable. The difference between their “weight” is immediately noticeable, so that users can make the correct choice. These buttons utilize the same blue as primary buttons but only as an outline.
     </p>
@@ -42,7 +40,6 @@
     <ExampleRow :data="tertiary_button" columns="4" />
 
     <h3>Feedback Button</h3>
-
     <p class="text-margin-bottom">
       Feedback buttons provide users with a quick and simple way to indicate if the specific page or feature they visited was useful to them, by simple clicking Yes or No. Feedback buttons are blue and round so they may be easily distinguished from primary and secondary action buttons. They should be placed at the bottom of the page to minimize distraction.
     </p>

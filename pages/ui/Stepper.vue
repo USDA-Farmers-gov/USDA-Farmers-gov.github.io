@@ -6,7 +6,6 @@
     </p>
 
     <h3>Vertical Steppers</h3>
-
     <p>
       Vertical steppers are used when the total number of questions per user path is not fixed, and each subsequent question is dependent on the answer to the previous question. 
     </p>

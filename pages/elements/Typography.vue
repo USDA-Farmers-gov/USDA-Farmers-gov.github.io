@@ -1,13 +1,11 @@
 <template>
   <div>
     <h2>Typography</h2>
-
     <div class="intro-text text-margin-bottom">
       The Farmers.gov site uses Public Sans for all of its text except for the blog body copy and pullquotes, which uses Merriweather.
     </div>
 
     <h3>Public Sans</h3>
-
     <div class="container typography-container">
       <div class="row">
         <div class="medium-2 text-large typography-letters ps-padding">A a</div>
