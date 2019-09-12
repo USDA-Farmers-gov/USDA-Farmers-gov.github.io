@@ -1,5 +1,5 @@
 <template>
-  <table>
+  <table v-if="data.table_headers && data.table_rows">
     <thead>
         <tr>
           <th v-for="header in data.table_headers"> {{ header }} </th>
