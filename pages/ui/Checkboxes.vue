@@ -15,7 +15,7 @@
     <p v-html="outputCheckboxMarkup({ label: 'Checkbox Label', checked: true })"></p>  
 
     <div class="checkbox-radio-mobile-container">
-      <ExampleRow :data="checkboxes" :itemClasses="[{ index: 0, classes: 'checkbox-grid-container' }]" columns="4" />
+      <ExampleRow :data="checkboxes" :item-classes="[{ index: 0, classes: 'checkbox-grid-container' }]" columns="4" />
     </div>
 
     <h4>Click Target</h4>

@@ -21,50 +21,7 @@
       </div>
     </div>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Hierarchy</th>
-          <th>Font Family</th>
-          <th>Weight</th>
-          <th>Font Size</th>
-          <th>Line Height</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="font in public_sans">
-          <td v-html="font.name_and_markup"></td>
-          <td>{{ font.font_family }}</td>
-          <td>{{ font.weight }}</td>
-          <td>{{ font.font_size }}</td>
-          <td>{{ font.line_height }}</td>
-        </tr>
-        <tr>
-          <td colspan="5" class="merriweather merriweather-container">
-            <h2 class="merriweather">Merriweather</h2>
-            <div class="container">
-              <div class="row">
-                <div class="medium-2 text-large typography-letters">A a</div>
-                <div class="medium-7 text-small typography-example">
-                  ABCDEFGHIJKLMNOPQRSTUVWXYZ
-                  <br/>
-                  abcdefghijklmnopqrstuvwxyz
-                  <br/>
-                  1234567890
-                </div>
-              </div>
-            </div>
-          </td>
-        </tr>
-        <tr v-for="font in merriweather">
-          <td v-html="font.name_and_markup"></td>
-          <td>{{ font.font_family }}</td>
-          <td>{{ font.weight }}</td>
-          <td>{{ font.font_size }}</td>
-          <td>{{ font.line_height }}</td>
-        </tr>
-      </tbody>
-    </table>
+    <Table :data="fonts" />
 
     <h3>Lists</h3>
     <div>
@@ -164,8 +121,7 @@
     },
     data() {
       return {
-        public_sans: typography_data.publicSans(),
-        merriweather: typography_data.merriweather(),
+        fonts: typography_data.fonts()[0],
         contrast_buttons_normal: typography_data.contrastButtonsNormal(),
         contrast_buttons_large_text: typography_data.contrastButtonsLargeText()
       }

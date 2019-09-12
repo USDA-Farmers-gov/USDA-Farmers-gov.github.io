@@ -15,47 +15,14 @@
       Simple tables are used when there is only one level of column headings. Table rows alternate in background colors for better readability and scannability of data across table rows. 
     </p>
 
-    <table v-if="simple_table">
-      <thead>
-        <tr>
-          <th v-for="header in simple_table.table_headers"> {{ header }} </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="row in simple_table.table_rows">
-          <td v-for="text in row">{{ text }}</td>
-        </tr>
-      </tbody>
-    </table>
+    <Table :data="simple_table" />
 
     <h4>Complex Table</h4>
     <p>
       A complex table is used when there are multiple levels of column headings. 
     </p>
 
-    <table v-if="complex_table">
-      <thead>
-        <tr>
-          <th v-for="header in complex_table.table_headers"> {{ header }} </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td colspan="2">{{ complex_table.subheading_1 }}</td>
-        </tr>
-        <tr v-for="row in complex_table.table_rows_1">
-          <td v-for="text in row">{{ text }}</td>
-        </tr>
-
-        <tr>
-          <td colspan="2">{{ complex_table.subheading_2 }}</td>
-        </tr>
-        <tr v-for="row in complex_table.table_rows_2">
-          <td v-for="text in row">{{ text }}</td>
-        </tr>
-
-      </tbody>
-    </table>
+    <Table :data="complex_table" />
     
     <h3>Specs</h3>
     <p>

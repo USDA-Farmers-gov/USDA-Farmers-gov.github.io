@@ -13,8 +13,8 @@
       <button class="btn" tabindex="-1">button</button>
     </p>
 
-   <ExampleRow v-if="primary_button" :data="primary_button" columns="3" />
-   <ExampleRow v-if="primary_button_states" :data="primary_button_states" columns="4" />
+   <ExampleRow :data="primary_button" columns="3" />
+   <ExampleRow :data="primary_button_states" columns="4" />
 
     <h3>Secondary Buttons</h3>
 
@@ -24,14 +24,14 @@
       <button class="btn outline" tabindex="-1">button</button>
     </p>
 
-    <ExampleRow v-if="secondary_button" :data="secondary_button" columns="3" />
-    <ExampleRow v-if="secondary_button_states" :data="secondary_button_states" columns="4" />
+    <ExampleRow :data="secondary_button" columns="3" />
+    <ExampleRow :data="secondary_button_states" columns="4" />
 
     <h3>Tertiary Buttons</h3>
     <p>The tertiary button should be used for instances of user actions that are of less importance than those reserved for primary and secondary buttons. Those buttons should be used for card design. Tertiary buttons should not be used in place of ‘text links,’ as tertiary buttons are not used for user navigation.</p>
 
-    <ExampleRow v-if="tertiary_button_default" :data="tertiary_button_default" columns="1" />
-    <ExampleRow v-if="tertiary_button" :data="tertiary_button" columns="4" />
+    <ExampleRow :data="tertiary_button_default" columns="1" />
+    <ExampleRow :data="tertiary_button" columns="4" />
 
     <h3>Feedback Button</h3>
 

@@ -1,24 +1,41 @@
 const typography_data = {
-  publicSans() {
+  fonts() {
     return [
-          { name_and_markup: '<h1>Headline 1</h1>', font_family: 'Public Sans', weight: '700', font_size: '38px', line_height: '48px' },
-          { name_and_markup: '<h2>Headline 2</h2>', font_family: 'Public Sans', weight: '700', font_size: '28px', line_height: '38px' },
-          { name_and_markup: '<h3>Headline 3</h3>', font_family: 'Public Sans', weight: '700', font_size: '23px', line_height: '30px' },
-          { name_and_markup: '<h4>Headline 4</h4>', font_family: 'Public Sans', weight: '700', font_size: '20px', line_height: '26px' },
-          { name_and_markup: '<h5>Headline 5</h5>', font_family: 'Public Sans', weight: '700', font_size: '16px', line_height: '20px' },
-          { name_and_markup: '<h6>Headline 6</h6>', font_family: 'Public Sans', weight: '400', font_size: '12px', line_height: '18px' },
-          { name_and_markup: '<div class="label">Label 1</div>', font_family: 'Public Sans', weight: '700', font_size: '22px', line_height: '34px' },
-          { name_and_markup: '<div class="lead-p">Lead Paragraph</div>', font_family: 'Public Sans', weight: '300', font_size: '22px', line_height: '34px' },
-          { name_and_markup: '<div class="body-p">Body Copy</div>', font_family: 'Public Sans', weight: '400', font_size: '18px', line_height: '28px' },
-          { name_and_markup: '<div class="subheading">Subheading</div>', font_family: 'Public Sans', weight: '400', font_size: '16px', line_height: '24px' },
-          { name_and_markup: '<div class="caption">Caption*</div>', font_family: 'Public Sans', weight: '400', font_size: '14px', line_height: '22px' },
+      {
+        table_headers: [ 'Hierarchy', 'Font Family', 'Weight', 'Font Size', 'Line Height' ],
+        table_rows: [
+          { text: [ '<h1>Headline 1</h1>', 'Public Sans', '700', '38px', '48px' ] },
+          { text: [ '<h2>Headline 2</h2>', 'Public Sans', '700', '28px', '38px' ] },
+          { text: [ '<h3>Headline 3</h3>', 'Public Sans', '700', '23px', '30px' ] },
+          { text: [ '<h4>Headline 4</h4>', 'Public Sans', '700', '20px', '26px' ] },
+          { text: [ '<h5>Headline 5</h5>', 'Public Sans', '700', '16px', '20px' ] },
+          { text: [ '<h6>Headline 6</h6>', 'Public Sans', '400', '12px', '18px' ] },
+          { text: [ '<div class="label">Label 1</div>', 'Public Sans', '700', '22px', '34px' ] },
+          { text: [ '<div class="lead-p">Lead Paragraph</div>', 'Public Sans', '300', '22px', '34px' ] },
+          { text: [ '<div class="body-p">Body Copy</div>', 'Public Sans', '400', '18px', '28px' ] },
+          { text: [ '<div class="subheading">Subheading</div>', 'Public Sans', '400', '16px', '24px' ] },
+          { text: [ '<div class="caption">Caption</div>', 'Public Sans', '400', '14px', '22px' ] },
+
+          { 
+            text: [ `<h2 class="merriweather">Merriweather</h2>
+                      <div class="container">
+                        <div class="row">
+                          <div class="medium-2 text-large typography-letters">A a</div>
+                          <div class="medium-7 text-small typography-example">
+                            ABCDEFGHIJKLMNOPQRSTUVWXYZ
+                            <br/>
+                            abcdefghijklmnopqrstuvwxyz
+                            <br/>
+                            1234567890
+                          </div>
+                        </div>
+                      </div>` ], classes: 'merriweather merriweather-container', colspan: 5 
+          },
+          { text: [ '<div class="blog-body-p">Blog Body Copy</div>', 'Merriweather', '400', '18px', '30px' ] },
+          { text: [ '<div class="blog-block-quote">Blog Quote</div>', 'Merriweather', '300', '28px', '34px' ] },
         ]
-  },
-  merriweather() {
-    return [
-          { name_and_markup: '<div class="blog-body-p">Blog Body Copy</div>', font_family: 'Merriweather', weight: '400', font_size: '18px', line_height: '30px' },
-          { name_and_markup: '<div class="blog-block-quote">Blog Quote</div>', font_family: 'Merriweather', weight: '300', font_size: '28px', line_height: '34px' },
-        ]
+      }
+    ]
   },
   contrastButtonsNormal() {
     return [

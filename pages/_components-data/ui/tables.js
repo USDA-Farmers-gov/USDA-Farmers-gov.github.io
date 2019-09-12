@@ -4,11 +4,11 @@ const tables_data = {
       {
         table_headers: [ 'Column Heading', 'Column Heading', 'Column Heading' ],
         table_rows: [
-          [ 'Table row placeholder', 'Row placeholder second column', 'Third column row' ],
-          [ 'Table row placeholder', 'Row placeholder second column', 'Third column row' ],
-          [ 'Table row placeholder', 'Row placeholder second column', 'Third column row' ],
-          [ 'Table row placeholder', 'Row placeholder second column going over two lines', 'Third column row' ],
-          [ 'Table row placeholder', 'Row placeholder second column', 'Third column row' ],
+          { text: [ 'Table row placeholder', 'Row placeholder second column', 'Third column row' ] },
+          { text: [ 'Table row placeholder', 'Row placeholder second column', 'Third column row' ] },
+          { text: [ 'Table row placeholder', 'Row placeholder second column', 'Third column row' ] },
+          { text: [ 'Table row placeholder', 'Row placeholder second column going over two lines', 'Third column row' ] },
+          { text: [ 'Table row placeholder', 'Row placeholder second column', 'Third column row' ] },
         ]
       }
     ]
@@ -17,14 +17,12 @@ const tables_data = {
     return [
       {
         table_headers: [ 'Column Heading', 'Column Heading' ],
-        subheading_1: 'Subheading',
-        table_rows_1: [
-          [ 'Subheading row placeholder text', 'Example of a subheading row that extends to the second line' ]
-        ],
-        subheading_2: 'Subheading',
-        table_rows_2: [
-          [ 'Subheading row placeholder text', 'Subheading row placeholder text' ],
-          [ 'Subheading row placeholder text', 'Subheading row placeholder text' ]
+        table_rows: [
+          { text: [ 'Subheading' ], colspan: 2 },
+          { text: [ 'Subheading row placeholder text', 'Example of a subheading row that extends to the second line' ] },
+          { text: [ 'Subheading' ], colspan: 2 },
+          { text: [ 'Subheading row placeholder text', 'Subheading row placeholder text' ] },
+          { text: [ 'Subheading row placeholder text', 'Subheading row placeholder text' ] }
         ]
       }
     ]

@@ -19,13 +19,13 @@
         code: ''
       }
     },
-    mounted() {
-      this.setCode()
-    },
-    updated: function() {
-      this.$nextTick(function () {
-        this.setCode()
-      })
+    watch: {
+      markup: {
+        immediate: true,
+        handler() {
+          this.setCode()
+        }
+      }
     },
     methods: {
       setCode() {

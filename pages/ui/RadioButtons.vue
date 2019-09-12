@@ -14,9 +14,8 @@
 
     <p v-html="outputRadioButtonMarkup({ label: 'Radio Label', name: 'default' })"></p>  
     <p v-html="outputRadioButtonMarkup({ label: 'Radio Label', name: 'default', checked: true })"></p>  
-    <!-- TODO: find out how to style disabled button (not there right now) -->
     <div class="checkbox-radio-mobile-container">
-      <ExampleRow :data="radio_buttons" :itemClasses="[{ index: 0, classes: 'checkbox-grid-container' }]" columns="4" />
+      <ExampleRow :data="radio_buttons" :item-classes="[{ index: 0, classes: 'checkbox-grid-container' }]" columns="4" />
     </div>
 
     <h4>Click Target</h4>
