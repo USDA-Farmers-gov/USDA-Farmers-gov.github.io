@@ -1,4 +1,11 @@
-.click-target-grid {
+.icons-click-target {
+  &.mouse-pointer {
+    position: relative;
+    top: 6.5rem;
+    left: -3rem;
+  }
+}
+.icons-click-target-grid {
   display: grid;
   grid-template-columns: 44px 16px 16px;
   grid-template-rows: 16px 12px 44px;

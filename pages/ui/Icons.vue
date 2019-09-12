@@ -17,7 +17,7 @@
       Interactive icons should have a minimum click/touch target of 44x44px. When used with a label, the icon and label should be one target. 
     </p>
 
-    <div class="click-target-grid text-margin-bottom">
+    <div class="icons-click-target-grid text-margin-bottom">
       <img src="/images/icons/close.svg" class="highlight-overlay" />
 
       <div class="click-target-top-span span-blue span-blue-vertical"></div>
@@ -25,6 +25,7 @@
 
       <div class="click-target-right-span span-red span-red-horizontal"></div>
       <div class="click-target-right-dimension dimension-red dimension-red-horizontal">44px</div>
+      <div class="icons-click-target mouse-pointer"></div>
     </div>
 
     <h3>Accessibility</h3>
