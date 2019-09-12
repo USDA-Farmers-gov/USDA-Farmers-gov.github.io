@@ -33,9 +33,13 @@
     </ul>
     <p>
       <strong>Example</strong>
-      <br>
-      [ COW IMAGE ]
     </p>
+    
+    <div class="row">
+      <div class="medium-12">
+        <img src="/images/hero-example.jpg" />
+      </div>
+    </div>
 
     <h4>Other Images</h4>
     <p>
@@ -47,9 +51,18 @@
       <li>Utilize positive imagery of people</li>
     </ul>
 
-    <strong>Example</strong>
-    <br>
-    [ 2 IMAGES ]
+    <p>
+      <strong>Example</strong>
+    </p>
+
+    <div class="row">
+      <div class="medium-6">
+        <img src="/images/images-example1.jpg" />
+      </div>
+      <div class="medium-6">
+        <img src="/images/images-example2.jpg" />
+      </div>
+    </div>
 
     <h3>Image Compression</h3>
     <p>
