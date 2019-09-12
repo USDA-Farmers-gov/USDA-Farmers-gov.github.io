@@ -25,8 +25,9 @@
 
     <div class="row">
       <div class="medium-3 checkbox-radio-click-target highlight-overlay" v-html="outputRadioButtonMarkup({ label: 'Radio Label' })"></div> 
+      <div class="checkbox-radio-click-target mouse-pointer text-margin-bottom"></div>
     </div>
-    <div class="checkbox-radio-click-target mouse-pointer text-margin-bottom"></div>
+    
     
     <h3 id="card-radio-buttons">Card Radio Buttons</h3>
 
@@ -55,9 +56,10 @@
     </p>
 
     <div class="card-highlight text-margin-bottom">
-        <div class="highlight-overlay" v-html="outputCardMarkup({ label: 'Card Radio Button' })"></div>
+      <div class="highlight-overlay" v-html="outputCardMarkup({ label: 'Card Radio Button' })"></div>
+      <div class="checkbox-radio-card-click-target mouse-pointer"></div>
     </div>
-    <div class="checkbox-radio-card-click-target mouse-pointer"></div>
+    
 
     <h3>Accessibility</h3>
 
