@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Footer</h2>
-    <p class="intro-text">
+    <p class="intro-text text-margin-bottom">
       A footer is a navigational element placed at the bottom of every page that provides users with consistent and easy access to important information such as the main navigation and additional resources.
     </p>
 

@@ -2,7 +2,7 @@
   <div>
     <h2>Accordions</h2>
   
-    <p class="intro-text">
+    <p class="intro-text text-margin-bottom">
       An accordion hides or reveals additional information. Accordions are used when large amounts of information need to be organized within a small space.
     </p>
 
@@ -26,14 +26,14 @@
     </p>
 
     <div v-html="clickTargetAccordionDimensions" />
-    <div class="click-target mouse-pointer"></div>
+    <div class="click-target mouse-pointer text-margin-bottom"></div>
 
     <h3>Box Accordions</h3>
     <p>
       Box accordions are sets of headers displayed in a &frac13; grid layout. They are used when groups of information can be categorized into related sections and help conserve space on content-heavy pages. Only one accordion should open at a time.
     </p>
 
-    <div v-html="boxMarkup" />
+    <div v-html="boxMarkup" class="text-margin-bottom" />
     <h3>Specs</h3>
     <p>
       The width of the accordion should follow the &frac13; grid layout and the specs outlined below. 
@@ -45,13 +45,14 @@
     <div id="accordionGroup" ref="accordionGroup" class="Accordion row">
       <div v-html="boxMarkupExpanded" />
     </div>
+    <ExampleRow :data="specs_expanded_box_accordion" rowClasses="text-margin-bottom" columns="4" />
 
     <h3>Click Target</h3>
     <p>
       Larger targets are easier for users to manipulate. Allow users to expand or collapse content by clicking on the entire box accordion.
     </p>
   
-    <div class="container">
+    <div class="container text-margin-bottom">
       <div class="row">
         <div class="medium-5">
           <div class="higlight-box-accordion highlight-overlay" v-html="boxClickTargetMarkup" />
@@ -97,7 +98,8 @@ export default {
       clickTargetAccordionDimensions: accordions_data.clickTargetAccordionDimensions(),
       boxAccordionDimensions: accordions_data.boxAccordionDimensions(),
       specs_default_accordion: accordions_data.defaultAccordionSpecs(),
-      specs_box_accordion: accordions_data.defaultBoxAccordionSpecs()
+      specs_box_accordion: accordions_data.defaultBoxAccordionSpecs(),
+      specs_expanded_box_accordion: accordions_data.expandedBoxAccordionSpecs(),
     }
   },
   mounted() {

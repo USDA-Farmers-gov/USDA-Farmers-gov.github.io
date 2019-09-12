@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Images</h2>
-    <p class="intro-text">
+    <p class="intro-text text-margin-bottom">
       Images are used to communicate brand style, support content on pages, and build trust with our audience. They should be relatable to our audience and convey that farmers.gov is a site &quot;For Farmers by Farmers.&quot;
     </p>
 
@@ -35,7 +35,7 @@
       <strong>Example</strong>
     </p>
     
-    <div class="row">
+    <div class="row text-margin-bottom">
       <div class="medium-12">
         <img src="/images/hero-example.jpg" />
       </div>
@@ -55,7 +55,7 @@
       <strong>Example</strong>
     </p>
 
-    <div class="row">
+    <div class="row text-margin-bottom">
       <div class="medium-6">
         <img src="/images/images-example1.jpg" />
       </div>
@@ -65,7 +65,7 @@
     </div>
 
     <h3>Image Compression</h3>
-    <p>
+    <p class="text-margin-bottom">
       Images should be optimized to speed up the page load time. Use online image compression tools, such as <a href="https://squoosh.app/">Squoosh</a>, or photo editing softwares to compress images. Explore different compression settings to find the right balance between file size and acceptable image quality.
     </p>
 
@@ -85,7 +85,7 @@
     </ul>
 
     <strong>Example</strong>
-    <p>
+    <p class="text-margin-bottom">
       fund-beginningfarmers-070119.jpg
       <br>
       farmloansfinder-microloanspdf-070119.jpg

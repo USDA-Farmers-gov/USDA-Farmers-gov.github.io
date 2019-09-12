@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Header</h2>
-    <p class="intro-text">
+    <p class="intro-text text-margin-bottom">
       The farmers.gov header combines the primary navigation of the website, the utility navigation, the search bar, and a lockup in one reoccurring component on the site. The header primarily serves a navigational function.
     </p>
 

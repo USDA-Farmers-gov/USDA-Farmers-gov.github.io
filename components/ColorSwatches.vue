@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="data" class="color-groups">
-      <div class="row">
+      <div :class="setRowClasses()">
         <div v-for="swatch in data" :class="setSwatchClasses(swatch)">
           <div :class="'color-swatch ' + swatch.classes"></div>
           <div class="color-name">{{ swatch.caption }}</div>
@@ -13,7 +13,7 @@
         <p>
           <strong>Examples</strong>
         </p>
-        <div class="color-examples">
+        <div class="color-examples text-margin-bottom">
           <div v-if="example.description" v-for="example in data" class="color-row">
             <div class="container-square">
               <div :class="'color-square ' + example.classes"></div>
@@ -28,11 +28,17 @@
 </template>
 
 <script>
+  import utils from '@/assets/js/utils.js'
   export default {
     props: {
-      data: [ Object, Array ]
+      data: [ Object, Array ],
+      rowClasses: String
     },
     methods: {
+      setRowClasses() {
+        let baseClass = 'row'
+        return this.rowClasses ? utils.setClasses(baseClass, this.rowClasses) : baseClass
+      },
       setSwatchClasses(swatch) {
         let baseClass = 'medium-3 colors'
         return swatch.classes.indexOf('grey-') === 0 ? baseClass + ' medium-greyscale' : baseClass

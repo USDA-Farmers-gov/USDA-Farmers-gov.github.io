@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Dividers</h2>
-    <p class="intro-text">
+    <p class="intro-text text-margin-bottom">
       Dividers separate content and different sections of the page. 
     </p>
     <h3>Tool Dividers</h3>
@@ -17,7 +17,7 @@
     <ExampleRow :data="default_specs" columns="1" />
 
     <h3>Primary Divider</h3>
-    <p>
+    <p class="text-margin-bottom">
       Primary dividers are used to create a visual separation between different content blocks in a page. A leaf icon can be used as a decorative element to help strategically represent the farmers.gov brand across the site.
 
       <div class="divider-line"></div>
@@ -46,7 +46,7 @@
         </div>
       </div>
     </p>
-    <ExampleRow :data="primary_specs" columns="3" />
+    <ExampleRow :data="primary_specs" rowClasses="text-margin-bottom" columns="3" />
 
     <h3>Secondary Dividers</h3>
     <p>
@@ -58,7 +58,7 @@
     <p>
       The width of the divider is flexible. However, it should not stretch across the edges of the page and/or card.
     </p>
-    <div class="secondary-specs-grid">
+    <div class="secondary-specs-grid text-margin-bottom">
       <div class="secondary-specs-height-dimension dimension-red">1px</div>
       <div class="secondary-specs-height span-red span-red-horizontal"></div>
       <div class="divider-dot example"></div>

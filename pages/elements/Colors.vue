@@ -4,7 +4,7 @@
     <p class="intro-text">
       Colors play a vital role in establishing the look and feel of any digital property. Our palette draws inspiration from the USDA branding combined with color recommendations from the U.S. Web Design System to create a unique style for Farmers.gov.
     </p>
-    <p>
+    <p class="intro-text text-margin-bottom">
       We’ve added brighter, vibrant colors to symbolize the field greens and
       sky blues farmers often experience in their everyday lives. The intent of
       these colors is to establish a trusted and familiar foundation to the
@@ -39,7 +39,7 @@
       These neutral grays provide a range of tones and shades for utilitarian purposes such as backgrounds and inactive states.
     </p>
 
-    <ColorSwatches :data="greyscale_colors" />
+    <ColorSwatches :data="greyscale_colors" rowClasses="text-margin-bottom" />
 
     <h3>Special States</h3>
 

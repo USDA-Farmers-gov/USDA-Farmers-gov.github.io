@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Breadcrumb</h2>
-    <p>
+    <p class="intro-text text-margin-bottom">
       A breadcrumb is a secondary navigation that displays the user’s current location on the site in relation to the site’s hierarchical structure.
     </p>
 

@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Tables</h2>
-    <p class="intro-text">
+    <p class="intro-text text-margin-bottom">
       Tables are used to display data or information in columns and rows.
     </p>
 

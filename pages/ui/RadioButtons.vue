@@ -2,7 +2,7 @@
   <div>
     <h2>Radio Buttons</h2>
 
-    <p class="intro-text">
+    <p class="intro-text text-margin-bottom">
       Radio buttons are used when the user can only make one selection from a list or group of options.
     </p>
 
@@ -26,7 +26,7 @@
     <div class="row">
       <div class="medium-3 checkbox-radio-click-target highlight-overlay" v-html="outputRadioButtonMarkup({ label: 'Radio Label' })"></div> 
     </div>
-    <div class="checkbox-radio-click-target mouse-pointer"></div>
+    <div class="checkbox-radio-click-target mouse-pointer text-margin-bottom"></div>
     
     <h3 id="card-radio-buttons">Card Radio Buttons</h3>
 
@@ -54,7 +54,7 @@
       The entire card in card radio buttons should be clickable.
     </p>
 
-    <div class="card-highlight">
+    <div class="card-highlight text-margin-bottom">
         <div class="highlight-overlay" v-html="outputCardMarkup({ label: 'Card Radio Button' })"></div>
     </div>
     <div class="checkbox-radio-card-click-target mouse-pointer"></div>

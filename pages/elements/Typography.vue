@@ -2,7 +2,7 @@
   <div>
     <h2>Typography</h2>
 
-    <div class="intro-text">
+    <div class="intro-text text-margin-bottom">
       The Farmers.gov site uses Public Sans for all of its text except for the blog body copy and pullquotes, which uses Merriweather.
     </div>
 
@@ -21,14 +21,14 @@
       </div>
     </div>
 
-    <Table :data="fonts" />
+    <Table :data="fonts" classes="text-margin-bottom"/>
 
     <h3>Lists</h3>
     <div>
       <p>
         There are two recommended ways of organizing bulleted information. The first is unorganized, where information can be shown in any order. The second list is organized based on priority.
       </p>
-      <div class="container">
+      <div class="container text-margin-bottom">
         <div class="row">
           <div class="medium-4">
             Unordered List

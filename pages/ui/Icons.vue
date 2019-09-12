@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Icons</h2>
-    <p class="intro-text">
+    <p class="intro-text text-margin-bottom">
       Icons show a behavior, support an action, and illustrate content. 
     </p>
 
@@ -41,7 +41,7 @@
     </p>
 
     <h4>References</h4>
-    <p>
+    <p class="text-margin-bottom">
       <a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast">https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast</a>
     </p>
 

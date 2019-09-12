@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Stepper</h2>
-    <p class="intro-text">
+    <p class="intro-text text-margin-bottom">
       A stepper is an interactive multi-step process indicator that guides users to complete a set of questions. 
     </p>
 

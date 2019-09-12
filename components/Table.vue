@@ -1,5 +1,5 @@
 <template>
-  <table v-if="data.table_headers && data.table_rows">
+  <table :class="classes" v-if="data.table_headers && data.table_rows">
     <thead>
         <tr>
           <th v-for="header in data.table_headers"> {{ header }} </th>
@@ -15,7 +15,8 @@
 <script>
   export default {
     props: {
-      data: [ Object, Array ]
+      data: [ Object, Array ],
+      classes: String
     }
   }
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Cards</h2>
-    <p class="intro-text">
+    <p class="intro-text text-margin-bottom">
       A card is a container for displaying content and/or actions. Cards can contain different kind of elements such as text, links, buttons, icons, and images. 
     </p>
 
@@ -10,7 +10,7 @@
       Content cards provide detailed information about a single subject. The primary focus of the card is the content, however icons may be added to visually communicate to users what information is included. A green accent line can be added to emphasize the headline which will also give the card more visual prominence on the page.
     </p>
 
-    <div class="row">
+    <div class="row text-margin-bottom">
       <div v-html="default_card" class="medium-6" />
     </div>
 
@@ -29,7 +29,7 @@
       Resource cards are used to display a link to another website or web page that provide additional information about a single subject. They contain a brief overview of the resource, link to the website or web page, and a logo of the organization, if available.
     </p>
 
-    <div class="row">
+    <div class="row text-margin-bottom">
       <div v-html="resource_card_single" class="medium-5" />
     </div>
     <h3>Specs</h3>

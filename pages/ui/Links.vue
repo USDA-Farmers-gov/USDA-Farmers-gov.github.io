@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Links</h2>
-    <p>
+    <p class="intro-text text-margin-bottom">
       Links direct users to different pages or sections of the site. Links should not be in uppercase to visually differentiate between a link and a button.
     </p>
     <h3>Text Link</h3>
@@ -10,7 +10,7 @@
     </p>
     <p v-html="text_link"></p>
 
-    <ExampleRow :data="text_links" columns="4" />
+    <ExampleRow :data="text_links" rowClasses="text-margin-bottom" columns="4" />
 
     <h3>External Text Link</h3>
 
@@ -19,7 +19,7 @@
     </p>
 
     <p v-html="external_link"></p>
-    <ExampleRow :data="external_text_links" columns="4" />
+    <ExampleRow :data="external_text_links" rowClasses="text-margin-bottom" columns="4" />
 
     <h3>Inline Textual Link</h3>
     <p>
@@ -28,7 +28,7 @@
 
     [ INLINE LINK SINGLE ]
     <br>
-    <ExampleRow :data="inline_text_links" columns="4" />
+    <ExampleRow :data="inline_text_links" rowClasses="text-margin-bottom" columns="4" />
 
     <h3>Anchor Link</h3>
     <p>
@@ -37,14 +37,16 @@
 
     [ ANCHOR LINK SINGLE ]
     <br>
-    <ExampleRow :data="anchor_links" columns="4" />
+    <ExampleRow :data="anchor_links" rowClasses="text-margin-bottom" columns="4" />
 
     <h4>Click Target</h4>
     <p>
       The click target includes the link text and its associated icon. This applys to all link styles.
     </p>
 
-    [ LINK HIGHLIGHT ]
+    <div class="text-margin-bottom">
+      [ LINK HIGHLIGHT ]
+    </div>
 
     <h4>Accessibility</h4>
     <p>

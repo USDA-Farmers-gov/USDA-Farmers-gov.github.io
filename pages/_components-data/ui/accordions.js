@@ -207,6 +207,32 @@ const accordions_data = {
           }
         }
       ]
+    },
+
+    expandedBoxAccordionSpecs() {
+      return [
+        {
+          code: { 
+            'Text': `color: #FFFFFF;
+              font-family: Public Sans;
+              font-size: 23px;
+              font-weight: bold;
+              line-height: 30px;`, 
+          }
+        },
+        {
+          code: { 
+            'Background': `color: #49A564;
+                shadow: 0;1;4;0 #BBBBBB;`, 
+          }
+        },
+                {
+          code: { 
+            'Icon': `color: #FFFFFF;
+                size: 32x32;`
+          }
+        }
+      ]
     }
 }
 
