@@ -9,6 +9,17 @@
   }
 }
 
+.external-grid-container {
+  .example-container {
+    position: relative;
+    top: -3.2rem;
+  }
+  .text-medium {
+    position: relative;
+    top: -1.8rem;
+  }
+}
+
 .default-link-grid {
   display: grid;
   grid-template-columns: 100px 6px 7px ;
@@ -38,5 +49,37 @@
     grid-row: 1;
     position: relative;
     left: -13px;
+  }
+}
+
+.external-link-grid {
+  display: grid;
+  grid-template-columns: 132px 4px 7px ;
+  grid-template-rows: 20px 13px 1fr ;
+
+  .external-link {
+    grid-column: 1 / 4;
+    grid-row: 3;
+  }
+
+  .external-link-display {
+    grid-column: 2;
+    grid-row: 3;
+    position: relative;
+    left: -5px;
+  }
+
+  .external-link-span {
+    grid-column: 2;
+    grid-row: 2;
+    position: relative;
+    left: -5px;
+  }
+
+  .external-link-dimension {
+    grid-column: 2;
+    grid-row: 1;
+    position: relative;
+    left: -5px;
   }
 }

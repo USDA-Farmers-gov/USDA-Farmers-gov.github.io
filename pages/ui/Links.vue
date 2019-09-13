@@ -19,7 +19,7 @@
     </p>
 
     <p v-html="external_link"></p>
-    <ExampleRow :data="external_text_links" rowClasses="text-margin-bottom" columns="4" />
+    <ExampleRow :data="external_text_links" rowClasses="text-margin-bottom" :itemClasses="[{ index: 0, classes: 'external-grid-container' }]" columns="4" />
 
     <h3>Inline Textual Link</h3>
     <p>
