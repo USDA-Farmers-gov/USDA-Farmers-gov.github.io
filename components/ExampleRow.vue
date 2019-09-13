@@ -9,7 +9,7 @@
       <p v-if="Object.keys(item.code).length" v-for="(row, key) in item.code" class="text-medium">
         <span class="label" v-if="key">{{ setContentHeader(key) }}</span>
         <br/>
-        <span class="text-medium" v-html="addLineBreaks(row)"></span>
+        <span v-html="addLineBreaks(row)"></span>
       </p>
     </div>
   </div>

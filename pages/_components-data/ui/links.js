@@ -5,7 +5,7 @@ const links_data = {
     return [
       { 
         header: 'Default',
-        markup: links_data.textLinkMarkup(),
+        markup: links_data.defaultLinkGrid(),
         code: {
           'Text': `color: #006546;
             font-family: Public Sans;
@@ -177,6 +177,14 @@ const links_data = {
   externalLinkMarkup(data) {
     let classes = (!!data && data.classes) ? data.classes : ''
     return `<a class="` + utils.setClasses('external-link', classes) + `">External Link</a>`
+  },
+  defaultLinkGrid() {
+    return `<div class="default-link-grid">
+              ` + links_data.textLinkMarkup() + `
+            <div class="default-link dashed-blue dashed-blue-vertical"></div>
+            <div class="default-link-span span-blue span-blue-vertical"></div>
+            <div class="default-link-dimension dimension-blue dimension-blue-vertical">6px</div>
+          </div>`
   }
 }
 

@@ -1,0 +1,42 @@
+.default-grid-container {
+  .example-container {
+    position: relative;
+    top: -3.2rem;
+  }
+  .text-medium {
+    position: relative;
+    top: -1.8rem;
+  }
+}
+
+.default-link-grid {
+  display: grid;
+  grid-template-columns: 100px 6px 7px ;
+  grid-template-rows: 20px 13px 1fr ;
+
+  .text-link {
+    grid-column: 1 / 4;
+    grid-row: 3;
+  }
+
+  .default-link {
+    grid-column: 2;
+    grid-row: 3;
+    position: relative;
+    left: -13px;
+  }
+
+  .default-link-span {
+    grid-column: 2;
+    grid-row: 2;
+    position: relative;
+    left: -13px;
+  }
+
+  .default-link-dimension {
+    grid-column: 2;
+    grid-row: 1;
+    position: relative;
+    left: -13px;
+  }
+}
