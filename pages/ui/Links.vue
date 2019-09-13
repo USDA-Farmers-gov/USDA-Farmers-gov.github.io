@@ -11,7 +11,7 @@
     </p>
     <p v-html="text_link"></p>
 
-    <ExampleRow :data="text_links" rowClasses="text-margin-bottom" :itemClasses="[{ index: 0, classes: 'default-grid-container' }]" columns="4" />
+    <ExampleRow :data="text_links" rowClasses="text-margin-bottom" :itemClasses="[{ index: 0, classes: 'default-link-grid-container' }]" columns="4" />
 
     <h3>External Text Link</h3>
     <p>
