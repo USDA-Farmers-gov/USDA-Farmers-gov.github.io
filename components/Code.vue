@@ -27,6 +27,9 @@
         }
       }
     },
+    mounted() {
+      if(!this.markup) console.error('CODE EXAMPLE ERROR: No markup provided!')
+    },
     methods: {
       setCode() {
         this.code = this.processHTML(this.markup)

@@ -20,13 +20,19 @@
 
   export default {
     props: {
-      data: [ Object, Array ],
+      data: {
+        type: [ Object, Array ],
+        required: true
+      },
       columns: {
         type: [ String, Number ],
         required: true
       },
       rowClasses: String,
       itemClasses: [ Object, Array ]
+    },
+    mounted() {
+      if(!this.data) console.error('EXAMPLE ROW ERROR: No data provided!')
     },
     methods: {
       setClasses(item, index) {

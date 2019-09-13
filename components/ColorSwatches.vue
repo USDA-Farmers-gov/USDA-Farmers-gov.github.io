@@ -31,8 +31,14 @@
   import utils from '@/assets/js/utils.js'
   export default {
     props: {
-      data: [ Object, Array ],
+     data: {
+        type: [ Object, Array ],
+        required: true
+      },
       rowClasses: String
+    },
+    mounted() {
+      if(!this.data) console.error('COLOR SWATCH ROW ERROR: No data provided!')
     },
     methods: {
       setRowClasses() {
@@ -44,7 +50,7 @@
         return swatch.classes.indexOf('grey-') === 0 ? baseClass + ' medium-greyscale' : baseClass
       },
       getDescriptionCount(data) {
-        return data.filter(row => row.description).length
+        return data ? data.filter(row => row.description).length : 0
       }
     }
   }

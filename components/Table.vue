@@ -1,6 +1,6 @@
 <template>
-  <table :class="classes" v-if="data.table_headers && data.table_rows">
-    <thead>
+  <table :class="classes" v-if="data && (data.table_headers || data.table_rows)">
+    <thead v-if="data.table_headers">
         <tr>
           <th v-for="header in data.table_headers"> {{ header }} </th>
         </tr>
@@ -15,8 +15,15 @@
 <script>
   export default {
     props: {
-      data: [ Object, Array ],
+      data: {
+        type: [ Object, Array ],
+        required: true
+      },
       classes: String
+    },
+    mounted() {
+      if(!this.data) console.error('TABLE ERROR: No data provided!')
+      if(this.data && !this.data.table_rows) console.error('TABLE ERROR: data not provided for rows!')
     }
   }
 </script>
