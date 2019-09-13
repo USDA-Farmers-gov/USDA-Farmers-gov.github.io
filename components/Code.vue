@@ -13,22 +13,20 @@
   import utils from '@/assets/js/utils.js'
 
   export default {
-    props: ['html', 'markup'],
+    props: [ 'markup' ],
     data() {
       return {
         code: ''
       }
     },
-    watch: {
-      markup: {
-        immediate: true,
-        handler() {
-          this.setCode()
-        }
-      }
-    },
     mounted() {
       if(!this.markup) console.error('CODE EXAMPLE ERROR: No markup provided!')
+      this.setCode()
+    },
+    updated: function() {
+      this.$nextTick(function () {
+        this.setCode()
+      })
     },
     methods: {
       setCode() {
