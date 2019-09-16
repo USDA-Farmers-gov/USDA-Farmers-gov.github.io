@@ -3,7 +3,7 @@
     Preview:
     <div v-html="markup" class="preview"></div>
     Code:
-    <div class="pre-format soft-yellow">
+    <div class="code-box soft-yellow">
       <pre>{{ code }}</pre>
     </div>
   </div>
@@ -62,10 +62,13 @@
 </script>
 
 <style scoped>
-  .pre-format {
+  .code-box {
     padding: 2rem;
     margin-top: 4rem;
     max-width: 80rem;
     overflow: scroll;
+  }
+  pre {
+    font-family: Arial, Helvetica, sans-serif;
   }
 </style>
