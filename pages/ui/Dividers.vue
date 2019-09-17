@@ -10,6 +10,7 @@
       Tool dividers are used to callout interactive tool pages. Double solid lines are used to create a hard separation between sections to allow the content inside to stand out.
     </p>
     <div class="double-line"></div>
+    
     <h3>Specs</h3>
     <p>
       The divider should be full-width. It should stay within the max width of the page. Tool dividers should not be used by themselves; they must be used above and below the tool callout content.

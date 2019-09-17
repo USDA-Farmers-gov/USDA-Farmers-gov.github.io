@@ -26,7 +26,6 @@
     <ColorSwatches :data="secondary_colors" />
 
     <h3>Low Saturation Colors</h3>
-
     <p>
       These colors provide a low saturation of the primary and secondary colors. They can be used as 508 compliant text backgrounds on system status indicators.
     </p>
@@ -34,7 +33,6 @@
     <ColorSwatches :data="low_saturation_colors" />
 
     <h3>Grayscale</h3>
-
     <p>
       These neutral grays provide a range of tones and shades for utilitarian purposes such as backgrounds and inactive states.
     </p>
@@ -42,7 +40,6 @@
     <ColorSwatches :data="greyscale_colors" rowClasses="text-margin-bottom" />
 
     <h3>Special States</h3>
-
     <p>
       Special states are used to signify information about an interaction or situational identifiers.
     </p>
