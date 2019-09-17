@@ -92,7 +92,7 @@ const links_data = {
     return [
       { 
         header: 'Default',
-        markup: '', 
+        markup: '<a href="#">Inline Link</a>', 
         code: {
           'Text': `color: #006546;
             font-family: Public Sans;
@@ -104,14 +104,14 @@ const links_data = {
       },
       { 
         header: 'Hover',
-        markup: '', 
+        markup: '<a href="#" class="hover">Inline Link</a>',
         code: {
           'Text': `font-weight: bold;`
         }
       },
       { 
         header: 'Focus',
-        markup: '', 
+        markup: '<a href="#" class="focus">Inline Link</a>',
         classes: 'focus',
         code: {
           'Text': `font-weight: bold;
@@ -120,7 +120,7 @@ const links_data = {
       },
       { 
         header: 'Visited',
-        markup: '', 
+        markup: '<a href="#" class="visited">Inline Link</a>',
         classes: 'visited',
         code: {
           'Text': `color: #4C2C92;`

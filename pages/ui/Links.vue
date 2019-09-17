@@ -26,7 +26,7 @@
       Inline textual links are used within body paragraphs. They are underlined on default so they can be easily distinguished between body text.
     </p>
 
-    [ INLINE LINK SINGLE ]
+    <a href="#">Inline Link</a>
     <br>
     <ExampleRow :data="inline_text_links" rowClasses="text-margin-bottom" columns="4" />
 
@@ -44,8 +44,10 @@
       The click target includes the link text and its associated icon. This applys to all link styles.
     </p>
 
-    <div class="text-margin-bottom">
-      [ LINK HIGHLIGHT ]
+    <div class="highlight-text-link text-margin-bottom">
+      <div class="highlight-overlay"></div>
+      <div class="highlight-link" v-html="text_link"></div>
+      <div class="mouse-pointer"></div>
     </div>
 
     <h4>Accessibility</h4>

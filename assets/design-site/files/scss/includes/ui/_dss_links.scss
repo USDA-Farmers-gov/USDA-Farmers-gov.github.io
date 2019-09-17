@@ -1,3 +1,22 @@
+.highlight-text-link  {
+  position: relative;
+  .highlight-overlay {
+    position: absolute;
+    width: 11.8rem;
+    height: 3.3rem;
+  }
+
+  .highlight-link {
+    padding-top: 0.3rem;
+    padding-left: 0.3rem;
+  }
+
+  .mouse-pointer {
+    position: relative;
+    left: 5rem;
+  }
+}
+
 .default-link-grid-container {
   .example-container {
     position: relative;
@@ -41,7 +60,7 @@
 
 .default-link-grid {
   display: grid;
-  grid-template-columns: 100px 6px 7px ;
+  grid-template-columns: 110px 6px 7px ;
   grid-template-rows: 20px 13px 1fr ;
 
   .text-link {
@@ -53,27 +72,27 @@
     grid-column: 2;
     grid-row: 3;
     position: relative;
-    left: -13px;
+    left: -23px;
   }
 
   .default-link-span {
     grid-column: 2;
     grid-row: 2;
     position: relative;
-    left: -13px;
+    left: -23px;
   }
 
   .default-link-dimension {
     grid-column: 2;
     grid-row: 1;
     position: relative;
-    left: -13px;
+    left: -23px;
   }
 }
 
 .external-link-grid {
   display: grid;
-  grid-template-columns: 132px 4px 7px ;
+  grid-template-columns: 142px 4px 7px ;
   grid-template-rows: 20px 13px 1fr ;
 
   .external-link {
@@ -85,21 +104,21 @@
     grid-column: 2;
     grid-row: 3;
     position: relative;
-    left: -5px;
+    left: -15px;
   }
 
   .external-link-span {
     grid-column: 2;
     grid-row: 2;
     position: relative;
-    left: -5px;
+    left: -15px;
   }
 
   .external-link-dimension {
     grid-column: 2;
     grid-row: 1;
     position: relative;
-    left: -5px;
+    left: -15px;
   }
 }
 
