@@ -132,7 +132,7 @@ const links_data = {
     return [
       { 
         header: 'Default',
-        markup: '', 
+        markup: links_data.anchorLinkGrid(),
         code: {
           'Text': `color: #006546;
             font-family: Public Sans;
@@ -146,14 +146,14 @@ const links_data = {
       },
       { 
         header: 'Hover',
-        markup: '', 
+        markup: links_data.anchorLinkMarkup({ classes: 'hover' }),
         code: {
           'Text': `font-weight: bold;`
         }
       },
       { 
         header: 'Focus',
-        markup: '', 
+        markup: links_data.anchorLinkMarkup({ classes: 'focus' }),
         classes: 'focus',
         code: {
           'Text': `font-weight: bold;
@@ -162,7 +162,7 @@ const links_data = {
       },
       { 
         header: 'Visited',
-        markup: '', 
+        markup: links_data.anchorLinkMarkup({ classes: 'visited' }),
         classes: 'visited',
         code: {
           'Text': `color: #4C2C92;`
@@ -178,6 +178,10 @@ const links_data = {
     let classes = (!!data && data.classes) ? data.classes : ''
     return `<a class="` + utils.setClasses('external-link', classes) + `">External Link</a>`
   },
+  anchorLinkMarkup(data) {
+    let classes = (!!data && data.classes) ? data.classes : ''
+    return `<a class="` + utils.setClasses('anchor-link', classes) + `">Anchor Link</a>`
+  },
   defaultLinkGrid() {
     return `<div class="default-link-grid">
               ` + links_data.textLinkMarkup() + `
@@ -192,6 +196,14 @@ const links_data = {
             <div class="external-link-display dashed-blue dashed-blue-vertical"></div>
             <div class="external-link-span span-blue span-blue-vertical"></div>
             <div class="external-link-dimension dimension-blue dimension-blue-vertical">4px</div>
+          </div>`
+  },
+  anchorLinkGrid() {
+    return `<div class="anchor-link-grid">
+              ` + links_data.anchorLinkMarkup() + `
+            <div class="anchor-link-display dashed-blue dashed-blue-vertical"></div>
+            <div class="anchor-link-span span-blue span-blue-vertical"></div>
+            <div class="anchor-link-dimension dimension-blue dimension-blue-vertical">10px</div>
           </div>`
   }
 }

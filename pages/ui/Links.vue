@@ -35,9 +35,9 @@
       Anchor links are used to navigate users to another section within the same page. They can be used with or without a leaf icon.
     </p>
 
-    [ ANCHOR LINK SINGLE ]
+    <p v-html="anchor_link"></p>
     <br>
-    <ExampleRow :data="anchor_links" rowClasses="text-margin-bottom" columns="4" />
+    <ExampleRow :data="anchor_links" rowClasses="anchor-link-examples text-margin-bottom" :itemClasses="[{ index: 0, classes: 'anchor-grid-container' }]" columns="4" />
 
     <h4>Click Target</h4>
     <p>
@@ -80,6 +80,7 @@
         external_link: links_data.externalLinkMarkup(),
         external_text_links: links_data.externalTextLinks(),
         inline_text_links: links_data.inlineTextLinks(),
+        anchor_link: links_data.anchorLinkMarkup(),
         anchor_links: links_data.anchorLinks(),
       }
     }
