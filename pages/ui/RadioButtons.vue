@@ -12,6 +12,7 @@
 
     <p v-html="outputRadioButtonMarkup({ label: 'Radio Label', name: 'default' })"></p>  
     <p v-html="outputRadioButtonMarkup({ label: 'Radio Label', name: 'default', checked: true })"></p>  
+    
     <div class="checkbox-radio-mobile-container">
       <ExampleRow :data="radio_buttons" :item-classes="[{ index: 0, classes: 'checkbox-grid-container' }]" columns="4" />
     </div>
@@ -25,7 +26,6 @@
       <div class="medium-3 checkbox-radio-click-target highlight-overlay" v-html="outputRadioButtonMarkup({ label: 'Radio Label' })"></div> 
       <div class="checkbox-radio-click-target mouse-pointer text-margin-bottom"></div>
     </div>
-    
     
     <h3 id="card-radio-buttons">Card Radio Buttons</h3>
     <p>
