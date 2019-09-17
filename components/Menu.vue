@@ -1,7 +1,7 @@
 <template>
   <div>
     <img class="logo" alt="Farmers.gov" src="/images/farmers-logo.svg"/>
-    <div id="leftnav" role="navigation">
+    <div id="leftnav" role="navigation" aria-label="Side">
       <ul class="menu-container">
         <li v-for="item in menu">
           <div :class="setClassesByCategory(item.category)" 
@@ -9,8 +9,8 @@
                 @keypress="setActiveCategoryOnEvent($event, item)"
                 tabindex="0">
                   {{ item.category }}
-                  <i v-if="activeCategory === item.category && !item.path" class="arrow arrow-up"></i>
-                  <i v-if="activeCategory !== item.category && !item.path" class="arrow arrow-down"></i>
+                  <span v-if="activeCategory === item.category && !item.path" class="arrow arrow-up"></span>
+                  <span v-if="activeCategory !== item.category && !item.path" class="arrow arrow-down"></span>
           </div>
 
           <ul v-if="activeCategory === item.category" class="menu-links">
