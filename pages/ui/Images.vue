@@ -94,7 +94,8 @@
     <h3>Accessibility</h3>
     <p>
       Informative images that represent information need descriptive alternative text.
-
+    </p>
+    <p>
       If the image is used for decorative purposes or if there already is descriptive text about the image, their alternative text should be empty (alt=&quot;&quot;) so that they can be skipped over when users utilize assistive technology such as screen readers.
     </p>
 
