@@ -8,7 +8,7 @@
     </header>
     <div class="container page">
         <div class="menu">
-          <Menu/>
+          <SideMenu/>
         </div>
         <main id="main-content">
           <nuxt />
@@ -18,11 +18,11 @@
 </template>
 
 <script>
-import Menu from '~/components/Menu.vue'
+import SideMenu from '~/components/SideMenu.vue'
 
 export default {
   components: {
-    Menu
+    SideMenu
   }
 }
 </script>
