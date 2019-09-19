@@ -1,8 +1,8 @@
 <template>
   <div>
     <img class="logo" alt="Farmers.gov" src="/images/farmers-logo.svg"/>
-    <div id="leftnav" role="navigation" aria-label="Side">
-      <ul class="menu-container">
+    <nav role="navigation" aria-label="Side">
+      <ul class="sidenav">
         <li v-for="item in menu">
           <div :class="setClassesByCategory(item.category)" 
                 @click="setActiveCategoryOnEvent($event, item)"
@@ -20,7 +20,7 @@
           </ul>
         </li>
       </ul>
-    </div>
+    </nav>
   </div>
 </template>
 

@@ -7,7 +7,7 @@
       <h1 id="site-title">Farmers Design System</h1>
     </header>
     <div class="container page">
-        <div class="menu">
+        <div id="sidebar">
           <SideMenu/>
         </div>
         <main id="main-content">
