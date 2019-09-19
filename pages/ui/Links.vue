@@ -26,7 +26,7 @@
       Inline textual links are used within body paragraphs. They are underlined on default so they can be easily distinguished between body text.
     </p>
 
-    <a href="#">Inline Link</a>
+    <a href="#" tabindex="-1">Inline Link</a>
     <br>
     <ExampleRow :data="inline_text_links" rowClasses="text-margin-bottom" columns="4" />
 

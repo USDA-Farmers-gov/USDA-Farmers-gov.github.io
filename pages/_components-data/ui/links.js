@@ -92,7 +92,7 @@ const links_data = {
     return [
       { 
         header: 'Default',
-        markup: '<a href="#">Inline Link</a>', 
+        markup: '<a href="#" tabindex="-1">Inline Link</a>', 
         code: {
           'Text': `color: #006546;
             font-family: Public Sans;
@@ -104,14 +104,14 @@ const links_data = {
       },
       { 
         header: 'Hover',
-        markup: '<a href="#" class="hover">Inline Link</a>',
+        markup: '<a href="#" class="hover" tabindex="-1">Inline Link</a>',
         code: {
           'Text': `font-weight: bold;`
         }
       },
       { 
         header: 'Focus',
-        markup: '<a href="#" class="focus">Inline Link</a>',
+        markup: '<a href="#" class="focus" tabindex="-1">Inline Link</a>',
         classes: 'focus',
         code: {
           'Text': `font-weight: bold;
@@ -120,7 +120,7 @@ const links_data = {
       },
       { 
         header: 'Visited',
-        markup: '<a href="#" class="visited">Inline Link</a>',
+        markup: '<a href="#" class="visited" tabindex="-1">Inline Link</a>',
         classes: 'visited',
         code: {
           'Text': `color: #4C2C92;`
@@ -172,15 +172,15 @@ const links_data = {
   },
   textLinkMarkup(data) {
     let classes = (!!data && data.classes) ? data.classes : ''
-    return `<a class="` + utils.setClasses('text-link', classes) + `">Text Link</a>`
+    return `<a class="` + utils.setClasses('text-link', classes) + `" tabindex="-1">Text Link</a>`
   },
   externalLinkMarkup(data) {
     let classes = (!!data && data.classes) ? data.classes : ''
-    return `<a class="` + utils.setClasses('external-link', classes) + `">External Link</a>`
+    return `<a class="` + utils.setClasses('external-link', classes) + `" tabindex="-1">External Link</a>`
   },
   anchorLinkMarkup(data) {
     let classes = (!!data && data.classes) ? data.classes : ''
-    return `<a class="` + utils.setClasses('anchor-link', classes) + `">Anchor Link</a>`
+    return `<a class="` + utils.setClasses('anchor-link', classes) + `" tabindex="-1">Anchor Link</a>`
   },
   defaultLinkGrid() {
     return `<div class="default-link-grid">
