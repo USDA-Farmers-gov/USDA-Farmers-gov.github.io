@@ -32,10 +32,6 @@
         activeCategory: '',
         categoryClasses: 'category',
         menu: [
-          // {
-          //   category: 'Overview',
-          //   path: '/'
-          // },
           {
             category: 'Primary Elements',
             links:  [
