@@ -8,4 +8,3 @@ Vue.component('Code', Code)
 Vue.component('ColorSwatches', ColorSwatches)
 Vue.component('ExampleRow', ExampleRow)
 Vue.component('Table', Table)
-
