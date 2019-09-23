@@ -91,11 +91,6 @@
         specs_states: radio_buttons_data.specsStates()
       }
     },
-    mounted() {
-      let checkboxScript = document.createElement('script')
-      checkboxScript.setAttribute('src', '/farmers/js/Components/radio_buttons.js')
-      document.head.appendChild(checkboxScript)
-    },
     methods: {
       outputCardMarkup(options) {
         return radio_buttons_data.outputCardMarkup(options)

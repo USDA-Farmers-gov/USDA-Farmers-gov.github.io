@@ -89,11 +89,6 @@
         specs_states: checkboxes_data.specsStates()
       }
     },
-    mounted() {
-      let checkboxScript = document.createElement('script')
-      checkboxScript.setAttribute('src', '/farmers/js/Components/checkbox.js')
-      document.head.appendChild(checkboxScript)
-    },
     methods: {
       outputCardMarkup(options) {
         return checkboxes_data.outputCardMarkup(options)
