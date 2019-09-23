@@ -100,4 +100,4 @@ assets/design-site/files/img
 # FROM: docroot/themes/farmers
 assets/design-site/files/sass/farmers/images
 
-
+dist/farmers
