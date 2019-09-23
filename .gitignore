@@ -100,3 +100,6 @@ assets/design-site/files/img
 # FROM: docroot/themes/farmers
 assets/design-site/files/sass/farmers/images
 
+# don't add farmers module to flat file site
+dist/farmers
+
