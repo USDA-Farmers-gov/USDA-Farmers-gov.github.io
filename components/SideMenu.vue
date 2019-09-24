@@ -6,7 +6,7 @@
         <li v-for="item in menu">
           <div :class="setClassesByCategory(item.category)" 
                 @click="setActiveCategoryOnEvent($event, item)"
-                @keypress="setActiveCategoryOnEvent($event, item)"
+                @keypress="setActiveCategoryOnEvent($event, item)" 
                 tabindex="0">
                   {{ item.category }}
                   <span v-if="activeCategory === item.category && !item.path" class="arrow arrow-up"></span>
