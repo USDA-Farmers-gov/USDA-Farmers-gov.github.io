@@ -26,16 +26,26 @@
       ul > li:first-child {
         margin-top: 1rem;
       }
-      a, a:hover, a:visited, a:visited:hover {
+      a, a:visited {
         display:block;
-        color: $asphalt;
         text-decoration: none;
-        text-shadow: none;
-        -webkit-text-stroke: $asphalt;
+        color: $asphalt;
       }
+      a:hover, a:visited:hover {
+        color: $heritage;
+        -webkit-text-stroke: $heritage;
+      }
+      
+      // menu no hover styles
+      // a, a:hover, a:visited, a:visited:hover {
+      //   display:block;
+      //   color: $asphalt;
+      //   text-decoration: none;
+      //   text-shadow: none;
+      //   -webkit-text-stroke: $asphalt;
+      // }
       a:not(active) {
         padding-left: 2rem;
-        text-shadow: none;
       }
       
       .category {
