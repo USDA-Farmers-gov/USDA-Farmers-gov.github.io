@@ -26,13 +26,16 @@
       ul > li:first-child {
         margin-top: 1rem;
       }
-      a {
+      a, a:hover, a:visited, a:visited:hover {
         display:block;
         color: $asphalt;
         text-decoration: none;
+        text-shadow: none;
+        -webkit-text-stroke: $asphalt;
       }
       a:not(active) {
         padding-left: 2rem;
+        text-shadow: none;
       }
       
       .category {
