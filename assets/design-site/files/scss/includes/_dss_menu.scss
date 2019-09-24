@@ -44,8 +44,14 @@
       //   text-shadow: none;
       //   -webkit-text-stroke: $asphalt;
       // }
+      .active a:hover {
+        text-shadow: none;
+        color: $asphalt;
+        -webkit-text-stroke: $asphalt;
+      }
       a:not(active) {
         padding-left: 2rem;
+        -webkit-text-stroke: $heritage;
       }
       
       .category {
