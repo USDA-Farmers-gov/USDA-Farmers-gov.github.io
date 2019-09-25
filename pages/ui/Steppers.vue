@@ -40,7 +40,7 @@
     layout: 'farmers',
     head() {
       return {
-        title: 'Stepper'
+        title: 'Steppers'
       }
     },
     data() {

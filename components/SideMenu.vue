@@ -53,7 +53,7 @@
                       { name: 'Images', path: '/ui/Images'},
                       { name: 'Links', path: '/ui/Links'},
                       { name: 'Radio Buttons', path: '/ui/RadioButtons'},
-                      { name: 'Stepper', path: '/ui/Stepper'},
+                      { name: 'Steppers', path: '/ui/Steppers'},
                       { name: 'Tables', path: '/ui/Tables'},
                     ]
           },
