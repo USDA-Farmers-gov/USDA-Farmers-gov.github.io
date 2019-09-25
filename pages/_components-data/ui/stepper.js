@@ -40,10 +40,11 @@ const stepper_data = {
       },
     ]
   },
-  markup() {
+  markup(type) {
+    let addToId = type ? '-' + type : ''
     return `<div class="row">
             <div class="stepper-example medium-12">
-            <form id="class-stepper">
+            <form id="class-stepper` + addToId + `">
             <div class="vertical-step ">
           <div class="vertical-step-left">
             <span class="step-icon">1</span>
@@ -55,24 +56,23 @@ const stepper_data = {
             </div>
             <div class="vertical-step-selections">
               <div class="medium-5">
-                <label tabindex="-1" for="radio-ex-yes" class="radio-card-label with-image">
+                <label tabindex="-1" for="radio-ex-yes` + addToId + `" class="radio-card-label with-image">
                   <div class="radio-img-card-top">
                     <h2>Yes</h2>
                   </div>
                   <div class="radio-img-card-bottom">
-                    <input type="radio" id="radio-ex-yes" class="radio-card-input" name="radio-step-example" title="Card Radio" tabindex="-1">
+                    <input type="radio" id="radio-ex-yes` + addToId + `" class="radio-card-input" name="radio-step-example" title="Card Radio" tabindex="-1">
                     <span class="radio-icon"></span>
                   </div>
                 </label>
               </div>
-            
               <div class="medium-5">
-                <label tabindex="-1" for="radio-ex-no" class="radio-card-label with-image">
+                <label tabindex="-1" for="radio-ex-no` + addToId + `" class="radio-card-label with-image">
                   <div class="radio-img-card-top">
                     <h2>No</h2>
                   </div>
                   <div class="radio-img-card-bottom">
-                    <input type="radio" id="radio-ex-no" class="radio-card-input" name="radio-step-example" title="Card Radio" tabindex="-1" checked>
+                    <input type="radio" id="radio-ex-no` + addToId + `" class="radio-card-input" name="radio-step-example" title="Card Radio" tabindex="-1" checked>
                     <span class="radio-icon"></span>
                   </div>
                 </label>
@@ -90,8 +90,8 @@ const stepper_data = {
           </div>
           <div class="vertical-step-selections">
               <div class="medium-5">
-                <label for="form-select-one" style="font-size:1.6rem;line-height:2.4rem;height:2.4rem;">Dropdown Label</label>
-                <select id="form-select-one" name="form-select" tabindex="-1">
+                <label for="form-select-one` + addToId + `" style="font-size:1.6rem;line-height:2.4rem;height:2.4rem;">Dropdown Label</label>
+                <select id="form-select-one` + addToId + `" name="form-select" tabindex="-1" disabled>
                   <option>- Please Select -</option>
                 </option></select>
               </div>
@@ -108,7 +108,7 @@ const stepper_data = {
           </div>
           <div class="vertical-step-selections">
               <div class="medium-5">
-                <button class="btn">BUTTON</button>
+                <button class="btn" tabindex="-1">BUTTON</button>
               </div>
           </div>
         </div>
@@ -116,7 +116,7 @@ const stepper_data = {
   },
   grid() {
     return `<div class="stepper-grid">`
-               + stepper_data.markup() +
+               + stepper_data.markup('grid') +
            `
               <div class="first-gutter-span span-blue span-blue-vertical"></div>
               <div class="first-gutter-dimension dimension-blue dimension-blue-vertical">40px</div>
