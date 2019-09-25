@@ -54,7 +54,7 @@ const stepper_data = {
               <p>Example of an optional supporting text for question with radio button selections.</p>
             </div>
             <div class="vertical-step-selections">
-              <div class="medium-6">
+              <div class="medium-5">
                 <label tabindex="-1" for="radio-ex-yes" class="radio-card-label with-image">
                   <div class="radio-img-card-top">
                     <h2>Yes</h2>
@@ -66,7 +66,7 @@ const stepper_data = {
                 </label>
               </div>
             
-              <div class="medium-6">
+              <div class="medium-5">
                 <label tabindex="-1" for="radio-ex-no" class="radio-card-label with-image">
                   <div class="radio-img-card-top">
                     <h2>No</h2>
@@ -89,7 +89,7 @@ const stepper_data = {
             <p></p>
           </div>
           <div class="vertical-step-selections">
-              <div class="medium-6">
+              <div class="medium-5">
                 <label for="form-select-one" style="font-size:1.6rem;line-height:2.4rem;height:2.4rem;">Dropdown Label</label>
                 <select id="form-select-one" name="form-select" tabindex="-1">
                   <option>- Please Select -</option>
@@ -107,7 +107,7 @@ const stepper_data = {
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
           </div>
           <div class="vertical-step-selections">
-              <div class="medium-6">
+              <div class="medium-5">
                 <button class="btn">BUTTON</button>
               </div>
           </div>
