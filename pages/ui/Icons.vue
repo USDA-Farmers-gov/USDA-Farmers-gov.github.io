@@ -10,7 +10,11 @@
       Interactive icons are functional icons that convey element behavior. Most interactive icons are modeled after USWDS's icon styles. They should be exported as a .svg file for higher resolution with a smaller file size.
     </p>
 
-    <Table :data="interactive_icons" classes="text-margin-bottom" />
+    <Table 
+      :data="interactive_icons"
+      classes="text-margin-bottom" 
+      caption="Column one contains the icon image as it is diplayed on the page, column two contains icon name, and column three contains a description of its usage." 
+    />
 
     <h3>Click Target</h3>
     <p>
@@ -18,7 +22,7 @@
     </p>
 
     <div class="icons-click-target-grid text-margin-bottom">
-      <img src="/images/icons/close.svg" class="highlight-overlay" />
+      <img src="/images/icons/close.svg" class="highlight-overlay" alt="" />
 
       <div class="click-target-top-span span-blue span-blue-vertical"></div>
       <div class="click-target-top-dimension dimension-blue dimension-blue-vertical">44px</div>
@@ -51,14 +55,14 @@
     <p>
       <strong>Examples</strong>
     </p>
-    
-    <div class="row">
+
+    <div class="row text-margin-bottom">
       <div v-for="icon in supporting_icons" class="medium-1" v-html="icon" />
     </div>
 
     <h3>Accessibility</h3>
     <p>
-      Supporting icons are used as decorative elements that don’t provide additional information.  Therefore, their alternative text should be empty (alt=“”) so that they can be skipped over when users utilize assistive technology such as screen readers.
+      Supporting icons are used as decorative elements that don’t provide additional information.  Therefore, their alternative text should be empty (alt=&quot;&quot;) so that they can be skipped over when users utilize assistive technology such as screen readers.
     </p>
 
     <h4>References</h4>
@@ -67,7 +71,7 @@
     </p>
 
     <h3>Illustrative Icons</h3>
-    <p>
+    <p class="text-margin-bottom">
       Illustrative icons are decorative icons that are used to visually represent the content. They add visual interest to the page and give a preview of the content when used on text heavy pages. Illustrative icons should not have any actions associated with them as they are used purely for decorative purposes.
     </p>
 
@@ -85,7 +89,7 @@
 
     <h3>Accessibility</h3>
     <p>
-      Illustrative icons are used as a decorative elements that don’t provide informative content.  Therefore, their alternative text should be empty (alt=“”) so that they can be skipped over when users utilize assistive technology such as screen readers.
+      Illustrative icons are used as a decorative elements that don’t provide informative content.  Therefore, their alternative text should be empty (alt=&quot;&quot;) so that they can be skipped over when users utilize assistive technology such as screen readers.
     </p>
 
     <h4>References</h4>

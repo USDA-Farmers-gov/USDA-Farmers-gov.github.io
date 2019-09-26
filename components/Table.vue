@@ -1,5 +1,6 @@
 <template>
   <table :class="classes" v-if="data && (data.table_headers || data.table_rows)">
+    <caption class="visually-hidden" v-if="caption"> {{ caption }} </caption>
     <thead v-if="data.table_headers">
         <tr>
           <th v-for="header in data.table_headers"> {{ header }} </th>
@@ -19,6 +20,7 @@
         type: [ Object, Array ],
         required: true
       },
+      caption: String,
       classes: String
     },
     mounted() {
