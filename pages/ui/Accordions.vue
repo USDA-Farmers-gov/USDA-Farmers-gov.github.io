@@ -10,7 +10,7 @@
       Card accordions display part of the content to provide context about the information before users expand the accordion to view the full content.  Users are able to see what information is included before making a decision to continue reading. A transparent gradient overlay is used as a visual indicator to show that there is underlying additional content.
     </p>
 
-    <div v-html="default_accordion_markup" />
+    <div v-html="default_accordion_markup" class="text-margin-bottom" />
 
     <h3>Specs</h3>
     <p>

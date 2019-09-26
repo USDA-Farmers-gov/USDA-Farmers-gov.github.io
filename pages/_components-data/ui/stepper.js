@@ -91,7 +91,7 @@ const stepper_data = {
           <div class="vertical-step-selections">
               <div class="medium-5">
                 <label for="form-select-one` + addToId + `" style="font-size:1.6rem;line-height:2.4rem;height:2.4rem;">Dropdown Label</label>
-                <select id="form-select-one` + addToId + `" name="form-select" tabindex="-1" disabled>
+                <select id="form-select-one` + addToId + `" name="form-select" tabindex="-1">
                   <option>- Please Select -</option>
                 </option></select>
               </div>
