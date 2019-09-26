@@ -48,10 +48,12 @@
       Supporting icons are solid filled icons. They are simple geometric shapes that are easily recognizable. They should be exported as a .svg file for higher resolution with a smaller file size.
     </p>
 
-    <strong>Examples</strong>
-    <br>
+    <p>
+      <strong>Examples</strong>
+    </p>
+    
     <div class="row">
-      <div v-for="icon in supporting_icons" class="medium-1">{{ icon }}</div>
+      <div v-for="icon in supporting_icons" class="medium-1" v-html="icon" />
     </div>
 
     <h3>Accessibility</h3>
@@ -74,9 +76,11 @@
       Illustrative icons have an outlined icon style. Outlined icons have a lighter line weight compared to solid icons, so they don’t overwhelm the associating content. They should use a consistent stroke weight. They should be exported as a .svg file for higher resolution with a smaller file size.
     </p>
 
-    <strong>Examples</strong>
+    <p>
+      <strong>Examples</strong>
+    </p>
     <div class="row text-margin-bottom">
-      <div v-for="icon in illustrative_icons" class="medium-1">{{ icon }}</div>
+      <div v-for="icon in illustrative_icons" class="medium-1" v-html="icon" />
     </div>
 
     <h3>Accessibility</h3>
