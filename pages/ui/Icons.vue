@@ -84,7 +84,7 @@
       <strong>Examples</strong>
     </p>
     <div class="row text-margin-bottom">
-      <div v-for="icon in illustrative_icons" class="medium-1" v-html="icon" />
+      <div v-for="icon in illustrative_icons" class="medium-2" v-html="icon" />
     </div>
 
     <h3>Accessibility</h3>

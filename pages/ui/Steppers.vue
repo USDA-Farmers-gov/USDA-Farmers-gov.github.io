@@ -16,7 +16,7 @@
       Vertical steppers must have a minimum of two steps. Stepper questions and answers should be visible as the user completes the steps so that they can review their information and change their input at any time if needed. 
     </p>
 
-    <div class="stepper-overlay">
+    <div class="">
       <div v-html="stepper_markup" />
     </div>
 
@@ -25,7 +25,7 @@
       Vertical steppers should follow the specified padding requirements outlined below. The input sections should follow its corresponding component specs in the design system. On the last step, use an icon that is relevant to the final call-to-action. 
     </p>
 
-    <div class="stepper-overlay">
+    <div class="">
       <div v-html="stepper_grid" />
     </div>
 
