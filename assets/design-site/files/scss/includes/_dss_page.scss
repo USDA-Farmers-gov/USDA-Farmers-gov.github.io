@@ -79,14 +79,7 @@ main {
 *, ::after, ::before {
     box-sizing: border-box;
 }
-// DISABLES CLICK
-// .cover{
-//   width:100%;
-//   height:100%;
-//   background:transparent;
-//   position:absolute;
-//   z-index:2;
-//   top:0;
-//   left:0;
-//   display:none;
-// }
+
+.flex-align-bottom {
+  align-self: flex-end;
+}
