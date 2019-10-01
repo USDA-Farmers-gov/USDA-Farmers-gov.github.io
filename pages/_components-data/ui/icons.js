@@ -36,8 +36,8 @@ const icons_data = {
   },
   imageMarkup(data) {
     const altText = data.alt ? data.alt : ''
-    const classes = data.classes ? data.classes : ''
-    return `<img src="` + data.image + `" class="` + classes + `" alt="` + altText + `">`
+    const classes = data.classes ? ' class="' + data.classes + '"' : ''
+    return `<img src="` + data.image + `"` + classes + ` alt="` + altText + `">`
   }
 }
 
