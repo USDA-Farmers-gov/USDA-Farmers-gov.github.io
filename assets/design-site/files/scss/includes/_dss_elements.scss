@@ -25,6 +25,10 @@
   }
 }
 
+.disable-clicks {
+  pointer-events: none;
+}
+
 .mouse-pointer {
   display: inline;
   position: relative;

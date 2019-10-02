@@ -56,24 +56,24 @@ const stepper_data = {
             <div class="vertical-step-selections">
             
               <div class="medium-5">
-                <label tabindex="-1" for="radio-ex-yes` + addToId + `" class="radio-card-label with-image checked">
+                <label tabindex="0" for="radio-ex-yes` + addToId + `" class="radio-card-label with-image">
                   <div class="radio-img-card-top">
                     <h2>Yes</h2>
                   </div>
                   <div class="radio-img-card-bottom">
-                    <input type="radio" id="radio-ex-yes` + addToId + `" class="radio-card-input" name="radio-step-example" title="Card Radio" tabindex="-1">
+                    <input type="radio" id="radio-ex-yes` + addToId + `" class="radio-card-input" name="radio-step-example" title="Card Radio" tabindex="0">
                     <span class="radio-icon"></span>
                   </div>
                 </label>
               </div>
             
               <div class="medium-5">
-                <label tabindex="-1" for="radio-ex-no` + addToId + `" class="radio-card-label with-image">
+                <label tabindex="0" for="radio-ex-no` + addToId + `" class="radio-card-label with-image checked">
                   <div class="radio-img-card-top">
                     <h2>No</h2>
                   </div>
                   <div class="radio-img-card-bottom">
-                    <input type="radio" id="radio-ex-no` + addToId + `" class="radio-card-input" name="radio-step-example" title="Card Radio" tabindex="-1" checked>
+                    <input type="radio" id="radio-ex-no` + addToId + `" class="radio-card-input" name="radio-step-example" title="Card Radio" tabindex="0" checked>
                     <span class="radio-icon"></span>
                   </div>
                 </label>
@@ -94,14 +94,14 @@ const stepper_data = {
           
               <div class="medium-4">
                 <label for="form-select-one` + addToId + `" style="font-size:1.6rem;line-height:2.4rem;height:2.4rem;">Dropdown Label</label>
-                <select id="form-select-one` + addToId + `" name="form-select" tabindex="-1">
+                <select id="form-select-one` + addToId + `" name="form-select" tabindex="0">
                   <option>- Please Select -</option>
                   <option value="1">Option 1</option><option value="2">Option 2</option><option value="3">Option 3</option><option value="4">Option 4
                 </option></select>
               </div>
             
           </div>
-        </div>
+        </div> 
       </div><div role="group" aria-label="step-3" class="vertical-step">
         <div class="vertical-step-left">
           <span class="step-icon"><img src="/images/stepper_doc_icon.svg" alt=""></span>
@@ -113,7 +113,7 @@ const stepper_data = {
           </div>
           <div class="vertical-step-selections">
           
-              <div class="medium-4">
+              <div class="medium-4 disable-clicks">
                 <button class="btn" tabindex="-1">BUTTON</button>
               </div>
             
