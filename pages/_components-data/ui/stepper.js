@@ -44,8 +44,7 @@ const stepper_data = {
     let addToId = type ? '-' + type : ''
     return `<div class="row">
             <div class="stepper-example medium-12">
-            <form id="class-stepper` + addToId + `">
-            <div class="vertical-step ">
+            <form id="class-stepper` + addToId + `"><div role="radiogroup" aria-label="step-1" class="vertical-step ">
           <div class="vertical-step-left">
             <span class="step-icon">1</span>
           </div>
@@ -55,8 +54,9 @@ const stepper_data = {
               <p>Example of an optional supporting text for question with radio button selections.</p>
             </div>
             <div class="vertical-step-selections">
+            
               <div class="medium-5">
-                <label tabindex="-1" for="radio-ex-yes` + addToId + `" class="radio-card-label with-image">
+                <label tabindex="-1" for="radio-ex-yes` + addToId + `" class="radio-card-label with-image checked">
                   <div class="radio-img-card-top">
                     <h2>Yes</h2>
                   </div>
@@ -66,6 +66,7 @@ const stepper_data = {
                   </div>
                 </label>
               </div>
+            
               <div class="medium-5">
                 <label tabindex="-1" for="radio-ex-no` + addToId + `" class="radio-card-label with-image">
                   <div class="radio-img-card-top">
@@ -77,29 +78,33 @@ const stepper_data = {
                   </div>
                 </label>
               </div>
+            
             </div>
           </div>
-        </div><div class="vertical-step">
+        </div><div role="group" aria-label="step-2" class="vertical-step">
         <div class="vertical-step-left">
           <span class="step-icon">2</span>
         </div>
         <div class="vertical-step-content">
           <div class="vertical-step-header">
             <h2>Example question with a dropdown</h2>
-            <p></p>
+            
           </div>
           <div class="vertical-step-selections">
-              <div class="medium-5">
+          
+              <div class="medium-4">
                 <label for="form-select-one` + addToId + `" style="font-size:1.6rem;line-height:2.4rem;height:2.4rem;">Dropdown Label</label>
                 <select id="form-select-one` + addToId + `" name="form-select" tabindex="-1">
                   <option>- Please Select -</option>
+                  <option value="1">Option 1</option><option value="2">Option 2</option><option value="3">Option 3</option><option value="4">Option 4
                 </option></select>
               </div>
+            
           </div>
         </div>
-      </div><div class="vertical-step">
+      </div><div role="group" aria-label="step-3" class="vertical-step">
         <div class="vertical-step-left">
-          <span class="step-icon"><img src="/images/stepper_doc_icon.svg"></span>
+          <span class="step-icon"><img src="/images/stepper_doc_icon.svg" alt=""></span>
         </div>
         <div class="vertical-step-content">
           <div class="vertical-step-header">
@@ -107,12 +112,15 @@ const stepper_data = {
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
           </div>
           <div class="vertical-step-selections">
-              <div class="medium-5">
+          
+              <div class="medium-4">
                 <button class="btn" tabindex="-1">BUTTON</button>
               </div>
+            
+            </div>
           </div>
-        </div>
-      </div></form></div></div>`
+        </div></form></div>
+      </div>`
   },
   grid() {
     return `<div class="stepper-grid">`

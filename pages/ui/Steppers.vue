@@ -31,7 +31,7 @@
 
     <ExampleRow :data="specs" columns="4" />
 
-    <h4>Accessibility</h4>
+    <h3>Accessibility</h3>
     <p>
       Vertical stepper and its elements must be available through the use of screen readers and keyboards. The different input components must follow their accessibility guidelines outlined in the design system.
     </p>
