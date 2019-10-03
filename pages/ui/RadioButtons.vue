@@ -14,7 +14,7 @@
     <p v-html="outputRadioButtonMarkup({ label: 'Radio Label', name: 'default', checked: true })"></p>  
     
     <div class="checkbox-radio-mobile-container">
-      <ExampleRow :data="radio_buttons" :item-classes="[{ index: 0, classes: 'checkbox-grid-container' }]" columns="4" />
+      <ExampleRow :data="radio_buttons_data.radioButtons()" :item-classes="[{ index: 0, classes: 'checkbox-grid-container' }]" columns="4" />
     </div>
 
     <h4>Click Target</h4>
@@ -42,8 +42,8 @@
       Card height and width are flexible based on specific use cases. The cards are most commonly used in a &frac13; or &frac14; grid layout. Icons can be used with different typography hierarchy inside the card. All elements should stay within the specified padding requirements below. 
     </p>
 
-    <ExampleRow :data="specs" columns="3" />
-    <ExampleRow :data="specs_states" columns="3" />
+    <ExampleRow :data="radio_buttons_data.specs()" columns="3" />
+    <ExampleRow :data="radio_buttons_data.specsStates()" columns="3" />
 
     <h3>Click Target</h3>
     <p>
@@ -85,10 +85,7 @@
     },
     data() {
       return {
-        buttons_default: radio_buttons_data.buttonsDefault(),
-        radio_buttons: radio_buttons_data.radioButtons(),
-        specs: radio_buttons_data.specs(),
-        specs_states: radio_buttons_data.specsStates()
+        radio_buttons_data: radio_buttons_data
       }
     },
     methods: {

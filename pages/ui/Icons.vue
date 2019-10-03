@@ -11,7 +11,7 @@
     </p>
 
     <Table 
-      :data="interactive_icons"
+      :data="icons_data.interactiveIcons()[0]"
       classes="text-margin-bottom" 
       caption="Column one contains the icon image as it is diplayed on the page, column two contains icon name, and column three contains a description of its usage." 
     />
@@ -57,7 +57,7 @@
     </p>
 
     <div class="row text-margin-bottom">
-      <div v-for="icon in supporting_icons" class="medium-1" v-html="icon" />
+      <div v-for="icon in icons_data.supportingIcons()" class="medium-1" v-html="icon" />
     </div>
 
     <h3>Accessibility</h3>
@@ -84,7 +84,7 @@
       <strong>Examples</strong>
     </p>
     <div class="row text-margin-bottom">
-      <div v-for="icon in illustrative_icons" class="medium-2 flex-align-bottom" v-html="icon" />
+      <div v-for="icon in icons_data.illustrativeIcons()" class="medium-2 flex-align-bottom" v-html="icon" />
     </div>
 
     <h3>Accessibility</h3>
@@ -109,9 +109,7 @@
     },
     data() {
       return {
-        interactive_icons: icons_data.interactiveIcons()[0],
-        supporting_icons: icons_data.supportingIcons(),
-        illustrative_icons: icons_data.illustrativeIcons(),
+        icons_data: icons_data
       }
     }
   }

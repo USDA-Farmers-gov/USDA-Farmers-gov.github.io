@@ -9,7 +9,7 @@
     </p>
 
     <div class="row text-margin-bottom">
-      <div class="medium-4" v-html="dropdown_single"/>
+      <div class="medium-4" v-html="dropdowns_data.dropdownSingle()"/>
     </div>
 
     <h3>Specs</h3>
@@ -22,11 +22,11 @@
 
     <h3>Default</h3>
     <div class="row">
-      <div class="medium-12" v-html="dropdown_dimensions"/>
+      <div class="medium-12" v-html="dropdowns_data.dropdownDimensions()"/>
     </div>
 
-    <ExampleRow :data="dropdown_specs" columns="4" />
-    <ExampleRow :data="dropdown_states" columns="3" />
+    <ExampleRow :data="dropdowns_data.dropdownSpecs()" columns="4" />
+    <ExampleRow :data="dropdowns_data.dropDownStates()" columns="3" />
 
     <h4>Click Target</h4>
     <p>
@@ -34,7 +34,7 @@
     </p>
 
     <div class="row text-margin-bottom">
-      <div class="medium-5" v-html="dropdown_highlight"/>
+      <div class="medium-5" v-html="dropdowns_data.dropdownHighlight()"/>
     </div>
 
     <h4>Accessibility</h4>
@@ -64,11 +64,7 @@
     },
     data() {
       return {
-        dropdown_single: dropdowns_data.dropdownSingle(),
-        dropdown_dimensions: dropdowns_data.dropdownDimensions(),
-        dropdown_highlight: dropdowns_data.dropdownHighlight(),
-        dropdown_specs: dropdowns_data.dropdownSpecs(),
-        dropdown_states: dropdowns_data.dropDownStates()
+        dropdowns_data: dropdowns_data
       }
     }
   }

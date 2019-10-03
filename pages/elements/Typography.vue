@@ -19,7 +19,7 @@
       </div>
     </div>
 
-    <Table :data="fonts" classes="text-margin-bottom"/>
+    <Table :data="typography_data.fonts()[0]" classes="text-margin-bottom"/>
 
     <h3>Lists</h3>
     <div>
@@ -69,7 +69,7 @@
             </p>
           </div>
 
-          <div v-for="btn in contrast_buttons_normal" class="row contrast">
+          <div v-for="btn in typography_data.contrastButtonsNormal()" class="row contrast">
             <div :class="'mini-square ' + btn.classes">
               AAA
             </div>
@@ -93,7 +93,7 @@
             </p>
           </div>
 
-          <div v-for="btn in contrast_buttons_large_text" class="row contrast">
+          <div v-for="btn in typography_data.contrastButtonsLargeText()" class="row contrast">
             <div :class="'mini-square ' + btn.classes">
               AA
             </div>
@@ -119,9 +119,7 @@
     },
     data() {
       return {
-        fonts: typography_data.fonts()[0],
-        contrast_buttons_normal: typography_data.contrastButtonsNormal(),
-        contrast_buttons_large_text: typography_data.contrastButtonsLargeText()
+        typography_data: typography_data
       }
     }
   }

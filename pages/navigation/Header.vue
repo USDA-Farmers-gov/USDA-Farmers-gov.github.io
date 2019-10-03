@@ -30,7 +30,7 @@
 
     [ DEFAULT EXAMPLE ]
 
-    <ExampleRow :data="specs" columns="4" />
+    <ExampleRow :data="header_data.specs()" columns="4" />
 
     <h4>Dropdown Menu</h4>
     <p>
@@ -39,14 +39,14 @@
 
     [ DROPDOWN EXAMPLE WITH GRID ]
 
-    <ExampleRow :data="dropdown_grid_specs" columns="4" />
-    <ExampleRow :data="dropdown_item_specs" columns="4" />
+    <ExampleRow :data="header_data.dropdownGridSpecs()" columns="4" />
+    <ExampleRow :data="header_data.dropdownItemSpecs()" columns="4" />
 
     <h5>Callout Button</h5>
-    <ExampleRow :data="callout_button_specs" columns="4" />
+    <ExampleRow :data="header_data.calloutButtonSpecs()" columns="4" />
 
     <h5>Search Bar</h5>
-    <ExampleRow :data="search_bar_specs" columns="4" />
+    <ExampleRow :data="header_data.searchBarSpecs()" columns="4" />
 
     <h3>Accessibility</h3>
     <p>
@@ -72,11 +72,7 @@
     },
     data() {
       return {
-        specs: header_data.specs(),
-        dropdown_grid_specs: header_data.dropdownGridSpecs(),
-        dropdown_item_specs: header_data.dropdownItemSpecs(),
-        callout_button_specs: header_data.calloutButtonSpecs(),
-        search_bar_specs: header_data.searchBarSpecs(),
+        header_data: header_data
       }
     }
   }

@@ -112,11 +112,6 @@
       return {
         title: 'Images'
       }
-    },
-    data() {
-      return {
-      
-      }
     }
   }
 </script>

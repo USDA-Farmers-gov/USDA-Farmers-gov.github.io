@@ -25,7 +25,7 @@
     </p>
 
     [ BREADCRUMB WITH GRID ]
-    <ExampleRow :data="specs" columns="4" />
+    <ExampleRow :data="breadcrumb_data.specs()" columns="4" />
 
     <h3>Accessibility</h3>
     <p>
@@ -52,7 +52,7 @@
     },
     data() {
       return {
-        specs: breadcrumb_data.specs()
+        breadcrumb_data: breadcrumb_data
       }
     }
   }

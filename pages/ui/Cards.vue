@@ -22,7 +22,7 @@
     <p>
       <strong>Examples</strong>
     </p>
-    <ExampleRow :data="specs" rowClasses="default-grid-row" :item-classes="[{ index: 0, classes: 'default-card-grid-container' }]" columns="2" />
+    <ExampleRow :data="cards_data.specs()" rowClasses="default-grid-row" :item-classes="[{ index: 0, classes: 'default-card-grid-container' }]" columns="2" />
 
     <h3>Resource Cards</h3>
     <p>
@@ -30,7 +30,7 @@
     </p>
 
     <div class="row text-margin-bottom">
-      <div v-html="resource_card_single" class="medium-5" />
+      <div v-html="cards_data.resourceCardSingle()" class="medium-5" />
     </div>
     <h3>Specs</h3>
     <p>
@@ -40,10 +40,10 @@
     <h4>Default with Logo</h4>
 
     <div class="row">
-      <div v-html="resource_card_with_grid" class="medium-6" />
+      <div v-html="cards_data.resourceCardGrid()" class="medium-6" />
     </div>
-    <ExampleRow :data="resource_card_specs" columns="4" />
-    <ExampleRow :data="card_specs_no_logo" rowClasses="resource-cards-no-logo" columns="2" />
+    <ExampleRow :data="cards_data.resourceCardSpecs()" columns="4" />
+    <ExampleRow :data="cards_data.resourceCardSpecsWithoutLogo()" rowClasses="resource-cards-no-logo" columns="2" />
 
     <h4>Accessibility</h4>
     <p>
@@ -64,17 +64,13 @@
     },
     data() {
       return {
+        cards_data: cards_data,
         default_card: cards_data.defaultCardMarkup({ 
               img: '/images/tractor.png',  
               header: 'Example Card Headline', 
               link: { text: 'Text Link', href: '#' },
               description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.`
-        }),
-        resource_card_single: cards_data.resourceCardSingle(),
-        resource_card_with_grid: cards_data.resourceCardGrid(),
-        specs: cards_data.specs(),
-        card_specs_no_logo: cards_data.resourceCardSpecsWithoutLogo(),
-        resource_card_specs: cards_data.resourceCardSpecs()
+        })
       }
     }
   }

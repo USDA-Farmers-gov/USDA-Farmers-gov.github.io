@@ -16,16 +16,16 @@
       Vertical steppers must have a minimum of two steps. Stepper questions and answers should be visible as the user completes the steps so that they can review their information and change their input at any time if needed. 
     </p>
 
-    <div v-html="stepper_markup" />
+    <div v-html="stepper_data.markup()" />
 
     <h3>Specs</h3>
     <p>
       Vertical steppers should follow the specified padding requirements outlined below. The input sections should follow its corresponding component specs in the design system. On the last step, use an icon that is relevant to the final call-to-action. 
     </p>
 
-    <div v-html="stepper_grid" />
+    <div v-html="stepper_data.grid()" />
 
-    <ExampleRow :data="specs" columns="4" />
+    <ExampleRow :data="stepper_data.specs()" columns="4" />
 
     <h3>Accessibility</h3>
     <p>
@@ -46,9 +46,7 @@
     },
     data() {
       return {
-        specs: stepper_data.specs(),
-        stepper_markup: stepper_data.markup(),
-        stepper_grid: stepper_data.grid(),
+        stepper_data: stepper_data
       }
     }
   }

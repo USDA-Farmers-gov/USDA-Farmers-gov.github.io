@@ -28,7 +28,7 @@
     </p>
 
     [ FOOTER EXAMPLE WITH GRID ]
-    <ExampleRow :data="specs" columns="4" />
+    <ExampleRow :data="footer_data.specs()" columns="4" />
 
     <h4>Accessibility</h4>
     <p>
@@ -48,7 +48,7 @@
     },
     data() {
       return {
-        specs: footer_data.specs()
+        footer_data: footer_data
       }
     }
   }

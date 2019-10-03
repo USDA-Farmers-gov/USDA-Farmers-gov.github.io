@@ -16,35 +16,35 @@
       The primary colors of the site, green and blue, signify the land and sky of America's beautiful landscapes. The vibrant chroma of the greens and blue establish a calm and positive energy that correlates with the sites photographic elements. The deep Asphalt adds dimension to the text and icon elements that would otherswise be lifeless if flat black.
     </p>
     
-    <ColorSwatches :data="primary_colors" />
+    <ColorSwatches :data="colors_data.primaryColors()" />
 
     <h3>Secondary Colors</h3>
     <p>
       The secondary colors also draw inspiration from hues found in nature such as bright dandelions and iconic red maple leaves. These colors compliment the primary colors by adding pops of accent elements throughout the site.
     </p>
 
-    <ColorSwatches :data="secondary_colors" />
+    <ColorSwatches :data="colors_data.secondaryColors()" />
 
     <h3>Low Saturation Colors</h3>
     <p>
       These colors provide a low saturation of the primary and secondary colors. They can be used as 508 compliant text backgrounds on system status indicators.
     </p>
 
-    <ColorSwatches :data="low_saturation_colors" />
+    <ColorSwatches :data="colors_data.lowSaturationColors()" />
 
     <h3>Grayscale</h3>
     <p>
       These neutral grays provide a range of tones and shades for utilitarian purposes such as backgrounds and inactive states.
     </p>
 
-    <ColorSwatches :data="greyscale_colors" rowClasses="text-margin-bottom" />
+    <ColorSwatches :data="colors_data.greyscaleColors()" rowClasses="text-margin-bottom" />
 
     <h3>Special States</h3>
     <p>
       Special states are used to signify information about an interaction or situational identifiers.
     </p>
     
-    <ColorSwatches :data="special_states" />
+    <ColorSwatches :data="colors_data.specialStates()" />
   </div>
 </template>
 
@@ -60,11 +60,7 @@
     },
     data() {
       return {
-        primary_colors: colors_data.primaryColors(),
-        secondary_colors: colors_data.secondaryColors(),
-        low_saturation_colors: colors_data.lowSaturationColors(),
-        greyscale_colors: colors_data.greyscaleColors(),
-        special_states: colors_data.specialStates()
+        colors_data: colors_data
       }
     }
   }

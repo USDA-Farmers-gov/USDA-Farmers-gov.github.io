@@ -13,7 +13,7 @@
     <p v-html="outputCheckboxMarkup({ label: 'Checkbox Label', checked: true })"></p>  
 
     <div class="checkbox-radio-mobile-container">
-      <ExampleRow :data="checkboxes" :item-classes="[{ index: 0, classes: 'checkbox-grid-container' }]" columns="4" />
+      <ExampleRow :data="checkboxes_data.default()" :item-classes="[{ index: 0, classes: 'checkbox-grid-container' }]" columns="4" />
     </div>
 
     <h4>Click Target</h4>
@@ -43,8 +43,8 @@
       Card height and width are flexible based on specific use cases. The cards are most commonly used in a &frac13; or &frac14; grid layout. Icons can be used with different typography hierarchy inside the card. All elements should stay within the specified padding requirements below.
     </p>
 
-    <ExampleRow :data="specs" columns="3" />
-    <ExampleRow :data="specs_states" columns="3" />
+    <ExampleRow :data="checkboxes_data.specs()" columns="3" />
+    <ExampleRow :data="checkboxes_data.specsStates()" columns="3" />
 
     <h3>Click Target</h3>
     <p>
@@ -84,6 +84,7 @@
     },
     data() {
       return {
+        checkboxes_data: checkboxes_data,
         checkboxes: checkboxes_data.default(),
         specs: checkboxes_data.specs(),
         specs_states: checkboxes_data.specsStates()

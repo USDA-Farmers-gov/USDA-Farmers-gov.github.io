@@ -15,14 +15,14 @@
       Simple tables are used when there is only one level of column headings. Table rows alternate in background colors for better readability and scannability of data across table rows. 
     </p>
 
-    <Table :data="simple_table" />
+    <Table :data="tables_data.simpleTable()[0]" />
 
     <h4>Complex Table</h4>
     <p>
       A complex table is used when there are multiple levels of column headings. 
     </p>
 
-    <Table :data="complex_table" />
+    <Table :data="tables_data.complexTable()[0]" />
     
     <h3>Specs</h3>
     <p>
@@ -30,7 +30,7 @@
     </p>
     [ SPEC TABLE WITH GRID ]
 
-    <ExampleRow :data="specs" columns="4" />
+    <ExampleRow :data="tables_data.specs()" columns="4" />
 
     <h3>Accessibility</h3>
     <p>
@@ -43,6 +43,7 @@
     <a href="https://www.w3.org/TR/wai-aria-practices/#table">https://www.w3.org/TR/wai-aria-practices/#table</a>
   </div>
 </template>
+
 <script>
   import tables_data from '@/pages/_components-data/ui/tables.js'
 
@@ -55,9 +56,7 @@
     },
     data() {
       return {
-        simple_table: tables_data.simpleTable()[0] ? tables_data.simpleTable()[0] : '',
-        complex_table: tables_data.complexTable()[0] ? tables_data.complexTable()[0] : '',
-        specs: tables_data.specs() ? tables_data.specs() : '',
+        tables_data: tables_data
       }
     }
   }
