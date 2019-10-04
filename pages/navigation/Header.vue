@@ -30,7 +30,7 @@
 
     [ DEFAULT EXAMPLE ]
 
-    <ExampleRow :data="header_data.specs()" columns="4" />
+    <ExampleRow :data="data.specs()" columns="4" />
 
     <h4>Dropdown Menu</h4>
     <p>
@@ -39,14 +39,14 @@
 
     [ DROPDOWN EXAMPLE WITH GRID ]
 
-    <ExampleRow :data="header_data.dropdownGridSpecs()" columns="4" />
-    <ExampleRow :data="header_data.dropdownItemSpecs()" columns="4" />
+    <ExampleRow :data="data.dropdownGridSpecs()" columns="4" />
+    <ExampleRow :data="data.dropdownItemSpecs()" columns="4" />
 
     <h5>Callout Button</h5>
-    <ExampleRow :data="header_data.calloutButtonSpecs()" columns="4" />
+    <ExampleRow :data="data.calloutButtonSpecs()" columns="4" />
 
     <h5>Search Bar</h5>
-    <ExampleRow :data="header_data.searchBarSpecs()" columns="4" />
+    <ExampleRow :data="data.searchBarSpecs()" columns="4" />
 
     <h3>Accessibility</h3>
     <p>
@@ -61,7 +61,7 @@
   </div>
 </template>
 <script>
-  import header_data from '@/pages/_components-data/navigation/header.js'
+  import data from '@/pages/_components-data/navigation/header.js'
 
   export default {
     layout: 'farmers',
@@ -72,7 +72,7 @@
     },
     data() {
       return {
-        header_data: header_data
+        data: data
       }
     }
   }

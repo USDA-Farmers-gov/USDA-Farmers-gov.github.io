@@ -19,7 +19,7 @@
       </div>
     </div>
 
-    <Table :data="typography_data.fonts()[0]" classes="text-margin-bottom"/>
+    <Table :data="data.fonts()[0]" classes="text-margin-bottom"/>
 
     <h3>Lists</h3>
     <div>
@@ -69,7 +69,7 @@
             </p>
           </div>
 
-          <div v-for="btn in typography_data.contrastButtonsNormal()" class="row contrast">
+          <div v-for="btn in data.contrastButtonsNormal()" class="row contrast">
             <div :class="'mini-square ' + btn.classes">
               AAA
             </div>
@@ -93,7 +93,7 @@
             </p>
           </div>
 
-          <div v-for="btn in typography_data.contrastButtonsLargeText()" class="row contrast">
+          <div v-for="btn in data.contrastButtonsLargeText()" class="row contrast">
             <div :class="'mini-square ' + btn.classes">
               AA
             </div>
@@ -108,7 +108,7 @@
 </template>
 
 <script>
-  import typography_data from '@/pages/_components-data/elements/typography.js'
+  import data from '@/pages/_components-data/elements/typography.js'
 
   export default {
     layout: 'farmers',
@@ -119,7 +119,7 @@
     },
     data() {
       return {
-        typography_data: typography_data
+        data: data
       }
     }
   }

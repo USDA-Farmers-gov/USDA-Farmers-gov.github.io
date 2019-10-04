@@ -16,7 +16,7 @@
       The divider should be full-width. It should stay within the max width of the page. Tool dividers should not be used by themselves; they must be used above and below the tool callout content.
     </p>      
     
-    <ExampleRow :data="dividers_data.defaultSpecs()" columns="1" />
+    <ExampleRow :data="data.defaultSpecs()" columns="1" />
 
     <h3>Primary Divider</h3>
     <p class="text-margin-bottom">
@@ -48,7 +48,7 @@
         </div>
       </div>
     </p>
-    <ExampleRow :data="dividers_data.primarySpecs()" rowClasses="text-margin-bottom" columns="3" />
+    <ExampleRow :data="data.primarySpecs()" rowClasses="text-margin-bottom" columns="3" />
 
     <h3>Secondary Dividers</h3>
     <p>
@@ -66,7 +66,7 @@
       <div class="divider-dot example"></div>
     </div>
 
-    <ExampleRow :data="dividers_data.secondarySpecs()" rowClasses="text-margin-bottom" columns="3" />
+    <ExampleRow :data="data.secondarySpecs()" rowClasses="text-margin-bottom" columns="3" />
 
     <h3>Accessibility</h3>
     <p>
@@ -79,7 +79,7 @@
 </template>
 
 <script>
-  import dividers_data from '@/pages/_components-data/ui/dividers.js'
+  import data from '@/pages/_components-data/ui/dividers.js'
 
   export default {
     layout: 'farmers',
@@ -90,10 +90,7 @@
     },
     data() {
       return {
-        dividers_data: dividers_data,
-        default_specs: dividers_data.defaultSpecs(),
-        primary_specs: dividers_data.primarySpecs(),
-        secondary_specs: dividers_data.secondarySpecs()
+        data: data
       }
     }
   }

@@ -18,8 +18,8 @@
 
     <button class="btn" tabindex="-1">button</button>
 
-   <ExampleRow :data="buttons_data.primaryButton()" columns="3" />
-   <ExampleRow :data="buttons_data.primaryButtonStates()" rowClasses="text-margin-bottom" columns="4" />
+   <ExampleRow :data="data.primaryButton()" columns="3" />
+   <ExampleRow :data="data.primaryButtonStates()" rowClasses="text-margin-bottom" columns="4" />
 
     <h3>Secondary Buttons</h3>
     <p class="text-margin-bottom">
@@ -28,16 +28,16 @@
 
     <button class="btn outline" tabindex="-1">button</button>
 
-    <ExampleRow :data="buttons_data.secondaryButton()" columns="3" />
-    <ExampleRow :data="buttons_data.secondaryButtonStates()" rowClasses="text-margin-bottom" columns="4" />
+    <ExampleRow :data="data.secondaryButton()" columns="3" />
+    <ExampleRow :data="data.secondaryButtonStates()" rowClasses="text-margin-bottom" columns="4" />
 
     <h3>Tertiary Buttons</h3>
     <p class="text-margin-bottom">
       The tertiary button should be used for instances of user actions that are of less importance than those reserved for primary and secondary buttons. Those buttons should be used for card design. Tertiary buttons should not be used in place of ‘text links,’ as tertiary buttons are not used for user navigation.
     </p>
 
-    <ExampleRow :data="buttons_data.tertiaryButtonDefault()" columns="1" />
-    <ExampleRow :data="buttons_data.tertiaryButton()" columns="4" />
+    <ExampleRow :data="data.tertiaryButtonDefault()" columns="1" />
+    <ExampleRow :data="data.tertiaryButton()" columns="4" />
 
     <h3>Feedback Button</h3>
     <p class="text-margin-bottom">
@@ -45,7 +45,7 @@
     </p>
 
     <button class="btn feedback" tabindex="-1">Yes</button>
-    <ExampleRow :data="buttons_data.feedbackButton()" rowClasses="feedback text-margin-bottom" columns="4"/>
+    <ExampleRow :data="data.feedbackButton()" rowClasses="feedback text-margin-bottom" columns="4"/>
 
     <h3>Accessibility</h3>
     <p>
@@ -66,7 +66,7 @@
 </template>
 
 <script>
-import buttons_data from '@/pages/_components-data/ui/buttons.js'
+import data from '@/pages/_components-data/ui/buttons.js'
 
 export default {
   layout: 'farmers',
@@ -77,7 +77,7 @@ export default {
   },
   data() {
     return {
-      buttons_data: buttons_data
+      data: data
     }
   }
 }

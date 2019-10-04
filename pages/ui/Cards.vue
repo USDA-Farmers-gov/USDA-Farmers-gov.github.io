@@ -22,7 +22,7 @@
     <p>
       <strong>Examples</strong>
     </p>
-    <ExampleRow :data="cards_data.specs()" rowClasses="default-grid-row" :item-classes="[{ index: 0, classes: 'default-card-grid-container' }]" columns="2" />
+    <ExampleRow :data="data.specs()" rowClasses="default-grid-row" :item-classes="[{ index: 0, classes: 'default-card-grid-container' }]" columns="2" />
 
     <h3>Resource Cards</h3>
     <p>
@@ -30,7 +30,7 @@
     </p>
 
     <div class="row text-margin-bottom">
-      <div v-html="cards_data.resourceCardSingle()" class="medium-5" />
+      <div v-html="data.resourceCardSingle()" class="medium-5" />
     </div>
     <h3>Specs</h3>
     <p>
@@ -40,10 +40,10 @@
     <h4>Default with Logo</h4>
 
     <div class="row">
-      <div v-html="cards_data.resourceCardGrid()" class="medium-6" />
+      <div v-html="data.resourceCardGrid()" class="medium-6" />
     </div>
-    <ExampleRow :data="cards_data.resourceCardSpecs()" columns="4" />
-    <ExampleRow :data="cards_data.resourceCardSpecsWithoutLogo()" rowClasses="resource-cards-no-logo" columns="2" />
+    <ExampleRow :data="data.resourceCardSpecs()" columns="4" />
+    <ExampleRow :data="data.resourceCardSpecsWithoutLogo()" rowClasses="resource-cards-no-logo" columns="2" />
 
     <h4>Accessibility</h4>
     <p>
@@ -53,7 +53,7 @@
 </template>
 
 <script>
-  import cards_data from '@/pages/_components-data/ui/cards.js'
+  import data from '@/pages/_components-data/ui/cards.js'
 
   export default {
     layout: 'farmers',
@@ -64,8 +64,8 @@
     },
     data() {
       return {
-        cards_data: cards_data,
-        default_card: cards_data.defaultCardMarkup({ 
+        data: data,
+        default_card: data.defaultCardMarkup({ 
               img: '/images/tractor.png',  
               header: 'Example Card Headline', 
               link: { text: 'Text Link', href: '#' },

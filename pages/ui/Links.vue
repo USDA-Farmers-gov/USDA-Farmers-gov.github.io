@@ -9,17 +9,17 @@
     <p>
       Text links are used to navigate users from page to page. Text links should be used on its own single line with a right caret icon. 
     </p>
-    <p v-html="links_data.textLinkMarkup()"></p>
+    <p v-html="data.textLinkMarkup()"></p>
 
-    <ExampleRow :data="links_data.textLinks()" rowClasses="text-margin-bottom" :itemClasses="[{ index: 0, classes: 'default-link-grid-container' }]" columns="4" />
+    <ExampleRow :data="data.textLinks()" rowClasses="text-margin-bottom" :itemClasses="[{ index: 0, classes: 'default-link-grid-container' }]" columns="4" />
 
     <h3>External Text Link</h3>
     <p>
       External links are used when directing users to a web page outside of Farmers.gov and USDA. An external link should appear with an external link icon to distinguish between Farmers.gov and USDA to non-Farmers.gov and USDA web pages. They should open in a new browser tab.
     </p>
 
-    <p v-html="links_data.externalLinkMarkup()"></p>
-    <ExampleRow :data="links_data.externalTextLinks()" rowClasses="text-margin-bottom" :itemClasses="[{ index: 0, classes: 'external-grid-container' }]" columns="4" />
+    <p v-html="data.externalLinkMarkup()"></p>
+    <ExampleRow :data="data.externalTextLinks()" rowClasses="text-margin-bottom" :itemClasses="[{ index: 0, classes: 'external-grid-container' }]" columns="4" />
 
     <h3>Inline Textual Link</h3>
     <p>
@@ -28,16 +28,16 @@
 
     <a class="inline-text-link" href="#" tabindex="-1">Inline Link</a>
     <br>
-    <ExampleRow :data="links_data.inlineTextLinks()" rowClasses="inline-text-link-container text-margin-bottom" columns="4" />
+    <ExampleRow :data="data.inlineTextLinks()" rowClasses="inline-text-link-container text-margin-bottom" columns="4" />
 
     <h3>Anchor Link</h3>
     <p>
       Anchor links are used to navigate users to another section within the same page. They can be used with or without a leaf icon.
     </p>
 
-    <p v-html="links_data.anchorLinkMarkup()"></p>
+    <p v-html="data.anchorLinkMarkup()"></p>
     <br>
-    <ExampleRow :data="links_data.anchorLinks()" rowClasses="anchor-link-examples text-margin-bottom" :itemClasses="[{ index: 0, classes: 'anchor-grid-container' }]" columns="4" />
+    <ExampleRow :data="data.anchorLinks()" rowClasses="anchor-link-examples text-margin-bottom" :itemClasses="[{ index: 0, classes: 'anchor-grid-container' }]" columns="4" />
 
     <h4>Click Target</h4>
     <p>
@@ -46,7 +46,7 @@
 
     <div class="highlight-text-link text-margin-bottom">
       <div class="highlight-overlay"></div>
-      <div class="highlight-link" v-html="links_data.textLinkMarkup()"></div>
+      <div class="highlight-link" v-html="data.textLinkMarkup()"></div>
       <div class="mouse-pointer"></div>
     </div>
 
@@ -66,7 +66,7 @@
 </template>
 
 <script>
-  import links_data from '@/pages/_components-data/ui/links.js'
+  import data from '@/pages/_components-data/ui/links.js'
 
   export default {
     layout: 'farmers',
@@ -77,7 +77,7 @@
     },
     data() {
       return {
-        links_data: links_data
+        data: data
       }
     }
   }

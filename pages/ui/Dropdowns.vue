@@ -9,7 +9,7 @@
     </p>
 
     <div class="row text-margin-bottom">
-      <div class="medium-4" v-html="dropdowns_data.dropdownSingle()"/>
+      <div class="medium-4" v-html="data.dropdownSingle()"/>
     </div>
 
     <h3>Specs</h3>
@@ -22,11 +22,11 @@
 
     <h3>Default</h3>
     <div class="row">
-      <div class="medium-12" v-html="dropdowns_data.dropdownDimensions()"/>
+      <div class="medium-12" v-html="data.dropdownDimensions()"/>
     </div>
 
-    <ExampleRow :data="dropdowns_data.dropdownSpecs()" columns="4" />
-    <ExampleRow :data="dropdowns_data.dropDownStates()" columns="3" />
+    <ExampleRow :data="data.dropdownSpecs()" columns="4" />
+    <ExampleRow :data="data.dropDownStates()" columns="3" />
 
     <h4>Click Target</h4>
     <p>
@@ -34,7 +34,7 @@
     </p>
 
     <div class="row text-margin-bottom">
-      <div class="medium-5" v-html="dropdowns_data.dropdownHighlight()"/>
+      <div class="medium-5" v-html="data.dropdownHighlight()"/>
     </div>
 
     <h4>Accessibility</h4>
@@ -53,7 +53,7 @@
 </template>
 
 <script>
-  import dropdowns_data from '@/pages/_components-data/ui/dropdowns.js'
+  import data from '@/pages/_components-data/ui/dropdowns.js'
 
   export default {
     layout: 'farmers',
@@ -64,7 +64,7 @@
     },
     data() {
       return {
-        dropdowns_data: dropdowns_data
+        data: data
       }
     }
   }

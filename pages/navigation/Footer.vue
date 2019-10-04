@@ -28,7 +28,7 @@
     </p>
 
     [ FOOTER EXAMPLE WITH GRID ]
-    <ExampleRow :data="footer_data.specs()" columns="4" />
+    <ExampleRow :data="data.specs()" columns="4" />
 
     <h4>Accessibility</h4>
     <p>
@@ -37,7 +37,7 @@
   </div>
 </template>
 <script>
-  import footer_data from '@/pages/_components-data/navigation/footer.js'
+  import data from '@/pages/_components-data/navigation/footer.js'
 
   export default {
     layout: 'farmers',
@@ -48,7 +48,7 @@
     },
     data() {
       return {
-        footer_data: footer_data
+        data: data
       }
     }
   }

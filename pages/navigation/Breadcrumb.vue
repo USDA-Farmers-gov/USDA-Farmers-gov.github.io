@@ -25,7 +25,7 @@
     </p>
 
     [ BREADCRUMB WITH GRID ]
-    <ExampleRow :data="breadcrumb_data.specs()" columns="4" />
+    <ExampleRow :data="data.specs()" columns="4" />
 
     <h3>Accessibility</h3>
     <p>
@@ -41,7 +41,7 @@
 </template>
 
 <script>
-  import breadcrumb_data from '@/pages/_components-data/navigation/breadcrumb.js'
+  import data from '@/pages/_components-data/navigation/breadcrumb.js'
 
   export default {
     layout: 'farmers',
@@ -52,7 +52,7 @@
     },
     data() {
       return {
-        breadcrumb_data: breadcrumb_data
+        data: data
       }
     }
   }

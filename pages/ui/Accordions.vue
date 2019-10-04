@@ -10,21 +10,21 @@
       Card accordions display part of the content to provide context about the information before users expand the accordion to view the full content.  Users are able to see what information is included before making a decision to continue reading. A transparent gradient overlay is used as a visual indicator to show that there is underlying additional content.
     </p>
 
-    <div v-html="accordions_data.defaultAccordionMarkup()" class="text-margin-bottom" />
+    <div v-html="data.defaultAccordionMarkup()" class="text-margin-bottom" />
 
     <h3>Specs</h3>
     <p>
       The height and width of the accordion is flexible but it should follow the grid system and the specs outlined below. 
     </p>
 
-    <ExampleRow :data="accordions_data.defaultAccordionSpecs()" columns="1" />
+    <ExampleRow :data="data.defaultAccordionSpecs()" columns="1" />
   
     <h4>Click Target</h4>
     <p>
       Larger targets are easier for users to manipulate. Allow users to expand or collapse content by clicking on large areas of the accordion; for example, the entire bottom portion of card accordions should be clickable and not just the “Show More” button.
     </p>
 
-    <div v-html="accordions_data.clickTargetAccordionDimensions()" />
+    <div v-html="data.clickTargetAccordionDimensions()" />
     <div class="click-target mouse-pointer text-margin-bottom"></div>
 
     <h3>Box Accordions</h3>
@@ -32,19 +32,19 @@
       Box accordions are sets of headers displayed in a &frac13; grid layout. They are used when groups of information can be categorized into related sections and help conserve space on content-heavy pages. Only one accordion should open at a time.
     </p>
 
-    <div v-html="accordions_data.defaultBoxAccordionMarkup()" class="text-margin-bottom" />
+    <div v-html="data.defaultBoxAccordionMarkup()" class="text-margin-bottom" />
     <h3>Specs</h3>
     <p>
       The width of the accordion should follow the &frac13; grid layout and the specs outlined below. 
     </p>
     
-    <div v-html="accordions_data.boxAccordionDimensions()" />
-    <ExampleRow :data="accordions_data.defaultBoxAccordionSpecs()" columns="4" />
+    <div v-html="data.boxAccordionDimensions()" />
+    <ExampleRow :data="data.defaultBoxAccordionSpecs()" columns="4" />
 
     <div id="accordionGroup" ref="accordionGroup" class="Accordion row">
-      <div v-html="accordions_data.defaultBoxAccordionMarkup(true)" />
+      <div v-html="data.defaultBoxAccordionMarkup(true)" />
     </div>
-    <ExampleRow :data="accordions_data.expandedBoxAccordionSpecs()" rowClasses="text-margin-bottom" columns="4" />
+    <ExampleRow :data="data.expandedBoxAccordionSpecs()" rowClasses="text-margin-bottom" columns="4" />
 
     <h3>Click Target</h3>
     <p>
@@ -54,7 +54,7 @@
     <div class="container text-margin-bottom">
       <div class="row">
         <div class="medium-5">
-          <div class="higlight-box-accordion highlight-overlay" v-html="accordions_data.defaultBoxAccordionMarkup()" />
+          <div class="higlight-box-accordion highlight-overlay" v-html="data.defaultBoxAccordionMarkup()" />
           <div class="click-target-collapsed mouse-pointer"></div>
         </div>
       </div>
@@ -73,7 +73,7 @@
 </template>
 
 <script>
-import accordions_data from '@/pages/_components-data/ui/accordions.js'
+import data from '@/pages/_components-data/ui/accordions.js'
 // Uncomment this only if accordions need to be functional
 // if (process.browser) {
 //   require('@/farmers/dist/js/farmers.min.js')
@@ -88,7 +88,7 @@ export default {
   },
   data() {
     return {
-      accordions_data: accordions_data
+      data: data
     }
   },
   mounted() {
