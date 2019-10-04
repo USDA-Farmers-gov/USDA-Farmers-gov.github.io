@@ -46,7 +46,7 @@
     },
     data() {
       return {
-        data: stepper_data
+        data: data
       }
     }
   }
