@@ -1,10 +1,19 @@
 <template>
   <div class="code-container">
-    Preview:
-    <div v-html="markup" class="preview"></div>
-    Code:
+    <strong>Preview:</strong>
+    <div class="row">
+      <div v-html="markup" class="medium-6 preview text-margin-bottom"></div>
+    </div>
+    <strong>Code:</strong>
     <div class="code-box soft-yellow">
       <pre>{{ code }}</pre>
+    </div>
+    
+    <div class="text-margin-bottom">
+      <button class="button" @click="copyToClipboard(code)" transition="fade">Copy Code</button>
+      <transition name="fade">
+          <div v-if="code_copied" class="copied">Copied to Clipboard!</div>
+      </transition>
     </div>
   </div>
 </template>
@@ -16,7 +25,8 @@
     props: [ 'markup' ],
     data() {
       return {
-        code: ''
+        code: '',
+        code_copied: false
       }
     },
     mounted() {
@@ -56,12 +66,39 @@
           }
 
           return node
+      },
+      copyToClipboard(str) {
+        const el = document.createElement('textarea')
+        el.value = str
+        document.body.appendChild(el)
+        el.select()
+        document.execCommand('copy')
+        document.body.removeChild(el)
+        this.code_copied = true
+
+        setTimeout(function() {
+          this.code_copied = false
+        }.bind(this), 2000)
       }
     }
   }
 </script>
 
 <style scoped>
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity 1s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
+  .copied {
+    background:#ccc;
+    color:#000;
+    padding:10px;
+    position:absolute;
+    border:1px solid #000;
+    margin-top: 1rem;
+  }
   .code-box {
     padding: 2rem;
     margin-top: 4rem;
