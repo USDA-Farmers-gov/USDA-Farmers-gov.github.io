@@ -21,8 +21,9 @@
         type: [ Object, Array ],
         required: true
       },
+      type: String,
       caption: String,
-      classes: String
+      customClasses: String
     },
     mounted() {
       if(!this.data) console.error('TABLE ERROR: No data provided!')
@@ -31,7 +32,10 @@
     methods: {
       setClasses() {
         let baseClasses = 'table'
-        return this.classes ? baseClasses + ' ' + this.classes : baseClasses
+        if(this.type === 'bordered') baseClasses = baseClasses + ' table-bordered'
+        if(this.type === 'condensed') baseClasses = baseClasses + ' table-condensed'
+
+        return this.customClasses ? baseClasses + ' ' + this.customClasses : baseClasses
 
       }
     }

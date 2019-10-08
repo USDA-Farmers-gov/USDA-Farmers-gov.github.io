@@ -1,7 +1,7 @@
 .table-grid {
   display: grid;
-  grid-template-columns: 24px 152px 24px 1fr 10px 10px;
-  grid-template-rows: 10px 10px 56px 102px 56px 102px 84px 118px;
+  grid-template-columns: 24px 152px 24px 481px 10px 30px;
+  grid-template-rows: 24px 10px 56px 102px 56px 102px 84px 118px;
 
   .table-bordered {
     grid-column: 1 / span 6;
@@ -39,32 +39,32 @@
   }
 
   .table-specs-heading-span {
-    grid-column: 6;
+    grid-column: 5;
     grid-row: 3;
   }
 
   .table-specs-heading-dimension {
-    grid-column: 7;
+    grid-column: 6;
     grid-row: 3;
   }
 
   .table-specs-first-row-span {
-    grid-column: 6;
+    grid-column: 5;
     grid-row: 5;
   }
 
   .table-specs-first-row-dimension {
-    grid-column: 7;
+    grid-column: 6;
     grid-row: 5;
   }
 
   .table-specs-second-row-span {
-    grid-column: 6;
+    grid-column: 5;
     grid-row: 7;
   }
 
   .table-specs-second-row-dimension {
-    grid-column: 7;
+    grid-column: 6;
     grid-row: 7;
   }
 }

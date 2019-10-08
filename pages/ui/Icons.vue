@@ -12,7 +12,8 @@
 
     <Table 
       :data="data.interactiveIcons()[0]"
-      classes="table-bordered text-margin-bottom" 
+      type="bordered"
+      customClasses="text-margin-bottom" 
       caption="Column one contains the icon image as it is diplayed on the page, column two contains icon name, and column three contains a description of its usage." 
     />
 
