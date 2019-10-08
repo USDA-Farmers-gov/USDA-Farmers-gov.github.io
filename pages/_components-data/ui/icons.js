@@ -4,15 +4,15 @@ const icons_data = {
       {
         table_headers: [ 'Icon', 'Icon Name', 'Icon Usage' ],
         table_rows: [
-          { text: [ icons_data.imageMarkup({ image: '/images/icons/caret-right.svg' }), 'caret-right', 'navigate to pages within farmer.gov and USDA' ] },
-          { text: [ icons_data.imageMarkup({ image: '/images/icons/search.svg' }), 'search', 'search button in search box' ] },
-          { text: [ icons_data.imageMarkup({ image: '/images/icons/caret-down.svg' }), 'chevron-down', 'expand dropdown' ] },
-          { text: [ icons_data.imageMarkup({ image: '/images/icons/caret-up.svg' }), 'chevron-up', 'collapse dropdown' ] },
-          { text: [ icons_data.imageMarkup({ image: '/images/icons/external-link.svg' }), 'external-link', 'navigate to pages outside of farmers.gov and USDA' ] },
-          { text: [ icons_data.imageMarkup({ image: '/images/icons/close.svg' }), 'close', 'close modals' ] },
-          { text: [ icons_data.imageMarkup({ image: '/images/icons/plus.svg' }), 'accordion-expand', 'expand accordion' ] },
-          { text: [ icons_data.imageMarkup({ image: '/images/icons/minus.svg' }), 'accordion-collapse', 'collapse accordion' ] },
-          { text: [ icons_data.imageMarkup({ image: '/images/icons/question.svg' }), 'popover', 'show popover' ] }
+          { text: [ icons_data.iconMarkup({ classes: 'icon caret-right' }), 'caret-right', 'navigate to pages within farmer.gov and USDA' ] },
+          { text: [ icons_data.iconMarkup({ classes: 'icon search' }), 'search', 'search button in search box' ] },
+          { text: [ icons_data.iconMarkup({ classes: 'icon chevron-up' }), 'chevron-down', 'expand dropdown' ] },
+          { text: [ icons_data.iconMarkup({ classes: 'icon chevron-down' }), 'chevron-up', 'collapse dropdown' ] },
+          { text: [ icons_data.iconMarkup({ classes: 'icon external-link' }), 'external-link', 'navigate to pages outside of farmers.gov and USDA' ] },
+          { text: [ icons_data.iconMarkup({ classes: 'icon close' }), 'close', 'close modals' ] },
+          { text: [ icons_data.iconMarkup({ classes: 'icon accordion-expand' }), 'accordion-expand', 'expand accordion' ] },
+          { text: [ icons_data.iconMarkup({ classes: 'icon accordion-collapse' }), 'accordion-collapse', 'collapse accordion' ] },
+          { text: [ icons_data.iconMarkup({ classes: 'icon popover' }), 'popover', 'show popover' ] }
         ]
       }
     ]
@@ -33,6 +33,10 @@ const icons_data = {
       icons_data.imageMarkup({ image: '/images/land.svg' }), 
       icons_data.imageMarkup({ image: '/images/mfp.svg' }), 
     ]
+  },
+  iconMarkup(data) {
+    const classes = data.classes ? data.classes : ''
+    return `<span class="` + classes + `">`
   },
   imageMarkup(data) {
     const altText = data.alt ? data.alt : ''

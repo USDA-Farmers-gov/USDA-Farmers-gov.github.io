@@ -15,20 +15,40 @@
       Simple tables are used when there is only one level of column headings. Table rows alternate in background colors for better readability and scannability of data across table rows. 
     </p>
 
-    <Table :data="data.simpleTable()[0]" />
+    <Table :data="data.simpleTable()[0]" classes="table-bordered" />
 
     <h4>Complex Table</h4>
     <p>
       A complex table is used when there are multiple levels of column headings. 
     </p>
 
-    <Table :data="data.complexTable()[0]" />
+    <Table :data="data.complexTable()[0]" classes="table-bordered" />
     
     <h3>Specs</h3>
     <p>
       Tables should follow the specified padding and size requirements below. 
     </p>
-    [ SPEC TABLE WITH GRID ]
+
+    <div class="table-grid">
+      <Table :data="data.simpleTable()[0]" classes="table-bordered" />
+
+      <div class="table-specs-first-cell dashed-blue dashed-blue-vertical"></div>
+      <div class="table-specs-first-cell-span span-blue span-blue-vertical"></div>
+      <div class="table-specs-first-cell-dimension dimension-blue dimension-blue-vertical">24px</div>
+
+      <div class="table-specs-second-cell dashed-blue dashed-blue-vertical"></div>
+      <div class="table-specs-second-cell-span span-blue span-blue-vertical"></div>
+      <div class="table-specs-second-cell-dimension dimension-blue dimension-blue-vertical">24px</div>
+
+      <div class="table-specs-heading-span span-red span-red-horizontal"></div>
+      <div class="table-specs-heading-dimension dimension-red dimension-red-horizontal">56px</div>
+
+      <div class="table-specs-first-row-span span-red span-red-horizontal"></div>
+      <div class="table-specs-first-row-dimension dimension-red dimension-red-horizontal">56px</div>
+
+      <div class="table-specs-second-row-span span-red span-red-horizontal"></div>
+      <div class="table-specs-second-row-dimension dimension-red dimension-red-horizontal">84px</div>
+    </div>
 
     <ExampleRow :data="data.specs()" columns="4" />
 

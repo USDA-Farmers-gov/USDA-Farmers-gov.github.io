@@ -18,9 +18,9 @@ const tables_data = {
       {
         table_headers: [ 'Column Heading', 'Column Heading' ],
         table_rows: [
-          { text: [ 'Subheading' ], colspan: 2 },
+          { span_heading: 'Subheading', colspan: 2 },
           { text: [ 'Subheading row placeholder text', 'Example of a subheading row that extends to the second line' ] },
-          { text: [ 'Subheading' ], colspan: 2 },
+          { span_heading: 'Subheading', colspan: 2 },
           { text: [ 'Subheading row placeholder text', 'Subheading row placeholder text' ] },
           { text: [ 'Subheading row placeholder text', 'Subheading row placeholder text' ] }
         ]
