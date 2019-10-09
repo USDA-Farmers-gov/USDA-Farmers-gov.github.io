@@ -1,9 +1,11 @@
 <template>
   <div class="code-container">
     <strong>Preview:</strong>
+    
     <div class="row">
-      <div v-html="markup" class="medium-6 preview text-margin-bottom"></div>
+      <div v-html="markup" :class="setPreviewClasses()"></div>
     </div>
+
     <strong>Code:</strong>
     <div class="code-box soft-yellow">
       <pre>{{ code }}</pre>
@@ -22,7 +24,10 @@
   import utils from '@/assets/js/utils.js'
 
   export default {
-    props: [ 'markup' ],
+    props: {
+      markup: String, 
+      designSystemWidth: [ Number, String ]
+    },
     data() {
       return {
         code: '',
@@ -39,6 +44,11 @@
       })
     },
     methods: {
+      setPreviewClasses() {
+        let classes = 'preview text-margin-bottom'
+        if(this.designSystemWidth) classes = 'medium-' + this.designSystemWidth + ' ' + classes
+        return classes
+      },
       setCode() {
         this.code = this.processHTML(this.markup)
       },
@@ -67,9 +77,9 @@
 
           return node
       },
-      copyToClipboard(str) {
+      copyToClipboard(code) {
         const el = document.createElement('textarea')
-        el.value = str
+        el.value = code
         document.body.appendChild(el)
         el.select()
         document.execCommand('copy')
