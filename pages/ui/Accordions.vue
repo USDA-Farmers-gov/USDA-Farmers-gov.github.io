@@ -76,7 +76,7 @@
 import data from '@/pages/_components-data/ui/accordions.js'
 // Uncomment this only if accordions need to be functional
 // if (process.browser) {
-//   require('@/farmers/dist/js/farmers.min.js')
+//   require('@/assets/farmers/dist/js/farmers.min.js')
 // }
 
 export default {

@@ -7,9 +7,9 @@
     </div>
 
     <strong>Code:</strong>
-    <div class="code-box soft-yellow">
-      <pre>{{ code }}</pre>
-    </div>
+    <div :class="collapsed ? 'collapsed' : '' " class="code-box soft-yellow">{{ code }}</div>
+    <div v-if="collapsed" @click="toggleCodeWindow()">+ Open</div>
+    <div v-if="!collapsed" @click="toggleCodeWindow()">- Close</div>
     
     <div class="text-margin-bottom">
       <button class="button" @click="copyToClipboard(code)" transition="fade">Copy Code</button>
@@ -31,7 +31,8 @@
     data() {
       return {
         code: '',
-        code_copied: false
+        code_copied: false,
+        collapsed: true
       }
     },
     mounted() {
@@ -44,6 +45,9 @@
       })
     },
     methods: {
+      toggleCodeWindow() {
+        this.collapsed = ! this.collapsed
+      },
       setPreviewClasses() {
         let classes = 'preview text-margin-bottom'
         if(this.designSystemWidth) classes = 'medium-' + this.designSystemWidth + ' ' + classes
@@ -101,6 +105,9 @@
   .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
     opacity: 0;
   }
+  .collapsed {
+    max-height: 100px;
+  }
   .copied {
     background:#ccc;
     color:#000;
@@ -110,12 +117,11 @@
     margin-top: 1rem;
   }
   .code-box {
-    padding: 2rem;
-    margin-top: 4rem;
+    font-family: monospace;
+    white-space: pre;    
+    padding-bottom: 2rem;
+    padding-left: 1rem;
     max-width: 80rem;
     overflow: scroll;
-  }
-  pre {
-    font-family: Arial, Helvetica, sans-serif;
   }
 </style>
