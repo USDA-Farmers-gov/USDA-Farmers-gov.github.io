@@ -7,9 +7,9 @@
     </div>
 
     <strong>Code:</strong>
-    <div :class="collapsed ? 'collapsed' : '' " class="code-box soft-yellow">{{ code }}</div>
-    <div v-if="collapsed" @click="toggleCodeWindow()">+ Open</div>
-    <div v-if="!collapsed" @click="toggleCodeWindow()">- Close</div>
+    <div ref="code" :class="collapsible && collapsed ? 'collapsed' : '' " class="code-box soft-yellow">{{ code }}</div>
+    <div v-if="collapsible && collapsed" @click="toggleCodeWindow()">+ Open</div>
+    <div v-if="collapsible && !collapsed" @click="toggleCodeWindow()">- Close</div>
     
     <div class="text-margin-bottom">
       <button class="button" @click="copyToClipboard(code)" transition="fade">Copy Code</button>
@@ -32,6 +32,7 @@
       return {
         code: '',
         code_copied: false,
+        collapsible: false,
         collapsed: true
       }
     },
@@ -55,6 +56,7 @@
       },
       setCode() {
         this.code = this.processHTML(this.markup)
+        if(this.$refs.code.clientHeight > 120) this.collapsible = true
       },
       processHTML(str) {
         var div = document.createElement('div')
