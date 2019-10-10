@@ -32,9 +32,6 @@
         })" 
         design-system-width="6" />
 
-    <Code :markup="'<h1>Hello</h1><p>This is another example.</p>'" 
-        design-system-width="6" />
-
     <h3>Resource Cards</h3>
     <p>
       Resource cards are used to display a link to another website or web page that provide additional information about a single subject. They contain a brief overview of the resource, link to the website or web page, and a logo of the organization, if available.
