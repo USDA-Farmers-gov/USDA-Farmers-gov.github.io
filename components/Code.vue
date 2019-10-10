@@ -39,13 +39,16 @@
         code: '',
         code_copied: false,
         collapsible: false,
-        collapsed: true
+        collapsed: true,
+        componentId: this._uid
       }
     },
     async mounted() {
       if(!this.markup) console.error('CODE EXAMPLE ERROR: No markup provided!')
       await this.setCode()
-      if(this.$refs.code.clientHeight > 240) this.collapsible = true
+
+      const box = document.querySelector('.code-box-' + this.componentId).getBoundingClientRect()
+      if(box.height > 240) this.collapsible = true
     },
     updated: function() {
       this.$nextTick(function () {
@@ -54,7 +57,7 @@
     },
     methods: {
       setCodeBoxClasses() {
-        let baseClasses = 'code-box'
+        let baseClasses = 'code-box-' + this.componentId
         if(this.collapsible && this.collapsed) baseClasses = baseClasses + ' code-collapsed'
 
         return baseClasses
