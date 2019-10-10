@@ -16,6 +16,8 @@
       <ExampleRow :data="data.default()" :item-classes="[{ index: 0, classes: 'checkbox-grid-container' }]" columns="4" />
     </div>
 
+    <Code :markup="outputCheckboxMarkup({ label: 'Checkbox Label' })" />
+
     <h4>Click Target</h4>
     <p>
       A checkbox can be selected and deselected by clicking or tapping on the checkbox as well as the text label.
@@ -46,6 +48,8 @@
     <ExampleRow :data="data.specs()" columns="3" />
     <ExampleRow :data="data.specsStates()" columns="3" />
 
+    <Code :markup="data.outputCardMarkup({ label: 'Card Checkbox', hover: true, image: '/images/MFP2-icon.jpg' })" />
+
     <h3>Click Target</h3>
     <p>
       The entire card in card checkboxes should be clickable.
@@ -55,7 +59,6 @@
         <div class="highlight-overlay" v-html="outputCardMarkup({ label: 'Card Checkbox' })"></div>
         <div class="checkbox-radio-card-click-target mouse-pointer"></div>
     </div>
-    
     
     <h3>Accessibility</h3>
     <p>

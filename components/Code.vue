@@ -11,8 +11,12 @@
       <div class="copy-code">
         <span class="copy-code-text" @click="copyToClipboard(code)">copy code</span>
       </div>
+      
       <div ref="code" :class="codeBoxClasses">
         <span>{{ code }}</span>
+      </div>
+      <div class="slot-wrapper" style="display:none;">
+        <slot></slot>
       </div>
       <div v-show="collapsible" class="code-toggle">
         <div class="show-more" v-if="collapsed" @click="toggleCollapsed()">show more <span class="arrow arrow-bigsky arrow-down"></span></div>
@@ -46,7 +50,7 @@
     },
     async mounted() {
       this.codeBoxClasses = this.defaultCodeBoxClasses
-      if(!this.markup) console.error('CODE EXAMPLE ERROR: No markup provided!')
+      // if(!this.markup) console.error('CODE EXAMPLE ERROR: No markup provided!')
       await this.setCode()
 
       const box = this.$refs.code.getBoundingClientRect()
@@ -76,7 +80,8 @@
         return classes
       },
       setCode() {
-        this.code = this.processHTML(this.markup)
+        const markup = this.markup ? this.markup : this.$el.getElementsByClassName("slot-wrapper")[0].innerHTML
+        this.code = this.processHTML(markup)
       },
       processHTML(str) {
         var div = document.createElement('div')
@@ -120,7 +125,7 @@
   }
 </script>
 
-<style scoped>
+<style>
   .fade-enter-active, .fade-leave-active {
     transition: opacity 1s;
   }

@@ -16,6 +16,7 @@
     <div class="checkbox-radio-mobile-container">
       <ExampleRow :data="data.radioButtons()" :item-classes="[{ index: 0, classes: 'checkbox-grid-container' }]" columns="4" />
     </div>
+    <Code :markup="outputRadioButtonMarkup({ label: 'Radio Label', name: 'default' })" />
 
     <h4>Click Target</h4>
     <p>
@@ -44,6 +45,7 @@
 
     <ExampleRow :data="data.specs()" columns="3" />
     <ExampleRow :data="data.specsStates()" columns="3" />
+    <Code :markup="outputCardMarkup({ label: 'Card Radio Button', name: 'click-target', checked: true })" />
 
     <h3>Click Target</h3>
     <p>

@@ -81,7 +81,7 @@ const dropdowns_data = {
     let labelClasses    = (!!options && options.labelClasses) ? options.labelClasses : ''
     let selectClasses   = (!!options && options.selectClasses) ? utils.setClasses('simpler-select', options.selectClasses) : ''
     let disabled        = (!!options && options.disabled) ? ' disabled' : ''
-    let name            = utils.lowerCaseAndHyphenate(label) + '-' + utils.randomString()
+    let name            = utils.lowerCaseAndHyphenate(label) + '-' + utils.randomNumber()
     let tabIndex        = disabled ? '-1' : '0'
     let ddLabel         = `<label for="` + name + `" class="` + labelClasses + `">` + label + `</label>`
     let ddSelect        = `<select class="` + selectClasses + `" id="` + name + `" name="` + name + `" tabindex="` + tabIndex + `"` + disabled + `>

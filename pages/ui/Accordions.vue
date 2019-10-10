@@ -19,6 +19,8 @@
 
     <ExampleRow :data="data.defaultAccordionSpecs()" columns="1" />
   
+    <Code :markup="data.defaultAccordionMarkup({ tabindex: true })" />
+
     <h4>Click Target</h4>
     <p>
       Larger targets are easier for users to manipulate. Allow users to expand or collapse content by clicking on large areas of the accordion; for example, the entire bottom portion of card accordions should be clickable and not just the “Show More” button.

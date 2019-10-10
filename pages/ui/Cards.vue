@@ -29,8 +29,7 @@
           header: 'Example Card Headline',
           description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.`,
           accent_top: true
-        })" 
-        design-system-width="6" />
+        })" />
 
     <h3>Resource Cards</h3>
     <p>

@@ -18,6 +18,8 @@
     
     <ExampleRow :data="data.defaultSpecs()" columns="1" />
 
+    <Code :markup="'<div class=&quot;double-line&quot;></div>'"/>
+
     <h3>Primary Divider</h3>
     <p class="text-margin-bottom">
       Primary dividers are used to create a visual separation between different content blocks in a page. A leaf icon can be used as a decorative element to help strategically represent the farmers.gov brand across the site.
@@ -48,7 +50,8 @@
         </div>
       </div>
     </p>
-    <ExampleRow :data="data.primarySpecs()" rowClasses="text-margin-bottom" columns="3" />
+    <ExampleRow :data="data.primarySpecs()" columns="3" />
+    <Code :markup="'<div class=&quot;divider-line&quot;></div>'"/>
 
     <h3>Secondary Dividers</h3>
     <p>
@@ -66,7 +69,8 @@
       <div class="divider-dot example"></div>
     </div>
 
-    <ExampleRow :data="data.secondarySpecs()" rowClasses="text-margin-bottom" columns="3" />
+    <ExampleRow :data="data.secondarySpecs()" columns="3" />
+    <Code :markup="'<div class=&quot;divider-dot&quot;></div>'"/>
 
     <h3>Accessibility</h3>
     <p>

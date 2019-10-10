@@ -16,6 +16,9 @@
     </p>
 
     <Table :data="data.simpleTable()[0]" type="bordered" />
+    <Code>
+      <Table :data="data.simpleTable()[0]" type="bordered" />
+    </Code>
 
     <h4>Complex Table</h4>
     <p>
@@ -23,6 +26,9 @@
     </p>
 
     <Table :data="data.complexTable()[0]" type="bordered" />
+    <Code>
+      <Table :data="data.complexTable()[0]" type="bordered" />
+    </Code>
     
     <h3>Specs</h3>
     <p>
@@ -40,14 +46,14 @@
       <div class="table-specs-second-cell-span span-blue span-blue-vertical"></div>
       <div class="table-specs-second-cell-dimension dimension-blue dimension-blue-vertical">24px</div>
 
-      <div class="table-specs-heading-span span-red span-red-horizontal"></div>
+      <!-- <div class="table-specs-heading-span span-red span-red-horizontal"></div>
       <div class="table-specs-heading-dimension dimension-red dimension-red-horizontal">56px</div>
 
       <div class="table-specs-first-row-span span-red span-red-horizontal"></div>
       <div class="table-specs-first-row-dimension dimension-red dimension-red-horizontal">56px</div>
 
       <div class="table-specs-second-row-span span-red span-red-horizontal"></div>
-      <div class="table-specs-second-row-dimension dimension-red dimension-red-horizontal">84px</div>
+      <div class="table-specs-second-row-dimension dimension-red dimension-red-horizontal">84px</div> -->
     </div>
 
     <ExampleRow :data="data.specs()" columns="4" />

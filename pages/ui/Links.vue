@@ -11,7 +11,8 @@
     </p>
     <p v-html="data.textLinkMarkup()"></p>
 
-    <ExampleRow :data="data.textLinks()" rowClasses="text-margin-bottom" :itemClasses="[{ index: 0, classes: 'default-link-grid-container' }]" columns="4" />
+    <ExampleRow :data="data.textLinks()" :itemClasses="[{ index: 0, classes: 'default-link-grid-container' }]" columns="4" />
+    <Code :markup="data.textLinkMarkup({ tabindex: true })" />
 
     <h3>External Text Link</h3>
     <p>
@@ -19,8 +20,9 @@
     </p>
 
     <p v-html="data.externalLinkMarkup()"></p>
-    <ExampleRow :data="data.externalTextLinks()" rowClasses="text-margin-bottom" :itemClasses="[{ index: 0, classes: 'external-grid-container' }]" columns="4" />
-
+    <ExampleRow :data="data.externalTextLinks()" :itemClasses="[{ index: 0, classes: 'external-grid-container' }]" columns="4" />
+    <Code :markup="data.externalLinkMarkup({ tabindex: true })" />
+    
     <h3>Inline Textual Link</h3>
     <p>
       Inline textual links are used within body paragraphs. They are underlined on default so they can be easily distinguished between body text.
@@ -28,7 +30,8 @@
 
     <a class="inline-text-link" href="#" tabindex="-1">Inline Link</a>
     <br>
-    <ExampleRow :data="data.inlineTextLinks()" rowClasses="inline-text-link-container text-margin-bottom" columns="4" />
+    <ExampleRow :data="data.inlineTextLinks()" rowClasses="inline-text-link-container" columns="4" />
+    <Code :markup="'<a class=&quot;inline-text-link&quot; href=&quot;#&quot; tabindex=&quot;0&quot;>Inline Link</a>'" />
 
     <h3>Anchor Link</h3>
     <p>
@@ -37,7 +40,8 @@
 
     <p v-html="data.anchorLinkMarkup()"></p>
     <br>
-    <ExampleRow :data="data.anchorLinks()" rowClasses="anchor-link-examples text-margin-bottom" :itemClasses="[{ index: 0, classes: 'anchor-grid-container' }]" columns="4" />
+    <ExampleRow :data="data.anchorLinks()" rowClasses="anchor-link-examples" :itemClasses="[{ index: 0, classes: 'anchor-grid-container' }]" columns="4" />
+    <Code :markup="data.anchorLinkMarkup({ tabindex: true })" />
 
     <h4>Click Target</h4>
     <p>

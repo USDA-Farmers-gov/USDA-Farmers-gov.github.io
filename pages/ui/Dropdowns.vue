@@ -27,6 +27,7 @@
 
     <ExampleRow :data="data.dropdownSpecs()" columns="4" />
     <ExampleRow :data="data.dropDownStates()" columns="3" />
+    <Code :markup="data.dropdownSingle()" />
 
     <h4>Click Target</h4>
     <p>

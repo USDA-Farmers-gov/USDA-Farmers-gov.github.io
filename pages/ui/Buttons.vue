@@ -19,7 +19,9 @@
     <button class="btn" tabindex="-1">button</button>
 
    <ExampleRow :data="data.primaryButton()" columns="3" />
-   <ExampleRow :data="data.primaryButtonStates()" rowClasses="text-margin-bottom" columns="4" />
+   <ExampleRow :data="data.primaryButtonStates()" columns="4" />
+
+    <Code :markup="'<button class=&quot;btn&quot;>button</button>'" />
 
     <h3>Secondary Buttons</h3>
     <p class="text-margin-bottom">
@@ -29,7 +31,9 @@
     <button class="btn outline" tabindex="-1">button</button>
 
     <ExampleRow :data="data.secondaryButton()" columns="3" />
-    <ExampleRow :data="data.secondaryButtonStates()" rowClasses="text-margin-bottom" columns="4" />
+    <ExampleRow :data="data.secondaryButtonStates()" columns="4" />
+
+    <Code :markup="'<button class=&quot;btn outline&quot;>button</button>'" />
 
     <h3>Tertiary Buttons</h3>
     <p class="text-margin-bottom">
@@ -39,13 +43,17 @@
     <ExampleRow :data="data.tertiaryButtonDefault()" columns="1" />
     <ExampleRow :data="data.tertiaryButton()" columns="4" />
 
+    <Code :markup="'<button class=&quot;btn tertiary&quot;>button</button>'" />
+
     <h3>Feedback Button</h3>
     <p class="text-margin-bottom">
       Feedback buttons provide users with a quick and simple way to indicate if the specific page or feature they visited was useful to them, by simple clicking Yes or No. Feedback buttons are blue and round so they may be easily distinguished from primary and secondary action buttons. They should be placed at the bottom of the page to minimize distraction.
     </p>
 
     <button class="btn feedback" tabindex="-1">Yes</button>
-    <ExampleRow :data="data.feedbackButton()" rowClasses="feedback text-margin-bottom" columns="4"/>
+    <ExampleRow :data="data.feedbackButton()" rowClasses="feedback" columns="4"/>
+
+    <Code :markup="'<button class=&quot;btn feedback&quot;>button</button>'" />
 
     <h3>Accessibility</h3>
     <p>

@@ -166,7 +166,7 @@ const checkboxes_data = {
         : card
     },
     outputCheckboxMarkup(options) {
-      let id = (!!options && options.id) ? options.id : 'checkbox-card-' + utils.randomNumber()
+      let id = (!!options && options.id) ? options.id : 'checkbox-' + utils.randomNumber()
       let label       = (!! options && options.label) ? options.label : 'Label'
       let labelClass  = 'checkbox-label'
       let gridClass   = ''

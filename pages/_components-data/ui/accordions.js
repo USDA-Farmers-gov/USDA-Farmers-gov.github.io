@@ -1,13 +1,12 @@
 import utils from '@/assets/js/utils.js'
 
 const accordions_data = {
-  defaultAccordionMarkup() {
-    return `<div class="card-accordion" tabindex="-1">
+  defaultAccordionMarkup(data) {
+    const tabindex = (data && data.tabindex) ? '0' : '-1'
+    return `<div class="card-accordion" tabindex="` + tabindex + `">
             <div class="card-accordion-content">
               <h4>Headline</h4>
-              <p>
-                We recommend that producers who have not participated in a USDA program contact their local USDA service center to establish farm records. To establish a farm tract number, be sure to bring the following items:
-              </p>
+              <p>We recommend that producers who have not participated in a USDA program contact their local USDA service center to establish farm records. To establish a farm tract number, be sure to bring the following items:</p>
               <div class="container">
                 <div class="row">
                   <div class="medium-6">

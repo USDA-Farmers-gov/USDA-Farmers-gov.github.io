@@ -1,7 +1,10 @@
 .table-grid {
+  table {
+    margin-bottom: 0;
+  }
   display: grid;
-  grid-template-columns: 24px 152px 24px 481px 10px 30px;
-  grid-template-rows: 24px 10px 56px 102px 56px 102px 84px 118px;
+  grid-template-columns: 24px 182px 24px 539px 10px 30px;
+  // grid-template-rows: 24px 10px 56px 102px 56px 102px 84px 118px;
 
   .table-bordered {
     grid-column: 1 / span 6;
@@ -10,7 +13,7 @@
 
   .table-specs-first-cell {
     grid-column: 1;
-    grid-row: 3 / span 6;
+    grid-row: 3 / span 10;
   }
 
   .table-specs-first-cell-dimension {
@@ -25,7 +28,7 @@
 
   .table-specs-second-cell {
     grid-column: 3;
-    grid-row: 3 / span 6;
+    grid-row: 3 / span 10;
   }
 
   .table-specs-first-cell-dimension {
