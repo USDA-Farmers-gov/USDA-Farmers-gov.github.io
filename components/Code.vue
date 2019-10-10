@@ -42,9 +42,10 @@
         collapsed: true
       }
     },
-    mounted() {
+    async mounted() {
       if(!this.markup) console.error('CODE EXAMPLE ERROR: No markup provided!')
-      this.setCode()
+      await this.setCode()
+      if(this.$refs.code.clientHeight > 240) this.collapsible = true
     },
     updated: function() {
       this.$nextTick(function () {
@@ -68,7 +69,6 @@
       },
       setCode() {
         this.code = this.processHTML(this.markup)
-        if(this.$refs.code.clientHeight > 240) this.collapsible = true
       },
       processHTML(str) {
         var div = document.createElement('div')
