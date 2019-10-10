@@ -41,16 +41,17 @@
         collapsible: false,
         collapsed: true,
         componentId: this._uid,
+        defaultCodeBoxClasses: 'code-box-' + this._uid,
         codeBoxClasses: ''
       }
     },
     async mounted() {
-      this.codeBoxClasses = 'code-box-' + this.componentId
+      this.codeBoxClasses = this.defaultCodeBoxClasses
       if(!this.markup) console.error('CODE EXAMPLE ERROR: No markup provided!')
       await this.setCode()
 
-      const box = document.querySelector('.code-box-' + this.componentId).getBoundingClientRect()
-      
+      const box = await document.querySelector('.code-box-' + this.componentId).getBoundingClientRect()
+
       if(box.height > 240) {
         this.collapsible = true
         this.updateCodeBoxClasses()
@@ -63,10 +64,12 @@
     },
     methods: {
       updateCodeBoxClasses() {
-        if(this.collapsible && this.collapsed) this.codeBoxClasses = this.codeBoxClasses + ' code-collapsed'
+        this.codeBoxClasses = this.defaultCodeBoxClasses
+        if(this.collapsed) this.codeBoxClasses = this.codeBoxClasses + ' code-collapsed'
       },
       toggleCollapsed() {
-        this.collapsed = ! this.collapsed
+        this.collapsed = !this.collapsed
+        this.updateCodeBoxClasses()
       },
       setPreviewClasses() {
         let classes = 'preview text-margin-bottom'
