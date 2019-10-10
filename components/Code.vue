@@ -11,7 +11,7 @@
       <div class="copy-code">
         <span class="copy-code-text" @click="copyToClipboard(code)">copy code</span>
       </div>
-      <div ref="code" :id="'code-box'" :class="codeBoxClasses">
+      <div ref="code" :class="codeBoxClasses">
         <span>{{ code }}</span>
       </div>
       <div v-show="collapsible" class="code-toggle">
