@@ -24,6 +24,17 @@
     </p>
     <ExampleRow :data="data.specs()" rowClasses="default-grid-row" :item-classes="[{ index: 0, classes: 'default-card-grid-container' }]" columns="2" />
 
+    <Code :markup="data.defaultCardMarkup({ 
+          img: '/images/tractor.png', 
+          header: 'Example Card Headline',
+          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.`,
+          accent_top: true
+        })" 
+        design-system-width="6" />
+
+    <Code :markup="'<h1>Hello</h1><p>This is another example.</p>'" 
+        design-system-width="6" />
+
     <h3>Resource Cards</h3>
     <p>
       Resource cards are used to display a link to another website or web page that provide additional information about a single subject. They contain a brief overview of the resource, link to the website or web page, and a logo of the organization, if available.

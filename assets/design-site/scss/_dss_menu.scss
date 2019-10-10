@@ -4,15 +4,6 @@
   
   .sidenav {
     padding: 2rem 0 0 0;
-
-    .arrow-up {
-      transform: rotate(-135deg);
-      -webkit-transform: rotate(-135deg);
-    }
-    .arrow-down {
-      transform: rotate(45deg);
-      -webkit-transform: rotate(45deg);
-    }
   }
   
   ul {
@@ -58,12 +49,7 @@
       }
 
       .category span {
-        display: inline-block;
         float: right;
-        padding: 0.25rem;
-        margin-top: 0.5rem;
-        border: solid $asphalt;
-        border-width: 0 2px 2px 0;
       }
     }
   }

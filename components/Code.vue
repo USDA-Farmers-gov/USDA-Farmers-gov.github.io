@@ -1,21 +1,23 @@
 <template>
-  <div class="code-container">
-    <strong>Preview:</strong>
-    
-    <div class="row">
+  <div class="code-container text-margin-bottom">
+    <div v-if="showPreview" class="row">
       <div v-html="markup" :class="setPreviewClasses()"></div>
     </div>
-
-    <strong>Code:</strong>
-    <div ref="code" :class="collapsible && collapsed ? 'collapsed' : '' " class="code-box soft-yellow">{{ code }}</div>
-    <div v-if="collapsible && collapsed" @click="toggleCodeWindow()">+ Open</div>
-    <div v-if="collapsible && !collapsed" @click="toggleCodeWindow()">- Close</div>
     
-    <div class="text-margin-bottom">
-      <button class="button" @click="copyToClipboard(code)" transition="fade">Copy Code</button>
+    <div :class="collapsible ? '' : 'no-collapse'" class="code-grid">
       <transition name="fade">
-          <div v-if="code_copied" class="copied">Copied to Clipboard!</div>
+        <div v-show="code_copied" class="code-alert">Copied!</div>
       </transition>
+      <div class="copy-code">
+        <span class="copy-code-text" @click="copyToClipboard(code)">copy code</span>
+      </div>
+      <div ref="code" :class="setCodeBoxClasses()">
+        <span>{{ code }}</span>
+      </div>
+      <div v-show="collapsible" class="code-toggle">
+        <div class="show-more" v-if="collapsed" @click="toggleCollapsed()">show more <span class="arrow arrow-bigsky arrow-down"></span></div>
+        <div class="show-less" v-if="!collapsed" @click="toggleCollapsed()">show less <span class="arrow arrow-bigsky arrow-up"></span></div>
+      </div>
     </div>
   </div>
 </template>
@@ -26,7 +28,11 @@
   export default {
     props: {
       markup: String, 
-      designSystemWidth: [ Number, String ]
+      designSystemWidth: [ Number, String ],
+      showPreview: {
+        type: Boolean,
+        default: false
+      }
     },
     data() {
       return {
@@ -46,7 +52,13 @@
       })
     },
     methods: {
-      toggleCodeWindow() {
+      setCodeBoxClasses() {
+        let baseClasses = 'code-box'
+        if(this.collapsible && this.collapsed) baseClasses = baseClasses + ' code-collapsed'
+
+        return baseClasses
+      },
+      toggleCollapsed() {
         this.collapsed = ! this.collapsed
       },
       setPreviewClasses() {
@@ -56,7 +68,7 @@
       },
       setCode() {
         this.code = this.processHTML(this.markup)
-        if(this.$refs.code.clientHeight > 120) this.collapsible = true
+        if(this.$refs.code.clientHeight > 240) this.collapsible = true
       },
       processHTML(str) {
         var div = document.createElement('div')
@@ -106,24 +118,5 @@
   }
   .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
     opacity: 0;
-  }
-  .collapsed {
-    max-height: 100px;
-  }
-  .copied {
-    background:#ccc;
-    color:#000;
-    padding:10px;
-    position:absolute;
-    border:1px solid #000;
-    margin-top: 1rem;
-  }
-  .code-box {
-    font-family: monospace;
-    white-space: pre;    
-    padding-bottom: 2rem;
-    padding-left: 1rem;
-    max-width: 80rem;
-    overflow: scroll;
   }
 </style>
