@@ -11,7 +11,7 @@
       <div class="copy-code">
         <span class="copy-code-text" @click="copyToClipboard(code)">copy code</span>
       </div>
-      <div ref="code" :class="codeBoxClasses">
+      <div ref="code" :id="'code-box-' + componentId" :class="codeBoxClasses">
         <span>{{ code }}</span>
       </div>
       <div v-show="collapsible" class="code-toggle">
@@ -50,8 +50,8 @@
       if(!this.markup) console.error('CODE EXAMPLE ERROR: No markup provided!')
       await this.setCode()
 
-      const box = await document.querySelector('.code-box-' + this.componentId).getBoundingClientRect()
-
+      const box = await document.querySelector('#code-box-' + this.componentId).getBoundingClientRect()
+console.log(box.height)
       if(box.height > 240) {
         this.collapsible = true
         this.updateCodeBoxClasses()
