@@ -46,7 +46,9 @@
     <div id="accordionGroup" ref="accordionGroup" class="Accordion row">
       <div v-html="data.defaultBoxAccordionMarkup(true)" />
     </div>
-    <ExampleRow :data="data.expandedBoxAccordionSpecs()" rowClasses="text-margin-bottom" columns="4" />
+    <ExampleRow :data="data.expandedBoxAccordionSpecs()" columns="4" />
+
+    <Code :markup="data.defaultBoxAccordionMarkup({ tabindex: true })" />
 
     <h3>Click Target</h3>
     <p>
