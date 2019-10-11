@@ -64,9 +64,9 @@
     </p> -->
     <p>
       <Table :data="data.simpleTable()[0]" type="condensed" />
-      <Code>
+ <!--      <Code>
         <Table :data="data.simpleTable()[0]" type="condensed" />
-      </Code>
+      </Code> -->
     </p>
 
     <h3>Accessibility</h3>
