@@ -1,15 +1,15 @@
 <template>
-  <table role="table" :class="setClasses()" v-if="data && (data.table_headers || data.table_rows)">
+  <table :class="setClasses()" v-if="data && (data.table_headers || data.table_rows)">
     <caption class="visually-hidden" v-show="caption">{{ caption }}</caption>
     <thead v-if="data.table_headers">
         <tr>
-          <td role="cell" v-for="header in data.table_headers"> {{ header }} </td>
+          <td v-for="header in data.table_headers"> {{ header }} </td>
         </tr>
       </thead>
       <tbody>
-        <tr role="row" v-for="row in data.table_rows">
+        <tr v-for="row in data.table_rows">
           <th v-if="row.span_heading" :colspan="row.colspan" v-html="row.span_heading"></th>
-          <td v-else role="cell" :class="row.classes" :colspan="row.colspan" v-for="text in row.text" v-html="text"></td>
+          <td v-else :class="row.classes" :colspan="row.colspan" v-for="text in row.text" v-html="text"></td>
         </tr>
       </tbody>
   </table>
