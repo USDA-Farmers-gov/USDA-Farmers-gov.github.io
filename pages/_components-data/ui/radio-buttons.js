@@ -100,36 +100,37 @@ const radio_buttons_data = {
             }
           ]
   },
-  outputCardMarkup(options) {
+  outputCardMarkup(data) {
     let labelClasses  = 'radio-card-label'
     let checked       = ''
+    let tabindex = (!!data && data.tabindex) ? '' : ' tabindex="-1"'
 
-    if(!!options && options.image)          labelClasses = utils.setClasses(labelClasses, 'with-image')
-    if(!!options && options.card_classes)   labelClasses = utils.setClasses(labelClasses, options.card_classes)
-    if(!!options && options.hover)          labelClasses = utils.setClasses(labelClasses, 'checked')
-    if(!!options && options.labelClasses)   labelClasses = utils.setClasses(labelClasses, options.labelClasses)
-    if(!!options && options.disabled)       labelClasses = utils.setClasses(labelClasses, 'disabled')
+    if(!!data && data.image)          labelClasses = utils.setClasses(labelClasses, 'with-image')
+    if(!!data && data.card_classes)   labelClasses = utils.setClasses(labelClasses, data.card_classes)
+    if(!!data && data.hover)          labelClasses = utils.setClasses(labelClasses, 'checked')
+    if(!!data && data.labelClasses)   labelClasses = utils.setClasses(labelClasses, data.labelClasses)
+    if(!!data && data.disabled)       labelClasses = utils.setClasses(labelClasses, 'disabled')
 
-    if(!!options && options.checked) {
+    if(!!data && data.checked) {
       checked       = ' checked'
       labelClasses  = labelClasses + ' checked'
     }
 
-    let name  = (!!options && options.name) ? options.name : 'radio-example-' + utils.randomNumber()
-    let id    = (!!options && options.id) ? options.id : 'radio-card-' + utils.randomNumber()
-    let card  = `<label tabindex="0" for="` + id + `" class="` + labelClasses + `">`
+    let name  = (!!data && data.name) ? data.name : 'radio-example-' + utils.randomNumber()
+    let id    = (!!data && data.id) ? data.id : 'radio-card-' + utils.randomNumber()
+    let card  = `<label` + tabindex + ` for="` + id + `" class="` + labelClasses + `">`
 
-    if(options.image) card = card + `<div class="radio-img-card-top">
-                                        <img src="` + options.image + `">
+    if(data.image) card = card + `<div class="radio-img-card-top">
+                                        <img src="` + data.image + `">
                                       </div>`
-    let radio_button = `<input type="radio" id="` + id + `" class="radio-card-input" name="` + name + `" title="` + options.label + `" tabindex="0"` + checked + `> ` + options.label + `
+    let radio_button = `<input type="radio" id="` + id + `" class="radio-card-input" name="` + name + `" title="` + data.label + `"` + tabindex + checked + `> ` + data.label + `
            <span class="radio-icon"></span>`
 
-    let card_bottom = (options.image) ? `<div class="radio-img-card-bottom">` + radio_button + `</div>` : radio_button
+    let card_bottom = (data.image) ? `<div class="radio-img-card-bottom">` + radio_button + `</div>` : radio_button
 
     card = card + card_bottom
 
-    return options.showCardDimensions 
+    return data.showCardDimensions 
       ? `<div class="checkbox-radio-card-grid">
           <div class="checkbox-radio-card">` + card  + `</div>
           <div class="checkbox-radio-card-top dashed-red dashed-red-horizontal"></div>
@@ -158,22 +159,23 @@ const radio_buttons_data = {
         </div>`
       : card
     },
-    outputRadioButtonMarkup(options) {
+    outputRadioButtonMarkup(data) {
       let id          = 'radio-input-' + utils.randomNumber()
-      let name        = (!!options && options.name) ? options.name : 'radio-button-' + utils.randomNumber()
+      let name        = (!!data && data.name) ? data.name : 'radio-button-' + utils.randomNumber()
       let labelClass  = 'radio-label'
-      let label       = (!!options && options.label) ? options.label : 'Label'
-      let gridClass   = (!!options && options.showDimensions) ? ' checkbox-radio-dimensions' : ''
-      let checked     = (!!options && options.checked) ? ' checked' : ''
-      let disabled    = (!!options && options.disabled) ? ' disabled' : ''
+      let label       = (!!data && data.label) ? data.label : 'Label'
+      let gridClass   = (!!data && data.showDimensions) ? ' checkbox-radio-dimensions' : ''
+      let checked     = (!!data && data.checked) ? ' checked' : ''
+      let disabled    = (!!data && data.disabled) ? ' disabled' : ''
+      let tabindex    = (!!data && data.tabindex) ? '' : ' tabindex="-1"'
 
-      if(!!options && options.showLabel === false)  labelClass = utils.setClasses(labelClass, ' visually-hidden')
-      if(!!options && options.labelClasses)         labelClass = utils.setClasses(labelClass, options.labelClasses)
+      if(!!data && data.showLabel === false)  labelClass = utils.setClasses(labelClass, ' visually-hidden')
+      if(!!data && data.labelClasses)         labelClass = utils.setClasses(labelClass, data.labelClasses)
 
       let radioButton = `<input type="radio" class="radio-input" name="` + name + `" id="` + id + `" value="1"` + checked + disabled + `>
-      <label for="` + id + `" class="` + labelClass + `" tabindex="0">` + label + `</label>`
+      <label for="` + id + `" class="` + labelClass + `"` + tabindex + `>` + label + `</label>`
 
-      return options.showDimensions ? `<div class="checkbox-radio-grid`+ gridClass + `">
+      return data.showDimensions ? `<div class="checkbox-radio-grid`+ gridClass + `">
               <div class="dimension-red dimension-red-horizontal">24 px</div>
               <div class="checkbox-radio-height span-red span-red-horizontal"></div>
               <div class="checkbox">

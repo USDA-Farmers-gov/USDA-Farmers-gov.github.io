@@ -105,38 +105,39 @@ const checkboxes_data = {
           }
         ]
     },
-    outputCardMarkup(options) {
+    outputCardMarkup(data) {
+      const tabindex = (!!data && data.tabindex) ? '' : 'tabindex="-1"'
       let labelClasses  = 'checkbox-card-label'
       let checked       = ''
       let disabled      = ''
-      let id = (!!options && options.id) ? options.id : 'checkbox-card-' + utils.randomNumber()
+      let id = (!!data && data.id) ? data.id : 'checkbox-card-' + utils.randomNumber()
       
-      if(!!options && options.image)          labelClasses = utils.setClasses(labelClasses, ' with-image')
-      if(!!options && options.hover)          labelClasses = utils.setClasses(labelClasses, ' checked')
-      if(!!options && options.labelClasses)   labelClasses = utils.setClasses(labelClasses, options.labelClasses)
+      if(!!data && data.image)          labelClasses = utils.setClasses(labelClasses, ' with-image')
+      if(!!data && data.hover)          labelClasses = utils.setClasses(labelClasses, ' checked')
+      if(!!data && data.labelClasses)   labelClasses = utils.setClasses(labelClasses, data.labelClasses)
 
-      if(!!options && options.checked) {
+      if(!!data && data.checked) {
         checked       = ' checked'
         labelClasses  = labelClasses + ' checked'
       }
-      if(!!options && options.disabled) {
+      if(!!data && data.disabled) {
         disabled      = ' disabled'
         labelClasses  = labelClasses + ' disabled '
       }
 
-      let card = `<label for="` + id + `" class="` + labelClasses + `" tabindex="0">`
-      if(options.image) card = card + `<div class="cb-img-card-top">
-                                          <img src="` + options.image + `">
+      let card = `<label for="` + id + `" class="` + labelClasses + `"` + tabindex + `>`
+      if(data.image) card = card + `<div class="cb-img-card-top">
+                                          <img src="` + data.image + `">
                                         </div>`
-      let checkbox = `<input type="checkbox" id="` + id + `" class="checkbox-card-input" title="` + options.label + `" tabindex="0" ` + checked + disabled + `>`
-                    + options.label + `
+      let checkbox = `<input type="checkbox" id="` + id + `" class="checkbox-card-input" title="` + data.label + `"` + tabindex + checked + disabled + `>`
+                    + data.label + `
                     <span class="cb-icon"></span>`
 
-      let card_bottom = (options.image) ? `<div class="cb-img-card-bottom">` + checkbox + `</div>` : checkbox
+      let card_bottom = (data.image) ? `<div class="cb-img-card-bottom">` + checkbox + `</div>` : checkbox
 
       card = card + card_bottom
 
-      return options.showCardDimensions 
+      return data.showCardDimensions 
         ? `<div class="checkbox-radio-card-grid">
             <div class="checkbox-radio-card">` + card  + `</div>
             <div class="checkbox-radio-card-top dashed-red dashed-red-horizontal"></div>
@@ -165,24 +166,25 @@ const checkboxes_data = {
           </div>`
         : card
     },
-    outputCheckboxMarkup(options) {
-      let id = (!!options && options.id) ? options.id : 'checkbox-' + utils.randomNumber()
-      let label       = (!! options && options.label) ? options.label : 'Label'
+    outputCheckboxMarkup(data) {
+      const id = (!!data && data.id) ? data.id : 'checkbox-' + utils.randomNumber()
+      const tabindex = (!!data && data.tabindex) ? '' : 'tabindex="-1"'
+      let label       = (!! data && data.label) ? data.label : 'Label'
       let labelClass  = 'checkbox-label'
       let gridClass   = ''
       let checked     = ''
       let disabled    = ''
 
-      if(!!options && options.showLabel === false)    labelClass = utils.setClasses(labelClass, ' visually-hidden')
-      if(!!options && options.labelClass)             labelClass = utils.setClasses(labelClass, options.labelClass)
-      if(!!options && options.showDimensions)         gridClass = ' checkbox-radio-dimensions'
-      if(!!options && options.checked)                checked = ' checked '
-      if(!!options && options.disabled)               disabled = ' disabled '
+      if(!!data && data.showLabel === false)    labelClass = utils.setClasses(labelClass, ' visually-hidden')
+      if(!!data && data.labelClass)             labelClass = utils.setClasses(labelClass, data.labelClass)
+      if(!!data && data.showDimensions)         gridClass = ' checkbox-radio-dimensions'
+      if(!!data && data.checked)                checked = ' checked '
+      if(!!data && data.disabled)               disabled = ' disabled '
 
       let checkbox = `<input id="` + id + `" type="checkbox" name="example" value="Option" title="Option"` + checked + disabled + ` class="checkbox-input">
-        <label for="` + id + `" tabindex="0" class="` + labelClass + `">` + label + `</label>`
+        <label for="` + id + `"` + tabindex + ` class="` + labelClass + `">` + label + `</label>`
 
-      return options.showDimensions ? `<div class="checkbox-radio-grid`+ gridClass + `">
+      return data.showDimensions ? `<div class="checkbox-radio-grid`+ gridClass + `">
               <div class="dimension-red dimension-red-horizontal">24 px</div>
               <div class="checkbox-radio-height span-red span-red-horizontal"></div>
               <div class="checkbox">

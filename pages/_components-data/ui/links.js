@@ -172,20 +172,20 @@ const links_data = {
   },
   textLinkMarkup(data) {
     let classes = (!!data && data.classes) ? data.classes : ''
-    let tabindex = (!!data && data.tabindex) ? '0' : '-1'
-    return `<a class="` + utils.setClasses('text-link', classes) + `" tabindex="` + tabindex + `">Text Link</a>`
+    let tabindex = (!!data && data.tabindex) ? '' : 'tabindex="-1"'
+    return `<a class="` + utils.setClasses('text-link', classes) + `" ` + tabindex + `>Text Link</a>`
   },
   externalLinkMarkup(data) {
     let classes = (!!data && data.classes) ? data.classes : ''
-    let tabindex = (!!data && data.tabindex) ? '0' : '-1'
+    let tabindex = (!!data && data.tabindex) ? '' : 'tabindex="-1"'
 
-    return `<a class="` + utils.setClasses('external-link', classes) + `" tabindex="` + tabindex + `">External Link</a>`
+    return `<a class="` + utils.setClasses('external-link', classes) + `"` + tabindex + `>External Link</a>`
   },
   anchorLinkMarkup(data) {
     let classes = (!!data && data.classes) ? data.classes : ''
-    let tabindex = (!!data && data.tabindex) ? '0' : '-1'
+    let tabindex = (!!data && data.tabindex) ? '' : 'tabindex="-1"'
 
-    return `<a class="` + utils.setClasses('anchor-link', classes) + `" tabindex="` + tabindex + `">Anchor Link</a>`
+    return `<a class="` + utils.setClasses('anchor-link', classes) + `"` + tabindex + `>Anchor Link</a>`
   },
   defaultLinkGrid() {
     return `<div class="default-link-grid">

@@ -31,7 +31,7 @@
     <a class="inline-text-link" href="#" tabindex="-1">Inline Link</a>
     <br>
     <ExampleRow :data="data.inlineTextLinks()" rowClasses="inline-text-link-container" columns="4" />
-    <Code :markup="'<a class=&quot;inline-text-link&quot; href=&quot;#&quot; tabindex=&quot;0&quot;>Inline Link</a>'" />
+    <Code :markup="'<a class=&quot;inline-text-link&quot; href=&quot;#&quot;>Inline Link</a>'" />
 
     <h3>Anchor Link</h3>
     <p>

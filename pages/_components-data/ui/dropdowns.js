@@ -77,14 +77,14 @@ const dropdowns_data = {
       }
     ]
   },
-  getDropdownMarkup(label, selectOptions, options, highlight) {
-    let labelClasses    = (!!options && options.labelClasses) ? options.labelClasses : ''
-    let selectClasses   = (!!options && options.selectClasses) ? utils.setClasses('simpler-select', options.selectClasses) : ''
-    let disabled        = (!!options && options.disabled) ? ' disabled' : ''
+  getDropdownMarkup(label, selectOptions, data, highlight) {
+    let labelClasses    = (!!data && data.labelClasses) ? data.labelClasses : ''
+    let selectClasses   = (!!data && data.selectClasses) ? utils.setClasses('simpler-select', data.selectClasses) : ''
+    let disabled        = (!!data && data.disabled) ? ' disabled' : ''
     let name            = utils.lowerCaseAndHyphenate(label) + '-' + utils.randomNumber()
-    let tabIndex        = disabled ? '-1' : '0'
+    let tabindex        = (disabled || !!data && data.tabindex) ? 'tabindex="-1"' : ''
     let ddLabel         = `<label for="` + name + `" class="` + labelClasses + `">` + label + `</label>`
-    let ddSelect        = `<select class="` + selectClasses + `" id="` + name + `" name="` + name + `" tabindex="` + tabIndex + `"` + disabled + `>
+    let ddSelect        = `<select class="` + selectClasses + `" id="` + name + `" name="` + name + `" ` + tabindex + disabled + `>
                 <option>- Please select -</option>`
 
     selectOptions.forEach(function(element){
@@ -93,14 +93,14 @@ const dropdowns_data = {
 
     ddSelect = ddSelect + `</select>`
 
-    let ddSelectFull = (!!options && options.highlight) ? `<div class="click-target-highlight highlight-overlay">`
+    let ddSelectFull = (!!data && data.highlight) ? `<div class="click-target-highlight highlight-overlay">`
                                     + ddSelect + 
                                     `<div class="highlight-pointer mouse-pointer"></div>
                                   </div>`
                                   : ddSelect
     let dropdown = ddLabel + ddSelectFull
 
-    return (!!options && options.showDimensions) ? `<div class="dropdown-grid">
+    return (!!data && data.showDimensions) ? `<div class="dropdown-grid">
                               ` + dropdown + `
                               <div class="label-dashed dashed-red dashed-red-horizontal"></div>
                               <div class="label-span span-red span-red-horizontal"></div>

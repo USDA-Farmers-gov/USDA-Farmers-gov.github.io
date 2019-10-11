@@ -2,8 +2,8 @@ import utils from '@/assets/js/utils.js'
 
 const accordions_data = {
   defaultAccordionMarkup(data) {
-    const tabindex = (data && data.tabindex) ? '0' : '-1'
-    return `<div class="card-accordion" tabindex="` + tabindex + `">
+    const tabindex = (data && data.tabindex) ? '' : ' tabindex="-1"'
+    return `<div class="card-accordion"` + tabindex + `>
             <div class="card-accordion-content">
               <h4>Headline</h4>
               <p>We recommend that producers who have not participated in a USDA program contact their local USDA service center to establish farm records. To establish a farm tract number, be sure to bring the following items:</p>
@@ -19,7 +19,7 @@ const accordions_data = {
               </div>
             </div>
             <div class="card-accordion-toggle">
-              <a href="#" class="card-accordion-show-more" tabindex="` + tabindex + `">Show More</a>
+              <a href="#" class="card-accordion-show-more"` + tabindex + `>Show More</a>
             </div>
         </div>`
   },
@@ -120,7 +120,7 @@ const accordions_data = {
     },
 
     boxAccordionMarkup(data) {
-      const tabindex = (data && data.tabindex) ? '0' : '-1'
+      const tabindex = (data && data.tabindex) ? '' : ' tabindex="-1"'
       const labelText     = (!!data && data.expanded) ? 'Expanded Box Accordion Headline 3' : 'Collapsed Box Accordion Headline 3'
       const ariaExpanded  = (!!data && data.expanded) ? 'true' : 'false'
       const hidden        = (!!data && data.expanded) ? '' : 'hidden'
@@ -130,7 +130,7 @@ const accordions_data = {
 
       return { 
             top: `<div class="box-accordion-top Accordion-trigger"
-                  tabindex="` + tabindex + `"
+                  ` + tabindex + `
                   aria-expanded="` + ariaExpanded + `"
                   aria-controls="` + sectId + `"
                   id="` + accordionId + `">
