@@ -122,8 +122,7 @@ const radio_buttons_data = {
     if(options.image) card = card + `<div class="radio-img-card-top">
                                         <img src="` + options.image + `">
                                       </div>`
-    let radio_button = `<input type="radio" id="` + id + `" class="radio-card-input" name="` + name + `" title="` + options.label + `" tabindex="0"` + checked + `>
-           ` + options.label + `
+    let radio_button = `<input type="radio" id="` + id + `" class="radio-card-input" name="` + name + `" title="` + options.label + `" tabindex="0"` + checked + `> ` + options.label + `
            <span class="radio-icon"></span>`
 
     let card_bottom = (options.image) ? `<div class="radio-img-card-bottom">` + radio_button + `</div>` : radio_button

@@ -25,9 +25,9 @@
       A complex table is used when there are multiple levels of column headings. 
     </p>
 
-    <Table :data="data.complexTable()[0]" type="bordered" />
+    <Table :data="data.complexTable()[0]" :caption="complexTableCaption" type="bordered" />
     <Code>
-      <Table :data="data.complexTable()[0]" type="bordered" />
+      <Table :data="data.complexTable()[0]" :caption="complexTableCaption" type="bordered" />
     </Code>
     
     <h3>Specs</h3>
@@ -59,9 +59,7 @@
     <ExampleRow :data="data.specs()" columns="4" />
 
     <h4 style="margin-bottom: 2rem;">Condensed Table</h4>
-<!--     <p>
-      A condensed table is used when there are multiple levels of column headings. 
-    </p> -->
+
     <Table :data="data.simpleTable()[0]" type="condensed" />
     <Code>
       <Table :data="data.simpleTable()[0]" type="condensed" />
@@ -91,7 +89,8 @@
     },
     data() {
       return {
-        data: data
+        data: data,
+        complexTableCaption: 'All columns have examples of subheading text'
       }
     }
   }

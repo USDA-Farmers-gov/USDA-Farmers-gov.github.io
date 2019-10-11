@@ -1,6 +1,6 @@
 <template>
   <table :class="setClasses()" v-if="data && (data.table_headers || data.table_rows)">
-    <caption class="visually-hidden" v-show="caption">{{ caption }}</caption>
+    <caption class="visually-hidden">{{ caption }}</caption>
     <thead v-if="data.table_headers">
         <tr>
           <td v-for="header in data.table_headers"> {{ header }} </td>

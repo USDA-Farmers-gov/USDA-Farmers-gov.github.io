@@ -50,7 +50,6 @@
     },
     async mounted() {
       this.codeBoxClasses = this.defaultCodeBoxClasses
-      // if(!this.markup) console.error('CODE EXAMPLE ERROR: No markup provided!')
       await this.setCode()
 
       const box = this.$refs.code.getBoundingClientRect()
