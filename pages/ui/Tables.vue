@@ -58,16 +58,14 @@
 
     <ExampleRow :data="data.specs()" columns="4" />
 
-    <h4>Condensed Table</h4>
+    <h4 style="margin-bottom: 2rem;">Condensed Table</h4>
 <!--     <p>
       A condensed table is used when there are multiple levels of column headings. 
     </p> -->
-    <p>
+    <Table :data="data.simpleTable()[0]" type="condensed" />
+    <Code>
       <Table :data="data.simpleTable()[0]" type="condensed" />
-      <Code>
-        <Table :data="data.simpleTable()[0]" type="condensed" />
-      </Code>
-    </p>
+    </Code>
 
     <h3>Accessibility</h3>
     <p>

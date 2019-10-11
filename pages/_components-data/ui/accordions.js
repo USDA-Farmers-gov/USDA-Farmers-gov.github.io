@@ -143,9 +143,7 @@ const accordions_data = {
             </div>`,
             bottom: 
             `<div id="` + sectId + `" role="region" aria-labelledby="` + accordionId + `" class="Accordion-panel" ` + hidden + `>
-                <p>
-                  Farmers.gov provides farmers, ranchers, private foresters, and agricultural producers with online self-service applications, educational materials, engagement opportunities, and business tools to increase efficiency and productivity while preserving and fostering long-held traditional relationships between local USDA offices and producers.
-                </p>
+                <p>Farmers.gov provides farmers, ranchers, private foresters, and agricultural producers with online self-service applications, educational materials, engagement opportunities, and business tools to increase efficiency and productivity while preserving and fostering long-held traditional relationships between local USDA offices and producers.</p>
             </div>` }
     },
 
