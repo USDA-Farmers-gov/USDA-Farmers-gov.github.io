@@ -58,6 +58,17 @@
 
     <ExampleRow :data="data.specs()" columns="4" />
 
+    <h4>Condensed Table</h4>
+<!--     <p>
+      A condensed table is used when there are multiple levels of column headings. 
+    </p> -->
+    <p>
+      <Table :data="data.simpleTable()[0]" type="condensed" />
+      <Code>
+        <Table :data="data.simpleTable()[0]" type="condensed" />
+      </Code>
+    </p>
+
     <h3>Accessibility</h3>
     <p>
       A title describing the table content is recommended. When providing a title, place a &lt;caption&gt; tag within the &lt;table&gt; element.
