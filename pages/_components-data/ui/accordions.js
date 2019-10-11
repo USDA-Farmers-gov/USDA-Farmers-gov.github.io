@@ -19,7 +19,7 @@ const accordions_data = {
               </div>
             </div>
             <div class="card-accordion-toggle">
-              <a href="#" class="card-accordion-show-more" tabindex="-1">Show More</a>
+              <a href="#" class="card-accordion-show-more" tabindex="` + tabindex + `">Show More</a>
             </div>
         </div>`
   },
