@@ -163,9 +163,7 @@ const cards_data = {
                       <a class="external-link">External Link Headline</a>
                     </div>
                     <div class="content">
-                      <p>
-                      ` + data.description + `
-                      </p>
+                      <p>` + data.description + `</p>
                     </div>`
     let footnote = (!!data && data.footnote) ? `<div class="card-footnote">*` + data.footnote + `</div>` : ``
 

@@ -52,6 +52,8 @@
     <ExampleRow :data="data.resourceCardSpecs()" columns="4" />
     <ExampleRow :data="data.resourceCardSpecsWithoutLogo()" rowClasses="resource-cards-no-logo" columns="2" />
 
+    <Code :markup="data.resourceCardSingle()" />
+
     <h4>Accessibility</h4>
     <p>
       All elements within cards must be available through the use of screen readers and keyboards.
