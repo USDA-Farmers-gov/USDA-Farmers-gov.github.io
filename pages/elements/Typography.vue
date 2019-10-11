@@ -19,7 +19,7 @@
       </div>
     </div>
 
-    <Table :data="data.fonts()[0]" type="condensed" customClasses="text-margin-bottom"/>
+    <Table :data="data.fonts()[0]" type="condensed" customClasses="table-fonts striping text-margin-bottom"/>
 
     <h3>Lists</h3>
     <div>

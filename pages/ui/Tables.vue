@@ -15,9 +15,9 @@
       Simple tables are used when there is only one level of column headings. Table rows alternate in background colors for better readability and scannability of data across table rows. 
     </p>
 
-    <Table :data="data.simpleTable()[0]" type="bordered" />
+    <Table :data="data.simpleTable()[0]" type="bordered" customClasses="striping"/>
     <Code>
-      <Table :data="data.simpleTable()[0]" type="bordered" />
+      <Table :data="data.simpleTable()[0]" type="bordered" customClasses="striping" />
     </Code>
 
     <h4>Complex Table</h4>
@@ -36,7 +36,7 @@
     </p>
 
     <div class="table-grid">
-      <Table :data="data.simpleTable()[0]" type="bordered" />
+      <Table :data="data.simpleTable()[0]" type="bordered" customClasses="striping" />
 
       <div class="table-specs-first-cell dashed-blue dashed-blue-vertical"></div>
       <div class="table-specs-first-cell-span span-blue span-blue-vertical"></div>
@@ -60,9 +60,9 @@
 
     <h4 style="margin-bottom: 2rem;">Condensed Table</h4>
 
-    <Table :data="data.simpleTable()[0]" type="condensed" />
+    <Table :data="data.simpleTable()[0]" type="condensed" customClasses="striping" />
     <Code>
-      <Table :data="data.simpleTable()[0]" type="condensed" />
+      <Table :data="data.simpleTable()[0]" type="condensed" customClasses="striping" />
     </Code>
 
     <h3>Accessibility</h3>

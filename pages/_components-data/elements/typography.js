@@ -15,7 +15,7 @@ const typography_data = {
           { text: [ '<div class="body-p">Body Copy</div>', 'Public Sans', '400', '18px', '28px' ] },
           { text: [ '<div class="subheading">Subheading</div>', 'Public Sans', '400', '16px', '24px' ] },
           { text: [ '<div class="caption">Caption</div>', 'Public Sans', '400', '14px', '22px' ] },
-
+          { text: [ '', '', '', '', '' ], classes: 'visually-hidden' },
           { 
             text: [ `<h2 class="merriweather">Merriweather</h2>
                       <div class="container">
