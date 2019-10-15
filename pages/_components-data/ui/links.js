@@ -146,14 +146,14 @@ const links_data = {
       },
       { 
         header: 'Hover',
-        markup: links_data.anchorLinkMarkup({ classes: 'hover' }),
+        markup: links_data.linkMarkup({ type: 'anchor', classes: 'hover' }),
         code: {
           'Text': `font-weight: bold;`
         }
       },
       { 
         header: 'Focus',
-        markup: links_data.anchorLinkMarkup({ classes: 'focus' }),
+        markup: links_data.linkMarkup({ type: 'anchor', classes: 'focus' }),
         classes: 'focus',
         code: {
           'Text': `font-weight: bold;
@@ -162,7 +162,7 @@ const links_data = {
       },
       { 
         header: 'Visited',
-        markup: links_data.anchorLinkMarkup({ classes: 'visited' }),
+        markup: links_data.linkMarkup({ type: 'anchor', classes: 'visited' }),
         classes: 'visited',
         code: {
           'Text': `color: #4C2C92;`
@@ -187,41 +187,16 @@ const links_data = {
       linkClass = 'inline-text-link'
       linkText = 'Inline Link'
     }
+    if(!!data && data.type === 'anchor') {
+      linkClass = 'anchor-link'
+      linkText = 'Anchor Link'
+    }
 
     return `<a ` + href + `class="` + utils.setClasses(linkClass, classes) + `" ` + tabindex + `>` + linkText + `</a>`
   },
-
-
-  textLinkMarkup(data) {
-    let classes = (!!data && data.classes) ? data.classes : ''
-    let tabindex = (!!data && data.tabindex) ? '' : 'tabindex="-1"'
-    let href = (!!data && data.tabindex) ? 'href="#" ' : ''
-    return `<a ` + href + `class="` + utils.setClasses('text-link', classes) + `" ` + tabindex + `>Text Link</a>`
-  },
-  externalLinkMarkup(data) {
-    let classes = (!!data && data.classes) ? data.classes : ''
-    let tabindex = (!!data && data.tabindex) ? '' : 'tabindex="-1"'
-    let href = (!!data && data.tabindex) ? 'href="#" ' : ''
-
-    return `<a ` + href + `class="` + utils.setClasses('external-link', classes) + `"` + tabindex + `>External Link</a>`
-  },
-  inlineTextLinkMarkup(data) {
-    let classes = (!!data && data.classes) ? data.classes : ''
-    let tabindex = (!!data && data.tabindex) ? '' : 'tabindex="-1"'
-    let href = (!!data && data.tabindex) ? 'href="#" ' : ''
-
-    return `<a ` + href + `class="` + utils.setClasses('inline-text-link', classes) + `"` + tabindex + `>Inline Link</a>`
-  },
-  anchorLinkMarkup(data) {
-    let classes = (!!data && data.classes) ? data.classes : ''
-    let tabindex = (!!data && data.tabindex) ? '' : 'tabindex="-1"'
-    let href = (!!data && data.tabindex) ? 'href="#" ' : ''
-
-    return `<a ` + href + `class="` + utils.setClasses('anchor-link', classes) + `"` + tabindex + `>Anchor Link</a>`
-  },
   defaultLinkGrid() {
     return `<div class="default-link-grid">
-              ` + links_data.textLinkMarkup() + `
+              ` + links_data.linkMarkup() + `
             <div class="default-link dashed-blue dashed-blue-vertical"></div>
             <div class="default-link-span span-blue span-blue-vertical"></div>
             <div class="default-link-dimension dimension-blue dimension-blue-vertical">6px</div>
@@ -229,7 +204,7 @@ const links_data = {
   },
   externalLinkGrid() {
     return `<div class="external-link-grid">
-              ` + links_data.externalLinkMarkup() + `
+              ` + links_data.linkMarkup({ type: 'external' }) + `
             <div class="external-link-display dashed-blue dashed-blue-vertical"></div>
             <div class="external-link-span span-blue span-blue-vertical"></div>
             <div class="external-link-dimension dimension-blue dimension-blue-vertical">4px</div>
@@ -237,7 +212,7 @@ const links_data = {
   },
   anchorLinkGrid() {
     return `<div class="anchor-link-grid">
-              ` + links_data.anchorLinkMarkup() + `
+              ` + links_data.linkMarkup({ type: 'anchor' }) + `
             <div class="anchor-link-display dashed-blue dashed-blue-vertical"></div>
             <div class="anchor-link-span span-blue span-blue-vertical"></div>
             <div class="anchor-link-dimension dimension-blue dimension-blue-vertical">10px</div>

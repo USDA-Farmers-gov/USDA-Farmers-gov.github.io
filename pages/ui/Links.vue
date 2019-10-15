@@ -12,7 +12,7 @@
     <p v-html="data.linkMarkup()"></p>
 
     <ExampleRow :data="data.textLinks()" :itemClasses="[{ index: 0, classes: 'default-link-grid-container' }]" columns="4" />
-    <Code :markup="data.textLinkMarkup({ tabindex: true })" />
+    <Code :markup="data.linkMarkup({ tabindex: true })" />
 
     <h3>External Text Link</h3>
     <p>
@@ -28,20 +28,20 @@
       Inline textual links are used within body paragraphs. They are underlined on default so they can be easily distinguished between body text.
     </p>
 
-    <a class="inline-text-link" href="#" tabindex="-1">Inline Link</a>
+    <p v-html="data.linkMarkup({ type: 'inline-text' })"></p>
     <br>
     <ExampleRow :data="data.inlineTextLinks()" rowClasses="inline-text-link-container" columns="4" />
-    <Code :markup="'<a href=&quot;#&quot; class=&quot;inline-text-link&quot;>Inline Link</a>'" />
+    <Code :markup="data.linkMarkup({ type: 'inline-text', tabindex: true })" />
 
     <h3>Anchor Link</h3>
     <p>
       Anchor links are used to navigate users to another section within the same page. They can be used with or without a leaf icon.
     </p>
 
-    <p v-html="data.anchorLinkMarkup()"></p>
+    <p v-html="data.linkMarkup({ type: 'anchor' })"></p>
     <br>
     <ExampleRow :data="data.anchorLinks()" rowClasses="anchor-link-examples" :itemClasses="[{ index: 0, classes: 'anchor-grid-container' }]" columns="4" />
-    <Code :markup="data.anchorLinkMarkup({ tabindex: true })" />
+    <Code :markup="data.linkMarkup({ type: 'anchor', tabindex: true })" />
 
     <h4>Click Target</h4>
     <p>
@@ -50,7 +50,7 @@
 
     <div class="highlight-text-link text-margin-bottom">
       <div class="highlight-overlay"></div>
-      <div class="highlight-link" v-html="data.textLinkMarkup()"></div>
+      <div class="highlight-link" v-html="data.linkMarkup()"></div>
       <div class="mouse-pointer"></div>
     </div>
 
