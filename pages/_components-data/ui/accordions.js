@@ -10,10 +10,10 @@ const accordions_data = {
               <div class="container">
                 <div class="row">
                   <div class="medium-6">
-                    <img src="/images/images-example1.jpg" alt="girl in a field holding bushel of vegetables" style="max-width: 100%" />
+                    <img src="/images/images-example1.jpg" alt="girl in a field holding bushel of vegetables" />
                   </div>
                   <div class="medium-6">
-                    <img src="/images/images-example1.jpg" alt="girl in a field holding bushel of vegetables" style="max-width: 100%" />
+                    <img src="/images/images-example1.jpg" alt="girl in a field holding bushel of vegetables" />
                   </div>
                 </div>
               </div>

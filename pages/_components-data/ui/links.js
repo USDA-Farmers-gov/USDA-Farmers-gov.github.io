@@ -170,7 +170,6 @@ const links_data = {
       }
     ]
   },
-
   linkMarkup(data) {
     let classes = (!!data && data.classes) ? data.classes : ''
     let tabindex = (!!data && data.tabindex) ? '' : 'tabindex="-1"'

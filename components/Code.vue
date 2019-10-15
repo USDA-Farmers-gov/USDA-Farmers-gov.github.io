@@ -87,6 +87,7 @@
         div.innerHTML = utils.removeLineBreaksAndTrim(str)
         let processedHTML = this.formatHTML(div, 0).innerHTML.replace('checked=""', 'checked')
         processedHTML = processedHTML.replace('disabled=""', 'disabled')
+        processedHTML = processedHTML.replace('hidden=""', 'hidden')
 
         return processedHTML
       },
