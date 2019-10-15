@@ -159,6 +159,24 @@
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
+.expand {
+  color: $bigsky;
+  font-weight: bold;
+  padding-right: 1.5rem;
+  background-size: 1.2rem;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-image: url('/_nuxt/assets/farmers/img/accordion-expand-blue.svg');
+}
+.collapse {
+    color: $bigsky;
+  font-weight: bold;
+  padding-right: 2rem;
+  background-size: 1.2rem;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-image: url('/_nuxt/assets/farmers/img/accordion-collapse-blue.svg');
+}
 .dashed-blue {
   z-index: 100;
   &.dashed-blue-horizontal {

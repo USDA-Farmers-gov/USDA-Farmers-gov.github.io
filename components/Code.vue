@@ -19,8 +19,8 @@
         <slot></slot>
       </div>
       <div v-show="collapsible" class="code-toggle">
-        <div class="show-more" v-show="collapsed" @click="toggleCollapsed()">show more <span class="arrow arrow-bigsky arrow-down"></span></div>
-        <div class="show-less" v-show="!collapsed" @click="toggleCollapsed()">show less <span class="arrow arrow-bigsky arrow-up"></span></div>
+        <div class="show-more" v-show="collapsed" @click="toggleCollapsed()">show more <span class="expand">&nbsp;</span></div>
+        <div class="show-less" v-show="!collapsed" @click="toggleCollapsed()">show less <span class="collapse"></span></div>
       </div>
     </div>
   </div>

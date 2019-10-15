@@ -9,7 +9,7 @@
     <p>
       Text links are used to navigate users from page to page. Text links should be used on its own single line with a right caret icon. 
     </p>
-    <p v-html="data.textLinkMarkup()"></p>
+    <p v-html="data.linkMarkup()"></p>
 
     <ExampleRow :data="data.textLinks()" :itemClasses="[{ index: 0, classes: 'default-link-grid-container' }]" columns="4" />
     <Code :markup="data.textLinkMarkup({ tabindex: true })" />
@@ -19,9 +19,9 @@
       External links are used when directing users to a web page outside of Farmers.gov and USDA. An external link should appear with an external link icon to distinguish between Farmers.gov and USDA to non-Farmers.gov and USDA web pages. They should open in a new browser tab.
     </p>
 
-    <p v-html="data.externalLinkMarkup()"></p>
+    <p v-html="data.linkMarkup({ type: 'external' })"></p>
     <ExampleRow :data="data.externalTextLinks()" :itemClasses="[{ index: 0, classes: 'external-grid-container' }]" columns="4" />
-    <Code :markup="data.externalLinkMarkup({ tabindex: true })" />
+    <Code :markup="data.linkMarkup({ type: 'external', tabindex: true })" />
     
     <h3>Inline Textual Link</h3>
     <p>
@@ -31,7 +31,7 @@
     <a class="inline-text-link" href="#" tabindex="-1">Inline Link</a>
     <br>
     <ExampleRow :data="data.inlineTextLinks()" rowClasses="inline-text-link-container" columns="4" />
-    <Code :markup="'<a class=&quot;inline-text-link&quot; href=&quot;#&quot;>Inline Link</a>'" />
+    <Code :markup="'<a href=&quot;#&quot; class=&quot;inline-text-link&quot;>Inline Link</a>'" />
 
     <h3>Anchor Link</h3>
     <p>

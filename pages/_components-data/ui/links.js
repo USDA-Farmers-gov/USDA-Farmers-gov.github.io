@@ -19,14 +19,14 @@ const links_data = {
       },
       { 
         header: 'Hover',
-        markup: links_data.textLinkMarkup({ classes: 'hover' }),
+        markup: links_data.linkMarkup({ classes: 'hover' }),
         code: {
           'Text': `color: #49A564;`
         }
       },
       { 
         header: 'Focus',
-        markup: links_data.textLinkMarkup({ classes: 'focus' }),
+        markup: links_data.linkMarkup({ classes: 'focus' }),
         classes: 'focus',
         code: {
           'Text': `color: #49A564;
@@ -35,7 +35,7 @@ const links_data = {
       },
       { 
         header: 'Visited',
-        markup: links_data.textLinkMarkup({ classes: 'visited' }),
+        markup: links_data.linkMarkup({ classes: 'visited' }),
         classes: 'visited',
         code: {
           'Text': `color: #4C2C92;`
@@ -61,7 +61,7 @@ const links_data = {
       },
       { 
         header: 'Hover',
-        markup: links_data.externalLinkMarkup({ classes: 'hover' }),
+        markup: links_data.linkMarkup({ type: 'external', classes: 'hover' }),
         code: {
           'Text': `color: #49A564;`,
           'Icon': `color: #49A564;`
@@ -69,7 +69,7 @@ const links_data = {
       },
       { 
         header: 'Focus',
-        markup: links_data.externalLinkMarkup({ classes: 'focus' }),
+        markup: links_data.linkMarkup({ type: 'external', classes: 'focus' }),
         classes: 'focus',
         code: {
           'Text': `color: #49A564;
@@ -79,7 +79,7 @@ const links_data = {
       },
       { 
         header: 'Visited',
-        markup: links_data.externalLinkMarkup({ classes: 'visited' }),
+        markup: links_data.linkMarkup({ type: 'external', classes: 'visited' }),
         classes: 'visited',
         code: {
           'Text': `color: #4C2C92;`,
@@ -170,22 +170,54 @@ const links_data = {
       }
     ]
   },
+
+  linkMarkup(data) {
+    let classes = (!!data && data.classes) ? data.classes : ''
+    let tabindex = (!!data && data.tabindex) ? '' : 'tabindex="-1"'
+    let href = (!!data && data.tabindex) ? 'href="#" ' : ''
+
+    let linkClass = 'text-link'
+    let linkText = 'Text Link'
+
+    if(!!data && data.type === 'external') {
+      linkClass = 'external-link'
+      linkText = 'External Link'
+    }
+    if(!!data && data.type === 'inline-text') {
+      linkClass = 'inline-text-link'
+      linkText = 'Inline Link'
+    }
+
+    return `<a ` + href + `class="` + utils.setClasses(linkClass, classes) + `" ` + tabindex + `>` + linkText + `</a>`
+  },
+
+
   textLinkMarkup(data) {
     let classes = (!!data && data.classes) ? data.classes : ''
     let tabindex = (!!data && data.tabindex) ? '' : 'tabindex="-1"'
-    return `<a class="` + utils.setClasses('text-link', classes) + `" ` + tabindex + `>Text Link</a>`
+    let href = (!!data && data.tabindex) ? 'href="#" ' : ''
+    return `<a ` + href + `class="` + utils.setClasses('text-link', classes) + `" ` + tabindex + `>Text Link</a>`
   },
   externalLinkMarkup(data) {
     let classes = (!!data && data.classes) ? data.classes : ''
     let tabindex = (!!data && data.tabindex) ? '' : 'tabindex="-1"'
+    let href = (!!data && data.tabindex) ? 'href="#" ' : ''
 
-    return `<a class="` + utils.setClasses('external-link', classes) + `"` + tabindex + `>External Link</a>`
+    return `<a ` + href + `class="` + utils.setClasses('external-link', classes) + `"` + tabindex + `>External Link</a>`
+  },
+  inlineTextLinkMarkup(data) {
+    let classes = (!!data && data.classes) ? data.classes : ''
+    let tabindex = (!!data && data.tabindex) ? '' : 'tabindex="-1"'
+    let href = (!!data && data.tabindex) ? 'href="#" ' : ''
+
+    return `<a ` + href + `class="` + utils.setClasses('inline-text-link', classes) + `"` + tabindex + `>Inline Link</a>`
   },
   anchorLinkMarkup(data) {
     let classes = (!!data && data.classes) ? data.classes : ''
     let tabindex = (!!data && data.tabindex) ? '' : 'tabindex="-1"'
+    let href = (!!data && data.tabindex) ? 'href="#" ' : ''
 
-    return `<a class="` + utils.setClasses('anchor-link', classes) + `"` + tabindex + `>Anchor Link</a>`
+    return `<a ` + href + `class="` + utils.setClasses('anchor-link', classes) + `"` + tabindex + `>Anchor Link</a>`
   },
   defaultLinkGrid() {
     return `<div class="default-link-grid">
