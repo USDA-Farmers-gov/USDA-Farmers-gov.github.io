@@ -44,7 +44,7 @@
     <ExampleRow :data="data.defaultBoxAccordionSpecs()" columns="4" />
 
     <div id="accordionGroup" ref="accordionGroup" class="Accordion row">
-      <div v-html="data.defaultBoxAccordionMarkup(true)" />
+      <div v-html="data.defaultBoxAccordionMarkup({ expanded: true })" />
     </div>
     <ExampleRow :data="data.expandedBoxAccordionSpecs()" columns="4" />
 

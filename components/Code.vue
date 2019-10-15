@@ -19,8 +19,8 @@
         <slot></slot>
       </div>
       <div v-show="collapsible" class="code-toggle">
-        <div class="show-more" v-if="collapsed" @click="toggleCollapsed()">show more <span class="arrow arrow-bigsky arrow-down"></span></div>
-        <div class="show-less" v-if="!collapsed" @click="toggleCollapsed()">show less <span class="arrow arrow-bigsky arrow-up"></span></div>
+        <div class="show-more" v-show="collapsed" @click="toggleCollapsed()">show more <span class="arrow arrow-bigsky arrow-down"></span></div>
+        <div class="show-less" v-show="!collapsed" @click="toggleCollapsed()">show less <span class="arrow arrow-bigsky arrow-up"></span></div>
       </div>
     </div>
   </div>
@@ -74,19 +74,21 @@
         this.updateCodeBoxClasses()
       },
       setPreviewClasses() {
-        let classes = 'preview text-margin-bottom'
-        if(this.designSystemWidth) classes = 'medium-' + this.designSystemWidth + ' ' + classes
-        return classes
+        let classes = [ 'preview text-margin-bottom' ]
+        if(this.designSystemWidth) classes.push('medium-' + this.designSystemWidth)
+        return classes.join(' ')
       },
       setCode() {
         const markup = this.markup ? this.markup : this.$refs["slot-wrapper"].innerHTML
         this.code = this.processHTML(markup)
       },
       processHTML(str) {
-        var div = document.createElement('div')
+        const div = document.createElement('div')
         div.innerHTML = utils.removeLineBreaksAndTrim(str)
+        let processedHTML = this.formatHTML(div, 0).innerHTML.replace('checked=""', 'checked')
+        processedHTML = processedHTML.replace('disabled=""', 'disabled')
 
-        return this.formatHTML(div, 0).innerHTML
+        return processedHTML
       },
       formatHTML(node, level) {
           var indentBefore = new Array(level++ + 1).join('  '),
