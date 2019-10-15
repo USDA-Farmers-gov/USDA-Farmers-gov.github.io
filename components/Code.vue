@@ -15,7 +15,7 @@
       <div ref="code" :class="codeBoxClasses">
         <span>{{ code }}</span>
       </div>
-      <div class="slot-wrapper" style="display:none;">
+      <div ref="slot-wrapper" style="display:none;">
         <slot></slot>
       </div>
       <div v-show="collapsible" class="code-toggle">
@@ -79,7 +79,7 @@
         return classes
       },
       setCode() {
-        const markup = this.markup ? this.markup : this.$el.getElementsByClassName("slot-wrapper")[0].innerHTML
+        const markup = this.markup ? this.markup : this.$refs["slot-wrapper"].innerHTML
         this.code = this.processHTML(markup)
       },
       processHTML(str) {
