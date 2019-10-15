@@ -12,11 +12,10 @@
 
     <p v-html="outputRadioButtonMarkup({ label: 'Radio Label', name: 'default' })"></p>  
     <p v-html="outputRadioButtonMarkup({ label: 'Radio Label', name: 'default', checked: true })"></p>  
-    
     <div class="checkbox-radio-mobile-container">
       <ExampleRow :data="data.radioButtons()" :item-classes="[{ index: 0, classes: 'checkbox-grid-container' }]" columns="4" />
     </div>
-    <Code :markup="outputRadioButtonMarkup({ label: 'Radio Label', name: 'default', tabindex: true })" />
+    <Code :markup="outputRadioButtonMarkup({ label: 'Radio Label', name: 'default', checked: true, tabindex: true })" />
 
     <h4>Click Target</h4>
     <p>
