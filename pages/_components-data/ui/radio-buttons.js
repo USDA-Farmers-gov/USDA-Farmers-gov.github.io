@@ -167,7 +167,7 @@ const radio_buttons_data = {
       let gridClass   = (!!data && data.showDimensions) ? ' checkbox-radio-dimensions' : ''
       let checked     = (!!data && data.checked) ? ' checked' : ''
       let disabled    = (!!data && data.disabled) ? ' disabled' : ''
-      let tabindex    = (!!data && data.tabindex) ? '' : ' tabindex="-1"'
+      let tabindex    = (!!data && data.tabindex) ? '' : ' tabindex="0"'
 
       if(!!data && data.showLabel === false)  labelClass = utils.setClasses(labelClass, ' visually-hidden')
       if(!!data && data.labelClasses)         labelClass = utils.setClasses(labelClass, data.labelClasses)

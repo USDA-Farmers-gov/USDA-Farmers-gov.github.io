@@ -19,19 +19,30 @@ const icons_data = {
   },
   supportingIcons() {
     return [ 
-      icons_data.imageMarkup({ image: '/images/info.svg' }), 
-      icons_data.imageMarkup({ image: '/images/mail.svg' }), 
-      icons_data.imageMarkup({ image: '/images/print.svg' }), 
-      icons_data.imageMarkup({ image: '/images/location.svg' }), 
-      icons_data.imageMarkup({ image: '/images/phone.svg' }), 
+      icons_data.iconMarkup({ classes: 'icon info' }), 
+      icons_data.iconMarkup({ classes: 'icon mail' }), 
+      icons_data.iconMarkup({ classes: 'icon print' }), 
+      icons_data.iconMarkup({ classes: 'icon location' }), 
+      icons_data.iconMarkup({ classes: 'icon phone' }),
+
+      //       icons_data.imageMarkup({ image: '/images/info.svg' }), 
+      // icons_data.imageMarkup({ image: '/images/mail.svg' }), 
+      // icons_data.imageMarkup({ image: '/images/print.svg' }), 
+      // icons_data.imageMarkup({ image: '/images/location.svg' }), 
+      // icons_data.imageMarkup({ image: '/images/phone.svg' }), 
     ]
   },
   illustrativeIcons() {
     return [ 
-      icons_data.imageMarkup({ image: '/images/barn.svg' }), 
-      icons_data.imageMarkup({ image: '/images/farmer.svg' }), 
-      icons_data.imageMarkup({ image: '/images/land.svg' }), 
-      icons_data.imageMarkup({ image: '/images/mfp.svg' }), 
+      icons_data.iconMarkup({ classes: 'outline-icon barn' }), 
+      icons_data.iconMarkup({ classes: 'outline-icon farmer' }), 
+      icons_data.iconMarkup({ classes: 'outline-icon land' }), 
+      icons_data.iconMarkup({ classes: 'outline-icon mfp' })
+
+      // icons_data.imageMarkup({ image: '/images/barn.svg' }), 
+      // icons_data.imageMarkup({ image: '/images/farmer.svg' }), 
+      // icons_data.imageMarkup({ image: '/images/land.svg' }), 
+      // icons_data.imageMarkup({ image: '/images/mfp.svg' }), 
     ]
   },
   iconMarkup(data) {
