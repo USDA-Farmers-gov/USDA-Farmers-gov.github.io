@@ -4,7 +4,7 @@ const icons_data = {
       {
         table_headers: [ 'Icon', 'Icon Name', 'Icon Usage' ],
         table_rows: [
-          { text: [ icons_data.iconMarkup({ classes: 'icon caret-right' }), 'caret-right', 'navigate to pages within farmer.gov and USDA' ] },
+          { text: [ icons_data.iconMarkup({ classes: 'icon caret-right' }), 'caret-right', 'navigate to pages within farmers.gov and USDA' ] },
           { text: [ icons_data.iconMarkup({ classes: 'icon search' }), 'search', 'search button in search box' ] },
           { text: [ icons_data.iconMarkup({ classes: 'icon chevron-up' }), 'chevron-down', 'expand dropdown' ] },
           { text: [ icons_data.iconMarkup({ classes: 'icon chevron-down' }), 'chevron-up', 'collapse dropdown' ] },
