@@ -3,7 +3,7 @@
     <caption class="visually-hidden">{{ caption }}</caption>
     <thead v-if="data.table_headers">
         <tr>
-          <td v-for="header in data.table_headers"> {{ header }} </td>
+          <th v-for="header in data.table_headers"> {{ header }} </th>
         </tr>
       </thead>
       <tbody>
