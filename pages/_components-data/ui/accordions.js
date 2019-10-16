@@ -3,7 +3,7 @@ import utils from '@/assets/js/utils.js'
 const accordions_data = {
   defaultAccordionMarkup(data) {
     const tabindex = (data && data.tabindex) ? '' : ' tabindex="-1"'
-    return `<div class="card-accordion"` + tabindex + `>
+    return `<div class="Card-Accordion card-accordion"` + tabindex + `>
             <div class="card-accordion-content">
               <h4>Headline</h4>
               <p>We recommend that producers who have not participated in a USDA program contact their local USDA service center to establish farm records. To establish a farm tract number, be sure to bring the following items:</p>
@@ -118,7 +118,6 @@ const accordions_data = {
 
       return  `<div class="box-accordion">` + markupTop + markupBottom + `</div>`
     },
-
     boxAccordionMarkup(data) {
       const tabindex = (data && data.tabindex) ? '' : ' tabindex="-1"'
       const labelText     = (!!data && data.expanded) ? 'Expanded Box Accordion Headline 3' : 'Collapsed Box Accordion Headline 3'
@@ -129,11 +128,11 @@ const accordions_data = {
       const sectId        = 'sect-' + randomString
 
       return { 
-            top: `<div class="box-accordion-top Accordion-trigger"
+            top: `<div id="` + accordionId + `"
+                  class="box-accordion-top Accordion-trigger"
                   ` + tabindex + `
                   aria-expanded="` + ariaExpanded + `"
-                  aria-controls="` + sectId + `"
-                  id="` + accordionId + `">
+                  aria-controls="` + sectId + `">
               <h3>
                   <span class="Accordion-title headline-3">` + labelText + `
                     <span class="Accordion-icon"></span>
@@ -146,7 +145,19 @@ const accordions_data = {
                 <p>Farmers.gov provides farmers, ranchers, private foresters, and agricultural producers with online self-service applications, educational materials, engagement opportunities, and business tools to increase efficiency and productivity while preserving and fostering long-held traditional relationships between local USDA offices and producers.</p>
             </div>` }
     },
-
+    boxAccordionCode(data) {
+      return `<div id="accordionGroup" class="row Accordion">
+                <div class="medium-3">`
+                  + accordions_data.defaultBoxAccordionMarkup(data) +
+                `</div>
+                <div class="medium-3">`
+                  + accordions_data.defaultBoxAccordionMarkup(data) +
+                `</div>
+                <div class="medium-3">`
+                  + accordions_data.defaultBoxAccordionMarkup(data) +
+                `</div>
+              </div>`
+    },
     boxAccordionDimensions() {
       return `<div class="box-accordion-grid">
               ` + accordions_data.defaultBoxAccordionMarkup() + `

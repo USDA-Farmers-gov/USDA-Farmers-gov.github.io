@@ -48,7 +48,7 @@
     </div>
     <ExampleRow :data="data.expandedBoxAccordionSpecs()" columns="4" />
 
-    <Code :markup="data.defaultBoxAccordionMarkup({ tabindex: true })" />
+    <Code :markup="data.boxAccordionCode({ tabindex: true })" />
 
     <h3>Click Target</h3>
     <p>
