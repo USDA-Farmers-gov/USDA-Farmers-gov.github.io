@@ -17,7 +17,7 @@
       caption="Column one contains the icon image as it is diplayed on the page, column two contains icon name, and column three contains a description of its usage." 
     />
 
-    <Code :markup="'<span class=&quot;icon [ICON-NAME]&quot;></span>'" />
+    <Code :markup="'<span class=&quot;icon [ ICON-NAME ]&quot;></span>'" />
 
     <h3>Click Target</h3>
     <p>
