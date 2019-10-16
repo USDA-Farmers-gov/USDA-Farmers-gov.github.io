@@ -9,7 +9,12 @@
         <div v-show="code_copied" class="code-alert">Copied!</div>
       </transition>
       <div class="copy-code">
-        <span class="copy-code-text" @click="copyToClipboard(code)">copy code</span>
+        <span class="copy-code-text" 
+          @click="copyToClipboard(code)" 
+          @keypress="copyCodeOnKeyPress($event, code)" 
+          tabindex="0">
+            copy code
+        </span>
       </div>
       
       <div ref="code" :class="codeBoxClasses">
@@ -19,8 +24,20 @@
         <slot></slot>
       </div>
       <div v-show="collapsible" class="code-toggle">
-        <div class="show-more" v-show="collapsed" @click="toggleCollapsed()">show more <span class="expand">&nbsp;</span></div>
-        <div class="show-less" v-show="!collapsed" @click="toggleCollapsed()">show less <span class="collapse"></span></div>
+        <div class="show-more" 
+          v-show="collapsed" 
+          @click="toggleCollapsed()" 
+          @keypress="toggleCodeOnKeyPress($event)" 
+          tabindex="0">
+          show more <span class="expand">&nbsp;</span>
+        </div>
+        <div class="show-less" 
+          v-show="!collapsed" 
+          @click="toggleCollapsed()" 
+          @keypress="toggleCodeOnKeyPress($event)" 
+          tabindex="0">
+            show less <span class="collapse"></span>
+        </div>
       </div>
     </div>
   </div>
@@ -81,6 +98,12 @@
       setCode() {
         const markup = this.markup ? this.markup : this.$refs["slot-wrapper"].innerHTML
         this.code = this.processHTML(markup)
+      },
+      copyCodeOnKeyPress(e, code) {
+        if(e.code === 'Enter') this.copyToClipboard(code)
+      },
+      toggleCodeOnKeyPress(e) {
+        if(e.code === 'Enter') this.toggleCollapsed()
       },
       processHTML(str) {
         const div = document.createElement('div')
