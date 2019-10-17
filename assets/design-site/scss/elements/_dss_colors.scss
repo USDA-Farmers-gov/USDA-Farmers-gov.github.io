@@ -2,7 +2,9 @@
 .color-groups .colors .color-swatch {
   padding: 7rem;
   border-top-left-radius: 5px;
-  border-top-right-radius: 5px; }
+  border-top-right-radius: 5px; 
+  cursor: pointer;
+}
 
 .color-groups .colors .color-name {
   border: 2px solid #EDEDED;
@@ -10,10 +12,13 @@
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   font-size: 1.4rem;
-  margin-bottom: 1.5rem;
   padding: 1rem;
   text-align: center; 
   cursor: pointer;
+}
+
+.color-examples {
+  margin-top: 1.5rem;
 }
   
 /* EVERYTHING ELSE */

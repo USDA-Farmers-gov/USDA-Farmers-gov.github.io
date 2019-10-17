@@ -2,7 +2,13 @@
   <div>
     <div v-if="data" class="color-groups">
       <div :class="setRowClasses()">
-        <div v-for="(swatch, index) in data" :class="setSwatchClasses(swatch)">
+        <div v-for="(swatch, index) in data" :class="setSwatchClasses(swatch)"
+            @click="copyToClipboard(swatch.hexcode, index)" 
+            @keypress="copyCodeOnKeyPress($event, swatch.hexcode, index)" 
+            @focus="setHoverVars(index)"
+            @mouseover="setHoverVars(index)"
+            @mouseleave="setHoverVars(null)"
+            tabindex="0">
           <div :class="'color-swatch ' + swatch.classes"></div>
           <div class="code-alert-container">
             <transition name="fade">
@@ -14,12 +20,7 @@
               </div>
             </transition>
           </div>
-          <div class="color-name" 
-            @click="copyToClipboard(swatch.hexcode, index)" 
-            @keypress="copyCodeOnKeyPress($event, swatch.hexcode, index)" 
-            @mouseover="setHoverVars(index)"
-            @mouseleave="setHoverVars(null)"
-            tabindex="0">
+          <div class="color-name">
               {{ swatch.caption }}
               {{ swatch.hexcode }}
           </div>
@@ -27,7 +28,7 @@
       </div>
     </div>
 
-    <div v-if="getDescriptionCount(data) > 0">
+    <div class="color-examples" v-if="getDescriptionCount(data) > 0">
         <p>
           <strong>Examples</strong>
         </p>

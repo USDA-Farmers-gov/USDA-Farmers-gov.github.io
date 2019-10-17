@@ -19,7 +19,8 @@ Vue.mixin({
         }.bind(this), 2000)
     },
     copyCodeOnKeyPress(e, code, index) {
-      if(e.code === 'Enter') this.copyToClipboard(code)
+      console.log(e)
+      if(e.code === 'Enter') this.copyToClipboard(code, index)
     }
   }
 })
