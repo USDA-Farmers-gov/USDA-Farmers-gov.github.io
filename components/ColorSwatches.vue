@@ -2,9 +2,27 @@
   <div>
     <div v-if="data" class="color-groups">
       <div :class="setRowClasses()">
-        <div v-for="swatch in data" :class="setSwatchClasses(swatch)">
+        <div v-for="(swatch, index) in data" :class="setSwatchClasses(swatch)">
           <div :class="'color-swatch ' + swatch.classes"></div>
-          <div class="color-name">{{ swatch.caption }}</div>
+          <div class="code-alert-container">
+            <transition name="fade">
+                <div v-show="codeCopied && index === elementIndex" class="code-alert link">Copied!</div>
+            </transition>
+            <transition name="fade">
+              <div v-show="showClickToCopy && !codeCopied && hoverIndex === index" class="code-alert click-to-copy">
+                Click to Copy
+              </div>
+            </transition>
+          </div>
+          <div class="color-name" 
+            @click="copyToClipboard(swatch.hexcode, index)" 
+            @keypress="copyCodeOnKeyPress($event, swatch.hexcode, index)" 
+            @mouseover="setHoverVars(index)"
+            @mouseleave="setHoverVars(null)"
+            tabindex="0">
+              {{ swatch.caption }}
+              {{ swatch.hexcode }}
+          </div>
         </div>
       </div>
     </div>
@@ -33,14 +51,27 @@
     props: {
      data: {
         type: [ Object, Array ],
-        required: true
+        required: true,
       },
       rowClasses: String
+    },
+    data() {
+      return {
+        elementIndex: -1,
+        hoverIndex: -1,
+        codeCopied: false,
+        showClickToCopy: null
+      }
     },
     mounted() {
       if(!this.data) console.error('COLOR SWATCH ROW ERROR: No data provided!')
     },
     methods: {
+      setHoverVars(index) {
+        if(index !== null && index !== this.hoverIndex) this.codeCopied = false
+        this.showClickToCopy = (index >= 0) ? true : false
+        this.hoverIndex = index
+      },
       setRowClasses() {
         let baseClass = 'row'
         return this.rowClasses ? utils.setClasses(baseClass, this.rowClasses) : baseClass

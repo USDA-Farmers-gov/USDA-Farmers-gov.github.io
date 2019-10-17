@@ -2,18 +2,22 @@ import Vue from 'vue'
 
 Vue.mixin({
   methods: {
-    copyToClipboard (code) {
+    copyToClipboard (code, index) {
       const el = document.createElement('textarea')
         el.value = code
         document.body.appendChild(el)
         el.select()
         document.execCommand('copy')
         document.body.removeChild(el)
-        this.code_copied = true
+        this.elementIndex = index
+        this.codeCopied = true
 
         setTimeout(function() {
-          this.code_copied = false
+          this.codeCopied = false
         }.bind(this), 2000)
+    },
+    copyCodeOnKeyPress(e, code, index) {
+      if(e.code === 'Enter') this.copyToClipboard(code)
     }
   }
 })

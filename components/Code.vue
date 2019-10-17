@@ -6,7 +6,7 @@
     
     <div :class="collapsible ? '' : 'no-collapse'" class="code-grid">
       <transition name="fade">
-        <div v-show="code_copied" class="code-alert">Copied!</div>
+        <div v-show="codeCopied" class="code-alert grid down-arrow">Copied!</div>
       </transition>
       <div class="copy-code">
         <span class="copy-code-text" 
@@ -16,7 +16,7 @@
             copy code
         </span>
       </div>
-      
+
       <div ref="code" :class="codeBoxClasses">
         <span>{{ code }}</span>
       </div>
@@ -58,7 +58,7 @@
     data() {
       return {
         code: '',
-        code_copied: false,
+        codeCopied: false,
         collapsible: false,
         collapsed: true,
         defaultCodeBoxClasses: 'code-box',
@@ -98,9 +98,6 @@
       setCode() {
         const markup = this.markup ? this.markup : this.$refs["slot-wrapper"].innerHTML
         this.code = this.processHTML(markup)
-      },
-      copyCodeOnKeyPress(e, code) {
-        if(e.code === 'Enter') this.copyToClipboard(code)
       },
       toggleCodeOnKeyPress(e) {
         if(e.code === 'Enter') this.toggleCollapsed()
