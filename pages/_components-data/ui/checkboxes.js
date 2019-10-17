@@ -106,7 +106,7 @@ const checkboxes_data = {
         ]
     },
     outputCardMarkup(data) {
-      const tabindex = (!!data && data.tabindex) ? '' : 'tabindex="-1"'
+      const tabindex = (!!data && data.tabindex === false) ? 'tabindex="-1"' : ''
       let labelClasses  = 'checkbox-card-label'
       let checked       = ''
       let disabled      = ''
@@ -168,7 +168,7 @@ const checkboxes_data = {
     },
     outputCheckboxMarkup(data) {
       const id = (!!data && data.id) ? data.id : 'checkbox-' + utils.randomNumber()
-      const tabindex = (!!data && data.tabindex) ? '' : 'tabindex="-1"'
+      const tabindex = (!!data && data.tabindex === false) ? 'tabindex="-1"' : ''
       let label       = (!! data && data.label) ? data.label : 'Label'
       let labelClass  = 'checkbox-label'
       let gridClass   = ''

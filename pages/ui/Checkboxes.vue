@@ -16,7 +16,7 @@
       <ExampleRow :data="data.default()" :item-classes="[{ index: 0, classes: 'checkbox-grid-container' }]" columns="4" />
     </div>
 
-    <Code :markup="outputCheckboxMarkup({ label: 'Checkbox Label', tabindex: true })" />
+    <Code :markup="outputCheckboxMarkup({ label: 'Checkbox Label' })" />
 
     <h4>Click Target</h4>
     <p>
@@ -48,7 +48,7 @@
     <ExampleRow :data="data.specs()" columns="3" />
     <ExampleRow :data="data.specsStates()" columns="3" />
 
-    <Code :markup="data.outputCardMarkup({ label: 'Card Checkbox', hover: true, image: '/images/MFP2-icon.jpg', tabindex: true })" />
+    <Code :markup="data.outputCardMarkup({ label: 'Card Checkbox', hover: true, image: '/images/MFP2-icon.jpg' })" />
 
     <h3>Click Target</h3>
     <p>
