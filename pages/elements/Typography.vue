@@ -21,6 +21,8 @@
 
     <Table :data="data.fonts()[0]" type="condensed" customClasses="table-fonts striping text-margin-bottom"/>
 
+    <Code :markup="data.typographyCode()" />
+
     <h3>Lists</h3>
     <div>
       <p>

@@ -4,17 +4,17 @@ const typography_data = {
       {
         table_headers: [ 'Hierarchy', 'Font Family', 'Weight', 'Font Size', 'Line Height' ],
         table_rows: [
-          { text: [ '<h1>Headline 1</h1>', 'Public Sans', '700', '38px', '48px' ] },
-          { text: [ '<h2>Headline 2</h2>', 'Public Sans', '700', '28px', '38px' ] },
-          { text: [ '<h3>Headline 3</h3>', 'Public Sans', '700', '23px', '30px' ] },
-          { text: [ '<h4>Headline 4</h4>', 'Public Sans', '700', '20px', '26px' ] },
-          { text: [ '<h5>Headline 5</h5>', 'Public Sans', '700', '16px', '20px' ] },
-          { text: [ '<h6>Headline 6</h6>', 'Public Sans', '400', '12px', '18px' ] },
-          { text: [ '<div class="label">Label 1</div>', 'Public Sans', '700', '22px', '34px' ] },
-          { text: [ '<div class="lead-p">Lead Paragraph</div>', 'Public Sans', '300', '22px', '34px' ] },
-          { text: [ '<div class="body-p">Body Copy</div>', 'Public Sans', '400', '18px', '28px' ] },
-          { text: [ '<div class="subheading">Subheading</div>', 'Public Sans', '400', '16px', '24px' ] },
-          { text: [ '<div class="caption">Caption</div>', 'Public Sans', '400', '14px', '22px' ] },
+          { text: [ typography_data.markup.header_1, 'Public Sans', '700', '38px', '48px' ] },
+          { text: [ typography_data.markup.header_2, 'Public Sans', '700', '28px', '38px' ] },
+          { text: [ typography_data.markup.header_3, 'Public Sans', '700', '23px', '30px' ] },
+          { text: [ typography_data.markup.header_4, 'Public Sans', '700', '20px', '26px' ] },
+          { text: [ typography_data.markup.header_5, 'Public Sans', '700', '16px', '20px' ] },
+          { text: [ typography_data.markup.header_6, 'Public Sans', '400', '12px', '18px' ] },
+          { text: [ typography_data.markup.label, 'Public Sans', '700', '22px', '34px' ] },
+          { text: [ typography_data.markup.lead_p, 'Public Sans', '300', '22px', '34px' ] },
+          { text: [ typography_data.markup.body_p, 'Public Sans', '400', '18px', '28px' ] },
+          { text: [ typography_data.markup.subheading, 'Public Sans', '400', '16px', '24px' ] },
+          { text: [ typography_data.markup.caption, 'Public Sans', '400', '14px', '22px' ] },
           { text: [ '', '', '', '', '' ], classes: 'visually-hidden' },
           { 
             text: [ `<h2 class="merriweather">Merriweather</h2>
@@ -31,8 +31,8 @@ const typography_data = {
                         </div>
                       </div>` ], classes: 'merriweather merriweather-container', colspan: 5 
           },
-          { text: [ '<div class="blog-body-p">Blog Body Copy</div>', 'Merriweather', '400', '18px', '30px' ] },
-          { text: [ '<div class="blog-block-quote">Blog Quote</div>', 'Merriweather', '300', '28px', '34px' ] },
+          { text: [ typography_data.markup.blog_body_p, 'Merriweather', '400', '18px', '30px' ] },
+          { text: [ typography_data.markup.blog_block_quote, 'Merriweather', '300', '28px', '34px' ] },
         ]
       }
     ]
@@ -56,7 +56,32 @@ const typography_data = {
           { classes: 'big-sky big-sky-border white-txt', description: 'White on Big Sky'},
           { classes: 'big-sky-txt grey-3-border', description: 'Big Sky on White'},
         ]
-  }
+  },
+  markup:
+      {
+        header_1: '<h1>Headline 1</h1>',
+        header_2: '<h2>Headline 2</h2>',
+        header_3: '<h3>Headline 3</h3>',
+        header_4: '<h4>Headline 4</h4>',
+        header_5: '<h5>Headline 5</h5>',
+        header_6: '<h6>Headline 6</h6>',
+        label: '<div class="label">Label 1</div>',
+        lead_p: '<div class="lead-p">Lead Paragraph</div>',
+        body_p: '<div class="body-p">Body Copy</div>',
+        subheading: '<div class="subheading">Subheading</div>',
+        caption: '<div class="caption">Caption</div>',
+        blog_body_p: '<div class="blog-body-p">Blog Body Copy</div>',
+        blog_block_quote: '<div class="blog-block-quote">Blog Quote</div>'
+    }, 
+    typographyCode() {
+      let x
+      let code = ''
+      for (x in typography_data.markup) {
+        let text = !!typography_data.markup[x] ? typography_data.markup[x] : ''
+        if(text) code = code + text
+      }
+      return code
+    }
 }
 
 export default typography_data
