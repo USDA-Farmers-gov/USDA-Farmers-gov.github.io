@@ -12,7 +12,9 @@ Vue.mixin({
         this.elementIndex = index
         this.codeCopied = true
 
-        setTimeout(function() {
+        clearTimeout(this.copied)
+
+        this.copied = setTimeout(function() {
           this.codeCopied = false
         }.bind(this), 2000)
     },
