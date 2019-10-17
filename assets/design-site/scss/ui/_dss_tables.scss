@@ -1,10 +1,17 @@
 .table-grid {
   table {
     margin-bottom: 0;
+    td:first-child {
+      min-width: 203px;
+    }
   }
   display: grid;
-  grid-template-columns: 24px 182px 24px 539px 10px 30px;
+  grid-template-columns: 24px 182px 24px auto;
   // grid-template-rows: 24px 10px 56px 102px 56px 102px 84px 118px;
+
+  // @media only screen and (max-width: 1024px) {
+  //   grid-auto-columns: min-content;
+  // }
 
   .table-bordered {
     grid-column: 1 / span 6;
