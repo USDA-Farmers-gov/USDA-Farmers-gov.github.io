@@ -48,7 +48,7 @@
     <ExampleRow :data="data.specs()" columns="3" />
     <ExampleRow :data="data.specsStates()" columns="3" />
 
-    <Code :markup="data.outputCardMarkup({ label: 'Card Checkbox', hover: true, image: '/images/MFP2-icon.jpg' })" />
+    <Code :markup="data.outputCardMarkup({ label: 'Card Checkbox', hover: true, image: '/images/produce_basket.jpg' })" />
 
     <h3>Click Target</h3>
     <p>

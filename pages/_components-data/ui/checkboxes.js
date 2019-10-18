@@ -41,7 +41,7 @@ const checkboxes_data = {
           {
             header: 'Unselected',
             classes_cell: 'dimension-margins',
-            markup: checkboxes_data.outputCardMarkup({ label: 'Card Checkbox', image: '/images/MFP2-icon.jpg' }),
+            markup: checkboxes_data.outputCardMarkup({ label: 'Card Checkbox', image: '/images/produce_basket.jpg' }),
             code: {
               'Card': `background: #FFFFFF;
                 border: 2px #BBBBBB;
@@ -56,7 +56,7 @@ const checkboxes_data = {
             header: 'Selected',
             markup: checkboxes_data.outputCardMarkup({ 
                                         label: 'Card Checkbox', 
-                                        image: '/images/MFP2-icon.jpg', 
+                                        image: '/images/produce_basket.jpg', 
                                         checked: true, 
                                         showCardDimensions: true }),
             code: {
@@ -74,7 +74,7 @@ const checkboxes_data = {
       return [
           {
             header: 'Hover',
-            markup: checkboxes_data.outputCardMarkup({ label: 'Card Checkbox', hover: true, image: '/images/MFP2-icon.jpg' }),
+            markup: checkboxes_data.outputCardMarkup({ label: 'Card Checkbox', hover: true, image: '/images/produce_basket.jpg' }),
             code: {
               'Card': `border: 2px #49A564;`,
               'Checkbox': `background: #FFFFFF;
@@ -86,7 +86,7 @@ const checkboxes_data = {
             markup: checkboxes_data.outputCardMarkup({ 
                             label: 'Card Checkbox', 
                             labelClasses: 'focus',
-                            image: '/images/MFP2-icon.jpg', 
+                            image: '/images/produce_basket.jpg', 
                             checked: true }),
             code: {
               'Card': `shadow: #1B69D3;`,
@@ -96,7 +96,7 @@ const checkboxes_data = {
           },
           {
             header: 'Disabled',
-            markup: checkboxes_data.outputCardMarkup({ label: 'Card Checkbox', image: '/images/MFP2-icon.jpg', disabled: true }),
+            markup: checkboxes_data.outputCardMarkup({ label: 'Card Checkbox', image: '/images/produce_basket.jpg', disabled: true }),
             code: {
               'Card': `border: 2px #BBBBBB;`,
               'Checkbox': `background: #F7F7F7;

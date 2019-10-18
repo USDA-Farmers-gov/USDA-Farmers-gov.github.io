@@ -45,7 +45,7 @@ const radio_buttons_data = {
             {
               header: 'Unselected',
               classes_cell: 'dimension-margins',
-              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', image: '/images/MFP2-icon.jpg', name: 'specs-1' }),
+              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', image: '/images/produce_basket.jpg', name: 'specs-1' }),
               code: {
                 'Card': `background: #FFFFFF;
                       border: 2px #BBBBBB;
@@ -57,7 +57,7 @@ const radio_buttons_data = {
             },
             {
               header: 'Selected',
-              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', image: '/images/MFP2-icon.jpg', name: 'specs-1', checked: true, showCardDimensions: true }),
+              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', image: '/images/produce_basket.jpg', name: 'specs-1', checked: true, showCardDimensions: true }),
               code: {
                 'Card': `background: #FFFFFF;
                     border: 2px #49A564;
@@ -73,7 +73,7 @@ const radio_buttons_data = {
     return [
             {
               header: 'Hover',
-              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', image: '/images/MFP2-icon.jpg', name: 'specs-2', hover: true }),
+              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', image: '/images/produce_basket.jpg', name: 'specs-2', hover: true }),
               code: {
                 'Card': `border: 2px #49A564;`,
                 'Radio Button': `background: #FFFFFF;
@@ -82,7 +82,7 @@ const radio_buttons_data = {
             },
             {
               header: 'Focus',
-              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', labelClasses: 'focus', image: '/images/MFP2-icon.jpg', name: 'specs-2', checked: true }),
+              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', labelClasses: 'focus', image: '/images/produce_basket.jpg', name: 'specs-2', checked: true }),
               code: {
                 'Card': `shadow: #1B69D3;`,
                 'Radio Button': `background: #49A564;
@@ -91,7 +91,7 @@ const radio_buttons_data = {
             },
             {
               header: 'Disabled',
-              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', image: '/images/MFP2-icon.jpg', name: 'specs-2', disabled: true }),
+              markup: radio_buttons_data.outputCardMarkup({ label: 'Card Radio Button', image: '/images/produce_basket.jpg', name: 'specs-2', disabled: true }),
               code: {
                 'Card': `border: 2px #BBBBBB;`,
                 'Radio Button': `background: #F7F7F7;

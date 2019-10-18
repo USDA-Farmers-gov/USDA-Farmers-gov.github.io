@@ -8,7 +8,7 @@ export default {
       lang: 'en',
     },
     titleTemplate: (titleChunk) => {
-      return titleChunk ? `${titleChunk} | Farmers Design System` : 'Farmers Design System';
+      return titleChunk ? `${titleChunk} | Farmers.gov Design System` : 'Farmers.gov Design System';
     },
     meta: [
       { charset: 'utf-8' },

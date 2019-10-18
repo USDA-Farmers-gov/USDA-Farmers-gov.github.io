@@ -44,7 +44,7 @@
 
     <ExampleRow :data="data.specs()" columns="3" />
     <ExampleRow :data="data.specsStates()" columns="3" />
-    <Code :markup="outputCardMarkup({ label: 'Card Radio Button', image: '/images/MFP2-icon.jpg', name: 'click-target', checked: true, tabindex: true })" />
+    <Code :markup="outputCardMarkup({ label: 'Card Radio Button', image: '/images/produce_basket.jpg', name: 'click-target', checked: true, tabindex: true })" />
 
     <h3>Click Target</h3>
     <p>
