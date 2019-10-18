@@ -1,7 +1,7 @@
 <template>
   <div :class="setRowClasses()">
     <div v-for="(item, index) in data" :class="setClasses(item, index)">
-      <p v-if="item.header">
+      <p class="example-header" v-if="item.header">
         <strong>{{ item.header }}</strong>
       </p>
       <div v-if="item.markup" v-html="item.markup" class="example-container"></div>
