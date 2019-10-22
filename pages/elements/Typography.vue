@@ -110,7 +110,7 @@
 </template>
 
 <script>
-  import data from '@/pages/_components-data/elements/typography.js'
+  import data from '@/components/data/elements/typography.js'
 
   export default {
     layout: 'farmers',

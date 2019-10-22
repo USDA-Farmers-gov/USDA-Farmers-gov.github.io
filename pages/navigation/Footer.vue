@@ -37,7 +37,7 @@
   </div>
 </template>
 <script>
-  import data from '@/pages/_components-data/navigation/footer.js'
+  import data from '@/components/data/navigation/footer.js'
 
   export default {
     layout: 'farmers',

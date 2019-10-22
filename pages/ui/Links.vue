@@ -70,7 +70,7 @@
 </template>
 
 <script>
-  import data from '@/pages/_components-data/ui/links.js'
+  import data from '@/components/data/ui/links.js'
 
   export default {
     layout: 'farmers',

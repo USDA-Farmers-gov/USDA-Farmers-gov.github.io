@@ -54,7 +54,7 @@
 </template>
 
 <script>
-  import data from '@/pages/_components-data/ui/dropdowns.js'
+  import data from '@/components/data/ui/dropdowns.js'
 
   export default {
     layout: 'farmers',

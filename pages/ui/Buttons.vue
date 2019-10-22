@@ -74,7 +74,7 @@
 </template>
 
 <script>
-import data from '@/pages/_components-data/ui/buttons.js'
+import data from '@/components/data/ui/buttons.js'
 
 export default {
   layout: 'farmers',

@@ -49,7 +49,7 @@
 </template>
 
 <script>
-  import data from '@/pages/_components-data/elements/colors.js'
+  import data from '@/components/data/elements/colors.js'
 
   export default {
     layout: 'farmers',

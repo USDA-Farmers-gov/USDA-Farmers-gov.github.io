@@ -74,7 +74,7 @@
 </template>
 
 <script>
-  import data from '@/pages/_components-data/ui/radio-buttons.js'
+  import data from '@/components/data/ui/radio-buttons.js'
   import utils from '@/assets/js/utils.js'
   
   export default {

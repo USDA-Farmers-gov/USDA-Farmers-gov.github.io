@@ -78,7 +78,7 @@
 </template>
 
 <script>
-  import data from '@/pages/_components-data/ui/tables.js'
+  import data from '@/components/data/ui/tables.js'
 
   export default {
     layout: 'farmers',

@@ -61,7 +61,7 @@
   </div>
 </template>
 <script>
-  import data from '@/pages/_components-data/navigation/header.js'
+  import data from '@/components/data/navigation/header.js'
 
   export default {
     layout: 'farmers',

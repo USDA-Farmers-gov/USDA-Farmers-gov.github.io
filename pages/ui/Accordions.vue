@@ -77,7 +77,7 @@
 </template>
 
 <script>
-import data from '@/pages/_components-data/ui/accordions.js'
+import data from '@/components/data/ui/accordions.js'
 // Uncomment this only if accordions need to be functional
 // if (process.browser) {
 //   require('@/assets/farmers/dist/js/farmers.min.js')

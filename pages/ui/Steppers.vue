@@ -35,7 +35,7 @@
 </template>
 <script>
   import Stepper from '@/assets/farmers/js/Components/Steppers/Vertical/Stepper.js'
-  import data from '@/pages/_components-data/ui/stepper.js'
+  import data from '@/components/data/ui/stepper.js'
 
   export default {
     layout: 'farmers',

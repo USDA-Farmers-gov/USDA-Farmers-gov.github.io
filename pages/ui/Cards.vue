@@ -62,7 +62,7 @@
 </template>
 
 <script>
-  import data from '@/pages/_components-data/ui/cards.js'
+  import data from '@/components/data/ui/cards.js'
 
   export default {
     layout: 'farmers',
