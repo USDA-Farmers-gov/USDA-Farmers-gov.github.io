@@ -31,11 +31,11 @@
         text-shadow: none;
         -webkit-text-stroke: unset;
       }
-    
-      .active a:hover {
-        text-shadow: none;
-        color: $asphalt;
-        -webkit-text-stroke: $asphalt;
+
+      &.no-hover a:hover {
+        background: none;
+        border-left: none;
+        margin-left: 0;
       }
 
       a:not(active) {

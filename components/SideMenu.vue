@@ -3,6 +3,9 @@
     <img class="logo" alt="Farmers.gov" src="/images/farmers-logo.svg"/>
     <nav aria-label="Side">
       <ul class="sidenav">
+        <li class="active no-hover">
+          <a href="/" class="category">Home</a>
+        </li>
         <li v-for="item in menu">
           <div :class="setClassesByCategory(item.category)" 
                 @click="setActiveCategoryOnEvent($event, item)"
