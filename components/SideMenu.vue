@@ -7,7 +7,7 @@
           <a href="/" class="category">Home</a>
         </li>
         <li class="active no-hover">
-          <a href="Installation" class="category">Installation</a>
+          <a href="/Installation" class="category">Installation</a>
         </li>
         <li v-for="item in menu">
           <div :class="setClassesByCategory(item.category)" 
