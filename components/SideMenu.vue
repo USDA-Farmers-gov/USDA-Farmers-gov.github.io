@@ -6,6 +6,9 @@
         <li class="active no-hover">
           <a href="/" class="category">Home</a>
         </li>
+        <li class="active no-hover">
+          <a href="installation" class="category">Installation</a>
+        </li>
         <li v-for="item in menu">
           <div :class="setClassesByCategory(item.category)" 
                 @click="setActiveCategoryOnEvent($event, item)"
