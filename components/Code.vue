@@ -91,9 +91,9 @@
         this.updateCodeBoxClasses()
       },
       setPreviewClasses() {
-        let classes = [ 'preview text-margin-bottom' ]
-        if(this.designSystemWidth) classes.push('medium-' + this.designSystemWidth)
-        return classes.join(' ')
+        let baseClasses = 'preview text-margin-bottom'
+        let customClasses = (this.designSystemWidth) ? 'medium-' + this.designSystemWidth : ''
+        return utils.setClasses(baseClasses, customClasses)
       },
       setCode() {
         const markup = this.markup ? this.markup : this.$refs["slot-wrapper"].innerHTML
