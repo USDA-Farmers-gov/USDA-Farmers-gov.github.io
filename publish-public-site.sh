@@ -6,7 +6,6 @@
 # Changes in the app must be committed to the repo before you can rebuild the site.
 # This is to prevent the generic commit message for the Github site from being used in the Nuxt app repo.
 
-
 if [ ! -z "$(git status --porcelain)" ]; 
   echo 'You have uncommitted changes to the app. Please type a commit message here (or ctrl-c to exit): '
   read gitmessage
