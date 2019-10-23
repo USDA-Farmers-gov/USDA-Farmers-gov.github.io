@@ -32,10 +32,16 @@
         -webkit-text-stroke: unset;
       }
 
-      &.no-hover a:hover {
-        background: none;
-        border-left: none;
-        margin-left: 0;
+      &.no-hover {
+        &.active {
+          background: $softgreen;
+        }
+
+        a:hover {
+          background: $softgreen;
+          border-left: none;
+          margin-left: 0;
+        }
       }
 
       a:not(active) {
