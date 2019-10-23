@@ -15,8 +15,9 @@ then
   git commit -m gitmessage
   git push
 fi
-  npm run generate
-  git add .
-  git commit -m "website rebuilt"
-  git subtree push --prefix=dist https://github.com/USDA-Farmers-gov/USDA-Farmers-gov.github.io master
-  git subtree push --prefix=dist https://github.com/mcalvert2089/mcalvert2089.github.io master
+
+npm run generate
+git add .
+git commit -m "website rebuilt"
+git subtree push --prefix=dist https://github.com/USDA-Farmers-gov/USDA-Farmers-gov.github.io master
+git subtree push --prefix=dist https://github.com/mcalvert2089/mcalvert2089.github.io master
