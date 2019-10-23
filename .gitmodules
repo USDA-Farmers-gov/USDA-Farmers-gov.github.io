@@ -1,0 +1,3 @@
+[submodule "assets/farmers"]
+	path = assets/farmers
+	url = https://github.com/USDA-Farmers-gov/USDA-Farmers-gov.github.io
