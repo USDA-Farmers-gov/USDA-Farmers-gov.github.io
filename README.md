@@ -1,6 +1,6 @@
 # farmers-design-system
 
-> Design System for Farmers websites
+> Design System for Farmers.gov website
 
 ## Build Setup
 
