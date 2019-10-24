@@ -3,11 +3,11 @@
     <img class="logo" alt="Farmers.gov" src="/images/farmers-logo.svg"/>
     <nav aria-label="Side">
       <ul class="sidenav">
-        <li :class="currentPath === '/' ? 'active no-hover' : 'no-hover'">
-          <a href="/" class="category">Home</a>
+        <li :class="currentPath === '/' ? 'active link' : 'link'">
+          <a href="/" class="base-link">Home</a>
         </li>
-        <li :class="currentPath === '/Installation' ? 'active no-hover' : 'no-hover'">
-          <a href="/Installation" class="category">Installation</a>
+        <li :class="currentPath === '/Installation' ? 'active link' : 'link'">
+          <a href="/Installation" class="base-link">Installation</a>
         </li>
         <li v-for="item in menu">
           <div :class="setClassesByCategory(item.category)" 

@@ -1,6 +1,6 @@
 #sidebar {
   font-size: 1.75rem;
-  flex: 0 0 217px;
+  flex: 0 0 227px;
   
   .sidenav {
     padding: 2rem 0 0 0;
@@ -10,11 +10,12 @@
     list-style-type: none;
     margin: 0;
 
+
     li {
       margin-top: 0;
-
-      a, .category {
-        padding: 1rem 1rem 1rem 0;
+      
+      a, .category, .base-link {
+        padding: 1rem;
       }
 
       a, a:visited {
@@ -32,30 +33,18 @@
         -webkit-text-stroke: unset;
       }
 
-      &.no-hover {
-        &.active {
-          background: $softgreen;
-        }
-
-        a:hover {
-          background: $softgreen;
-          border-left: none;
-          margin-left: 0;
-        }
-      }
-
       a:not(active) {
         padding-left: 2rem;
         -webkit-text-stroke: $heritage;
       }
       
-      .category {
+      .category, .base-link {
         cursor: pointer;
         font-weight: 700;
-      }
 
-      .category span {
-        float: right;
+        span {
+          float: right;
+        }
       }
     }
   }
@@ -65,12 +54,14 @@
   }
 }
 
+.active:not(.category) {
+  background: $softgreen;
+  border-left: 0.25rem $heritage solid;
+  margin-left: -0.25rem;
+  font-weight: 700;
+}
+
 .sidebar-nav-links {
   padding: 0;
   margin: 0;
-  .active {
-      border-left: 0.25rem $heritage solid;
-      margin-left: -0.25rem;
-      font-weight: 700;
-    }
 }
