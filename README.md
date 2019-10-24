@@ -3,7 +3,7 @@
 > This app is used to manage/develop the public Github site of the design system.
 
 ## Installation
-Clone the repository into a local folder. To ensure the farmers submodule has all its files included, you must use the --rescursive flag.
+Clone the repository into a local folder. To ensure the farmers submodule has all its files included, you must use the rescursive flag.
 
 ``` git clone https://github.com/USDA-Farmers-gov/farmers-design-system-nuxt.git --recursive ```
 
