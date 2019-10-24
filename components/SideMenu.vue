@@ -3,14 +3,13 @@
     <img class="logo" alt="Farmers.gov" src="/images/farmers-logo.svg"/>
     <nav aria-label="Side">
       <ul class="sidenav">
-        <li :class="currentPath === '/' ? 'active link' : 'link'">
-          <a href="/" class="base-link">Home</a>
-        </li>
-        <li :class="currentPath === '/Installation' ? 'active link' : 'link'">
-          <a href="/Installation" class="base-link">Installation</a>
-        </li>
         <li v-for="item in menu">
-          <div :class="setClassesByCategory(item.category)" 
+          <!-- LINK -->
+          <a v-if="typeof item.name !== 'undefined'" :href="item.path" :class="currentPath === item.path ? 'active' : ''">{{ item.name }}</a>
+
+          
+          <!-- CATEGORY -->
+          <div v-if="typeof item.category !== 'undefined'" :class="setClassesByCategory(item.category)" 
                 @click="setActiveCategoryOnEvent($event, item)"
                 @keypress="setActiveCategoryOnEvent($event, item)" 
                 tabindex="0">
@@ -19,7 +18,7 @@
                   <span v-if="activeCategory !== item.category && !item.path" class="arrow arrow-down"></span>
           </div>
 
-          <ul v-if="activeCategory === item.category" class="sidebar-nav-links">
+          <ul v-if="typeof item.category !== 'undefined' && activeCategory === item.category" class="sidebar-nav-links">
             <li :class="currentPath === link.path ? 'active soft-green' : ''" v-for="link in item.links">
               <a :href="link.path">{{ link.name }}</a>
             </li>
@@ -38,6 +37,14 @@
         activeCategory: '',
         categoryClasses: 'category',
         menu: [
+          {
+            name: 'Home',
+            path: '/'
+          },
+          {
+            name: 'Installation',
+            path: '/Installation'
+          },
           {
             category: 'Primary Elements',
             links:  [
