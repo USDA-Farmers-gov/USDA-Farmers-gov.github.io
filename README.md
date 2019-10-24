@@ -1,6 +1,6 @@
 # Farmers.gov Design System Nuxt App
 
-> This app is used to manage the public Github site of the design system.
+> This app is used to manage/develop the public Github site of the design system.
 
 ## Build Setup
 
