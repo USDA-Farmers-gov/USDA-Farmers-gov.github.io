@@ -15,7 +15,7 @@ $ npm run dev
 ## Publish to Public Site
 To publish flat files to the public site, run the script:
 
-$ ./publish-public-site.sh
+``` $ ./publish-public-site.sh ```
 
 If your working branch is not clean, a prompt will come up with the status message. You can confirm whether you still want to publish or not.
 
